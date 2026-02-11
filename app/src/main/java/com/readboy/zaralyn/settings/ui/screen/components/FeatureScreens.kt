@@ -458,7 +458,7 @@ fun ParentControlScreen(viewModel: MainViewModel, context: Context) {
             ActionCard(
                 title = "提醒记录",
                 description = "查看提醒记录",
-                icon = Icons.Default.Reminder,
+                icon = Icons.Default.Notifications,
                 onClick = { viewModel.openReminderRecord(context) }
             )
         }
@@ -488,7 +488,7 @@ fun ParentControlScreen(viewModel: MainViewModel, context: Context) {
             ActionCard(
                 title = "弹窗推送",
                 description = "打开弹窗推送",
-                icon = Icons.Default.Popup,
+                icon = Icons.Default.Message,
                 onClick = { viewModel.openPopupPushMessage(context) }
             )
         }
@@ -651,7 +651,7 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
                     containerColor = MaterialTheme.colorScheme.tertiary
                 )
             ) {
-                Icon(Icons.Default.Database, null)
+                Icon(Icons.Default.Storage, null)
                 Spacer(Modifier.width(8.dp))
                 Text("查询应用数据")
             }

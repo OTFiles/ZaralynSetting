@@ -3,16 +3,12 @@ package com.readboy.zaralyn.settings.ui.screen
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.readboy.zaralyn.settings.ui.screen.components.*
 import com.readboy.zaralyn.settings.viewmodel.MainViewModel
@@ -47,26 +43,26 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 NavigationBarItem(
                     selected = selectedTab == 0,
                     onClick = { viewModel.selectTab(0) },
-                    icon = { Icon(Icons.Default.Dashboard, contentDescription = null) },
-                    label = { Text("系统功能") }
+                    icon = { Icon(Icons.Default.Settings, contentDescription = null) },
+                    label = { Text("系统设置") }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 1,
                     onClick = { viewModel.selectTab(1) },
-                    icon = { Icon(Icons.Default.PhoneAndroid, contentDescription = null) },
+                    icon = { Icon(Icons.Default.Apps, contentDescription = null) },
                     label = { Text("应用管理") }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 2,
                     onClick = { viewModel.selectTab(2) },
-                    icon = { Icon(Icons.Default.Security, contentDescription = null) },
+                    icon = { Icon(Icons.Default.Shield, contentDescription = null) },
                     label = { Text("家长控制") }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { viewModel.selectTab(3) },
-                    icon = { Icon(Icons.Default.Settings, contentDescription = null) },
-                    label = { Text("高级设置") }
+                    icon = { Icon(Icons.Default.CloudUpload, contentDescription = null) },
+                    label = { Text("数据服务") }
                 )
             }
         }
@@ -77,10 +73,10 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 .padding(paddingValues)
         ) {
             when (selectedTab) {
-                0 -> SystemFunctionsScreen(viewModel, context)
+                0 -> SystemSettingsScreen(viewModel, context)
                 1 -> AppManagementScreen(viewModel, context)
                 2 -> ParentControlScreen(viewModel, context)
-                3 -> AdvancedSettingsScreen(viewModel, context)
+                3 -> DataServiceScreen(viewModel, context)
             }
         }
     }
