@@ -196,8 +196,6 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val result = withContext(Dispatchers.IO) {
-                    // 这里应该是实际的 HTTP 请求
-                    // 由于没有网络库，我们只模拟请求
                     val url = _selectedApiServer.value
                     "URL: $url\nData: ${requestData.ifEmpty { "默认请求数据" }}\n\n请求已发送（模拟）"
                 }
@@ -321,8 +319,10 @@ class MainViewModel : ViewModel() {
     }
     
     fun restartDevice(context: Context) {
+        // 使用SettingsBootCompletedReceiver的Action
         val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_REBOOT"
+            action = "android.intent.action.ReadboyForceShutdownOrReboot"
+            putExtra("type", "reboot")
         }
         try {
             context.sendBroadcast(intent)
@@ -333,8 +333,10 @@ class MainViewModel : ViewModel() {
     }
     
     fun shutdownDevice(context: Context) {
+        // 使用SettingsBootCompletedReceiver的Action
         val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_SHUTDOWN"
+            action = "android.intent.action.ReadboyForceShutdownOrReboot"
+            putExtra("type", "shutdown")
         }
         try {
             context.sendBroadcast(intent)
@@ -381,6 +383,7 @@ class MainViewModel : ViewModel() {
         
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_START_PACKAGE"
+            setPackage("com.readboy.parentmanager")
             putExtra("package_name", _targetPackageName.value)
         }
         
@@ -400,6 +403,7 @@ class MainViewModel : ViewModel() {
         
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_PAUSE_PACKAGE"
+            setPackage("com.readboy.parentmanager")
             putExtra("package_name", _targetPackageName.value)
         }
         
@@ -418,7 +422,8 @@ class MainViewModel : ViewModel() {
         }
         
         val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_CLEAN_APP_DATA_EVENT"
+            action = "android.intent.action.ReadboyCleanAppDataEvent"
+            setPackage("com.android.settings")
             putExtra("package_name", _targetPackageName.value)
         }
         
@@ -522,6 +527,7 @@ class MainViewModel : ViewModel() {
         _parentModeEnabled.value = !_parentModeEnabled.value
         val intent = Intent().apply {
             action = "android.intent.action.ReadboyExchangeParentMode"
+            setPackage("com.android.settings")
             putExtra("new_parent_mode", if (_parentModeEnabled.value) 1 else 0)
         }
         try {
@@ -550,27 +556,27 @@ class MainViewModel : ViewModel() {
             return
         }
         
+        // 打开设置密码Activity
         val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_CHANAGE_PASSWORD"
-            putExtra("new_password", newPassword)
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.SettingPasswordActivity")
         }
         try {
-            context.sendBroadcast(intent)
-            Toast.makeText(context, "密码修改命令已发送", Toast.LENGTH_SHORT).show()
+            context.startActivity(intent)
+            Toast.makeText(context, "密码设置页面已打开", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
-            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
     
     fun resetPassword(context: Context) {
         val intent = Intent().apply {
-            action = "android.readboy.parentmanager.BROADCAST_JUDGE_PASSWORD_EXISTS"
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.ParentalAuthActivity")
         }
         try {
-            context.sendBroadcast(intent)
-            Toast.makeText(context, "密码重置命令已发送", Toast.LENGTH_SHORT).show()
+            context.startActivity(intent)
+            Toast.makeText(context, "家长认证页面已打开", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
-            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
     
@@ -674,12 +680,11 @@ class MainViewModel : ViewModel() {
     
     fun uploadCustomData(context: Context) {
         val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_UPLOAD_STATISTICS_DATA"
-            putExtra("server_url", _customServerUrl.value)
-            putExtra("custom_data", _customUploadData.value)
+            action = "com.readboy.parentmanager.ACTION_UPLOAD_RECORD"
+            setPackage("com.readboy.parentmanager")
         }
         try {
-            context.sendBroadcast(intent)
+            context.startService(intent)
             Toast.makeText(context, "数据已发送", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
             Toast.makeText(context, "发送失败: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -688,8 +693,8 @@ class MainViewModel : ViewModel() {
     
     fun syncData(context: Context) {
         val intent = Intent().apply {
-            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.SyncDataService")
             action = "com.readboy.parentmanager.ACTION_SYNC_INIT_DATA"
+            setPackage("com.readboy.parentmanager")
         }
         try {
             context.startService(intent)
@@ -702,8 +707,8 @@ class MainViewModel : ViewModel() {
     fun startRecording(context: Context) {
         _recordingEnabled.value = true
         val intent = Intent().apply {
-            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.RecordService")
-            action = "START_RECORD"
+            action = "com.readboy.parentmanager.ACTION_START_RECORD"
+            setPackage("com.readboy.parentmanager")
         }
         try {
             context.startService(intent)
@@ -715,12 +720,14 @@ class MainViewModel : ViewModel() {
     
     fun stopRecording(context: Context) {
         _recordingEnabled.value = false
+        // 发送停止广播
         val intent = Intent().apply {
-            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.RecordService")
-            action = "STOP_RECORD"
+            action = "com.readboy.parentmanager.ACTION_START_RECORD"
+            setPackage("com.readboy.parentmanager")
+            putExtra("action", "stop")
         }
         try {
-            context.startService(intent)
+            context.sendBroadcast(intent)
             Toast.makeText(context, "停止录音", Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
             Toast.makeText(context, "停止失败: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -731,7 +738,7 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val data = withContext(Dispatchers.IO) {
-                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.AppContentProvider")
+                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.DataProvider")
                     val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
                     val result = StringBuilder()
                     cursor?.use {
@@ -758,7 +765,7 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val data = withContext(Dispatchers.IO) {
-                    val uri = android.net.Uri.parse("content://com.coolerfall.Provider.SqliteProvider")
+                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.recordprovider")
                     val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
                     val result = StringBuilder()
                     cursor?.use {
