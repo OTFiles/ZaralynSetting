@@ -7,17 +7,12 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.readboy.zaralyn.settings.ui.screen.MainScreen
 import com.readboy.zaralyn.settings.ui.theme.ZaralynSettingsTheme
-import com.readboy.zaralyn.settings.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
     
@@ -37,8 +32,8 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             ZaralynSettingsTheme {
-                viewModel()
-                MainScreen()
+                val viewModel: MainViewModel = viewModel()
+                MainScreen(viewModel)
             }
         }
         
