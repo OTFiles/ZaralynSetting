@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.readboy.zaralyn.settings.ui.screen.MainScreen
 import com.readboy.zaralyn.settings.ui.theme.ZaralynSettingsTheme
+import com.readboy.zaralyn.settings.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
     
