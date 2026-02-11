@@ -2,13 +2,17 @@ package com.readboy.zaralyn.settings.viewmodel
 
 import android.content.Context
 import android.content.Intent
+import android.database.Cursor
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.readboy.zaralyn.settings.service.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class MainViewModel : ViewModel() {
     
@@ -17,35 +21,17 @@ class MainViewModel : ViewModel() {
     val selectedTab: StateFlow<Int> = _selectedTab
     
     // Feature States
-    private val _usbDebugEnabled = MutableStateFlow(false)
-    val usbDebugEnabled: StateFlow<Boolean> = _usbDebugEnabled
-    
-    private val _developerOptionsEnabled = MutableStateFlow(false)
-    val developerOptionsEnabled: StateFlow<Boolean> = _developerOptionsEnabled
-    
-    private val _dataUploadEnabled = MutableStateFlow(false)
-    val dataUploadEnabled: StateFlow<Boolean> = _dataUploadEnabled
-    
-    private val _locationEnabled = MutableStateFlow(false)
-    val locationEnabled: StateFlow<Boolean> = _locationEnabled
-    
     private val _parentModeEnabled = MutableStateFlow(false)
     val parentModeEnabled: StateFlow<Boolean> = _parentModeEnabled
     
     private val _dreamModeEnabled = MutableStateFlow(false)
     val dreamModeEnabled: StateFlow<Boolean> = _dreamModeEnabled
     
-    private val _pauseAppsEnabled = MutableStateFlow(false)
-    val pauseAppsEnabled: StateFlow<Boolean> = _pauseAppsEnabled
+    private val _powerSaverEnabled = MutableStateFlow(false)
+    val powerSaverEnabled: StateFlow<Boolean> = _powerSaverEnabled
     
-    private val _startAppsEnabled = MutableStateFlow(false)
-    val startAppsEnabled: StateFlow<Boolean> = _startAppsEnabled
-    
-    private val _clearDataEnabled = MutableStateFlow(false)
-    val clearDataEnabled: StateFlow<Boolean> = _clearDataEnabled
-    
-    private val _allPermissionsEnabled = MutableStateFlow(false)
-    val allPermissionsEnabled: StateFlow<Boolean> = _allPermissionsEnabled
+    private val _zenModeEnabled = MutableStateFlow(false)
+    val zenModeEnabled: StateFlow<Boolean> = _zenModeEnabled
     
     private val _recordingEnabled = MutableStateFlow(false)
     val recordingEnabled: StateFlow<Boolean> = _recordingEnabled
@@ -60,61 +46,160 @@ class MainViewModel : ViewModel() {
     private val _customUploadData = MutableStateFlow("")
     val customUploadData: StateFlow<String> = _customUploadData
     
+    private val _targetPackageName = MutableStateFlow("")
+    val targetPackageName: StateFlow<String> = _targetPackageName
+    
+    // Data Display
+    private val _logcatLogs = MutableStateFlow("")
+    val logcatLogs: StateFlow<String> = _logcatLogs
+    
+    private val _appData = MutableStateFlow("")
+    val appData: StateFlow<String> = _appData
+    
+    private val _sqliteData = MutableStateFlow("")
+    val sqliteData: StateFlow<String> = _sqliteData
+    
     fun selectTab(index: Int) {
         _selectedTab.value = index
     }
     
-    // System Functions
-    fun toggleUsbDebug(context: Context) {
-        _usbDebugEnabled.value = !_usbDebugEnabled.value
+    // ============ 系统设置 ============
+    
+    fun openBluetoothSettings(context: Context) {
         val intent = Intent().apply {
-            action = "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
-            putExtra("enable_adb", _usbDebugEnabled.value)
+            setClassName("com.android.settings", "com.android.settings.bluetooth.BluetoothSettings")
         }
-        context.startActivity(intent)
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    fun toggleDeveloperOptions(context: Context) {
-        _developerOptionsEnabled.value = !_developerOptionsEnabled.value
+    fun openTetherSettings(context: Context) {
         val intent = Intent().apply {
-            action = "android.settings.APPLICATION_DEVELOPMENT_SETTINGS_FULL"
+            setClassName("com.android.settings", "com.android.settings.TetherSettings")
         }
-        context.startActivity(intent)
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    fun toggleDataUpload(context: Context) {
-        _dataUploadEnabled.value = !_dataUploadEnabled.value
-        val intent = Intent(context, DataUploadService::class.java).apply {
-            action = if (_dataUploadEnabled.value) "START_UPLOAD" else "STOP_UPLOAD"
+    fun openLanguageSettings(context: Context) {
+        val intent = Intent().apply {
+            action = "android.settings.LOCALE_SETTINGS"
         }
-        context.startService(intent)
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    fun toggleLocation(context: Context) {
-        _locationEnabled.value = !_locationEnabled.value
+    fun openDisplaySettings(context: Context) {
         val intent = Intent().apply {
-            action = "android.readboy.GpsNetworkLocation"
+            action = "android.settings.DISPLAY_SETTINGS"
         }
-        context.sendBroadcast(intent)
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openSoundSettings(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$SoundSettingsActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openNotificationSettings(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$ConfigureNotificationSettingsActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun togglePowerSaver(context: Context) {
+        _powerSaverEnabled.value = !_powerSaverEnabled.value
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.fuelgauge.BatterySaverModeVoiceActivity")
+            putExtra("enabled", _powerSaverEnabled.value)
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun toggleZenMode(context: Context) {
+        _zenModeEnabled.value = !_zenModeEnabled.value
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$ZenModeSettingsActivity")
+            putExtra("enabled", _zenModeEnabled.value)
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openFingerprintSettings(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.fingerprint.FingerprintEnrollIntroduction")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun restartDevice(context: Context) {
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_REBOOT"
         }
-        context.sendBroadcast(intent)
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "重启命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun shutdownDevice(context: Context) {
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_SHUTDOWN"
         }
-        context.sendBroadcast(intent)
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "关机命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    // App Management
+    // ============ 应用管理 ============
+    
     fun updateCustomApkPath(path: String) {
         _customApkPath.value = path
+    }
+    
+    fun updateTargetPackageName(pkg: String) {
+        _targetPackageName.value = pkg
     }
     
     fun installCustomApk(context: Context) {
@@ -136,41 +221,163 @@ class MainViewModel : ViewModel() {
         }
     }
     
-    fun togglePauseApps(context: Context) {
-        _pauseAppsEnabled.value = !_pauseAppsEnabled.value
-        val intent = Intent().apply {
-            action = "com.readboy.parentmanager.ACTION_PAUSE_PACKAGE"
-            putExtra("package_name", "com.example.target")
+    fun startApp(context: Context) {
+        if (_targetPackageName.value.isEmpty()) {
+            Toast.makeText(context, "请输入包名", Toast.LENGTH_SHORT).show()
+            return
         }
-        context.sendBroadcast(intent)
-    }
-    
-    fun toggleStartApps(context: Context) {
-        _startAppsEnabled.value = !_startAppsEnabled.value
+        
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_START_PACKAGE"
-            putExtra("package_name", "com.example.target")
+            putExtra("package_name", _targetPackageName.value)
         }
-        context.sendBroadcast(intent)
+        
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "启动命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "启动失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    fun toggleClearData(context: Context) {
-        _clearDataEnabled.value = !_clearDataEnabled.value
+    fun pauseApp(context: Context) {
+        if (_targetPackageName.value.isEmpty()) {
+            Toast.makeText(context, "请输入包名", Toast.LENGTH_SHORT).show()
+            return
+        }
+        
+        val intent = Intent().apply {
+            action = "com.readboy.parentmanager.ACTION_PAUSE_PACKAGE"
+            putExtra("package_name", _targetPackageName.value)
+        }
+        
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "暂停命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "暂停失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun clearAppData(context: Context) {
+        if (_targetPackageName.value.isEmpty()) {
+            Toast.makeText(context, "请输入包名", Toast.LENGTH_SHORT).show()
+            return
+        }
+        
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_CLEAN_APP_DATA_EVENT"
-            putExtra("package_name", "com.example.target")
+            putExtra("package_name", _targetPackageName.value)
         }
-        context.sendBroadcast(intent)
+        
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "清除数据命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    // Parent Control
+    fun openAdvancedAppsSettings(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$AdvancedAppsActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openRunningServices(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$RunningServicesActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openStorageUse(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.Settings\$StorageUseActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openInstalledAppDetails(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.android.settings", "com.android.settings.applications.InstalledAppDetailsTop")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openDeviceAdminSettings(context: Context) {
+        val intent = Intent().apply {
+            action = "android.settings.DEVICE_ADMIN_SETTINGS"
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    // ============ Logcat ============
+    
+    fun fetchLogcat(context: Context) {
+        viewModelScope.launch {
+            try {
+                val logs = withContext(Dispatchers.IO) {
+                    val process = Runtime.getRuntime().exec(arrayOf("logcat", "-d", "-v", "time", "*:D"))
+                    val reader = BufferedReader(InputStreamReader(process.inputStream))
+                    val lines = reader.use { it.readLines() }
+                    lines.takeLast(200).joinToString("\n")
+                }
+                _logcatLogs.value = logs
+            } catch (e: Exception) {
+                _logcatLogs.value = "获取日志失败: ${e.message}"
+            }
+        }
+    }
+    
+    fun clearLogcat() {
+        _logcatLogs.value = ""
+        viewModelScope.launch {
+            try {
+                withContext(Dispatchers.IO) {
+                    Runtime.getRuntime().exec(arrayOf("logcat", "-c"))
+                }
+            } catch (e: Exception) {
+                // Ignore
+            }
+        }
+    }
+    
+    // ============ 家长控制 ============
+    
     fun toggleParentMode(context: Context) {
         _parentModeEnabled.value = !_parentModeEnabled.value
         val intent = Intent().apply {
             action = "android.intent.action.ReadboyExchangeParentMode"
             putExtra("new_parent_mode", if (_parentModeEnabled.value) 1 else 0)
         }
-        context.sendBroadcast(intent)
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "家长模式${if (_parentModeEnabled.value) "已启用" else "已禁用"}", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun toggleDreamMode(context: Context) {
@@ -178,33 +385,133 @@ class MainViewModel : ViewModel() {
         val intent = Intent().apply {
             action = "cn.dream.ebag.action.SETTING_TEACHER_CHECK"
         }
-        context.startActivity(intent)
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
-    fun changePassword(context: Context) {
+    fun changePassword(context: Context, newPassword: String) {
+        if (newPassword.isEmpty()) {
+            Toast.makeText(context, "请输入新密码", Toast.LENGTH_SHORT).show()
+            return
+        }
+        
         val intent = Intent().apply {
             action = "com.readboy.parentmanager.ACTION_CHANAGE_PASSWORD"
-            putExtra("new_password", "123456")
+            putExtra("new_password", newPassword)
         }
-        context.sendBroadcast(intent)
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "密码修改命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun resetPassword(context: Context) {
         val intent = Intent().apply {
             action = "android.readboy.parentmanager.BROADCAST_JUDGE_PASSWORD_EXISTS"
         }
-        context.sendBroadcast(intent)
-    }
-    
-    fun requestAllPermissions(context: Context) {
-        _allPermissionsEnabled.value = !_allPermissionsEnabled.value
-        val intent = Intent().apply {
-            action = "android.readboy.RequestAppAllPermission"
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "密码重置命令已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
-        context.sendBroadcast(intent)
     }
     
-    // Advanced Settings
+    fun validatePassword(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.ValidatePassword")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openActivation(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.ActivationActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openReminderRecord(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.ReminderRecordActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openAppletApply(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.AppletApplyActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openScanPenData(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.ScanPenDataActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openPopupPushMessage(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.PopupPushMessageActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openBigImage(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.BigImageActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun openCloseAppHint(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.CloseAppHintActivity")
+        }
+        try {
+            context.startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    // ============ 数据服务 ============
+    
     fun updateCustomServerUrl(url: String) {
         _customServerUrl.value = url
     }
@@ -219,22 +526,106 @@ class MainViewModel : ViewModel() {
             putExtra("server_url", _customServerUrl.value)
             putExtra("custom_data", _customUploadData.value)
         }
-        context.sendBroadcast(intent)
+        try {
+            context.sendBroadcast(intent)
+            Toast.makeText(context, "数据已发送", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "发送失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun syncData(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.SyncDataService")
+            action = "com.readboy.parentmanager.ACTION_SYNC_INIT_DATA"
+        }
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "同步数据中...", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "同步失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun startRecording(context: Context) {
         _recordingEnabled.value = true
-        val intent = Intent(context, RecordService::class.java).apply {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.RecordService")
             action = "START_RECORD"
         }
-        context.startService(intent)
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "开始录音", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "录音失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
     
     fun stopRecording(context: Context) {
         _recordingEnabled.value = false
-        val intent = Intent(context, RecordService::class.java).apply {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.client.service.RecordService")
             action = "STOP_RECORD"
         }
-        context.startService(intent)
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "停止录音", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "停止失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    fun queryAppData(context: Context) {
+        viewModelScope.launch {
+            try {
+                val data = withContext(Dispatchers.IO) {
+                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.AppContentProvider")
+                    val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
+                    val result = StringBuilder()
+                    cursor?.use {
+                        val columns = it.columnNames
+                        result.append("列: ${columns.joinToString(", ")}\n\n")
+                        while (it.moveToNext()) {
+                            for (col in columns) {
+                                val idx = it.getColumnIndex(col)
+                                result.append("$col: ${it.getString(idx)}\n")
+                            }
+                            result.append("\n")
+                        }
+                    }
+                    result.toString()
+                }
+                _appData.value = data.ifEmpty { "暂无数据" }
+            } catch (e: Exception) {
+                _appData.value = "查询失败: ${e.message}"
+            }
+        }
+    }
+    
+    fun querySqliteData(context: Context) {
+        viewModelScope.launch {
+            try {
+                val data = withContext(Dispatchers.IO) {
+                    val uri = android.net.Uri.parse("content://com.coolerfall.Provider.SqliteProvider")
+                    val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
+                    val result = StringBuilder()
+                    cursor?.use {
+                        val columns = it.columnNames
+                        result.append("列: ${columns.joinToString(", ")}\n\n")
+                        while (it.moveToNext()) {
+                            for (col in columns) {
+                                val idx = it.getColumnIndex(col)
+                                result.append("$col: ${it.getString(idx)}\n")
+                            }
+                            result.append("\n")
+                        }
+                    }
+                    result.toString()
+                }
+                _sqliteData.value = data.ifEmpty { "暂无数据" }
+            } catch (e: Exception) {
+                _sqliteData.value = "查询失败: ${e.message}"
+            }
+        }
     }
 }
