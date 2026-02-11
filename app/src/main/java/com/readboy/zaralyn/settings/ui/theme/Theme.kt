@@ -1,4 +1,4 @@
-package com.zaralyn.settings.ui.theme
+package com.readboy.zaralyn.settings.ui.theme
 
 import android.app.Activity
 import android.os.Build

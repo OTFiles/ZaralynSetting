@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.zaralyn.settings"
+    namespace = "com.readboy.zaralyn.settings"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.zaralyn.settings"
+        applicationId = "com.readboy.zaralyn.settings"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

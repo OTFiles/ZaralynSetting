@@ -1,11 +1,11 @@
-package com.zaralyn.settings.viewmodel
+package com.readboy.zaralyn.settings.viewmodel
 
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.zaralyn.settings.service.*
+import com.readboy.zaralyn.settings.service.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

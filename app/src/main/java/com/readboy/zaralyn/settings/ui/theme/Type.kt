@@ -1,4 +1,4 @@
-package com.zaralyn.settings.ui.theme
+package com.readboy.zaralyn.settings.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.zaralyn.settings.service
+package com.readboy.zaralyn.settings.service
 
 import android.app.Service
 import android.content.Intent

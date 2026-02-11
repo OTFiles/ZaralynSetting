@@ -1,4 +1,4 @@
-package com.zaralyn.settings.ui.screen
+package com.readboy.zaralyn.settings.ui.screen
 
 import android.content.Context
 import android.widget.Toast
@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.zaralyn.settings.ui.screen.components.*
-import com.zaralyn.settings.viewmodel.MainViewModel
+import com.readboy.zaralyn.settings.ui.screen.components.*
+import com.readboy.zaralyn.settings.viewmodel.MainViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
