@@ -320,13 +320,14 @@ fun AdvancedSettingsScreen(viewModel: MainViewModel, context: Context) {
         }
         
         item {
+            val recordingEnabled = viewModel.recordingEnabled.collectAsState().value
             FeatureCard(
                 title = "开始录音",
                 description = "录制音频",
                 icon = Icons.Default.Mic,
-                isEnabled = viewModel.recordingEnabled.collectAsState().value,
-                onToggle = { 
-                    if (viewModel.recordingEnabled.collectAsState().value) {
+                isEnabled = recordingEnabled,
+                onToggle = {
+                    if (recordingEnabled) {
                         viewModel.stopRecording(context)
                     } else {
                         viewModel.startRecording(context)
