@@ -31,9 +31,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
           
-    - name: Make gradlew executable
-      run: chmod +x gradlew
-      
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v3
       with:
@@ -41,7 +38,7 @@ jobs:
         cache-read-only: ${{ github.ref != 'refs/heads/main' }}
         
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --no-daemon --stacktrace
+      run: gradle assembleDebug --no-daemon --stacktrace
       
     - name: Upload Debug APK
       if: success()
