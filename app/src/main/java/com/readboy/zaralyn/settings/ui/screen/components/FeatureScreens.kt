@@ -2,11 +2,10 @@ package com.readboy.zaralyn.settings.ui.screen.components
 
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -557,12 +556,99 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
     val sqliteData by viewModel.sqliteData.collectAsState()
     var showAppDataDialog by remember { mutableStateOf(false) }
     var showSqliteDataDialog by remember { mutableStateOf(false) }
+    val showCustomServerDialog by viewModel.showCustomServerDialog.collectAsState()
+    val selectedApiServer by viewModel.selectedApiServer.collectAsState()
+    var apiRequestData by remember { mutableStateOf("") }
+    var showApiServerSelector by remember { mutableStateOf(false) }
+    val showApiResultDialog by viewModel.showApiResultDialog.collectAsState()
+    val apiRequestResult by viewModel.apiRequestResult.collectAsState()
     
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
+        item { SectionTitle("官方 API 接口") }
+        
+        // API 接口选择器
+        item {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                )
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(
+                        "当前选择的 API",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        selectedApiServer,
+                        style = MaterialTheme.typography.bodySmall,
+                        fontFamily = FontFamily.Monospace
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    Button(
+                        onClick = { showApiServerSelector = true },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(Icons.Default.Api, null)
+                        Spacer(Modifier.width(8.dp))
+                        Text("选择 API 接口")
+                    }
+                }
+            }
+        }
+        
+        // 自定义服务器（隐藏入口）
+        item {
+            Button(
+                onClick = { viewModel.showCustomServerDialog() },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.secondary
+                )
+            ) {
+                Icon(Icons.Default.Add, null)
+                Spacer(Modifier.width(8.dp))
+                Text("添加自定义服务器")
+            }
+        }
+        
+        // 请求数据输入
+        item {
+            OutlinedTextField(
+                value = apiRequestData,
+                onValueChange = { apiRequestData = it },
+                label = { Text("请求数据") },
+                placeholder = { Text("输入请求参数 (JSON)" ) },
+                modifier = Modifier.fillMaxWidth(),
+                leadingIcon = { Icon(Icons.Default.Code, null) },
+                minLines = 3,
+                maxLines = 5
+            )
+        }
+        
+        // 发送请求
+        item {
+            Button(
+                onClick = { viewModel.sendApiRequest(context, apiRequestData) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
+            ) {
+                Icon(Icons.Default.Send, null)
+                Spacer(Modifier.width(8.dp))
+                Text("发送请求")
+            }
+        }
+        
         item { SectionTitle("数据上传") }
         
         // 服务器地址
@@ -597,7 +683,7 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
                 onClick = { viewModel.uploadCustomData(context) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(Icons.Default.Send, null)
+                Icon(Icons.Default.CloudUpload, null)
                 Spacer(Modifier.width(8.dp))
                 Text("发送数据")
             }
@@ -674,6 +760,113 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
                 Text("查询 SQLite 数据")
             }
         }
+    }
+    
+    // API 服务器选择对话框
+    if (showApiServerSelector) {
+        AlertDialog(
+            onDismissRequest = { showApiServerSelector = false },
+            title = { Text("选择 API 接口") },
+            text = {
+                LazyColumn(
+                    modifier = Modifier.height(400.dp)
+                ) {
+                    viewModel.apiServers.forEach { server ->
+                        item {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        viewModel.selectApiServer(server)
+                                        showApiServerSelector = false
+                                    }
+                                    .padding(8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = selectedApiServer == server,
+                                    onClick = {
+                                        viewModel.selectApiServer(server)
+                                        showApiServerSelector = false
+                                    }
+                                )
+                                Spacer(Modifier.width(8.dp))
+                                Text(
+                                    server,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    fontFamily = FontFamily.Monospace
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showApiServerSelector = false }) {
+                    Text("关闭")
+                }
+            }
+        )
+    }
+    
+    // 自定义服务器对话框
+    if (showCustomServerDialog) {
+        var customUrl by remember { mutableStateOf("") }
+        AlertDialog(
+            onDismissRequest = { viewModel.hideCustomServerDialog() },
+            title = { Text("添加自定义服务器") },
+            text = {
+                OutlinedTextField(
+                    value = customUrl,
+                    onValueChange = { customUrl = it },
+                    label = { Text("服务器 URL") },
+                    placeholder = { Text("http://custom-server.com/api" ) },
+                    singleLine = true
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        if (customUrl.isNotEmpty()) {
+                            viewModel.selectApiServer(customUrl)
+                            viewModel.hideCustomServerDialog()
+                        }
+                    }
+                ) {
+                    Text("添加")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { viewModel.hideCustomServerDialog() }) {
+                    Text("取消")
+                }
+            }
+        )
+    }
+    
+    // API 结果对话框
+    if (showApiResultDialog) {
+        AlertDialog(
+            onDismissRequest = { viewModel.hideApiResultDialog() },
+            title = { Text("请求结果") },
+            text = {
+                SelectionContainer {
+                    Text(
+                        text = apiRequestResult,
+                        fontFamily = FontFamily.Monospace,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                        modifier = Modifier
+                            .height(300.dp)
+                            .verticalScroll(rememberScrollState())
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { viewModel.hideApiResultDialog() }) {
+                    Text("关闭")
+                }
+            }
+        )
     }
     
     // 应用数据对话框

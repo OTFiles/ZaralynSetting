@@ -15,13 +15,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.readboy.zaralyn.settings.ui.screen.components.*
+import com.readboy.zaralyn.settings.ui.screen.MainScreen
 import com.readboy.zaralyn.settings.ui.theme.ZaralynSettingsTheme
 import com.readboy.zaralyn.settings.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
-    
-    private lateinit var viewModel: MainViewModel
     
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -39,8 +37,8 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             ZaralynSettingsTheme {
-                viewModel = viewModel()
-                MainScreen(viewModel, this@MainActivity)
+                viewModel()
+                MainScreen()
             }
         }
         
@@ -62,50 +60,6 @@ class MainActivity : ComponentActivity() {
         
         if (permissionsToRequest.isNotEmpty()) {
             requestPermissionLauncher.launch(permissionsToRequest.toTypedArray())
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MainScreen(viewModel: MainViewModel, activity: MainActivity) {
-    var selectedTab by remember { mutableStateOf(0) }
-    val tabs = listOf("系统设置", "应用管理", "家长控制", "数据服务")
-    val icons = listOf(
-        Icons.Default.Settings,
-        Icons.Default.Apps,
-        Icons.Default.Shield,
-        Icons.Default.CloudUpload
-    )
-    
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Zaralyn Settings") },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary
-                )
-            )
-        },
-        bottomBar = {
-            NavigationBar {
-                tabs.forEachIndexed { index, title ->
-                    NavigationBarItem(
-                        icon = { Icon(icons[index], contentDescription = title) },
-                        label = { Text(title) },
-                        selected = selectedTab == index,
-                        onClick = { selectedTab = index }
-                    )
-                }
-            }
-        }
-    ) { padding ->
-        when (selectedTab) {
-            0 -> SystemSettingsScreen(viewModel, activity)
-            1 -> AppManagementScreen(viewModel, activity)
-            2 -> ParentControlScreen(viewModel, activity)
-            3 -> DataServiceScreen(viewModel, activity)
         }
     }
 }

@@ -59,8 +59,160 @@ class MainViewModel : ViewModel() {
     private val _sqliteData = MutableStateFlow("")
     val sqliteData: StateFlow<String> = _sqliteData
     
+    // API Server
+    private val _selectedApiServer = MutableStateFlow("http://parent-manage.readboy.com/api/v1/machine/active")
+    val selectedApiServer: StateFlow<String> = _selectedApiServer
+    
+    private val _showCustomServerDialog = MutableStateFlow(false)
+    val showCustomServerDialog: StateFlow<Boolean> = _showCustomServerDialog
+    
+    private val _apiRequestResult = MutableStateFlow("")
+    val apiRequestResult: StateFlow<String> = _apiRequestResult
+    
+    private val _showApiResultDialog = MutableStateFlow(false)
+    val showApiResultDialog: StateFlow<Boolean> = _showApiResultDialog
+    
+    // API Servers List
+    val apiServers = listOf(
+        // ParentManager API - Machine
+        "http://parent-manage.readboy.com/api/v1/machine/active",
+        "http://parent-manage.readboy.com/api/v1/machine/get_active_status",
+        "http://parent-manage.readboy.com/api/v1/machine/info",
+        "http://parent-manage.readboy.com/api/v1/machine/uploadInfo",
+        "http://parent-manage.readboy.com/api/v1/machine/uploadFunction",
+        // ParentManager API - Password
+        "http://parent-manage.readboy.com/api/v1/password/upload",
+        // ParentManager API - ControlExtend
+        "http://parent-manage.readboy.com/api/v1/controlExtend/uploadFunc",
+        "http://parent-manage.readboy.com/api/v1/controlExtend/updateDownloadLevel",
+        "http://parent-manage.readboy.com/api/v1/controlExtend/getDownloadLevel",
+        // ParentManager API - Homework
+        "http://parent-manage.readboy.com/api/v1/homework/uploadFunc",
+        "http://parent-manage.readboy.com/api/v1/homework/modelFunc",
+        // ParentManager API - Time
+        "http://parent-manage.readboy.com/api/v1/time/uploadLockStatus",
+        "http://parent-manage.readboy.com/api/v1/time/UploadTimeUsage",
+        "http://parent-manage.readboy.com/api/v1/time/updateStatus",
+        // ParentManager API - Install
+        "http://parent-manage.readboy.com/api/v1/install/upload_list",
+        "http://parent-manage.readboy.com/api/v1/install/forbidden_list",
+        // ParentManager API - Uninstall
+        "http://parent-manage.readboy.com/api/v1/uninstall/uploadApps",
+        // ParentManager API - App
+        "http://parent-manage.readboy.com/api/v1/app/updateAppStatus",
+        // ParentManager API - Screenshot
+        "http://parent-manage.readboy.com/api/v1/screenshot/upload",
+        // ParentManager API - Heartbeat
+        "http://parent-manage.readboy.com/api/v1/heart_beat",
+        // ParentManager API - Device Status
+        "http://parent-manage.readboy.com/api/v1/device_status/upload",
+        // ParentManager API - Current Usage
+        "http://parent-manage.readboy.com/api/v1/current_usage/upload",
+        // ParentManager API - Location
+        "http://parent-manage.readboy.com/api/v1/location/upload",
+        // ParentManager API - Bluetooth
+        "http://parent-manage.readboy.com/api/v1/bluetooth/upload",
+        // ParentManager API - USB Control
+        "http://parent-manage.readboy.com/api/v1/control_usb/upload",
+        // ParentManager API - Whitelist
+        "http://parent-manage.readboy.com/api/v1/whitelist/uploadFunc",
+        // ParentManager API - Push
+        "http://parent-manage.readboy.com/api/v1/push/get_last_push",
+        // ParentManager API - TX Push
+        "http://parent-manage.readboy.com/api/v1/tx_push/upload_token",
+        // ParentManager API - JPush
+        "http://parent-manage.readboy.com/api/v1/jpush/execute",
+        "http://parent-manage.readboy.com/api/v1/jpush/content",
+        // ParentManager API - LiteApp
+        "http://parent-manage.readboy.com/api/v1/liteApp/getConfigs",
+        "http://parent-manage.readboy.com/api/v1/liteApp/appletApply",
+        "http://parent-manage.readboy.com/api/v1/liteApp/uploadLevel",
+        "http://parent-manage.readboy.com/api/v1/liteApp/uploadFunc",
+        // ParentManager API - Voice Limit
+        "http://parent-manage.readboy.com/api/v1/voiceLimit/getUseCount",
+        "http://parent-manage.readboy.com/api/v1/voiceLimit/uploadFunc",
+        // ParentManager API - Listener
+        "http://parent-manage.readboy.com/api/v1/listener/uploadFunc",
+        // ParentManager API - Shutdown
+        "http://parent-manage.readboy.com/api/v1/shutdown/uploadFunc",
+        // ParentManager API - System Mode
+        "http://parent-manage.readboy.com/api/v1/system_mode/upload",
+        // ParentManager API - Hide App
+        "http://parent-manage.readboy.com/api/v1/hide_app/upload",
+        // ParentManager API - Disable Mode
+        "http://parent-manage.readboy.com/api/v1/disable_mode/close",
+        // ParentManager API - Reminder
+        "http://parent-manage.readboy.com/api/v1/reminder/read",
+        "http://parent-manage.readboy.com/api/v1/reminder/reply",
+        // ParentManager API - Device Log
+        "http://parent-manage.readboy.com/api/v1/device_log/upload",
+        // ParentManager API - Eyeshield
+        "http://parent-manage.readboy.com/api/v1/eyeshield/updateStatus",
+        // ParentManager API - Control Answer
+        "http://parent-manage.readboy.com/api/v1/controlAnswer/updateStatus",
+        // ParentManager API - Upload Allow Password
+        "http://parent-manage.readboy.com/api/v1/uploadAllowPwd",
+        // ParentAdmin API - Machine
+        "https://parentadmin.readboy.com/v1/machine/cancel_bindings",
+        "https://parentadmin.readboy.com/v1/machine/miPushStatus/upload",
+        // ParentAdmin API - AppInfo
+        "https://parentadmin.readboy.com/v1/appinfo/controlApp/upload",
+        // ParentAdmin API - JPush
+        "https://parentadmin.readboy.com/v1/jpush/executed",
+        // ParentAdmin API - V2 Machine
+        "https://parentadmin.readboy.com/v2/machine/controllableStatus/upload",
+        // Other Servers
+        "http://server.readboy.com:9002/v1",
+        "http://api.log.readboy.com/logSdkConf",
+        "http://weixin.readboy.com/findPassword/",
+        "https://care.readboy.com/api/warranty/check",
+        "https://api-log.readboy.com/logStsAuth",
+        "http://stat.readboy.com/api/events",
+        "http://timu.readboy.com/stat/events",
+        "http://api.video.readboy.com",
+        "http://api.video.readboy.com:8000",
+        "http://g-apkstore.strongwind.cn"
+    )
+    
     fun selectTab(index: Int) {
         _selectedTab.value = index
+    }
+    
+    // ============ API Server Functions ============
+    
+    fun selectApiServer(server: String) {
+        _selectedApiServer.value = server
+    }
+    
+    fun showCustomServerDialog() {
+        _showCustomServerDialog.value = true
+    }
+    
+    fun hideCustomServerDialog() {
+        _showCustomServerDialog.value = false
+    }
+    
+    fun sendApiRequest(context: Context, requestData: String = "") {
+        viewModelScope.launch {
+            try {
+                val result = withContext(Dispatchers.IO) {
+                    // 这里应该是实际的 HTTP 请求
+                    // 由于没有网络库，我们只模拟请求
+                    val url = _selectedApiServer.value
+                    "URL: $url\nData: ${requestData.ifEmpty { "默认请求数据" }}\n\n请求已发送（模拟）"
+                }
+                _apiRequestResult.value = result
+                _showApiResultDialog.value = true
+                Toast.makeText(context, "请求已发送", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                _apiRequestResult.value = "请求失败: ${e.message}"
+                _showApiResultDialog.value = true
+            }
+        }
+    }
+    
+    fun hideApiResultDialog() {
+        _showApiResultDialog.value = false
     }
     
     // ============ 系统设置 ============
