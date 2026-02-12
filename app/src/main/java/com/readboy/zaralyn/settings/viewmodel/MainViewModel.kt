@@ -738,7 +738,7 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val data = withContext(Dispatchers.IO) {
-                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.DataProvider")
+                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.AppContentProvider")
                     val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
                     val result = StringBuilder()
                     cursor?.use {
@@ -765,7 +765,7 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val data = withContext(Dispatchers.IO) {
-                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.recordprovider")
+                    val uri = android.net.Uri.parse("content://com.readboy.parentmanager.SqliteProvider")
                     val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
                     val result = StringBuilder()
                     cursor?.use {
