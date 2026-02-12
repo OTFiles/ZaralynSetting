@@ -1,12 +1,8 @@
 package com.readboy.zaralyn.settings.ui.screen.components
 
-import android.content.Context
-import android.widget.Toast
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -14,1151 +10,333 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.readboy.zaralyn.settings.viewmodel.MainViewModel
+import android.content.Context
 
-// ============ 系统设置页面 ============
 @Composable
-fun SystemSettingsScreen(viewModel: MainViewModel, context: Context) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        item { SectionTitle("系统设置") }
-        
-        // 蓝牙设置
-        item {
-            ActionCard(
-                title = "蓝牙设置",
-                description = "打开蓝牙设置",
-                icon = Icons.Default.Bluetooth,
-                onClick = { viewModel.openBluetoothSettings(context) }
-            )
-        }
-        
-        // 热点设置
-        item {
-            ActionCard(
-                title = "热点设置",
-                description = "打开热点设置",
-                icon = Icons.Default.WifiTethering,
-                onClick = { viewModel.openTetherSettings(context) }
-            )
-        }
-        
-        // 语言设置
-        item {
-            ActionCard(
-                title = "语言设置",
-                description = "打开语言设置",
-                icon = Icons.Default.Translate,
-                onClick = { viewModel.openLanguageSettings(context) }
-            )
-        }
-        
-        // 显示设置
-        item {
-            ActionCard(
-                title = "显示设置",
-                description = "打开显示设置",
-                icon = Icons.Default.DisplaySettings,
-                onClick = { viewModel.openDisplaySettings(context) }
-            )
-        }
-        
-        // 声音设置
-        item {
-            ActionCard(
-                title = "声音设置",
-                description = "打开声音设置",
-                icon = Icons.Default.VolumeUp,
-                onClick = { viewModel.openSoundSettings(context) }
-            )
-        }
-        
-        // 通知设置
-        item {
-            ActionCard(
-                title = "通知设置",
-                description = "打开通知设置",
-                icon = Icons.Default.Notifications,
-                onClick = { viewModel.openNotificationSettings(context) }
-            )
-        }
-        
-        // 省电模式
-        item {
-            val powerSaverEnabled by viewModel.powerSaverEnabled.collectAsState()
-            ToggleCard(
-                title = "省电模式",
-                description = "启用电池省电模式",
-                icon = Icons.Default.BatterySaver,
-                isEnabled = powerSaverEnabled,
-                onToggle = { viewModel.togglePowerSaver(context) }
-            )
-        }
-        
-        // 勿扰模式
-        item {
-            val zenModeEnabled by viewModel.zenModeEnabled.collectAsState()
-            ToggleCard(
-                title = "勿扰模式",
-                description = "启用勿扰模式",
-                icon = Icons.Default.DoNotDisturb,
-                isEnabled = zenModeEnabled,
-                onToggle = { viewModel.toggleZenMode(context) }
-            )
-        }
-        
-        // 指纹设置
-        item {
-            ActionCard(
-                title = "指纹设置",
-                description = "打开指纹设置",
-                icon = Icons.Default.Fingerprint,
-                onClick = { viewModel.openFingerprintSettings(context) }
-            )
-        }
-        
-        item { SectionTitle("系统控制") }
-        
-        // 设备重启
-        item {
-            ActionCard(
-                title = "设备重启",
-                description = "重启设备",
-                icon = Icons.Default.RestartAlt,
-                onClick = { viewModel.restartDevice(context) }
-            )
-        }
-        
-        // 设备关机
-        item {
-            ActionCard(
-                title = "设备关机",
-                description = "关闭设备",
-                icon = Icons.Default.PowerSettingsNew,
-                onClick = { viewModel.shutdownDevice(context) }
-            )
-        }
-
-        // 电源保持
-        item {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Button(
-                    onClick = { viewModel.enablePowerOffKeeper(context) },
-                    modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.primary
-                    )
-                ) {
-                    Icon(Icons.Default.Power, null)
-                    Spacer(Modifier.width(4.dp))
-                    Text("启用电源保持")
-                }
-                Button(
-                    onClick = { viewModel.disablePowerOffKeeper(context) },
-                    modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.secondary
-                    )
-                ) {
-                    Icon(Icons.Default.PowerOff, null)
-                    Spacer(Modifier.width(4.dp))
-                    Text("禁用电源保持")
-                }
-            }
-        }
-
-        // 自动安装卸载
-        item {
-            ActionCard(
-                title = "自动安装卸载",
-                description = "打开自动安装卸载页面",
-                icon = Icons.Default.InstallMobile,
-                onClick = { viewModel.openAutoInstallUninstallApk(context) }
-            )
-        }
-
-        // 预安装对话框
-        item {
-            ActionCard(
-                title = "预安装对话框",
-                description = "打开预安装对话框",
-                icon = Icons.Default.InstallMobile,
-                onClick = { viewModel.openPreinstallDialog(context) }
-            )
-        }
-
-        // 设备凭据确认
-        item {
-            ActionCard(
-                title = "设备凭据确认",
-                description = "打开设备凭据确认",
-                icon = Icons.Default.Fingerprint,
-                onClick = { viewModel.openConfirmCredential(context) }
-            )
-        }
-    }
-}
-
-// ============ 应用管理页面 ============
-@Composable
-fun AppManagementScreen(viewModel: MainViewModel, context: Context) {
-    val apkPath by viewModel.customApkPath.collectAsState()
-    val packageName by viewModel.targetPackageName.collectAsState()
-    val logcatLogs by viewModel.logcatLogs.collectAsState()
-    var showLogcatDialog by remember { mutableStateOf(false) }
+fun PasswordExtractionScreen(viewModel: MainViewModel) {
+    val context = LocalContext.current
+    val passwordExists by viewModel.passwordExists.collectAsState()
+    val plainPassword by viewModel.plainPassword.collectAsState()
+    val bypassResult by viewModel.bypassResult.collectAsState()
     
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        item { SectionTitle("应用安装") }
-        
-        // APK 路径输入
-        item {
-            OutlinedTextField(
-                value = apkPath,
-                onValueChange = { viewModel.updateCustomApkPath(it) },
-                label = { Text("APK 路径") },
-                placeholder = { Text("/sdcard/Download/app.apk") },
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Default.FolderOpen, null) }
-            )
-        }
-        
-        // 安装按钮
-        item {
-            Button(
-                onClick = { viewModel.installCustomApk(context) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Icon(Icons.Default.InstallMobile, null)
-                Spacer(Modifier.width(8.dp))
-                Text("安装 APK")
-            }
-        }
-        
-        item { SectionTitle("应用控制") }
-        
-        // 包名输入
-        item {
-            OutlinedTextField(
-                value = packageName,
-                onValueChange = { viewModel.updateTargetPackageName(it) },
-                label = { Text("目标包名") },
-                placeholder = { Text("com.example.app") },
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Default.Apps, null) }
-            )
-        }
-        
-        // 启动应用
-        item {
-            Button(
-                onClick = { viewModel.startApp(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary
-                )
-            ) {
-                Icon(Icons.Default.PlayArrow, null)
-                Spacer(Modifier.width(8.dp))
-                Text("启动应用")
-            }
-        }
-        
-        // 暂停应用
-        item {
-            Button(
-                onClick = { viewModel.pauseApp(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary
-                )
-            ) {
-                Icon(Icons.Default.Pause, null)
-                Spacer(Modifier.width(8.dp))
-                Text("暂停应用")
-            }
-        }
-        
-        // 清除数据
-        item {
-            Button(
-                onClick = { viewModel.clearAppData(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.error
-                )
-            ) {
-                Icon(Icons.Default.Delete, null)
-                Spacer(Modifier.width(8.dp))
-                Text("清除应用数据")
-            }
-        }
-        
-        item { SectionTitle("应用信息") }
-        
-        // 高级应用设置
-        item {
-            ActionCard(
-                title = "高级应用设置",
-                description = "查看所有应用高级设置",
-                icon = Icons.Default.Settings,
-                onClick = { viewModel.openAdvancedAppsSettings(context) }
-            )
-        }
-        
-        // 运行服务
-        item {
-            ActionCard(
-                title = "运行服务",
-                description = "查看运行中的服务",
-                icon = Icons.Default.Sync,
-                onClick = { viewModel.openRunningServices(context) }
-            )
-        }
-        
-        // 存储使用
-        item {
-            ActionCard(
-                title = "存储使用",
-                description = "查看存储使用情况",
-                icon = Icons.Default.Storage,
-                onClick = { viewModel.openStorageUse(context) }
-            )
-        }
-        
-        // 已安装应用详情
-        item {
-            ActionCard(
-                title = "已安装应用详情",
-                description = "查看应用详情",
-                icon = Icons.Default.Info,
-                onClick = { viewModel.openInstalledAppDetails(context) }
-            )
-        }
-        
-        // 设备管理器设置
-        item {
-            ActionCard(
-                title = "设备管理器设置",
-                description = "打开设备管理器",
-                icon = Icons.Default.AdminPanelSettings,
-                onClick = { viewModel.openDeviceAdminSettings(context) }
-            )
-        }
-        
-        item { SectionTitle("系统日志") }
-        
-        // Logcat 日志
-        item {
-            Button(
-                onClick = { 
-                    viewModel.fetchLogcat(context)
-                    showLogcatDialog = true
-                },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
-                )
-            ) {
-                Icon(Icons.Default.Terminal, null)
-                Spacer(Modifier.width(8.dp))
-                Text("查看 Logcat 日志")
-            }
-        }
-        
-        // 清空日志
-        item {
-            Button(
-                onClick = { viewModel.clearLogcat() },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
-            ) {
-                Icon(Icons.Default.Clear, null)
-                Spacer(Modifier.width(8.dp))
-                Text("清空日志")
-            }
-        }
-    }
-    
-    // Logcat 对话框
-    if (showLogcatDialog) {
-        AlertDialog(
-            onDismissRequest = { showLogcatDialog = false },
-            title = { Text("Logcat 日志") },
-            text = {
-                SelectionContainer {
-                    Text(
-                        text = logcatLogs.ifEmpty { "暂无日志" },
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        modifier = Modifier
-                            .height(300.dp)
-                            .verticalScroll(rememberScrollState())
-                    )
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { showLogcatDialog = false }) {
-                    Text("关闭")
-                }
-            }
-        )
-    }
-}
-
-// ============ 家长控制页面 ============
-@Composable
-fun ParentControlScreen(viewModel: MainViewModel, context: Context) {
-    val parentModeEnabled by viewModel.parentModeEnabled.collectAsState()
-    val dreamModeEnabled by viewModel.dreamModeEnabled.collectAsState()
-    var newPassword by remember { mutableStateOf("") }
     var showPasswordDialog by remember { mutableStateOf(false) }
+    var showBypassDialog by remember { mutableStateOf(false) }
+    var showPlainDialog by remember { mutableStateOf(false) }
     
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        item { SectionTitle("模式切换") }
-        
-        // 家长模式
         item {
-            ToggleCard(
-                title = "家长模式",
-                description = "切换家长控制模式",
-                icon = Icons.Default.Shield,
-                isEnabled = parentModeEnabled,
-                onToggle = { viewModel.toggleParentMode(context) }
+            SectionTitle("密码获取工具")
+        }
+        
+        item {
+            SectionDescription(
+                "利用 ValidatePassword 组件的安全漏洞获取密码信息"
             )
         }
         
-        // Dream 模式
         item {
-            ToggleCard(
-                title = "Dream 模式",
-                description = "切换 Dream 学习模式",
-                icon = Icons.Default.School,
-                isEnabled = dreamModeEnabled,
-                onToggle = { viewModel.toggleDreamMode(context) }
-            )
+            Divider(color = MaterialTheme.colorScheme.outlineVariant)
         }
         
-        item { SectionTitle("密码管理") }
-        
-        // 修改密码
         item {
-            Button(
-                onClick = { showPasswordDialog = true },
-                modifier = Modifier.fillMaxWidth()
+            SectionTitle("漏洞 1: 密码存在性检查")
+        }
+        
+        item {
+            VulnerabilityCard(
+                title = "判断密码是否存在",
+                description = "通过 JUDGE_PASSWORD_EXISTS Action 查询家长模式密码是否已设置",
+                severity = "HIGH",
+                cvss = "7.5",
+                icon = Icons.Default.Lock
             ) {
-                Icon(Icons.Default.Lock, null)
-                Spacer(Modifier.width(8.dp))
-                Text("修改密码")
+                viewModel.checkPasswordExists(context)
             }
         }
         
-        // 重置密码
         item {
-            Button(
-                onClick = { viewModel.resetPassword(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary
+            if (passwordExists.isNotEmpty()) {
+                ResultCard(
+                    title = "检查结果",
+                    content = passwordExists
                 )
+            }
+        }
+        
+        item {
+            Divider(color = MaterialTheme.colorScheme.outlineVariant)
+        }
+        
+        item {
+            SectionTitle("漏洞 2: 密码验证绕过")
+        }
+        
+        item {
+            VulnerabilityCard(
+                title = "尝试绕过密码验证",
+                description = "通过 INPUT_PASSWORD Action 和特定参数尝试绕过密码验证",
+                severity = "CRITICAL",
+                cvss = "9.1",
+                icon = Icons.Default.Security
             ) {
-                Icon(Icons.Default.LockReset, null)
-                Spacer(Modifier.width(8.dp))
-                Text("重置密码")
+                viewModel.attemptBypass(context)
             }
         }
         
-        // 验证密码
         item {
-            Button(
-                onClick = { viewModel.validatePassword(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
+            if (bypassResult.isNotEmpty()) {
+                ResultCard(
+                    title = "绕过结果",
+                    content = bypassResult
                 )
+            }
+        }
+        
+        item {
+            Divider(color = MaterialTheme.colorScheme.outlineVariant)
+        }
+        
+        item {
+            SectionTitle("漏洞 3: 明文密码提取")
+        }
+        
+        item {
+            VulnerabilityCard(
+                title = "提取明文密码",
+                description = "直接从 AppContentProvider 数据库读取明文密码",
+                severity = "HIGH",
+                cvss = "7.5",
+                icon = Icons.Default.Visibility
             ) {
-                Icon(Icons.Default.VerifiedUser, null)
-                Spacer(Modifier.width(8.dp))
-                Text("验证密码")
+                viewModel.extractPlainPassword(context)
             }
         }
         
-        item { SectionTitle("其他功能") }
-        
-        // 激活
         item {
-            ActionCard(
-                title = "激活",
-                description = "打开激活页面",
-                icon = Icons.Default.CheckCircle,
-                onClick = { viewModel.openActivation(context) }
-            )
-        }
-        
-        // 提醒记录
-        item {
-            ActionCard(
-                title = "提醒记录",
-                description = "查看提醒记录",
-                icon = Icons.Default.Notifications,
-                onClick = { viewModel.openReminderRecord(context) }
-            )
-        }
-        
-        // 小程序申请
-        item {
-            ActionCard(
-                title = "小程序申请",
-                description = "打开小程序申请",
-                icon = Icons.Default.AppRegistration,
-                onClick = { viewModel.openAppletApply(context) }
-            )
-        }
-        
-        // 扫描笔数据
-        item {
-            ActionCard(
-                title = "扫描笔数据",
-                description = "查看扫描笔数据",
-                icon = Icons.Default.Edit,
-                onClick = { viewModel.openScanPenData(context) }
-            )
-        }
-        
-        // 弹窗推送
-        item {
-            ActionCard(
-                title = "弹窗推送",
-                description = "打开弹窗推送",
-                icon = Icons.Default.Message,
-                onClick = { viewModel.openPopupPushMessage(context) }
-            )
-        }
-        
-        // 大图查看
-        item {
-            ActionCard(
-                title = "大图查看",
-                description = "打开大图查看",
-                icon = Icons.Default.Image,
-                onClick = { viewModel.openBigImage(context) }
-            )
-        }
-        
-        // 关闭应用提示
-        item {
-            ActionCard(
-                title = "关闭应用提示",
-                description = "打开关闭应用提示",
-                icon = Icons.Default.Close,
-                onClick = { viewModel.openCloseAppHint(context) }
-            )
-        }
-
-        // WiFi设置
-        item {
-            ActionCard(
-                title = "WiFi设置",
-                description = "打开WiFi设置",
-                icon = Icons.Default.Wifi,
-                onClick = { viewModel.openWifiSetting(context) }
-            )
-        }
-
-        // NSFW卸载提示
-        item {
-            ActionCard(
-                title = "NSFW卸载提示",
-                description = "打开NSFW应用卸载提示",
-                icon = Icons.Default.Warning,
-                onClick = { viewModel.openNsfwUninstallTips(context) }
-            )
-        }
-
-        // 帮助
-        item {
-            ActionCard(
-                title = "帮助",
-                description = "打开帮助页面",
-                icon = Icons.Default.Help,
-                onClick = { viewModel.openHelp(context) }
-            )
-        }
-    }
-    
-    // 修改密码对话框
-    if (showPasswordDialog) {
-        AlertDialog(
-            onDismissRequest = { showPasswordDialog = false },
-            title = { Text("修改密码") },
-            text = {
-                OutlinedTextField(
-                    value = newPassword,
-                    onValueChange = { newPassword = it },
-                    label = { Text("新密码") },
-                    singleLine = true
+            if (plainPassword.isNotEmpty()) {
+                ResultCard(
+                    title = "密码数据",
+                    content = plainPassword
                 )
-            },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        viewModel.changePassword(context, newPassword)
-                        showPasswordDialog = false
-                        newPassword = ""
-                    }
-                ) {
-                    Text("确定")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showPasswordDialog = false }) {
-                    Text("取消")
-                }
             }
-        )
+        }
+        
+        item {
+            Spacer(modifier = Modifier.height(32.dp))
+        }
+        
+        item {
+            SecurityWarning()
+        }
     }
 }
 
-// ============ 数据服务页面 ============
 @Composable
-fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
-    val serverUrl by viewModel.customServerUrl.collectAsState()
-    val uploadData by viewModel.customUploadData.collectAsState()
-    val recordingEnabled by viewModel.recordingEnabled.collectAsState()
-    val appData by viewModel.appData.collectAsState()
-    val sqliteData by viewModel.sqliteData.collectAsState()
-    var showAppDataDialog by remember { mutableStateOf(false) }
-    var showSqliteDataDialog by remember { mutableStateOf(false) }
-    val showCustomServerDialog by viewModel.showCustomServerDialog.collectAsState()
-    val selectedApiServer by viewModel.selectedApiServer.collectAsState()
-    var apiRequestData by remember { mutableStateOf("") }
-    var showApiServerSelector by remember { mutableStateOf(false) }
-    val showApiResultDialog by viewModel.showApiResultDialog.collectAsState()
-    val apiRequestResult by viewModel.apiRequestResult.collectAsState()
-    
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        item { SectionTitle("官方 API 接口") }
-        
-        // API 接口选择器
-        item {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer
-                )
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp)
-                ) {
-                    Text(
-                        "当前选择的 API",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    Text(
-                        selectedApiServer,
-                        style = MaterialTheme.typography.bodySmall,
-                        fontFamily = FontFamily.Monospace
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    Button(
-                        onClick = { showApiServerSelector = true },
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Icon(Icons.Default.Api, null)
-                        Spacer(Modifier.width(8.dp))
-                        Text("选择 API 接口")
-                    }
-                }
-            }
-        }
-        
-        // 自定义服务器（隐藏入口）
-        item {
-            Button(
-                onClick = { viewModel.showCustomServerDialog() },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary
-                )
-            ) {
-                Icon(Icons.Default.Add, null)
-                Spacer(Modifier.width(8.dp))
-                Text("添加自定义服务器")
-            }
-        }
-        
-        // 请求数据输入
-        item {
-            OutlinedTextField(
-                value = apiRequestData,
-                onValueChange = { apiRequestData = it },
-                label = { Text("请求数据") },
-                placeholder = { Text("输入请求参数 (JSON)" ) },
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Default.Code, null) },
-                minLines = 3,
-                maxLines = 5
-            )
-        }
-        
-        // 发送请求
-        item {
-            Button(
-                onClick = { viewModel.sendApiRequest(context, apiRequestData) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary
-                )
-            ) {
-                Icon(Icons.Default.Send, null)
-                Spacer(Modifier.width(8.dp))
-                Text("发送请求")
-            }
-        }
-        
-        item { SectionTitle("数据上传") }
-        
-        // 服务器地址
-        item {
-            OutlinedTextField(
-                value = serverUrl,
-                onValueChange = { viewModel.updateCustomServerUrl(it) },
-                label = { Text("服务器地址") },
-                placeholder = { Text("http://your-server.com") },
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Default.Storage, null) }
-            )
-        }
-        
-        // 上传数据
-        item {
-            OutlinedTextField(
-                value = uploadData,
-                onValueChange = { viewModel.updateCustomUploadData(it) },
-                label = { Text("上传数据") },
-                placeholder = { Text("自定义上传内容") },
-                modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Default.CloudUpload, null) },
-                minLines = 3,
-                maxLines = 5
-            )
-        }
-        
-        // 发送数据
-        item {
-            Button(
-                onClick = { viewModel.uploadCustomData(context) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Icon(Icons.Default.CloudUpload, null)
-                Spacer(Modifier.width(8.dp))
-                Text("发送数据")
-            }
-        }
-        
-        // 同步数据
-        item {
-            Button(
-                onClick = { viewModel.syncData(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary
-                )
-            ) {
-                Icon(Icons.Default.Sync, null)
-                Spacer(Modifier.width(8.dp))
-                Text("同步数据")
-            }
-        }
-
-        // 上传记录
-        item {
-            Button(
-                onClick = { viewModel.uploadRecord(context) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
-                )
-            ) {
-                Icon(Icons.Default.UploadFile, null)
-                Spacer(Modifier.width(8.dp))
-                Text("上传记录")
-            }
-        }
-        
-        item { SectionTitle("录音功能") }
-        
-        // 录音开关
-        item {
-            ToggleCard(
-                title = "录音",
-                description = if (recordingEnabled) "正在录音" else "开始录音",
-                icon = Icons.Default.Mic,
-                isEnabled = recordingEnabled,
-                onToggle = {
-                    if (recordingEnabled) {
-                        viewModel.stopRecording(context)
-                    } else {
-                        viewModel.startRecording(context)
-                    }
-                }
-            )
-        }
-        
-        item { SectionTitle("数据查询") }
-        
-        // 应用数据
-        item {
-            Button(
-                onClick = { 
-                    viewModel.queryAppData(context)
-                    showAppDataDialog = true
-                },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
-                )
-            ) {
-                Icon(Icons.Default.Storage, null)
-                Spacer(Modifier.width(8.dp))
-                Text("查询应用数据")
-            }
-        }
-        
-        // SQLite 数据
-        item {
-            Button(
-                onClick = { 
-                    viewModel.querySqliteData(context)
-                    showSqliteDataDialog = true
-                },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
-                )
-            ) {
-                Icon(Icons.Default.Storage, null)
-                Spacer(Modifier.width(8.dp))
-                Text("查询 SQLite 数据")
-            }
-        }
-
-        // 共享数据
-        item {
-            Button(
-                onClick = { 
-                    viewModel.querySharedData(context)
-                    showAppDataDialog = true
-                },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
-                )
-            ) {
-                Icon(Icons.Default.Storage, null)
-                Spacer(Modifier.width(8.dp))
-                Text("查询共享数据")
-            }
-        }
-    }
-    
-    // API 服务器选择对话框
-    if (showApiServerSelector) {
-        AlertDialog(
-            onDismissRequest = { showApiServerSelector = false },
-            title = { Text("选择 API 接口") },
-            text = {
-                LazyColumn(
-                    modifier = Modifier.height(400.dp)
-                ) {
-                    viewModel.apiServers.forEach { server ->
-                        item {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clickable {
-                                        viewModel.selectApiServer(server)
-                                        showApiServerSelector = false
-                                    }
-                                    .padding(8.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(
-                                    selected = selectedApiServer == server,
-                                    onClick = {
-                                        viewModel.selectApiServer(server)
-                                        showApiServerSelector = false
-                                    }
-                                )
-                                Spacer(Modifier.width(8.dp))
-                                Text(
-                                    server,
-                                    style = MaterialTheme.typography.bodySmall,
-                                    fontFamily = FontFamily.Monospace
-                                )
-                            }
-                        }
-                    }
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { showApiServerSelector = false }) {
-                    Text("关闭")
-                }
-            }
-        )
-    }
-    
-    // 自定义服务器对话框
-    if (showCustomServerDialog) {
-        var customUrl by remember { mutableStateOf("") }
-        AlertDialog(
-            onDismissRequest = { viewModel.hideCustomServerDialog() },
-            title = { Text("添加自定义服务器") },
-            text = {
-                OutlinedTextField(
-                    value = customUrl,
-                    onValueChange = { customUrl = it },
-                    label = { Text("服务器 URL") },
-                    placeholder = { Text("http://custom-server.com/api" ) },
-                    singleLine = true
-                )
-            },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        if (customUrl.isNotEmpty()) {
-                            viewModel.selectApiServer(customUrl)
-                            viewModel.hideCustomServerDialog()
-                        }
-                    }
-                ) {
-                    Text("添加")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { viewModel.hideCustomServerDialog() }) {
-                    Text("取消")
-                }
-            }
-        )
-    }
-    
-    // API 结果对话框
-    if (showApiResultDialog) {
-        AlertDialog(
-            onDismissRequest = { viewModel.hideApiResultDialog() },
-            title = { Text("请求结果") },
-            text = {
-                SelectionContainer {
-                    Text(
-                        text = apiRequestResult,
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        modifier = Modifier
-                            .height(300.dp)
-                            .verticalScroll(rememberScrollState())
-                    )
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { viewModel.hideApiResultDialog() }) {
-                    Text("关闭")
-                }
-            }
-        )
-    }
-    
-    // 应用数据对话框
-    if (showAppDataDialog) {
-        AlertDialog(
-            onDismissRequest = { showAppDataDialog = false },
-            title = { Text("应用数据") },
-            text = {
-                SelectionContainer {
-                    Text(
-                        text = appData.ifEmpty { "暂无数据" },
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        modifier = Modifier
-                            .height(300.dp)
-                            .verticalScroll(rememberScrollState())
-                    )
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { showAppDataDialog = false }) {
-                    Text("关闭")
-                }
-            }
-        )
-    }
-    
-    // SQLite 数据对话框
-    if (showSqliteDataDialog) {
-        AlertDialog(
-            onDismissRequest = { showSqliteDataDialog = false },
-            title = { Text("SQLite 数据") },
-            text = {
-                SelectionContainer {
-                    Text(
-                        text = sqliteData.ifEmpty { "暂无数据" },
-                        fontFamily = FontFamily.Monospace,
-                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
-                        modifier = Modifier
-                            .height(300.dp)
-                            .verticalScroll(rememberScrollState())
-                    )
-                }
-            },
-            confirmButton = {
-                TextButton(onClick = { showSqliteDataDialog = false }) {
-                    Text("关闭")
-                }
-            }
-        )
-    }
-}
-
-// ============ 组件 ============
-@Composable
-fun SectionTitle(title: String) {
+fun SectionTitle(text: String) {
     Text(
-        title,
-        style = MaterialTheme.typography.titleLarge,
+        text = text,
+        fontSize = 20.sp,
         fontWeight = FontWeight.Bold,
         color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.padding(vertical = 4.dp)
+        modifier = Modifier.padding(vertical = 8.dp)
     )
 }
 
 @Composable
-fun ActionCard(
+fun SectionDescription(text: String) {
+    Text(
+        text = text,
+        fontSize = 14.sp,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(bottom = 8.dp)
+    )
+}
+
+@Composable
+fun VulnerabilityCard(
     title: String,
     description: String,
+    severity: String,
+    cvss: String,
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     onClick: () -> Unit
 ) {
+    val severityColor = when (severity) {
+        "CRITICAL" -> Color(0xFFD32F2F)
+        "HIGH" -> Color(0xFFF57C00)
+        "MEDIUM" -> Color(0xFFFFA000)
+        else -> Color(0xFF1976D2)
+    }
+    
     Card(
         modifier = Modifier.fillMaxWidth(),
-        onClick = onClick,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
+        shape = RoundedCornerShape(12.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
-        Row(
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .padding(16.dp)
         ) {
-            Icon(
-                icon,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.size(24.dp)
-            )
-            Spacer(Modifier.width(16.dp))
-            Column(Modifier.weight(1f)) {
-                Text(
-                    title,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Medium
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = severityColor,
+                    modifier = Modifier.size(32.dp)
                 )
-                Text(
-                    description,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = title,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    
+                    Text(
+                        text = description,
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 4.dp)
+                    )
+                }
+            }
+            
+            Row(
+                modifier = Modifier.padding(top = 12.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                AssistChip(
+                    onClick = {},
+                    label = { Text(severity, fontSize = 11.sp) },
+                    colors = AssistChipDefaults.assistChipColors(
+                        containerColor = severityColor.copy(alpha = 0.1f),
+                        labelColor = severityColor
+                    )
+                )
+                
+                AssistChip(
+                    onClick = {},
+                    label = { Text("CVSS: $cvss", fontSize = 11.sp) },
+                    colors = AssistChipDefaults.assistChipColors(
+                        containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                        labelColor = MaterialTheme.colorScheme.onSecondaryContainer
+                    )
                 )
             }
-            Icon(
-                Icons.Default.ChevronRight,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            
+            Button(
+                onClick = onClick,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
+            ) {
+                Icon(Icons.Default.ExpandMore, null)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("执行")
+            }
+        }
+    }
+}
+
+@Composable
+fun ResultCard(
+    title: String,
+    content: String
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.secondaryContainer
+        )
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+            Text(
+                text = title,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSecondaryContainer
+            )
+            
+            Spacer(modifier = Modifier.height(8.dp))
+            
+            Text(
+                text = content,
+                fontSize = 12.sp,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .verticalScroll(rememberScrollState())
+                    .padding(8.dp)
             )
         }
     }
 }
 
 @Composable
-fun ToggleCard(
-    title: String,
-    description: String,
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    isEnabled: Boolean,
-    onToggle: () -> Unit
-) {
+fun SecurityWarning() {
     Card(
         modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isEnabled) 
-                MaterialTheme.colorScheme.primaryContainer 
-            else 
-                MaterialTheme.colorScheme.surface
+            containerColor = Color(0xFFFFEBEE)
         )
     ) {
-        Row(
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .padding(16.dp)
         ) {
-            Icon(
-                icon,
-                contentDescription = null,
-                tint = if (isEnabled) 
-                    MaterialTheme.colorScheme.primary 
-                else 
-                    MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(24.dp)
-            )
-            Spacer(Modifier.width(16.dp))
-            Column(Modifier.weight(1f)) {
-                Text(
-                    title,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Medium,
-                    color = if (isEnabled) 
-                        MaterialTheme.colorScheme.onPrimaryContainer 
-                    else 
-                        MaterialTheme.colorScheme.onSurface
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Warning,
+                    contentDescription = null,
+                    tint = Color(0xFFD32F2F)
                 )
+                
                 Text(
-                    description,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = if (isEnabled) 
-                        MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f) 
-                    else 
-                        MaterialTheme.colorScheme.onSurfaceVariant
+                    text = "安全警告",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFFD32F2F)
                 )
             }
-            Switch(
-                checked = isEnabled,
-                onCheckedChange = { onToggle() }
+            
+            Spacer(modifier = Modifier.height(8.dp))
+            
+            Text(
+                text = "本工具仅用于安全研究和教育目的。利用这些漏洞可能违反设备使用条款，请确保您有合法授权。",
+                fontSize = 13.sp,
+                color = Color(0xFFB71C1C),
+                textAlign = TextAlign.Justify
             )
         }
     }
