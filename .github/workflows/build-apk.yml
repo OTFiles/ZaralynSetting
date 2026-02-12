@@ -87,6 +87,10 @@ jobs:
         echo "${{ secrets.OTF_JKS_BASE64 }}" | base64 -d > otf.jks
 
     - name: Build Release APK
+      env:
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       run: gradle assembleRelease --no-daemon --stacktrace
 
     - name: Rename APK
