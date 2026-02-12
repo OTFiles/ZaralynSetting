@@ -398,6 +398,32 @@ object ParentManagerHelper {
     }
 
     /**
+     * 生成所有可能的动态密码（支持时间窗口）
+     * Settings.apk 允许使用前后 3 分钟内的密码
+     *
+     * @return 所有可能的密码列表
+     */
+    fun generateAllPossiblePasswords(): List<String> {
+        val passwords = mutableListOf<String>()
+        val sdf = SimpleDateFormat("MMddHHmm", Locale.getDefault())
+        val currentTime = System.currentTimeMillis()
+
+        // 时间窗口：前后 3 分钟（-60s, 0s, +60s, +120s, +180s）
+        val timeOffsets = listOf(-60000, 0, 60000, 120000, 180000) // 毫秒
+
+        for (offset in timeOffsets) {
+            val time = currentTime + offset
+            val date = java.util.Date(time)
+            val timeStr = sdf.format(date)
+            val password = timeStr.replace("0", "")
+            passwords.add(password)
+            Log.d(TAG, "生成密码 - 时间偏移: ${offset / 1000}秒 -> 时间: $timeStr -> 密码: $password")
+        }
+
+        return passwords
+    }
+
+    /**
      * 关机设备
      *
      * @param context 上下文
@@ -462,6 +488,7 @@ object ParentManagerHelper {
     /**
      * 自动获取密码后关机
      * 使用动态密码（基于时间的密码）而不是从 ParentManager 读取的固定密码
+     * 支持 3 分钟时间窗口，依次尝试所有可能的密码
      *
      * @param context 上下文
      * @return 是否成功发送关机命令
@@ -469,16 +496,28 @@ object ParentManagerHelper {
     fun shutdownWithAutoPassword(context: Context): Boolean {
         Log.d(TAG, "准备自动获取密码并关机...")
 
-        // 使用动态密码生成
-        val password = generateDynamicPassword()
+        // 生成所有可能的密码（支持时间窗口）
+        val passwords = generateAllPossiblePasswords()
+        Log.d(TAG, "共生成 ${passwords.size} 个可能的密码")
 
-        Log.d(TAG, "成功生成动态密码: $password，准备关机")
-        return shutdownDevice(context, password)
+        // 尝试使用每个密码
+        for (password in passwords) {
+            Log.d(TAG, "尝试使用密码: $password")
+            val result = shutdownDevice(context, password)
+            if (result) {
+                Log.d(TAG, "使用密码 $password 成功发送关机命令")
+                return true
+            }
+        }
+
+        Log.e(TAG, "所有密码尝试均失败")
+        return false
     }
 
     /**
      * 自动获取密码后重启
      * 使用动态密码（基于时间的密码）而不是从 ParentManager 读取的固定密码
+     * 支持 3 分钟时间窗口，依次尝试所有可能的密码
      *
      * @param context 上下文
      * @return 是否成功发送重启命令
@@ -486,10 +525,21 @@ object ParentManagerHelper {
     fun rebootWithAutoPassword(context: Context): Boolean {
         Log.d(TAG, "准备自动获取密码并重启...")
 
-        // 使用动态密码生成
-        val password = generateDynamicPassword()
+        // 生成所有可能的密码（支持时间窗口）
+        val passwords = generateAllPossiblePasswords()
+        Log.d(TAG, "共生成 ${passwords.size} 个可能的密码")
 
-        Log.d(TAG, "成功生成动态密码: $password，准备重启")
-        return rebootDevice(context, password)
+        // 尝试使用每个密码
+        for (password in passwords) {
+            Log.d(TAG, "尝试使用密码: $password")
+            val result = rebootDevice(context, password)
+            if (result) {
+                Log.d(TAG, "使用密码 $password 成功发送重启命令")
+                return true
+            }
+        }
+
+        Log.e(TAG, "所有密码尝试均失败")
+        return false
     }
 }
