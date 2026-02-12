@@ -235,7 +235,7 @@ class MainActivity : AppCompatActivity() {
     private fun showPasswordInputDialog(operation: String, callback: (String) -> Unit) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("输入密码")
-        builder.setMessage("请输入家长密码以执行$operation操作")
+        builder.setMessage("请输入家长密码以执行$operation 操作")
 
         val input = android.widget.EditText(this)
         input.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
