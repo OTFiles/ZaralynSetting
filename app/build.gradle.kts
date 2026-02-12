@@ -17,7 +17,12 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("otf.jks")
+            val keystoreFile = File(rootDir, "otf.jks")
+            if (keystoreFile.exists()) {
+                storeFile = keystoreFile
+            } else {
+                storeFile = file("otf.jks")
+            }
             storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "OTFiles2024"
             keyAlias = System.getenv("KEY_ALIAS") ?: "OTFiles"
             keyPassword = System.getenv("KEY_PASSWORD") ?: "OTFiles2024"
