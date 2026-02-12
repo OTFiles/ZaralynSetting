@@ -6,6 +6,9 @@ import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
 import android.util.Log
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 /**
  * ParentManager 辅助类
@@ -374,6 +377,27 @@ object ParentManagerHelper {
     private const val ACTION_REBOOT = "reboot"
 
     /**
+     * 生成动态密码
+     * Settings.apk 使用基于时间的动态密码，格式为 MMddHHmm 并移除所有 0
+     *
+     * 示例：
+     * - 时间：2026-02-12 14:45:00
+     * - 格式化：02121445（MMddHHmm）
+     * - 替换0：2121445
+     * - 密码：2121445
+     *
+     * @return 动态生成的密码
+     */
+    fun generateDynamicPassword(): String {
+        val calendar = Calendar.getInstance()
+        val sdf = SimpleDateFormat("MMddHHmm", Locale.getDefault())
+        val timeStr = sdf.format(calendar.time)
+        val password = timeStr.replace("0", "")
+        Log.d(TAG, "生成动态密码 - 时间: $timeStr -> 密码: $password")
+        return password
+    }
+
+    /**
      * 关机设备
      *
      * @param context 上下文
@@ -437,6 +461,7 @@ object ParentManagerHelper {
 
     /**
      * 自动获取密码后关机
+     * 使用动态密码（基于时间的密码）而不是从 ParentManager 读取的固定密码
      *
      * @param context 上下文
      * @return 是否成功发送关机命令
@@ -444,20 +469,16 @@ object ParentManagerHelper {
     fun shutdownWithAutoPassword(context: Context): Boolean {
         Log.d(TAG, "准备自动获取密码并关机...")
 
-        // 首先获取家长密码
-        val password = readParentPassword(context)
+        // 使用动态密码生成
+        val password = generateDynamicPassword()
 
-        if (password == null) {
-            Log.e(TAG, "无法获取家长密码，关机失败")
-            return false
-        }
-
-        Log.d(TAG, "成功获取家长密码，准备关机")
+        Log.d(TAG, "成功生成动态密码: $password，准备关机")
         return shutdownDevice(context, password)
     }
 
     /**
      * 自动获取密码后重启
+     * 使用动态密码（基于时间的密码）而不是从 ParentManager 读取的固定密码
      *
      * @param context 上下文
      * @return 是否成功发送重启命令
@@ -465,15 +486,10 @@ object ParentManagerHelper {
     fun rebootWithAutoPassword(context: Context): Boolean {
         Log.d(TAG, "准备自动获取密码并重启...")
 
-        // 首先获取家长密码
-        val password = readParentPassword(context)
+        // 使用动态密码生成
+        val password = generateDynamicPassword()
 
-        if (password == null) {
-            Log.e(TAG, "无法获取家长密码，重启失败")
-            return false
-        }
-
-        Log.d(TAG, "成功获取家长密码，准备重启")
+        Log.d(TAG, "成功生成动态密码: $password，准备重启")
         return rebootDevice(context, password)
     }
 }
