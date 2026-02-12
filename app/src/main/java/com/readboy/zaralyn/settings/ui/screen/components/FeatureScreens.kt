@@ -1,3 +1,5 @@
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 package com.readboy.zaralyn.settings.ui.screen.components
 
 import androidx.compose.foundation.layout.*
