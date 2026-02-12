@@ -144,6 +144,67 @@ fun SystemSettingsScreen(viewModel: MainViewModel, context: Context) {
                 onClick = { viewModel.shutdownDevice(context) }
             )
         }
+
+        // 电源保持
+        item {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Button(
+                    onClick = { viewModel.enablePowerOffKeeper(context) },
+                    modifier = Modifier.weight(1f),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary
+                    )
+                ) {
+                    Icon(Icons.Default.Power, null)
+                    Spacer(Modifier.width(4.dp))
+                    Text("启用电源保持")
+                }
+                Button(
+                    onClick = { viewModel.disablePowerOffKeeper(context) },
+                    modifier = Modifier.weight(1f),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.secondary
+                    )
+                ) {
+                    Icon(Icons.Default.PowerOff, null)
+                    Spacer(Modifier.width(4.dp))
+                    Text("禁用电源保持")
+                }
+            }
+        }
+
+        // 自动安装卸载
+        item {
+            ActionCard(
+                title = "自动安装卸载",
+                description = "打开自动安装卸载页面",
+                icon = Icons.Default.InstallMobile,
+                onClick = { viewModel.openAutoInstallUninstallApk(context) }
+            )
+        }
+
+        // 预安装对话框
+        item {
+            ActionCard(
+                title = "预安装对话框",
+                description = "打开预安装对话框",
+                icon = Icons.Default.InstallMobile,
+                onClick = { viewModel.openPreinstallDialog(context) }
+            )
+        }
+
+        // 设备凭据确认
+        item {
+            ActionCard(
+                title = "设备凭据确认",
+                description = "打开设备凭据确认",
+                icon = Icons.Default.Fingerprint,
+                onClick = { viewModel.openConfirmCredential(context) }
+            )
+        }
     }
 }
 
@@ -511,6 +572,36 @@ fun ParentControlScreen(viewModel: MainViewModel, context: Context) {
                 onClick = { viewModel.openCloseAppHint(context) }
             )
         }
+
+        // WiFi设置
+        item {
+            ActionCard(
+                title = "WiFi设置",
+                description = "打开WiFi设置",
+                icon = Icons.Default.Wifi,
+                onClick = { viewModel.openWifiSetting(context) }
+            )
+        }
+
+        // NSFW卸载提示
+        item {
+            ActionCard(
+                title = "NSFW卸载提示",
+                description = "打开NSFW应用卸载提示",
+                icon = Icons.Default.Warning,
+                onClick = { viewModel.openNsfwUninstallTips(context) }
+            )
+        }
+
+        // 帮助
+        item {
+            ActionCard(
+                title = "帮助",
+                description = "打开帮助页面",
+                icon = Icons.Default.Help,
+                onClick = { viewModel.openHelp(context) }
+            )
+        }
     }
     
     // 修改密码对话框
@@ -703,6 +794,21 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
                 Text("同步数据")
             }
         }
+
+        // 上传记录
+        item {
+            Button(
+                onClick = { viewModel.uploadRecord(context) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.tertiary
+                )
+            ) {
+                Icon(Icons.Default.UploadFile, null)
+                Spacer(Modifier.width(8.dp))
+                Text("上传记录")
+            }
+        }
         
         item { SectionTitle("录音功能") }
         
@@ -758,6 +864,24 @@ fun DataServiceScreen(viewModel: MainViewModel, context: Context) {
                 Icon(Icons.Default.Storage, null)
                 Spacer(Modifier.width(8.dp))
                 Text("查询 SQLite 数据")
+            }
+        }
+
+        // 共享数据
+        item {
+            Button(
+                onClick = { 
+                    viewModel.querySharedData(context)
+                    showAppDataDialog = true
+                },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.tertiary
+                )
+            ) {
+                Icon(Icons.Default.Storage, null)
+                Spacer(Modifier.width(8.dp))
+                Text("查询共享数据")
             }
         }
     }
