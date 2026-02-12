@@ -15,6 +15,15 @@ android {
         versionName = "1.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("otf.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "OTFiles2024"
+            keyAlias = System.getenv("KEY_ALIAS") ?: "OTFiles"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "OTFiles2024"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -22,6 +31,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
