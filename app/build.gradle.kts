@@ -23,9 +23,9 @@ android {
             } else {
                 storeFile = file("otf.jks")
             }
-            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "OTFiles2024"
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "OTFlies-ABC345abc"
             keyAlias = System.getenv("KEY_ALIAS") ?: "OTFiles"
-            keyPassword = System.getenv("KEY_PASSWORD") ?: "OTFiles2024"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "OTFlies-ABC345abc"
         }
     }
 
