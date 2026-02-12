@@ -18,4 +18,9 @@
     <string name="failed">失败</string>
     <string name="confirm_delete">确认删除</string>
     <string name="confirm_delete_message">确定要删除 %s 吗？</string>
+
+    <!-- 新增功能页面标签 -->
+    <string name="tab_parent_password">家长密码</string>
+    <string name="tab_database">数据库</string>
+    <string name="tab_system_control">系统控制</string>
 </resources>
