@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
                     tab.text = getString(R.string.tab_system_control)
                     tab.setIcon(android.R.drawable.ic_dialog_alert)
                 }
+                6 -> {
+                    tab.text = "漏洞利用"
+                    tab.setIcon(android.R.drawable.ic_menu_info_details)
+                }
             }
         }.attach()
     }

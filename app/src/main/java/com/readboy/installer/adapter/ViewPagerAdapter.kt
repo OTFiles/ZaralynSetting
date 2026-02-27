@@ -8,6 +8,7 @@ import com.readboy.installer.PackageListFragment
 import com.readboy.installer.ParentPasswordFragment
 import com.readboy.installer.SqliteDatabaseFragment
 import com.readboy.installer.SystemControlFragment
+import com.readboy.installer.VulnerabilityExploitFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
@@ -17,7 +18,8 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
         PackageListFragment.newInstance(false),
         ParentPasswordFragment(),
         SqliteDatabaseFragment(),
-        SystemControlFragment()
+        SystemControlFragment(),
+        VulnerabilityExploitFragment()
     )
 
     override fun getItemCount(): Int = fragments.size
