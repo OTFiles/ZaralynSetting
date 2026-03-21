@@ -50,8 +50,13 @@ class PackageListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupRecyclerView()
-        loadPackages()
+        try {
+            setupRecyclerView()
+            loadPackages()
+        } catch (e: Exception) {
+            android.util.Log.e("PackageListFragment", "初始化失败", e)
+            Toast.makeText(requireContext(), "初始化失败: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setupRecyclerView() {
@@ -66,15 +71,22 @@ class PackageListFragment : Fragment() {
     }
 
     private fun loadPackages() {
-        val packages = ProviderHelper.getPackageList(requireContext(), isWhitelist)
+        try {
+            val packages = ProviderHelper.getPackageList(requireContext(), isWhitelist)
 
-        if (packages.isEmpty()) {
+            if (packages.isEmpty()) {
+                binding.tvEmpty.visibility = View.VISIBLE
+                binding.recyclerView.visibility = View.GONE
+            } else {
+                binding.tvEmpty.visibility = View.GONE
+                binding.recyclerView.visibility = View.VISIBLE
+                adapter.submitList(packages)
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("PackageListFragment", "加载包列表失败", e)
             binding.tvEmpty.visibility = View.VISIBLE
             binding.recyclerView.visibility = View.GONE
-        } else {
-            binding.tvEmpty.visibility = View.GONE
-            binding.recyclerView.visibility = View.VISIBLE
-            adapter.submitList(packages)
+            Toast.makeText(requireContext(), "加载失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -100,17 +112,22 @@ class PackageListFragment : Fragment() {
     }
 
     private fun addPackage(packageName: String) {
-        val success = ProviderHelper.addPackage(requireContext(), packageName, isWhitelist)
+        try {
+            val success = ProviderHelper.addPackage(requireContext(), packageName, isWhitelist)
 
-        if (success) {
-            Toast.makeText(
-                requireContext(),
-                "已添加${if (isWhitelist) "白名单" else "黑名单"}",
-                Toast.LENGTH_SHORT
-            ).show()
-            loadPackages()
-        } else {
-            Toast.makeText(requireContext(), "添加失败", Toast.LENGTH_SHORT).show()
+            if (success) {
+                Toast.makeText(
+                    requireContext(),
+                    "已添加${if (isWhitelist) "白名单" else "黑名单"}",
+                    Toast.LENGTH_SHORT
+                ).show()
+                loadPackages()
+            } else {
+                Toast.makeText(requireContext(), "添加失败", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("PackageListFragment", "添加包失败", e)
+            Toast.makeText(requireContext(), "添加失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 

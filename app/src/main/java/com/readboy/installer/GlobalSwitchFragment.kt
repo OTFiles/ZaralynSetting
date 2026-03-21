@@ -28,35 +28,57 @@ class GlobalSwitchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        switchInstall = binding.switchInstall
-        loadStatus()
+        try {
+            switchInstall = binding.switchInstall
+            loadStatus()
 
-        switchInstall.setOnCheckedChangeListener { _, isChecked ->
-            setInstallStatus(isChecked)
+            switchInstall.setOnCheckedChangeListener { _, isChecked ->
+                try {
+                    setInstallStatus(isChecked)
+                } catch (e: Exception) {
+                    android.util.Log.e("GlobalSwitchFragment", "设置安装状态失败", e)
+                    Toast.makeText(requireContext(), "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
+                    loadStatus()
+                }
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("GlobalSwitchFragment", "初始化失败", e)
+            Toast.makeText(requireContext(), "初始化失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun loadStatus() {
-        val isEnabled = ProviderHelper.getGlobalInstallState(requireContext())
-        switchInstall.isChecked = isEnabled
+        try {
+            val isEnabled = ProviderHelper.getGlobalInstallState(requireContext())
+            switchInstall.isChecked = isEnabled
 
-        val statusText = if (isEnabled) "已启用" else "已禁用"
-        binding.tvStatus.text = "$statusText - 当前状态"
+            val statusText = if (isEnabled) "已启用" else "已禁用"
+            binding.tvStatus.text = "$statusText - 当前状态"
+        } catch (e: Exception) {
+            android.util.Log.e("GlobalSwitchFragment", "加载状态失败", e)
+            binding.tvStatus.text = "加载失败"
+        }
     }
 
     private fun setInstallStatus(enabled: Boolean) {
-        val success = ProviderHelper.setGlobalInstallState(requireContext(), enabled)
+        try {
+            val success = ProviderHelper.setGlobalInstallState(requireContext(), enabled)
 
-        if (success) {
-            val statusText = if (enabled) "已启用" else "已禁用"
-            binding.tvStatus.text = "$statusText - 已更新"
-            Toast.makeText(
-                requireContext(),
-                if (enabled) "已允许安装" else "已禁止安装",
-                Toast.LENGTH_SHORT
-            ).show()
-        } else {
-            Toast.makeText(requireContext(), "操作失败", Toast.LENGTH_SHORT).show()
+            if (success) {
+                val statusText = if (enabled) "已启用" else "已禁用"
+                binding.tvStatus.text = "$statusText - 已更新"
+                Toast.makeText(
+                    requireContext(),
+                    if (enabled) "已允许安装" else "已禁止安装",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                Toast.makeText(requireContext(), "操作失败", Toast.LENGTH_SHORT).show()
+                loadStatus()
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("GlobalSwitchFragment", "设置安装状态失败", e)
+            Toast.makeText(requireContext(), "操作失败: ${e.message}", Toast.LENGTH_SHORT).show()
             loadStatus()
         }
     }
