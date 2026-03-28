@@ -95,6 +95,19 @@ class SqliteDatabaseFragment : Fragment() {
         }
     }
 
+    /**
+     * 获取当前选择的表名
+     * 优先使用selectedTable，如果为空则从actvTable.text获取
+     */
+    private fun getSelectedTable(): String? {
+        val tableName = selectedTable ?: actvTable.text?.toString()?.trim()
+        if (!tableName.isNullOrEmpty()) {
+            selectedTable = tableName
+            return tableName
+        }
+        return null
+    }
+
     private fun setupButtons() {
         // 获取所有表名按钮
         btnGetAllTables.setOnClickListener {
@@ -141,7 +154,7 @@ class SqliteDatabaseFragment : Fragment() {
         // 刷新表数据按钮
         btnRefreshTable.setOnClickListener {
             try {
-                val tableName = selectedTable
+                val tableName = getSelectedTable()
                 if (tableName.isNullOrEmpty()) {
                     showToast("请先选择一个表")
                     log("✗ 未选择表")
@@ -224,7 +237,7 @@ class SqliteDatabaseFragment : Fragment() {
     }
 
     private fun showInsertDialog() {
-        val tableName = selectedTable
+        val tableName = getSelectedTable()
         if (tableName.isNullOrEmpty()) {
             showToast("请先选择一个表")
             return
@@ -283,7 +296,7 @@ class SqliteDatabaseFragment : Fragment() {
     }
 
     private fun showUpdateDialog() {
-        val tableName = selectedTable
+        val tableName = getSelectedTable()
         if (tableName.isNullOrEmpty()) {
             showToast("请先选择一个表")
             return
@@ -358,7 +371,7 @@ class SqliteDatabaseFragment : Fragment() {
     }
 
     private fun showDeleteDialog() {
-        val tableName = selectedTable
+        val tableName = getSelectedTable()
         if (tableName.isNullOrEmpty()) {
             showToast("请先选择一个表")
             return
