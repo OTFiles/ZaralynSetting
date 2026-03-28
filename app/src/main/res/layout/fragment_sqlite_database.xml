@@ -45,8 +45,9 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:layout_marginStart="12dp"
                             android:text="数据库管理"
                             android:textColor="@color/on_surface"
@@ -116,7 +117,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- 操作按钮 -->
+            <!-- 查询操作 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -135,7 +136,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="操作"
+                        android:text="查询操作"
                         android:textColor="@color/on_surface"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -176,6 +177,97 @@
                             app:iconSize="18dp" />
 
                     </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCopyData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="复制数据为纯文本"
+                        android:textSize="14sp"
+                        app:icon="@drawable/ic_settings"
+                        app:iconGravity="start"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="12dp"
+                        app:iconSize="18dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 修改操作 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/surface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="修改操作"
+                        android:textColor="@color/on_surface"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnInsertData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="插入数据"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="8dp"
+                            app:icon="@drawable/ic_add"
+                            app:iconGravity="start"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="12dp"
+                            app:iconSize="18dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnUpdateData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="更新数据"
+                            android:textSize="14sp"
+                            android:layout_marginStart="8dp"
+                            app:icon="@drawable/ic_settings"
+                            app:iconGravity="start"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="12dp"
+                            app:iconSize="18dp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDeleteData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="删除数据"
+                        android:textSize="14sp"
+                        app:icon="@drawable/ic_delete"
+                        app:iconGravity="start"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="12dp"
+                        app:iconSize="18dp" />
 
                 </LinearLayout>
 
@@ -267,14 +359,31 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="操作日志"
-                        android:textColor="@color/on_surface"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="12dp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="操作日志"
+                            android:textColor="@color/on_surface"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnClearLog"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="清空"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
 
                     <ScrollView
                         android:layout_width="match_parent"

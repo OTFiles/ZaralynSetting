@@ -1,6 +1,9 @@
 package com.readboy.installer
 
+import android.content.ContentValues
+import android.content.Context
 import android.os.Bundle
+import android.text.ClipboardManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +12,10 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -22,12 +27,18 @@ class SqliteDatabaseFragment : Fragment() {
     private lateinit var actvTable: AutoCompleteTextView
     private lateinit var btnGetAllTables: MaterialButton
     private lateinit var btnRefreshTable: MaterialButton
+    private lateinit var btnCopyData: MaterialButton
+    private lateinit var btnInsertData: MaterialButton
+    private lateinit var btnUpdateData: MaterialButton
+    private lateinit var btnDeleteData: MaterialButton
+    private lateinit var btnClearLog: MaterialButton
     private lateinit var tvResult: TextView
     private lateinit var tvRowCount: TextView
     private lateinit var tvLog: TextView
 
     private val tableList = mutableListOf<String>()
     private var selectedTable: String? = null
+    private var currentTableData = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,6 +67,11 @@ class SqliteDatabaseFragment : Fragment() {
         actvTable = view.findViewById(R.id.actvTable)
         btnGetAllTables = view.findViewById(R.id.btnGetAllTables)
         btnRefreshTable = view.findViewById(R.id.btnRefreshTable)
+        btnCopyData = view.findViewById(R.id.btnCopyData)
+        btnInsertData = view.findViewById(R.id.btnInsertData)
+        btnUpdateData = view.findViewById(R.id.btnUpdateData)
+        btnDeleteData = view.findViewById(R.id.btnDeleteData)
+        btnClearLog = view.findViewById(R.id.btnClearLog)
         tvResult = view.findViewById(R.id.tvResult)
         tvRowCount = view.findViewById(R.id.tvRowCount)
         tvLog = view.findViewById(R.id.tvLog)
@@ -104,13 +120,15 @@ class SqliteDatabaseFragment : Fragment() {
                     tables.forEach { tableName ->
                         tableListText.append("• $tableName\n")
                     }
-                    tvResult.text = tableListText.toString()
+                    currentTableData = tableListText.toString()
+                    tvResult.text = currentTableData
                     tvRowCount.text = "${tables.size} 个表"
 
                     showToast("成功获取 ${tables.size} 个表")
                 } else {
                     log("✗ 未找到任何表")
-                    tvResult.text = "未找到任何表"
+                    currentTableData = "未找到任何表"
+                    tvResult.text = currentTableData
                     tvRowCount.text = "0 个表"
                     showToast("未找到任何表")
                 }
@@ -132,6 +150,7 @@ class SqliteDatabaseFragment : Fragment() {
 
                 log("开始查询表 '$tableName' 的数据...")
                 val tableData = queryTableSafe(tableName)
+                currentTableData = tableData
                 tvResult.text = tableData
 
                 // 计算行数（不包括表头）
@@ -144,6 +163,45 @@ class SqliteDatabaseFragment : Fragment() {
                 logError("查询表数据失败: ${e.message}", e)
                 showToast("查询表数据失败: ${e.message}")
             }
+        }
+
+        // 复制数据按钮
+        btnCopyData.setOnClickListener {
+            try {
+                if (currentTableData.isEmpty()) {
+                    showToast("没有数据可复制")
+                    return@setOnClickListener
+                }
+
+                val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                clipboard.text = currentTableData
+
+                log("✓ 数据已复制到剪贴板")
+                showToast("数据已复制到剪贴板")
+            } catch (e: Exception) {
+                logError("复制数据失败: ${e.message}", e)
+                showToast("复制失败: ${e.message}")
+            }
+        }
+
+        // 插入数据按钮
+        btnInsertData.setOnClickListener {
+            showInsertDialog()
+        }
+
+        // 更新数据按钮
+        btnUpdateData.setOnClickListener {
+            showUpdateDialog()
+        }
+
+        // 删除数据按钮
+        btnDeleteData.setOnClickListener {
+            showDeleteDialog()
+        }
+
+        // 清空日志按钮
+        btnClearLog.setOnClickListener {
+            tvLog.text = "日志已清空\n"
         }
     }
 
@@ -163,6 +221,198 @@ class SqliteDatabaseFragment : Fragment() {
             logError("查询表 '$tableName' 异常: ${e.message}", e)
             throw e
         }
+    }
+
+    private fun showInsertDialog() {
+        val tableName = selectedTable
+        if (tableName.isNullOrEmpty()) {
+            showToast("请先选择一个表")
+            return
+        }
+
+        val dialogView = LayoutInflater.from(requireContext())
+            .inflate(R.layout.dialog_edit_data, null)
+
+        val tilColumns = dialogView.findViewById<TextInputLayout>(R.id.tilColumns)
+        val etColumns = dialogView.findViewById<TextInputEditText>(R.id.etColumns)
+        val tilValues = dialogView.findViewById<TextInputLayout>(R.id.tilValues)
+        val etValues = dialogView.findViewById<TextInputEditText>(R.id.etValues)
+
+        tilColumns.hint = "列名（用逗号分隔）"
+        tilValues.hint = "值（用逗号分隔）"
+
+        AlertDialog.Builder(requireContext())
+            .setTitle("插入数据到表 '$tableName'")
+            .setView(dialogView)
+            .setPositiveButton("插入") { _, _ ->
+                try {
+                    val columnsStr = etColumns.text?.toString() ?: ""
+                    val valuesStr = etValues.text?.toString() ?: ""
+
+                    if (columnsStr.isEmpty() || valuesStr.isEmpty()) {
+                        showToast("请填写列名和值")
+                        return@setPositiveButton
+                    }
+
+                    val columns = columnsStr.split(",").map { it.trim() }
+                    val values = valuesStr.split(",").map { it.trim() }
+
+                    val contentValues = ContentValues()
+                    for (i in columns.indices) {
+                        if (i < values.size) {
+                            contentValues.put(columns[i], values[i])
+                        }
+                    }
+
+                    val id = ParentManagerHelper.insertData(requireContext(), tableName, contentValues)
+                    if (id > 0) {
+                        log("✓ 插入成功，ID: $id")
+                        showToast("插入成功，ID: $id")
+                        btnRefreshTable.performClick()
+                    } else {
+                        log("✗ 插入失败")
+                        showToast("插入失败")
+                    }
+                } catch (e: Exception) {
+                    logError("插入数据失败: ${e.message}", e)
+                    showToast("插入失败: ${e.message}")
+                }
+            }
+            .setNegativeButton("取消", null)
+            .show()
+    }
+
+    private fun showUpdateDialog() {
+        val tableName = selectedTable
+        if (tableName.isNullOrEmpty()) {
+            showToast("请先选择一个表")
+            return
+        }
+
+        val dialogView = LayoutInflater.from(requireContext())
+            .inflate(R.layout.dialog_edit_data, null)
+
+        val tilColumns = dialogView.findViewById<TextInputLayout>(R.id.tilColumns)
+        val etColumns = dialogView.findViewById<TextInputEditText>(R.id.etColumns)
+        val tilValues = dialogView.findViewById<TextInputLayout>(R.id.tilValues)
+        val etValues = dialogView.findViewById<TextInputEditText>(R.id.etValues)
+        val tilWhere = dialogView.findViewById<TextInputLayout>(R.id.tilWhere)
+        val etWhere = dialogView.findViewById<TextInputEditText>(R.id.etWhere)
+
+        tilColumns.hint = "要更新的列名（用逗号分隔）"
+        tilValues.hint = "新值（用逗号分隔）"
+        tilWhere.hint = "WHERE 条件（例如: _id = 1）"
+
+        AlertDialog.Builder(requireContext())
+            .setTitle("更新表 '$tableName' 的数据")
+            .setView(dialogView)
+            .setPositiveButton("更新") { _, _ ->
+                try {
+                    val columnsStr = etColumns.text?.toString() ?: ""
+                    val valuesStr = etValues.text?.toString() ?: ""
+                    val whereClause = etWhere.text?.toString() ?: ""
+
+                    if (columnsStr.isEmpty() || valuesStr.isEmpty()) {
+                        showToast("请填写列名和值")
+                        return@setPositiveButton
+                    }
+
+                    if (whereClause.isEmpty()) {
+                        showToast("请填写WHERE条件")
+                        return@setPositiveButton
+                    }
+
+                    val columns = columnsStr.split(",").map { it.trim() }
+                    val values = valuesStr.split(",").map { it.trim() }
+
+                    val contentValues = ContentValues()
+                    for (i in columns.indices) {
+                        if (i < values.size) {
+                            contentValues.put(columns[i], values[i])
+                        }
+                    }
+
+                    val rowsAffected = ParentManagerHelper.updateData(
+                        requireContext(),
+                        tableName,
+                        contentValues,
+                        whereClause,
+                        null
+                    )
+
+                    if (rowsAffected > 0) {
+                        log("✓ 更新成功，受影响的行数: $rowsAffected")
+                        showToast("更新成功，受影响的行数: $rowsAffected")
+                        btnRefreshTable.performClick()
+                    } else {
+                        log("✗ 更新失败，未找到匹配的行")
+                        showToast("更新失败，未找到匹配的行")
+                    }
+                } catch (e: Exception) {
+                    logError("更新数据失败: ${e.message}", e)
+                    showToast("更新失败: ${e.message}")
+                }
+            }
+            .setNegativeButton("取消", null)
+            .show()
+    }
+
+    private fun showDeleteDialog() {
+        val tableName = selectedTable
+        if (tableName.isNullOrEmpty()) {
+            showToast("请先选择一个表")
+            return
+        }
+
+        val dialogView = LayoutInflater.from(requireContext())
+            .inflate(R.layout.dialog_edit_data, null)
+
+        val tilWhere = dialogView.findViewById<TextInputLayout>(R.id.tilWhere)
+        val etWhere = dialogView.findViewById<TextInputEditText>(R.id.etWhere)
+
+        tilWhere.hint = "WHERE 条件（例如: _id = 1）"
+
+        // 隐藏其他字段
+        dialogView.findViewById<TextInputLayout>(R.id.tilColumns).visibility = View.GONE
+        dialogView.findViewById<TextInputEditText>(R.id.etColumns).visibility = View.GONE
+        dialogView.findViewById<TextInputLayout>(R.id.tilValues).visibility = View.GONE
+        dialogView.findViewById<TextInputEditText>(R.id.etValues).visibility = View.GONE
+
+        AlertDialog.Builder(requireContext())
+            .setTitle("删除表 '$tableName' 的数据")
+            .setMessage("⚠️ 警告：删除操作不可恢复！")
+            .setView(dialogView)
+            .setPositiveButton("删除") { _, _ ->
+                try {
+                    val whereClause = etWhere.text?.toString() ?: ""
+
+                    if (whereClause.isEmpty()) {
+                        showToast("请填写WHERE条件")
+                        return@setPositiveButton
+                    }
+
+                    val rowsAffected = ParentManagerHelper.deleteData(
+                        requireContext(),
+                        tableName,
+                        whereClause,
+                        null
+                    )
+
+                    if (rowsAffected > 0) {
+                        log("✓ 删除成功，受影响的行数: $rowsAffected")
+                        showToast("删除成功，受影响的行数: $rowsAffected")
+                        btnRefreshTable.performClick()
+                    } else {
+                        log("✗ 删除失败，未找到匹配的行")
+                        showToast("删除失败，未找到匹配的行")
+                    }
+                } catch (e: Exception) {
+                    logError("删除数据失败: ${e.message}", e)
+                    showToast("删除失败: ${e.message}")
+                }
+            }
+            .setNegativeButton("取消", null)
+            .show()
     }
 
     private fun log(message: String) {
