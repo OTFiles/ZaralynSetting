@@ -123,7 +123,7 @@ class SqliteDatabaseFragment : Fragment() {
                     selectedTable = null
                     actvTable.setText("")
                     currentTableData = ""
-                    tvResult.text = "已切换到 ${getProviderName()}，请点击"获取所有表""
+                    tvResult.text = "已切换到 ${getProviderName()}，请点击「获取所有表」"
                     tvRowCount.text = "0 行"
 
                     // 更新提示文字
