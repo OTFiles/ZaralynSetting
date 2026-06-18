@@ -13,7 +13,7 @@ ZaralynSettings 是一个基于某学习平板的家长管理APP的SQL注入漏�
 注意：其它功能皆为测试内容，大部分不可用。
 
 ## 相关技术细节
-可访问本人的(博客)[https://OTFiles.github.io]查看
+可访问本人的 (博客)[https://OTFiles.github.io] 查看
 
 ## 构建说明
 
@@ -58,9 +58,9 @@ cd ZaralynSetting
 
 ## 许可证
 
-本项目仅供学习研究使用。
+(MIT许可证)[LICENSE]
 
 ## 联系方式
 
-- GitHub: https://github.com/OTFiles/ZaralynSetting
+- GitHub: https://github.com/OTFiles/
 - Issues: https://github.com/OTFiles/ZaralynSetting/issues
