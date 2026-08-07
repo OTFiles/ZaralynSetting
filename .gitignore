@@ -66,3 +66,5 @@ gradle-app.setting
 .idea/libraries/
 .idea/mongoSettings.xml
 .idea/jarRepositories.xml
+cache/
+*cache*

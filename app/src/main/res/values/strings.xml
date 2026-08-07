@@ -21,4 +21,21 @@
 
     <!-- 数据库页面标签 -->
     <string name="tab_database">数据库</string>
+
+    <!-- 设置页 -->
+    <string name="tab_settings">设置</string>
+    <string name="settings_version_title">家长管理版本</string>
+    <string name="settings_redetect">重新检测</string>
+    <string name="version_old">老版本（forbidden_app / un_mall_app_state 机制）</string>
+    <string name="version_new">新版本（install_app_list.disabled_state 机制）</string>
+    <string name="version_unknown">未检测到家长管理 / 检测失败</string>
+
+    <string name="settings_sql_method_title">SQL 修改方式</string>
+    <string name="settings_sql_method_global">全局生效，所有页面共用此设置</string>
+    <string name="sql_method_auto">自动（推荐）</string>
+    <string name="sql_method_raw_sql">raw_sql 注入</string>
+    <string name="sql_method_content">标准 ContentProvider</string>
+    <string name="sql_method_hint_auto">自动：查询优先使用 raw_sql 注入，写入使用标准 ContentProvider，自动适配新旧版本家长管理。</string>
+    <string name="sql_method_hint_raw_sql">仅通过 raw_sql 执行查询（数据库管理仅支持 app_record 库）；写入仍走标准 ContentProvider。</string>
+    <string name="sql_method_hint_content">不依赖 raw_sql，全部通过标准 ContentProvider 增删改查，兼容性最好。</string>
 </resources>

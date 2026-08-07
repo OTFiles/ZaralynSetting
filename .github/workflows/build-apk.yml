@@ -101,27 +101,40 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ github.run_number }}
-        name: ZaralynSettings v${{ github.run_number }}
+        name: 修复新版兼容性问题
         body: |
-          ## ZaralynSettings v${{ github.run_number }}
-          
-          Material Design 3 风格的设置应用，利用系统漏洞实现高级功能。
-          
-          ### 功能特性
-          - 系统功能控制 (USB调试、ADB、开发者选项)
-          - 应用管理 (静默安装、应用卸载)
-          - 家长模式切换
-          - 录音功能
-          - 自定义数据上传
-          
+          ## 修复新版兼容性问题
+
+          本版本修复了 ZaralynSettings 对**新版家长管理（v6.2.8+）**不兼容的问题，并自动适配新旧版本。
+
+          ### 兼容性修复内容
+
+          - **自动识别版本**：启动时通过数据库结构自动检测家长管理为老版（forbidden_app / un_mall_app_state 机制）还是新版（install_app_list.disabled_state 机制），无需手动切换
+          - **全局安装开关**：新版下同步写入新管控表 install_app_list 与旧门禁表，确保开关生效
+          - **黑名单/白名单**：新版自动读写 install_app_list（disabled_state），老版仍走 forbidden_app
+          - **家长密码读取**：兼容明文与加密（AES）存储的密码
+          - **数据库管理**：新版 mysql.db3 只读提示；新增「设置」页
+
+          ### 新增设置页
+
+          - **家长管理版本**：显示检测结果，可手动重新检测
+          - **SQL 修改方式**（全局生效）：自动 / raw_sql 注入 / 标准 ContentProvider，三种方式自动适配不同环境
+
           ### 安装说明
+
           1. 下载 APK 文件
           2. 在设备上安装
           3. 授予必要权限
-          
+          4. 在「设置」页可查看检测到的家长管理版本并调整 SQL 方式
+
           ### 签名信息
+
           - 签名文件: otf.jks
           - 签名别名: OTFiles
+
+          ### 注意
+
+          - 数据库管理页 SQLiteProvider（mysql.db3）在新版中为只读，仅能查询
         files: ZaralynSettings-v${{ github.run_number }}.apk
         draft: false
         prerelease: false

@@ -55,7 +55,17 @@ object ParentManagerHelper {
                     }
 
                     // 获取密码（通常在第2列，索引为1）
-                    val password = cursor.getString(1)
+                    val rawPassword = cursor.getString(1)
+
+                    // 兼容中间版本：若密码疑似 AES 密文则尝试解密
+                    val password = if (rawPassword != null && ParentManagerCompat.looksLikeCiphertext(rawPassword)) {
+                        val decrypted = ParentManagerCompat.aesDecryptPassword(rawPassword)
+                        Log.d(TAG, "密码疑似密文，解密结果: $decrypted")
+                        decrypted ?: rawPassword
+                    } else {
+                        rawPassword
+                    }
+
                     Log.d(TAG, "成功读取家长密码！")
                     Log.d(TAG, "密码: $password")
 
@@ -139,6 +149,11 @@ object ParentManagerHelper {
      * @return 表名列表
      */
     fun getAllTables(context: Context): List<String> {
+        // raw_sql 模式仅支持 AppContentProvider（app_record.db），mysql.db3 必须走标准查询
+        if (ParentManagerCompat.getSqlMethod(context) == ParentManagerCompat.SqlMethod.RAW_SQL) {
+            throw IllegalStateException("raw_sql 模式仅支持 AppContentProvider (app_record.db)，请切换 SQL 修改方式")
+        }
+
         val tables = mutableListOf<String>()
         val uri = Uri.parse("content://$SQLITE_AUTHORITY/sqlite_master")
         var cursor: Cursor? = null
@@ -189,6 +204,11 @@ object ParentManagerHelper {
      * @return 表数据的字符串表示
      */
     fun queryTable(context: Context, tableName: String): String {
+        // raw_sql 模式仅支持 AppContentProvider（app_record.db），mysql.db3 必须走标准查询
+        if (ParentManagerCompat.getSqlMethod(context) == ParentManagerCompat.SqlMethod.RAW_SQL) {
+            throw IllegalStateException("raw_sql 模式仅支持 AppContentProvider (app_record.db)，请切换 SQL 模式")
+        }
+
         val result = StringBuilder()
         val uri = Uri.parse("content://$SQLITE_AUTHORITY/$tableName")
         var cursor: Cursor? = null
@@ -557,6 +577,55 @@ object ParentManagerHelper {
      * @return 表名列表
      */
     fun getAllTablesAppProvider(context: Context): List<String> {
+        // 按全局 SQL 修改方式路由：标准 ContentProvider 模式不依赖 raw_sql
+        return when (ParentManagerCompat.getSqlMethod(context)) {
+            ParentManagerCompat.SqlMethod.CONTENT ->
+                getAllTablesContent(context, AUTHORITY)
+            else ->
+                getAllTablesAppProviderRawSql(context)
+        }
+    }
+
+    /**
+     * 通过标准 query 查询 sqlite_master 获取 app_record.db 中的所有表名
+     */
+    fun getAllTablesContent(context: Context, authority: String): List<String> {
+        val tables = mutableListOf<String>()
+        val uri = Uri.parse("content://$authority/sqlite_master")
+        var cursor: Cursor? = null
+
+        try {
+            Log.d(TAG, "开始通过标准查询获取所有表名 ($authority)...")
+            cursor = context.contentResolver.query(
+                uri, null, "type=?", arrayOf("table"), "name"
+            )
+
+            if (cursor != null) {
+                Log.d(TAG, "查询成功，共 ${cursor.count} 个表")
+                val nameIndex = cursor.getColumnIndex("name")
+                if (nameIndex >= 0) {
+                    while (cursor.moveToNext()) {
+                        val tableName = cursor.getString(nameIndex)
+                        if (tableName != null && tableName !in listOf("android_metadata", "sqlite_sequence")) {
+                            tables.add(tableName)
+                            Log.d(TAG, "发现表: $tableName")
+                        }
+                    }
+                }
+            } else {
+                Log.e(TAG, "Cursor 为 null，查询失败")
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "标准查询获取表名时发生错误", e)
+        } finally {
+            cursor?.close()
+        }
+
+        Log.d(TAG, "共找到 ${tables.size} 个表（标准查询）")
+        return tables
+    }
+
+    private fun getAllTablesAppProviderRawSql(context: Context): List<String> {
         val tables = mutableListOf<String>()
         val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
         var cursor: Cursor? = null
@@ -602,6 +671,73 @@ object ParentManagerHelper {
      * @return 表数据的字符串表示
      */
     fun queryTableAppProvider(context: Context, tableName: String): String {
+        // 按全局 SQL 修改方式路由：标准 ContentProvider 模式不依赖 raw_sql
+        return when (ParentManagerCompat.getSqlMethod(context)) {
+            ParentManagerCompat.SqlMethod.CONTENT ->
+                queryTableContent(context, AUTHORITY, tableName)
+            else ->
+                queryTableAppProviderRawSql(context, tableName)
+        }
+    }
+
+    /**
+     * 通过标准 query 查询指定表的数据（不依赖 raw_sql）
+     */
+    fun queryTableContent(context: Context, authority: String, tableName: String): String {
+        val result = StringBuilder()
+        val uri = Uri.parse("content://$authority/$tableName")
+        var cursor: Cursor? = null
+
+        try {
+            Log.d(TAG, "开始标准查询表: $tableName（$authority）")
+            cursor = context.contentResolver.query(uri, null, null, null, null)
+
+            if (cursor != null) {
+                result.append("查询成功，共 ${cursor.count} 行数据\n\n")
+
+                if (cursor.moveToFirst()) {
+                    val columnCount = cursor.columnCount
+                    for (i in 0 until columnCount) {
+                        result.append("${cursor.getColumnName(i)}\t")
+                    }
+                    result.append("\n")
+                    result.append("-".repeat(columnCount * 20))
+                    result.append("\n")
+
+                    do {
+                        for (i in 0 until columnCount) {
+                            val value = try {
+                                cursor.getString(i)
+                            } catch (e: Exception) {
+                                "<无法读取>"
+                            }
+                            result.append("$value\t")
+                        }
+                        result.append("\n")
+                    } while (cursor.moveToNext())
+
+                    Log.d(TAG, "表 $tableName 查询成功（标准查询）")
+                } else {
+                    result.append("表为空，没有数据")
+                }
+            } else {
+                result.append("查询失败：Cursor 为 null")
+                Log.e(TAG, "查询 $tableName 失败：Cursor 为 null")
+            }
+        } catch (e: SecurityException) {
+            result.append("安全异常：${e.message}")
+            Log.e(TAG, "安全异常（标准查询）", e)
+        } catch (e: Exception) {
+            result.append("错误: ${e.message}")
+            Log.e(TAG, "查询表 $tableName 时发生错误（标准查询）", e)
+        } finally {
+            cursor?.close()
+        }
+
+        return result.toString()
+    }
+
+    private fun queryTableAppProviderRawSql(context: Context, tableName: String): String {
         val result = StringBuilder()
         val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
         var cursor: Cursor? = null

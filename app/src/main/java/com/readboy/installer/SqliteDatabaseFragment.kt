@@ -127,11 +127,16 @@ class SqliteDatabaseFragment : Fragment() {
                     tvRowCount.text = "0 行"
 
                     // 更新提示文字
+                    val versionText = when (ParentManagerCompat.detectVersion(requireContext())) {
+                        ParentManagerCompat.PmsVersion.NEW -> "已检测到新版本（install_app_list 机制）"
+                        ParentManagerCompat.PmsVersion.OLD -> "已检测到老版本（forbidden_app 机制）"
+                        ParentManagerCompat.PmsVersion.UNKNOWN -> "未检测到家长管理"
+                    }
                     tvProviderHint.text = when (currentProvider) {
                         ProviderType.SQLITE ->
-                            "SqliteProvider — mysql.db3（secondtype, packet 等）"
+                            "SqliteProvider — mysql.db3（只读，增删改不可用）\n$versionText"
                         ProviderType.APP_RECORD ->
-                            "AppContentProvider — app_record.db（user_info 家长密码, forbidden_app 等）"
+                            "AppContentProvider — app_record.db（user_info 家长密码, install_app_list 等）\n$versionText"
                     }
 
                     log("已切换到: ${getProviderName()}")

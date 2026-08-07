@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.readboy.installer.GlobalSwitchFragment
 import com.readboy.installer.PackageListFragment
+import com.readboy.installer.SettingsFragment
 import com.readboy.installer.SqliteDatabaseFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
@@ -13,7 +14,8 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
         GlobalSwitchFragment(),
         PackageListFragment.newInstance(true),
         PackageListFragment.newInstance(false),
-        SqliteDatabaseFragment()
+        SqliteDatabaseFragment(),
+        SettingsFragment()
     )
 
     override fun getItemCount(): Int = fragments.size
