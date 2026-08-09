@@ -41,7 +41,19 @@ jobs:
         cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
     - name: Build Debug APK
-      run: gradle assembleDebug --no-daemon --stacktrace
+      id: build
+      run: |
+        set -o pipefail
+        gradle assembleDebug --no-daemon --stacktrace 2>&1 | tee build-output.log
+        exit ${PIPESTATUS[0]}
+
+    - name: Upload Build Log On Failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-log
+        path: build-output.log
+        if-no-files-found: ignore
 
     - name: Upload Debug APK
       if: success()
