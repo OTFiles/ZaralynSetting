@@ -596,7 +596,7 @@ object ParentManagerHelper {
         // 按全局 SQL 修改方式路由：标准 ContentProvider 模式不依赖 raw_sql
         return when (ParentManagerCompat.getSqlMethod(context)) {
             ParentManagerCompat.SqlMethod.CONTENT ->
-                getAllTablesContent(context, AUTHORITY)
+                getAllTablesContent(context, appAuthority(context))
             else ->
                 getAllTablesAppProviderRawSql(context)
         }
@@ -690,7 +690,7 @@ object ParentManagerHelper {
         // 按全局 SQL 修改方式路由：标准 ContentProvider 模式不依赖 raw_sql
         return when (ParentManagerCompat.getSqlMethod(context)) {
             ParentManagerCompat.SqlMethod.CONTENT ->
-                queryTableContent(context, AUTHORITY, tableName)
+                queryTableContent(context, appAuthority(context), tableName)
             else ->
                 queryTableAppProviderRawSql(context, tableName)
         }
