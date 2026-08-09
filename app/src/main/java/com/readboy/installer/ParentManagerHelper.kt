@@ -21,9 +21,24 @@ import java.util.Locale
 object ParentManagerHelper {
 
     private const val TAG = "ParentManagerHelper"
-    private const val AUTHORITY = "com.readboy.parentmanager.AppContentProvider"
-    private const val SQLITE_AUTHORITY = "com.readboy.parentmanager.SqliteProvider"
-    private const val URI_USER_INFO = "content://$AUTHORITY/user_info"
+
+    /** app_record.db 提供者（动态解析，包名不同的设备也能用） */
+    private fun appAuthority(context: Context): String {
+        return ParentManagerCompat.authority(context)
+    }
+
+    /** mysql.db3 提供者（动态解析） */
+    private fun sqliteAuthority(context: Context): String {
+        return ParentManagerCompat.sqliteAuthority(context)
+    }
+
+    private fun uriUserInfo(context: Context): String {
+        return "content://${appAuthority(context)}/user_info"
+    }
+
+    private fun rawSqlUri(context: Context): String {
+        return "content://${appAuthority(context)}/raw_sql"
+    }
 
     /**
      * 读取家长密码
@@ -32,12 +47,11 @@ object ParentManagerHelper {
      * @return 家长密码，如果读取失败返回 null
      */
     fun readParentPassword(context: Context): String? {
-        val uri = Uri.parse(URI_USER_INFO)
+        val uri = Uri.parse(uriUserInfo(context))
         var cursor: Cursor? = null
 
         try {
-            Log.d(TAG, "开始读取家长密码...")
-            Log.d(TAG, "URI: $uri")
+            AppLogger.i(TAG, "开始读取家长密码, URI: $uri")
 
             cursor = context.contentResolver.query(uri, null, null, null, null)
 
@@ -94,7 +108,7 @@ object ParentManagerHelper {
      * @return 用户信息字符串，如果读取失败返回错误信息
      */
     fun readAllUserInfo(context: Context): String {
-        val uri = Uri.parse(URI_USER_INFO)
+        val uri = Uri.parse(uriUserInfo(context))
         var cursor: Cursor? = null
         val result = StringBuilder()
 
@@ -155,7 +169,7 @@ object ParentManagerHelper {
         }
 
         val tables = mutableListOf<String>()
-        val uri = Uri.parse("content://$SQLITE_AUTHORITY/sqlite_master")
+        val uri = Uri.parse("content://${sqliteAuthority(context)}/sqlite_master")
         var cursor: Cursor? = null
 
         try {
@@ -210,7 +224,7 @@ object ParentManagerHelper {
         }
 
         val result = StringBuilder()
-        val uri = Uri.parse("content://$SQLITE_AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${sqliteAuthority(context)}/$tableName")
         var cursor: Cursor? = null
 
         try {
@@ -276,7 +290,7 @@ object ParentManagerHelper {
      * @return 插入行的 ID，如果失败返回 -1
      */
     fun insertData(context: Context, tableName: String, values: ContentValues): Long {
-        val uri = Uri.parse("content://$SQLITE_AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${sqliteAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始向表 $tableName 插入数据...")
@@ -288,9 +302,11 @@ object ParentManagerHelper {
             if (resultUri != null) {
                 val id = resultUri.lastPathSegment?.toLongOrNull() ?: -1
                 Log.d(TAG, "插入成功，ID: $id")
+                AppLogger.i(TAG, "insertData 成功: 表=$tableName id=$id")
                 return id
             } else {
                 Log.e(TAG, "插入失败：返回的 URI 为 null")
+                AppLogger.w(TAG, "insertData 失败: 表=$tableName 返回 null（SqliteProvider 可能为只读）")
                 return -1
             }
         } catch (e: SecurityException) {
@@ -319,7 +335,7 @@ object ParentManagerHelper {
         whereClause: String?,
         whereArgs: Array<String>?
     ): Int {
-        val uri = Uri.parse("content://$SQLITE_AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${sqliteAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始更新表 $tableName 的数据...")
@@ -336,6 +352,7 @@ object ParentManagerHelper {
             )
 
             Log.d(TAG, "更新成功，受影响的行数: $rowsAffected")
+            AppLogger.i(TAG, "updateData: 表=$tableName 影响 $rowsAffected 行")
             return rowsAffected
         } catch (e: SecurityException) {
             Log.e(TAG, "安全异常：没有权限更新数据", e)
@@ -361,7 +378,7 @@ object ParentManagerHelper {
         whereClause: String?,
         whereArgs: Array<String>?
     ): Int {
-        val uri = Uri.parse("content://$SQLITE_AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${sqliteAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始删除表 $tableName 的数据...")
@@ -376,6 +393,7 @@ object ParentManagerHelper {
             )
 
             Log.d(TAG, "删除成功，受影响的行数: $rowsAffected")
+            AppLogger.i(TAG, "deleteData: 表=$tableName 影响 $rowsAffected 行")
             return rowsAffected
         } catch (e: SecurityException) {
             Log.e(TAG, "安全异常：没有权限删除数据", e)
@@ -568,8 +586,6 @@ object ParentManagerHelper {
     // query() 的 selection 参数被直接传给 rawQuery() 执行。
     // 用于访问 app_record.db（包含 user_info、forbidden_app 等表）
 
-    private const val APP_PROVIDER_RAW_SQL = "content://$AUTHORITY/raw_sql"
-
     /**
      * 通过 AppContentProvider 的 raw_sql 漏洞获取 app_record.db 中的所有表名
      *
@@ -627,7 +643,7 @@ object ParentManagerHelper {
 
     private fun getAllTablesAppProviderRawSql(context: Context): List<String> {
         val tables = mutableListOf<String>()
-        val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
+        val uri = Uri.parse(rawSqlUri(context))
         var cursor: Cursor? = null
 
         try {
@@ -739,7 +755,7 @@ object ParentManagerHelper {
 
     private fun queryTableAppProviderRawSql(context: Context, tableName: String): String {
         val result = StringBuilder()
-        val uri = Uri.parse(APP_PROVIDER_RAW_SQL)
+        val uri = Uri.parse(rawSqlUri(context))
         var cursor: Cursor? = null
 
         try {
@@ -802,7 +818,7 @@ object ParentManagerHelper {
      * @return 插入行的 ID，失败返回 -1
      */
     fun insertDataAppProvider(context: Context, tableName: String, values: ContentValues): Long {
-        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${appAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始通过 AppContentProvider 向表 $tableName 插入数据...")
@@ -811,9 +827,11 @@ object ParentManagerHelper {
             if (resultUri != null) {
                 val id = resultUri.lastPathSegment?.toLongOrNull() ?: -1
                 Log.d(TAG, "插入成功（AppProvider），ID: $id")
+                AppLogger.i(TAG, "insertDataAppProvider 成功: 表=$tableName id=$id")
                 return id
             } else {
                 Log.e(TAG, "插入失败（AppProvider）：返回的 URI 为 null")
+                AppLogger.w(TAG, "insertDataAppProvider 失败: 表=$tableName 返回 null")
                 return -1
             }
         } catch (e: Exception) {
@@ -836,12 +854,13 @@ object ParentManagerHelper {
         context: Context, tableName: String, values: ContentValues,
         whereClause: String?, whereArgs: Array<String>?
     ): Int {
-        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${appAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始通过 AppContentProvider 更新表 $tableName 的数据...")
             val rowsAffected = context.contentResolver.update(uri, values, whereClause, whereArgs)
             Log.d(TAG, "更新成功（AppProvider），受影响的行数: $rowsAffected")
+            AppLogger.i(TAG, "updateDataAppProvider: 表=$tableName 影响 $rowsAffected 行")
             return rowsAffected
         } catch (e: Exception) {
             Log.e(TAG, "通过 AppContentProvider 更新数据时发生错误", e)
@@ -862,12 +881,13 @@ object ParentManagerHelper {
         context: Context, tableName: String,
         whereClause: String?, whereArgs: Array<String>?
     ): Int {
-        val uri = Uri.parse("content://$AUTHORITY/$tableName")
+        val uri = Uri.parse("content://${appAuthority(context)}/$tableName")
 
         try {
             Log.d(TAG, "开始通过 AppContentProvider 删除表 $tableName 的数据...")
             val rowsAffected = context.contentResolver.delete(uri, whereClause, whereArgs)
             Log.d(TAG, "删除成功（AppProvider），受影响的行数: $rowsAffected")
+            AppLogger.i(TAG, "deleteDataAppProvider: 表=$tableName 影响 $rowsAffected 行")
             return rowsAffected
         } catch (e: Exception) {
             Log.e(TAG, "通过 AppContentProvider 删除数据时发生错误", e)

@@ -13,16 +13,25 @@ import android.util.Log
  *           + un_mall_app_state（state: 0=禁止安装/1=允许安装）
  * - 新版本（6.2.8+）：install_app_list（disabled_state: 0=允许/1=禁止）
  *           写入时同时兼容同步 forbidden_app / un_mall_app_state 旧门禁
+ *
+ * authority 通过 ParentManagerCompat 动态解析（兼容包名不同的设备）。
  */
 object ProviderHelper {
 
     private const val TAG = "ProviderHelper"
 
-    private const val AUTHORITY = "com.readboy.parentmanager.AppContentProvider"
-    private val URI_FORBIDDEN_APP = Uri.parse("content://$AUTHORITY/forbidden_app")
-    private val URI_UN_MALL_APP_STATE = Uri.parse("content://$AUTHORITY/un_mall_app_state")
-    private val URI_USER_INFO = Uri.parse("content://$AUTHORITY/user_info")
-    private val URI_INSTALL_APP_LIST = Uri.parse("content://$AUTHORITY/install_app_list")
+    private fun authority(context: Context): String {
+        return ParentManagerCompat.authority(context)
+    }
+
+    private fun uriFor(context: Context, table: String): Uri {
+        return Uri.parse("content://${authority(context)}/$table")
+    }
+
+    private fun uriForbiddenApp(context: Context): Uri = uriFor(context, "forbidden_app")
+    private fun uriUnMallAppState(context: Context): Uri = uriFor(context, "un_mall_app_state")
+    private fun uriUserInfo(context: Context): Uri = uriFor(context, "user_info")
+    private fun uriInstallAppList(context: Context): Uri = uriFor(context, "install_app_list")
 
     // ==================== 全局安装状态 ====================
 
@@ -32,7 +41,7 @@ object ProviderHelper {
      * 新版本：install_app_list 无 disabled_state=1 的行 且 旧门禁 state != 0 视为允许
      */
     fun getGlobalInstallState(context: Context): Boolean {
-        return if (ParentManagerCompat.isNewVersion(context)) {
+        val result = if (ParentManagerCompat.isNewVersion(context)) {
             val blockedRows = countDisabledRows(context)
             val legacyState = readUnMallState(context)
             val installAllowed = blockedRows != -1 && blockedRows == 0
@@ -41,6 +50,8 @@ object ProviderHelper {
         } else {
             readUnMallState(context) != 0
         }
+        AppLogger.d(TAG, "getGlobalInstallState: $result (version=${ParentManagerCompat.detectVersion(context)})")
+        return result
     }
 
     /**
@@ -49,20 +60,23 @@ object ProviderHelper {
      * 新版本：同时更新 install_app_list 全表 disabled_state 与 un_mall_app_state 旧门禁
      */
     fun setGlobalInstallState(context: Context, enabled: Boolean): Boolean {
-        return if (ParentManagerCompat.isNewVersion(context)) {
+        AppLogger.i(TAG, "setGlobalInstallState: enabled=$enabled version=${ParentManagerCompat.detectVersion(context)}")
+        val result = if (ParentManagerCompat.isNewVersion(context)) {
             setGlobalInstallStateNew(context, enabled)
         } else {
             setGlobalInstallStateOld(context, enabled)
         }
+        AppLogger.i(TAG, "setGlobalInstallState 结果: $result")
+        return result
     }
 
     private fun setGlobalInstallStateOld(context: Context, enabled: Boolean): Boolean {
         val values = ContentValues()
         values.put("state", if (enabled) 1 else 0)
         return try {
-            context.contentResolver.update(URI_UN_MALL_APP_STATE, values, null, null) > 0
+            context.contentResolver.update(uriUnMallAppState(context), values, null, null) > 0
         } catch (e: Exception) {
-            Log.e(TAG, "设置全局安装状态失败（老版）", e)
+            AppLogger.e(TAG, "设置全局安装状态失败（老版）: ${e.message}", e)
             false
         }
     }
@@ -74,20 +88,22 @@ object ProviderHelper {
         try {
             val cv = ContentValues()
             cv.put("disabled_state", if (enabled) 0 else 1)
-            val rows = context.contentResolver.update(URI_INSTALL_APP_LIST, cv, null, null)
+            val rows = context.contentResolver.update(uriInstallAppList(context), cv, null, null)
             ok = rows > 0
+            AppLogger.i(TAG, "更新 install_app_list 影响 $rows 行")
         } catch (e: Exception) {
-            Log.e(TAG, "更新 install_app_list 失败", e)
+            AppLogger.e(TAG, "更新 install_app_list 失败: ${e.message}", e)
         }
 
         // 2) 旧门禁兼容：un_mall_app_state
         try {
             val cv2 = ContentValues()
             cv2.put("state", if (enabled) 1 else 0)
-            val rows2 = context.contentResolver.update(URI_UN_MALL_APP_STATE, cv2, null, null)
+            val rows2 = context.contentResolver.update(uriUnMallAppState(context), cv2, null, null)
             ok = ok || rows2 > 0
+            AppLogger.i(TAG, "更新 un_mall_app_state 影响 $rows2 行")
         } catch (e: Exception) {
-            Log.e(TAG, "更新 un_mall_app_state 失败", e)
+            AppLogger.e(TAG, "更新 un_mall_app_state 失败: ${e.message}", e)
         }
 
         return ok
@@ -101,11 +117,13 @@ object ProviderHelper {
      * 新版本：install_app_list，disabled_state = 1 黑名单（禁止安装）/ 0 白名单（允许安装）
      */
     fun getPackageList(context: Context, isWhitelist: Boolean): List<PackageInfo> {
-        return if (ParentManagerCompat.isNewVersion(context)) {
+        val list = if (ParentManagerCompat.isNewVersion(context)) {
             getPackageListNew(context, isWhitelist)
         } else {
             getPackageListOld(context, isWhitelist)
         }
+        AppLogger.d(TAG, "getPackageList(whitelist=$isWhitelist): ${list.size} 项")
+        return list
     }
 
     private fun getPackageListOld(context: Context, isWhitelist: Boolean): List<PackageInfo> {
@@ -114,7 +132,7 @@ object ProviderHelper {
 
         try {
             val cursor = context.contentResolver.query(
-                URI_FORBIDDEN_APP,
+                uriForbiddenApp(context),
                 null,
                 "state = ?",
                 arrayOf(state.toString()),
@@ -132,7 +150,7 @@ object ProviderHelper {
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "获取列表失败（老版）", e)
+            AppLogger.e(TAG, "获取列表失败（老版）: ${e.message}", e)
         }
         return list
     }
@@ -144,7 +162,7 @@ object ProviderHelper {
 
         try {
             val cursor = context.contentResolver.query(
-                URI_INSTALL_APP_LIST,
+                uriInstallAppList(context),
                 null,
                 "disabled_state = ?",
                 arrayOf(disabledState.toString()),
@@ -160,7 +178,7 @@ object ProviderHelper {
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "获取列表失败（新版）", e)
+            AppLogger.e(TAG, "获取列表失败（新版）: ${e.message}", e)
         }
         return list
     }
@@ -171,11 +189,14 @@ object ProviderHelper {
      * 新版本：upsert install_app_list（disabled_state 0/1），并同步写 forbidden_app 兼容旧门禁
      */
     fun addPackage(context: Context, packageName: String, isWhitelist: Boolean): Boolean {
-        return if (ParentManagerCompat.isNewVersion(context)) {
+        AppLogger.i(TAG, "addPackage: pkg=$packageName whitelist=$isWhitelist version=${ParentManagerCompat.detectVersion(context)}")
+        val result = if (ParentManagerCompat.isNewVersion(context)) {
             addPackageNew(context, packageName, isWhitelist)
         } else {
             addPackageOld(context, packageName, isWhitelist)
         }
+        AppLogger.i(TAG, "addPackage 结果: $result")
+        return result
     }
 
     private fun addPackageOld(context: Context, packageName: String, isWhitelist: Boolean): Boolean {
@@ -184,10 +205,10 @@ object ProviderHelper {
         values.put("state", if (isWhitelist) 1 else 0)
 
         return try {
-            val uri = context.contentResolver.insert(URI_FORBIDDEN_APP, values)
+            val uri = context.contentResolver.insert(uriForbiddenApp(context), values)
             uri != null
         } catch (e: Exception) {
-            Log.e(TAG, "添加包失败（老版）", e)
+            AppLogger.e(TAG, "添加包失败（老版）: ${e.message}", e)
             false
         }
     }
@@ -196,14 +217,14 @@ object ProviderHelper {
         val disabled = if (isWhitelist) 0 else 1
         var ok = false
 
-        // 1) install_app_list：已存在则更新，不存在则插入（avoid UNIQUE 冲突）
+        // 1) install_app_list：已存在则更新，不存在则插入（避免 UNIQUE 冲突）
         try {
             val cv = ContentValues()
             cv.put("package_name", packageName)
             cv.put("disabled_state", disabled)
 
             val updated = context.contentResolver.update(
-                URI_INSTALL_APP_LIST, cv, "package_name = ?", arrayOf(packageName)
+                uriInstallAppList(context), cv, "package_name = ?", arrayOf(packageName)
             )
             if (updated > 0) {
                 ok = true
@@ -211,11 +232,12 @@ object ProviderHelper {
                 val insertCv = ContentValues()
                 insertCv.put("package_name", packageName)
                 insertCv.put("disabled_state", disabled)
-                val uri = context.contentResolver.insert(URI_INSTALL_APP_LIST, insertCv)
+                val uri = context.contentResolver.insert(uriInstallAppList(context), insertCv)
                 ok = uri != null
             }
+            AppLogger.i(TAG, "install_app_list upsert: updated=$updated inserted=${ok}")
         } catch (e: Exception) {
-            Log.e(TAG, "更新 install_app_list 失败", e)
+            AppLogger.e(TAG, "更新 install_app_list 失败: ${e.message}", e)
         }
 
         // 2) 兼容旧安装门禁：同步写 forbidden_app
@@ -224,13 +246,13 @@ object ProviderHelper {
             fcv.put("package_name", packageName)
             fcv.put("state", if (isWhitelist) 1 else 0)
             val fUpdated = context.contentResolver.update(
-                URI_FORBIDDEN_APP, fcv, "package_name = ?", arrayOf(packageName)
+                uriForbiddenApp(context), fcv, "package_name = ?", arrayOf(packageName)
             )
             if (fUpdated == 0) {
-                context.contentResolver.insert(URI_FORBIDDEN_APP, fcv)
+                context.contentResolver.insert(uriForbiddenApp(context), fcv)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "同步写 forbidden_app 失败", e)
+            AppLogger.e(TAG, "同步写 forbidden_app 失败: ${e.message}", e)
         }
 
         return ok
@@ -245,26 +267,27 @@ object ProviderHelper {
         var rows = 0
         try {
             rows = context.contentResolver.delete(
-                URI_FORBIDDEN_APP,
+                uriForbiddenApp(context),
                 "package_name = ?",
                 arrayOf(packageName)
             )
         } catch (e: Exception) {
-            Log.e(TAG, "删除 forbidden_app 失败", e)
+            AppLogger.e(TAG, "删除 forbidden_app 失败: ${e.message}", e)
         }
 
         if (ParentManagerCompat.isNewVersion(context)) {
             try {
                 val rows2 = context.contentResolver.delete(
-                    URI_INSTALL_APP_LIST,
+                    uriInstallAppList(context),
                     "package_name = ?",
                     arrayOf(packageName)
                 )
                 rows += rows2
             } catch (e: Exception) {
-                Log.e(TAG, "删除 install_app_list 失败", e)
+                AppLogger.e(TAG, "删除 install_app_list 失败: ${e.message}", e)
             }
         }
+        AppLogger.i(TAG, "removePackage: pkg=$packageName 共删除 $rows 行")
         return rows > 0
     }
 
@@ -276,7 +299,7 @@ object ProviderHelper {
      */
     fun hasParentPassword(context: Context): Boolean {
         val cursor = context.contentResolver.query(
-            URI_USER_INFO,
+            uriUserInfo(context),
             null,
             "_id > ?",
             arrayOf("0"),
@@ -299,7 +322,7 @@ object ProviderHelper {
 
     private fun readUnMallState(context: Context): Int? {
         return try {
-            context.contentResolver.query(URI_UN_MALL_APP_STATE, null, null, null, null)?.use {
+            context.contentResolver.query(uriUnMallAppState(context), null, null, null, null)?.use {
                 if (it.moveToFirst()) {
                     val idx = it.getColumnIndex("state")
                     if (idx >= 0) it.getInt(idx) else null
@@ -308,7 +331,7 @@ object ProviderHelper {
                 }
             }
         } catch (e: Exception) {
-            Log.e(TAG, "读取 un_mall_app_state 失败", e)
+            AppLogger.e(TAG, "读取 un_mall_app_state 失败: ${e.message}", e)
             null
         }
     }
@@ -317,14 +340,14 @@ object ProviderHelper {
     private fun countDisabledRows(context: Context): Int {
         return try {
             context.contentResolver.query(
-                URI_INSTALL_APP_LIST,
+                uriInstallAppList(context),
                 null,
                 "disabled_state = ?",
                 arrayOf("1"),
                 null
             )?.use { it.count } ?: -1
         } catch (e: Exception) {
-            Log.e(TAG, "统计 disabled_state 失败", e)
+            AppLogger.e(TAG, "统计 disabled_state 失败: ${e.message}", e)
             -1
         }
     }

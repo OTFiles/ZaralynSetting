@@ -72,11 +72,21 @@ class SettingsFragment : Fragment() {
 
     private fun loadVersion() {
         val version = ParentManagerCompat.detectVersion(requireContext())
-        tvVersion.text = when (version) {
+        val provider = ParentManagerCompat.resolveProvider(requireContext())
+
+        val versionText = when (version) {
             ParentManagerCompat.PmsVersion.OLD -> getString(R.string.version_old)
             ParentManagerCompat.PmsVersion.NEW -> getString(R.string.version_new)
             ParentManagerCompat.PmsVersion.UNKNOWN -> getString(R.string.version_unknown)
         }
+
+        val providerText = if (provider?.packageName != null) {
+            getString(R.string.settings_provider_info, provider.packageName, provider.authority ?: "?")
+        } else {
+            getString(R.string.settings_provider_not_found)
+        }
+
+        tvVersion.text = "$versionText\n$providerText\n${getString(R.string.settings_check_log)}"
     }
 
     private fun loadSqlMethod() {

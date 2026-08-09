@@ -74,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                         tab.text = getString(R.string.tab_settings)
                         tab.setIcon(R.drawable.ic_settings)
                     }
+                    5 -> {
+                        tab.text = getString(R.string.tab_log)
+                        tab.setIcon(R.drawable.ic_log)
+                    }
                 }
             }.attach()
         } catch (e: Exception) {

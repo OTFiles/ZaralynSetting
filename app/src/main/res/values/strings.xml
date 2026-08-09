@@ -29,6 +29,9 @@
     <string name="version_old">老版本（forbidden_app / un_mall_app_state 机制）</string>
     <string name="version_new">新版本（install_app_list.disabled_state 机制）</string>
     <string name="version_unknown">未检测到家长管理 / 检测失败</string>
+    <string name="settings_provider_info">包名: %1$s\nauthority: %2$s</string>
+    <string name="settings_provider_not_found">未找到家长管理的 ContentProvider</string>
+    <string name="settings_check_log">详细检测过程请查看「日志」页</string>
 
     <string name="settings_sql_method_title">SQL 修改方式</string>
     <string name="settings_sql_method_global">全局生效，所有页面共用此设置</string>
@@ -38,4 +41,10 @@
     <string name="sql_method_hint_auto">自动：查询优先使用 raw_sql 注入，写入使用标准 ContentProvider，自动适配新旧版本家长管理。</string>
     <string name="sql_method_hint_raw_sql">仅通过 raw_sql 执行查询（数据库管理仅支持 app_record 库）；写入仍走标准 ContentProvider。</string>
     <string name="sql_method_hint_content">不依赖 raw_sql，全部通过标准 ContentProvider 增删改查，兼容性最好。</string>
+
+    <!-- 日志页 -->
+    <string name="tab_log">日志</string>
+    <string name="log_refresh">刷新</string>
+    <string name="log_copy">复制</string>
+    <string name="log_empty">该日期暂无日志</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.readboy.installer
 
 import android.content.Context
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Base64
 import android.util.Log
@@ -12,26 +13,23 @@ import javax.crypto.spec.SecretKeySpec
 /**
  * ParentManager 版本兼容层
  *
- * 自动识别家长管理为：
- * - 老版本：forbidden_app / un_mall_app_state 机制
- * - 新版本（6.2.8+）：install_app_list.disabled_state 机制
+ * - 动态解析家长管理 Provider 的 authority 与包名（解决包名不一致问题）
+ * - 自动识别家长管理为老版本（forbidden_app / un_mall_app_state 机制）
+ *   或新版本（install_app_list.disabled_state 机制）
+ * - 全局有效的「SQL 修改方式」设置（自动 / raw_sql / 标准 ContentProvider）
+ * - 中间版本 AES 加密密码的解密回退
  *
- * 并提供全局有效的「SQL 修改方式」设置：
- * - AUTO    自动（推荐）：查询优先 raw_sql，写入走标准 ContentProvider
- * - RAW_SQL 仅通过 raw_sql 执行查询
- * - CONTENT 不依赖 raw_sql，全部走标准 ContentProvider
- *
- * 该设置为全局生效（SharedPreferences 持久化），所有组件统一读取。
+ * 所有探测过程都会写入文件日志（AppLogger），可在「日志」页面查看。
  */
 object ParentManagerCompat {
 
     private const val TAG = "ParentManagerCompat"
 
+    /** 家长管理默认 authority（用于回退） */
     const val AUTHORITY = "com.readboy.parentmanager.AppContentProvider"
     const val SQLITE_AUTHORITY = "com.readboy.parentmanager.SqliteProvider"
-    const val RAW_SQL_URI = "content://$AUTHORITY/raw_sql"
 
-    /** 家长管理硬编码的 AES 密钥（用于解密中间版本存储的加密密码） */
+    /** 家长管理硬编码的 AES 密钥（中间版本加密密码用） */
     const val AES_KEY = "#reaboy+ZHdream#"
 
     /** 家长管理版本 */
@@ -54,6 +52,12 @@ object ParentManagerCompat {
         }
     }
 
+    /** 解析到的提供者信息 */
+    data class ProviderInfo(
+        val packageName: String?,
+        val authority: String?
+    )
+
     private const val PREFS = "pms_compat"
     private const val KEY_VERSION = "detected_version"
     private const val KEY_SQL_METHOD = "sql_method"
@@ -61,13 +65,98 @@ object ParentManagerCompat {
     @Volatile
     private var cachedVersion: PmsVersion? = null
 
+    @Volatile
+    private var cachedProvider: ProviderInfo? = null
+
+    // ==================== Provider 解析（包名/authority） ====================
+
+    /**
+     * 解析家长管理 ContentProvider 的实际 authority 与包名。
+     *
+     * 优先按已知 authority 解析；失败则全量扫描已安装应用
+     * 中名称含 readboy+parent 的 provider，并记录到日志。
+     */
+    fun resolveProvider(context: Context): ProviderInfo? {
+        cachedProvider?.let { return it }
+        val info = doResolveProvider(context)
+        cachedProvider = info
+        return info
+    }
+
+    private fun doResolveProvider(context: Context): ProviderInfo? {
+        val pm = context.packageManager
+
+        // 1) 按已知 authority 解析
+        for (auth in listOf(AUTHORITY, SQLITE_AUTHORITY)) {
+            try {
+                val info = pm.resolveContentProvider(auth, 0)
+                if (info != null) {
+                    AppLogger.i(TAG, "提供者解析成功: 请求=$auth actual=${info.authority} 包名=${info.packageName}")
+                    return ProviderInfo(info.packageName, info.authority)
+                }
+            } catch (e: Exception) {
+                AppLogger.e(TAG, "解析提供者 $auth 异常", e)
+            }
+        }
+        AppLogger.w(TAG, "默认 authority 未找到（$AUTHORITY / $SQLITE_AUTHORITY），开始全量扫描...")
+
+        // 2) 全量扫描带 provider 的应用
+        try {
+            val pkgs = pm.getInstalledPackages(PackageManager.GET_PROVIDERS)
+            for (pkg in pkgs) {
+                val providers = pkg.providers ?: continue
+                for (pr in providers) {
+                    val auth = pr.authority
+                    if (auth == null || auth.isEmpty()) continue
+                    val low = auth.lowercase()
+                    if (low.contains("readboy") &&
+                        (low.contains("parent") || low.contains("manager") || low.contains("control"))
+                    ) {
+                        AppLogger.i(
+                            TAG,
+                            "扫描发现候选 Provider: 包名=${pkg.packageName} authority=$auth"
+                        )
+                        return ProviderInfo(pkg.packageName, auth)
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "全量扫描 Provider 异常", e)
+        }
+
+        AppLogger.w(TAG, "未找到任何家长管理相关 Provider，请确认家长管理已安装")
+        return null
+    }
+
+    /** 当前生效的 AppContentProvider authority（解析失败回退默认值） */
+    fun authority(context: Context): String {
+        return resolveProvider(context)?.authority ?: AUTHORITY
+    }
+
+    /** 当前生效的 SqliteProvider authority（独立解析，回退默认值） */
+    fun sqliteAuthority(context: Context): String {
+        return try {
+            context.packageManager.resolveContentProvider(
+                SQLITE_AUTHORITY, 0
+            )?.authority
+                ?: resolveProvider(context)?.authority
+                ?: SQLITE_AUTHORITY
+        } catch (e: Exception) {
+            SQLITE_AUTHORITY
+        }
+    }
+
+    /** raw_sql 查询 URI（使用解析到的 authority） */
+    fun rawSqlUri(context: Context): Uri {
+        return Uri.parse("content://${authority(context)}/raw_sql")
+    }
+
     // ==================== 版本探测 ====================
 
     /**
-     * 探测家长管理版本（结果缓存，可调用 [resetDetection] 强制重新探测）
-     *
+     * 探测家长管理版本（结果缓存，可调用 [resetDetection] 强制重新探测）。
      * 新版 app_record.db 的 install_app_list 表包含 disabled_state 列，
-     * 老版本该表不存在该列，以此作为新旧版本判据。
+     * 老版本没有该列，以此作为新旧版本判据。
      */
     fun detectVersion(context: Context): PmsVersion {
         cachedVersion?.let { return it }
@@ -78,6 +167,7 @@ object ParentManagerCompat {
             val v = runCatching { PmsVersion.valueOf(saved) }.getOrNull()
             if (v != null) {
                 cachedVersion = v
+                AppLogger.i(TAG, "使用缓存的版本检测结果: $v")
                 return v
             }
         }
@@ -85,50 +175,89 @@ object ParentManagerCompat {
         val version = probeVersion(context)
         cachedVersion = version
         prefs.edit().putString(KEY_VERSION, version.name).apply()
-        Log.d(TAG, "检测到家长管理版本: $version")
+        AppLogger.i(TAG, "家长管理版本探测结果: $version")
         return version
     }
 
-    /** 清除版本缓存，强制下次重新探测 */
+    /** 清除缓存，强制重新探测 */
     fun resetDetection(context: Context) {
         cachedVersion = null
+        cachedProvider = null
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit().remove(KEY_VERSION).apply()
+        AppLogger.i(TAG, "已重置版本与 Provider 缓存")
     }
 
     private fun probeVersion(context: Context): PmsVersion {
-        // 1) 通过 raw_sql 执行 PRAGMA 探测 install_app_list 的列结构
+        val provider = resolveProvider(context)
+        if (provider?.authority == null) {
+            AppLogger.w(TAG, "Provider 不存在，跳过版本探测")
+            return PmsVersion.UNKNOWN
+        }
+        val auth = provider.authority
+        AppLogger.i(TAG, "开始探测版本, authority=$auth, 包名=${provider.packageName}")
+
+        // 查不存在的表 PRAGMA 也能成功（返回空行），因此用 PRAGMA 结果第一优先
+        var pragmaRows = -1  // -1 表示查询失败
         try {
             val cursor = context.contentResolver.query(
-                Uri.parse(RAW_SQL_URI),
+                rawSqlUri(context),
                 null,
                 "PRAGMA table_info(install_app_list)",
                 null,
                 null
             )
-            cursor?.use { c ->
-                val nameIdx = c.getColumnIndex("name")
-                if (nameIdx >= 0) {
-                    while (c.moveToNext()) {
-                        val col = c.getString(nameIdx)
-                        if (col == "disabled_state") return PmsVersion.NEW
-                        if (col == "state") return PmsVersion.OLD
+            if (cursor == null) {
+                AppLogger.w(TAG, "PRAGMA 查询返回 null（可能是老版无 raw_sql 路径，或 provider 未运行）")
+            } else {
+                cursor.use { c ->
+                    pragmaRows = c.count
+                    AppLogger.i(TAG, "PRAGMA table_info(install_app_list) 返回 $pragmaRows 行")
+                    val nameIdx = c.getColumnIndex("name")
+                    if (nameIdx >= 0) {
+                        val columns = mutableListOf<String>()
+                        while (c.moveToNext()) {
+                            val col = c.getString(nameIdx)
+                            columns.add(col ?: "")
+                        }
+                        AppLogger.i(TAG, "install_app_list 列: $columns")
+                        if ("disabled_state" in columns) return PmsVersion.NEW
+                        if ("state" in columns) return PmsVersion.OLD
+                    } else {
+                        AppLogger.w(TAG, "PRAGMA 结果中没有 name 列")
                     }
                 }
             }
         } catch (e: Exception) {
-            Log.w(TAG, "raw_sql 探测失败: ${e.message}")
+            AppLogger.e(TAG, "PRAGMA 探测异常: ${e.message}", e)
         }
 
         // 2) 回退：标准查询 sqlite_master 判断关键表
         try {
-            val tables = queryTableNames(context, AUTHORITY)
+            val tables = queryTableNames(context, auth)
+            AppLogger.i(TAG, "sqlite_master 查询到 ${tables.size} 个表: ${tables.take(30)}")
             if (tables.contains("install_app_list")) return PmsVersion.NEW
             if (tables.contains("forbidden_app") || tables.contains("user_info")) return PmsVersion.OLD
+            if (tables.isEmpty()) {
+                AppLogger.w(TAG, "sqlite_master 查询返回空表列表")
+            }
         } catch (e: Exception) {
-            Log.w(TAG, "sqlite_master 回退探测失败: ${e.message}")
+            AppLogger.e(TAG, "sqlite_master 回退探测异常: ${e.message}", e)
         }
 
+        // 3) 尝试查 sqlite_master 对应库（SqliteProvider / mysql.db3）
+        try {
+            val tables = queryTableNames(context, sqliteAuthority(context))
+            AppLogger.i(TAG, "mysql.db3 sqlite_master 查询到 ${tables.size} 个表: ${tables.take(30)}")
+            if (tables.contains("install_app_list")) return PmsVersion.NEW
+            if (tables.contains("user_info") || tables.contains("forbidden_app")) return PmsVersion.OLD
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "mysql.db3 探测异常: ${e.message}", e)
+        }
+
+        if (pragmaRows < 0) {
+            AppLogger.w(TAG, "PRAGMA 查询失败且无 sqlite_master 回退结果")
+        }
         return PmsVersion.UNKNOWN
     }
 
@@ -174,6 +303,7 @@ object ParentManagerCompat {
     fun setSqlMethod(context: Context, method: SqlMethod) {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit().putString(KEY_SQL_METHOD, method.key).apply()
+        AppLogger.i(TAG, "SQL 修改方式已设置: $method")
         Log.d(TAG, "SQL 修改方式已设置为: $method")
     }
 
@@ -196,12 +326,9 @@ object ParentManagerCompat {
      * 复刻家长管理 AESUtils 的解密逻辑：
      * KeyGenerator("AES") + SecureRandom(密钥字节作为种子) 派生密钥，
      * Cipher("AES") 默认 ECB/PKCS5Padding。
-     *
-     * @param cipherText 加密的密码字符串
-     * @return 解密后的明文密码；失败返回 null
      */
     fun aesDecryptPassword(cipherText: String, key: String = AES_KEY): String? {
-        // 尝试多种字节编码方式（不同版本存储方式可能不同）
+        AppLogger.i(TAG, "尝试 AES 解密密码（密文长度=${cipherText.length}）")
         val candidates = listOf(
             runCatching { cipherText.toByteArray(Charsets.ISO_8859_1) }.getOrNull(),
             runCatching { cipherText.toByteArray(Charsets.UTF_8) }.getOrNull(),
@@ -220,11 +347,15 @@ object ParentManagerCompat {
                 val cipher = Cipher.getInstance("AES")
                 cipher.init(Cipher.DECRYPT_MODE, keySpec)
                 val decrypted = String(cipher.doFinal(data), Charsets.UTF_8)
-                if (decrypted.isNotBlank()) return decrypted
+                if (decrypted.isNotBlank()) {
+                    AppLogger.i(TAG, "AES 解密成功")
+                    return decrypted
+                }
             } catch (e: Exception) {
-                Log.d(TAG, "AES 解密尝试失败: ${e.message}")
+                AppLogger.d(TAG, "AES 解密尝试失败: ${e.message}")
             }
         }
+        AppLogger.w(TAG, "AES 解密失败（可能不是密文）")
         return null
     }
 }

@@ -25,6 +25,14 @@ class ZaralynApplication : android.app.Application() {
         super.onCreate()
         instance = this
 
+        // 初始化文件日志系统（按日期分文件，可在「日志」页面查看）
+        try {
+            AppLogger.init(this)
+            AppLogger.i(TAG, "应用启动，日志系统已初始化")
+        } catch (e: Exception) {
+            Log.e(TAG, "初始化日志系统失败: ${e.message}", e)
+        }
+
         // 设置全局异常处理器
         Thread.setDefaultUncaughtExceptionHandler(CrashHandler())
 
