@@ -101,10 +101,14 @@ object ParentManagerCompat {
         AppLogger.w(TAG, "默认 authority 未找到（$AUTHORITY / $SQLITE_AUTHORITY），开始全量扫描...")
 
         // 2) 全量扫描带 provider 的应用，记录所有候选
+        //    注意：MATCH_UNINSTALLED_PACKAGES 才能包含被强制停止的应用
         val candidates = mutableListOf<Pair<String, String>>()  // authority -> packageName
         var seenProviders = 0
+        var disabledParents = 0
         try {
-            val pkgs = pm.getInstalledPackages(PackageManager.GET_PROVIDERS)
+            val pkgs = pm.getInstalledPackages(
+                PackageManager.GET_PROVIDERS or PackageManager.MATCH_UNINSTALLED_PACKAGES
+            )
             for (pkg in pkgs) {
                 val providers = pkg.providers ?: continue
                 for (pr in providers) {
@@ -115,6 +119,16 @@ object ParentManagerCompat {
                     val parentLike = low.contains("parent") || low.contains("pmanager")
                     val readboyLike = low.contains("readboy") || low.contains("dream")
                     if (parentLike || readboyLike) {
+                        val enabledState = pm.getApplicationEnabledSetting(pkg.packageName)
+                        if (enabledState == PackageManager.COMPONENT_ENABLED_STATE_DISABLED ||
+                            enabledState == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_UNTIL_USED
+                        ) {
+                            disabledParents++
+                            AppLogger.w(
+                                TAG,
+                                "候选已禁用（enabledState=$enabledState）: authority=$auth 包名=${pkg.packageName}"
+                            )
+                        }
                         candidates.add(auth to pkg.packageName)
                     }
                 }
@@ -122,7 +136,7 @@ object ParentManagerCompat {
         } catch (e: Exception) {
             AppLogger.e(TAG, "全量扫描 Provider 异常: ${e.message}", e)
         }
-        AppLogger.i(TAG, "Provider 全量扫描完成，共扫描 $seenProviders 个 provider")
+        AppLogger.i(TAG, "Provider 全量扫描完成，共扫描 $seenProviders 个 provider（候选 ${candidates.size} 个，其中禁用 $disabledParents 个）")
         if (candidates.isNotEmpty()) {
             AppLogger.w(
                 TAG,
@@ -226,16 +240,13 @@ object ParentManagerCompat {
     }
 
     private fun probeVersion(context: Context): PmsVersion {
-        val provider = resolveProvider(context)
-        if (provider?.authority == null) {
-            AppLogger.w(TAG, "Provider 不存在，跳过版本探测")
-            return PmsVersion.UNKNOWN
-        }
-        val auth = provider.authority
-        AppLogger.i(TAG, "开始探测版本, authority=$auth, 包名=${provider.packageName}")
+        // 注意：content 查询不受包可见性/停止状态影响，先直接探测默认 authority
+        val auth = authority(context)
+        AppLogger.i(TAG, "开始探测版本（先直接查询，authority=$auth）")
 
         // 查不存在的表 PRAGMA 也能成功（返回空行），因此用 PRAGMA 结果第一优先
         var pragmaRows = -1  // -1 表示查询失败
+        var providerMissing = false
         try {
             val cursor = context.contentResolver.query(
                 rawSqlUri(context),
@@ -245,7 +256,7 @@ object ParentManagerCompat {
                 null
             )
             if (cursor == null) {
-                AppLogger.w(TAG, "PRAGMA 查询返回 null（可能是老版无 raw_sql 路径，或 provider 未运行）")
+                AppLogger.w(TAG, "PRAGMA 查询返回 null（可能是老版无 raw_sql 路径，或 provider 未运行/已停止）")
             } else {
                 cursor.use { c ->
                     pragmaRows = c.count
@@ -266,20 +277,28 @@ object ParentManagerCompat {
                 }
             }
         } catch (e: Exception) {
+            val msg = e.message ?: ""
+            if (msg.contains("Unknown URI") || msg.contains("Failed to find provider")) {
+                providerMissing = true
+            }
             AppLogger.e(TAG, "PRAGMA 探测异常: ${e.message}", e)
         }
 
-        // 2) 回退：标准查询 sqlite_master 判断关键表
+        // 2) 回退：标准查询 sqlite_master 判断关键表（同样直接 content 查询）
         try {
             val tables = queryTableNames(context, auth)
-            AppLogger.i(TAG, "sqlite_master 查询到 ${tables.size} 个表: ${tables.take(30)}")
+            AppLogger.i(TAG, "app_record sqlite_master 查询到 ${tables.size} 个表: ${tables.take(30)}")
             if (tables.contains("install_app_list")) return PmsVersion.NEW
             if (tables.contains("forbidden_app") || tables.contains("user_info")) return PmsVersion.OLD
             if (tables.isEmpty()) {
                 AppLogger.w(TAG, "sqlite_master 查询返回空表列表")
             }
         } catch (e: Exception) {
-            AppLogger.e(TAG, "sqlite_master 回退探测异常: ${e.message}", e)
+            val msg = e.message ?: ""
+            if (msg.contains("Unknown URI") || msg.contains("Failed to find provider")) {
+                providerMissing = true
+            }
+            AppLogger.e(TAG, "app_record sqlite_master 回退探测异常: ${e.message}", e)
         }
 
         // 3) 尝试查 sqlite_master 对应库（SqliteProvider / mysql.db3）
@@ -289,12 +308,18 @@ object ParentManagerCompat {
             if (tables.contains("install_app_list")) return PmsVersion.NEW
             if (tables.contains("user_info") || tables.contains("forbidden_app")) return PmsVersion.OLD
         } catch (e: Exception) {
+            val msg = e.message ?: ""
+            if (msg.contains("Unknown URI") || msg.contains("Failed to find provider")) {
+                providerMissing = true
+            }
             AppLogger.e(TAG, "mysql.db3 探测异常: ${e.message}", e)
         }
 
+        // 4) 直接查询全部失败：再做包管理诊断（可见性/停止状态/禁用状态）
         if (pragmaRows < 0) {
-            AppLogger.w(TAG, "PRAGMA 查询失败且无 sqlite_master 回退结果")
+            AppLogger.w(TAG, "直接 content 查询失败（providerMissing=$providerMissing），进入包管理诊断")
         }
+        resolveProvider(context)
         return PmsVersion.UNKNOWN
     }
 

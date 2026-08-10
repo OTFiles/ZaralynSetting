@@ -17,6 +17,17 @@
     <uses-permission android:name="android.permission.READ_LOGS" tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!-- Android 11+ 包可见性：声明家长管理包与 provider，确保能解析/扫描到 -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <queries>
+        <package android:name="com.readboy.parentmanager" />
+        <provider android:authorities="com.readboy.parentmanager.AppContentProvider" />
+        <provider android:authorities="com.readboy.parentmanager.SqliteProvider" />
+    </queries>
+
     <application
         android:name=".ZaralynApplication"
         android:allowBackup="true"
