@@ -100,7 +100,9 @@ object ParentManagerCompat {
         }
         AppLogger.w(TAG, "默认 authority 未找到（$AUTHORITY / $SQLITE_AUTHORITY），开始全量扫描...")
 
-        // 2) 全量扫描带 provider 的应用
+        // 2) 全量扫描带 provider 的应用，记录所有候选
+        val candidates = mutableListOf<Pair<String, String>>()  // authority -> packageName
+        var seenProviders = 0
         try {
             val pkgs = pm.getInstalledPackages(PackageManager.GET_PROVIDERS)
             for (pkg in pkgs) {
@@ -108,23 +110,52 @@ object ParentManagerCompat {
                 for (pr in providers) {
                     val auth = pr.authority
                     if (auth == null || auth.isEmpty()) continue
+                    seenProviders++
                     val low = auth.lowercase()
-                    if (low.contains("readboy") &&
-                        (low.contains("parent") || low.contains("manager") || low.contains("control"))
-                    ) {
-                        AppLogger.i(
-                            TAG,
-                            "扫描发现候选 Provider: 包名=${pkg.packageName} authority=$auth"
-                        )
-                        return ProviderInfo(pkg.packageName, auth)
+                    val parentLike = low.contains("parent") || low.contains("pmanager")
+                    val readboyLike = low.contains("readboy") || low.contains("dream")
+                    if (parentLike || readboyLike) {
+                        candidates.add(auth to pkg.packageName)
                     }
                 }
             }
         } catch (e: Exception) {
-            AppLogger.e(TAG, "全量扫描 Provider 异常", e)
+            AppLogger.e(TAG, "全量扫描 Provider 异常: ${e.message}", e)
+        }
+        AppLogger.i(TAG, "Provider 全量扫描完成，共扫描 $seenProviders 个 provider")
+        if (candidates.isNotEmpty()) {
+            AppLogger.w(
+                TAG,
+                "发现 readboy/家长 相关候选: " +
+                    candidates.joinToString("; ") { "${it.first} (${it.second})" }
+            )
         }
 
-        AppLogger.w(TAG, "未找到任何家长管理相关 Provider，请确认家长管理已安装")
+        // 3) 优先选择含 parent 的 authority（管控类提供者）
+        val best = candidates.firstOrNull { it.first.lowercase().contains("parent") }
+            ?: candidates.firstOrNull {
+                it.first.lowercase().contains("appcontent") ||
+                    it.first.lowercase().contains("provider")
+            }
+        if (best != null) {
+            AppLogger.i(TAG, "选定候选 Provider: authority=${best.first} 包名=${best.second}")
+            return ProviderInfo(best.second, best.first)
+        }
+
+        // 4) 检查默认包是否已安装但被禁用
+        try {
+            val pi = pm.getPackageInfo("com.readboy.parentmanager", 0)
+            val enabled = pi.applicationInfo.enabled
+            val enabledSetting = pm.getApplicationEnabledSetting("com.readboy.parentmanager")
+            AppLogger.w(
+                TAG,
+                "包 com.readboy.parentmanager 已安装，enabled=$enabled, enabledSetting=$enabledSetting（若为禁用状态请先在系统设置中启用）"
+            )
+        } catch (e: Exception) {
+            AppLogger.w(TAG, "包 com.readboy.parentmanager 未安装")
+        }
+
+        AppLogger.w(TAG, "未找到任何家长管理相关 Provider，请确认家长管理已安装且未被禁用")
         return null
     }
 
@@ -165,16 +196,22 @@ object ParentManagerCompat {
         val saved = prefs.getString(KEY_VERSION, null)
         if (saved != null) {
             val v = runCatching { PmsVersion.valueOf(saved) }.getOrNull()
-            if (v != null) {
+            if (v != null && v != PmsVersion.UNKNOWN) {
                 cachedVersion = v
                 AppLogger.i(TAG, "使用缓存的版本检测结果: $v")
                 return v
+            }
+            if (v == PmsVersion.UNKNOWN) {
+                AppLogger.i(TAG, "缓存的版本检测结果为 UNKNOWN，重新探测（家长管理可能刚安装）")
             }
         }
 
         val version = probeVersion(context)
         cachedVersion = version
-        prefs.edit().putString(KEY_VERSION, version.name).apply()
+        // 只缓存确定的结果；UNKNOWN 每次启动都重新探测，避免家长管理后装时检测失效
+        if (version != PmsVersion.UNKNOWN) {
+            prefs.edit().putString(KEY_VERSION, version.name).apply()
+        }
         AppLogger.i(TAG, "家长管理版本探测结果: $version")
         return version
     }
