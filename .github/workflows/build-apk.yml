@@ -113,7 +113,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ github.run_number }}
-        name: 修复新版兼容性问题
+        name: ZaralynSetting 兼容新版家长管理 + 老机型适配（Android 7）
         body: |
           ## 修复新版兼容性问题
 
