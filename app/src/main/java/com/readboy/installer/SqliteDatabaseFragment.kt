@@ -172,7 +172,7 @@ class SqliteDatabaseFragment : Fragment() {
                 log("开始获取所有表名（${getProviderName()}）...")
                 val tables = getAllTablesSafe()
                 if (tables.isNotEmpty()) {
-                    log("✓ 成功获取 ${tables.size} 个表")
+                    log("成功获取 ${tables.size} 个表")
                     tableList.clear()
                     tableList.addAll(tables)
 
@@ -196,7 +196,7 @@ class SqliteDatabaseFragment : Fragment() {
 
                     showToast("成功获取 ${tables.size} 个表")
                 } else {
-                    log("✗ 未找到任何表")
+                    log("未找到任何表")
                     currentTableData = "未找到任何表"
                     tvResult.text = currentTableData
                     tvRowCount.text = "0 个表"
@@ -214,7 +214,7 @@ class SqliteDatabaseFragment : Fragment() {
                 val tableName = getSelectedTable()
                 if (tableName.isNullOrEmpty()) {
                     showToast("请先选择一个表")
-                    log("✗ 未选择表")
+                    log("未选择表")
                     return@setOnClickListener
                 }
 
@@ -227,7 +227,7 @@ class SqliteDatabaseFragment : Fragment() {
                 val rows = tableData.lines().filter { it.isNotBlank() && !it.startsWith("---") }.size - 1
                 tvRowCount.text = "$rows 行"
 
-                log("✓ 查询完成，共 $rows 行数据")
+                log("查询完成，共 $rows 行数据")
                 showToast("表数据已刷新")
             } catch (e: Exception) {
                 logError("查询表数据失败: ${e.message}", e)
@@ -246,7 +246,7 @@ class SqliteDatabaseFragment : Fragment() {
                 val clipboard = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 clipboard.text = currentTableData
 
-                log("✓ 数据已复制到剪贴板")
+                log("数据已复制到剪贴板")
                 showToast("数据已复制到剪贴板")
             } catch (e: Exception) {
                 logError("复制数据失败: ${e.message}", e)
@@ -345,11 +345,11 @@ class SqliteDatabaseFragment : Fragment() {
                         ProviderType.APP_RECORD -> ParentManagerHelper.insertDataAppProvider(requireContext(), tableName, contentValues)
                     }
                     if (id > 0) {
-                        log("✓ 插入成功，ID: $id")
+                        log("插入成功，ID: $id")
                         showToast("插入成功，ID: $id")
                         btnRefreshTable.performClick()
                     } else {
-                        log("✗ 插入失败")
+                        log("插入失败")
                         showToast("插入失败")
                     }
                 } catch (e: Exception) {
@@ -421,11 +421,11 @@ class SqliteDatabaseFragment : Fragment() {
                     }
 
                     if (rowsAffected > 0) {
-                        log("✓ 更新成功，受影响的行数: $rowsAffected")
+                        log("更新成功，受影响的行数: $rowsAffected")
                         showToast("更新成功，受影响的行数: $rowsAffected")
                         btnRefreshTable.performClick()
                     } else {
-                        log("✗ 更新失败，未找到匹配的行")
+                        log("更新失败，未找到匹配的行")
                         showToast("更新失败，未找到匹配的行")
                     }
                 } catch (e: Exception) {
@@ -481,11 +481,11 @@ class SqliteDatabaseFragment : Fragment() {
                     }
 
                     if (rowsAffected > 0) {
-                        log("✓ 删除成功，受影响的行数: $rowsAffected")
+                        log("删除成功，受影响的行数: $rowsAffected")
                         showToast("删除成功，受影响的行数: $rowsAffected")
                         btnRefreshTable.performClick()
                     } else {
-                        log("✗ 删除失败，未找到匹配的行")
+                        log("删除失败，未找到匹配的行")
                         showToast("删除失败，未找到匹配的行")
                     }
                 } catch (e: Exception) {
@@ -531,7 +531,7 @@ class SqliteDatabaseFragment : Fragment() {
 
     private fun logError(message: String, exception: Exception) {
         Log.e(TAG, message, exception)
-        log("✗ $message")
+        log("$message")
     }
 
     private fun showToast(message: String) {
