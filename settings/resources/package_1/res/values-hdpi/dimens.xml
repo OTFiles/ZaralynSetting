@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<resources>
-  <dimen name="readboy_navigationbar_guide_offset_1">45.0dp</dimen>
-  <dimen name="readboy_network_guide_height_1">80.0dp</dimen>
-</resources>

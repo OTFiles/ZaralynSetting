@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/readboy_show_other_more_settings_title"
-                  android:key="parent" xmlns:android="http://schemas.android.com/apk/res/android">
-  <Preference android:title="@string/readboy_rise_and_fall_camera_adjust_title"
-              android:key="rise_and_fall_camera_adjust_pref"
-              android:summary="@string/readboy_rise_and_fall_camera_adjust_summary"
-              android:order="1913" />
-</PreferenceScreen>

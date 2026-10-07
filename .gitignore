@@ -68,3 +68,11 @@ gradle-app.setting
 .idea/jarRepositories.xml
 cache/
 *cache*
+
+# 反编译产物 / 本地工具目录（勿提交）
+settings/
+.pi/
+.qwen/
+cache/
+tmp/
+tools/__pycache__/

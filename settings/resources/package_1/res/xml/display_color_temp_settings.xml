@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/readboy_color_manager_temp"
-                  android:key="parent" xmlns:android="http://schemas.android.com/apk/res/android">
-  <com.android.settings.CMSeekBarPreference android:title="@string/readboy_color_manager_temp"
-                        android:key="color_manager_temp_pref" />
-</PreferenceScreen>

@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<ripple android:color="@color/readboy_text_list_item_pressed" xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/popup_dialog_bg_bottom_selector" />
-</ripple>

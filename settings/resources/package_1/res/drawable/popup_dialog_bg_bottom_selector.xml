@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
-  <corners android:bottomLeftRadius="@dimen/readboy_popup_dialog_bg_radius"
-           android:bottomRightRadius="@dimen/readboy_popup_dialog_bg_radius" />
-  <solid android:color="@color/readboy_text_list_item_normal" />
-  <stroke android:width="@dimen/readboy_app_detail_button_stroke"
-          android:color="@color/list_divider_popdlg_color" />
-</shape>

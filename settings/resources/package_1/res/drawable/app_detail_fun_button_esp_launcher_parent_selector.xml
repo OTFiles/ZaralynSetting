@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<level-list xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/app_detail_fun_button_exit_selector"
-        android:maxLevel="1" />
-  <item android:drawable="@drawable/app_detail_fun_button_enter_selector"
-        android:maxLevel="2" />
-</level-list>

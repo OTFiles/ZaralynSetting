@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<inset android:drawable="@drawable/local_preference_list_divider_material"
-       android:insetLeft="@dimen/settings_side_big_margin"
-       android:insetRight="@dimen/settings_side_big_margin" xmlns:android="http://schemas.android.com/apk/res/android" />

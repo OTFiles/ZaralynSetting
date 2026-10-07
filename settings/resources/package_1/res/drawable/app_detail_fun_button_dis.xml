@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
-  <corners android:radius="@dimen/readboy_app_detail_button_radius" />
-  <solid android:color="@color/readboy_text_list_item_normal" />
-  <padding android:left="10.0dp"
-           android:right="10.0dp" />
-  <stroke android:width="@dimen/readboy_app_detail_button_stroke"
-          android:color="@color/app_stroke_color_disable" />
-</shape>

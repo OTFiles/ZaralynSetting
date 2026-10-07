@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/touchmode_settings"
-                  android:key="parent" xmlns:android="http://schemas.android.com/apk/res/android">
-  <SwitchPreference android:title="@string/touchmode_pen_title"
-                    android:key="touchmode_pen"
-                    android:summary="@string/touchmode_pen_summary"
-                    android:defaultValue="false" />
-</PreferenceScreen>
