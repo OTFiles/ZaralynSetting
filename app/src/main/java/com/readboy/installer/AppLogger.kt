@@ -35,22 +35,26 @@ object AppLogger {
                 runCatching { context.getExternalFilesDir(DIRECTORY_NAME) }.getOrNull(),
                 File(context.filesDir, DIRECTORY_NAME)
             )
-            var dir: File? = null
+            var chosen: File? = null
             for (candidate in candidates) {
                 if (candidate == null) continue
-                runCatching {
+                val writable = runCatching {
                     if (!candidate.exists()) candidate.mkdirs()
                     // 真正验证可写（老 ROM 上目录可能创建成功却不可写）
                     val probe = File(candidate, ".write_test")
                     probe.writeText("ok")
                     val ok = probe.readText() == "ok"
                     probe.delete()
-                    if (ok) dir = candidate
+                    ok
                 }.onFailure { Log.w(TAG, "日志目录不可写: ${candidate.absolutePath} (${it.message})") }
-                if (dir != null) break
+                    .getOrDefault(false)
+                if (writable) {
+                    chosen = candidate
+                    break
+                }
             }
-            logDirectory = dir
-            if (dir == null) {
+            logDirectory = chosen
+            if (chosen == null) {
                 Log.e(TAG, "无可写日志目录，日志将仅输出到 logcat")
                 return
             }
@@ -61,7 +65,7 @@ object AppLogger {
                 appendToFile(nowDate(), buffer.toString())
                 buffer.setLength(0)
             }
-            Log.d(TAG, "日志目录: ${dir.absolutePath}")
+            Log.d(TAG, "日志目录: ${chosen.absolutePath}")
         }
     }
 
