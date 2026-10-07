@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.readboy.BaseScrollView android:layout_width="fill_parent"
+                        android:layout_height="0.0dp"
+                        android:layout_marginTop="12.0dp"
+                        android:layout_weight="1.0"
+                        android:layout_marginStart="@dimen/preference_no_icon_padding_start_settings"
+                        android:layout_marginEnd="12.0dp">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <TextView android:textSize="18.0sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_network_desc"
+                android:textDirection="locale" />
+      <include android:id="@id/erase_esim_container"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               layout="@layout/reset_esim_checkbox" />
+    </LinearLayout>
+  </com.android.settingslib.readboy.BaseScrollView>
+  <Spinner android:layout_gravity="center_horizontal"
+           android:id="@id/reset_network_subscription"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20.0dp" />
+  <Button android:gravity="center"
+          android:layout_gravity="center_horizontal"
+          android:id="@id/initiate_reset_network"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20.0dp"
+          android:layout_marginBottom="12.0dp"
+          android:text="@string/reset_network_button_text"
+          style="@style/rbButtonStyle" />
+</LinearLayout>

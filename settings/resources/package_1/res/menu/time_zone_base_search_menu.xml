@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:icon="@android:drawable/ic_settings"
+        android:id="@id/time_zone_search_menu"
+        android:title="@string/search_settings"
+        android:showAsAction="always|collapseActionView"
+        android:actionViewClass="android.widget.SearchView" />
+</menu>

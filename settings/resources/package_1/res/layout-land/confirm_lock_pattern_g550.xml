@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <include layout="@layout/confirm_lock_background_base" />
+  <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:id="@id/topLayout"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_marginTop="48.0dp">
+      <TextView android:textColor="?android:attr/colorAccent"
+                android:id="@id/headerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32.0dp"
+                android:layout_marginEnd="32.0dp"
+                style="@android:style/TextAppearance.Material.Headline" />
+      <TextView android:id="@id/detailsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dp"
+                android:layout_marginStart="32.0dp"
+                android:layout_marginEnd="32.0dp"
+                style="@android:style/TextAppearance.Material.Body1" />
+      <Button android:id="@id/cancelButton"
+              android:visibility="gone"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16.0dp"
+              android:text="@string/cancel"
+              android:layout_marginStart="16.0dp"
+              android:layout_marginEnd="16.0dp"
+              style="@style/rbButtonStyle" />
+      <LinearLayout android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dp"
+                    android:layout_weight="1.0">
+        <View android:id="@id/leftSpacer"
+              android:layout_width="fill_parent"
+              android:layout_height="0.0dp"
+              android:layout_weight="0.4" />
+        <LinearLayout android:gravity="center_horizontal"
+                      android:orientation="vertical"
+                      android:clipChildren="false"
+                      android:clipToPadding="false"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+          <com.android.internal.widget.LockPatternView android:layout_gravity="center"
+                                android:id="@id/lockPattern"
+                                android:layout_width="288.0dp"
+                                android:layout_height="288.0dp"
+                                android:layout_marginStart="-42.0dp"
+                                android:layout_marginEnd="-42.0dp" />
+          <TextView android:layout_gravity="bottom|center"
+                    android:id="@id/errorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.0dp"
+                    android:layout_marginBottom="24.0dp"
+                    android:accessibilityLiveRegion="polite"
+                    style="@style/TextAppearance.ConfirmDeviceCredentialsErrorText" />
+        </LinearLayout>
+        <View android:id="@id/rightSpacer"
+              android:layout_width="fill_parent"
+              android:layout_height="0.0dp"
+              android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical"
+                   android:id="@id/fingerprintIcon"
+                   android:visibility="gone"
+                   android:layout_width="wrap_content"
+                   android:layout_height="0.0dp"
+                   android:layout_weight="1.0" />
+      </LinearLayout>
+    </LinearLayout>
+  </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>
+</FrameLayout>

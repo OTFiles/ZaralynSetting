@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:background="@drawable/app_subtitle_line_border_white_item"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/dashboard_tile_minimum_height"
+              android:paddingStart="@dimen/header_item_margin_size"
+              android:paddingEnd="@dimen/header_item_margin_size" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center_vertical"
+             android:id="@id/icon"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="13.0dp"
+             android:layout_marginBottom="13.0dp" />
+  <RelativeLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0"
+                  android:layout_marginStart="12.0dp"
+                  android:layout_marginEnd="6.0dp">
+    <TextView android:textSize="24.0sp"
+              android:textColor="@color/header_text_color"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+              android:ellipsize="end"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:layout_below="@android:id/title"
+              android:layout_alignStart="@android:id/title" />
+  </RelativeLayout>
+  <ImageView android:layout_gravity="center_vertical"
+             android:id="@id/ext_icon"
+             android:visibility="invisible"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/phone_ota_new_version_selector"
+             android:paddingStart="15.0dp"
+             android:paddingEnd="15.0dp" />
+  <ImageView android:layout_gravity="center_vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/arrow_nor" />
+</LinearLayout>

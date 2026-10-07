@@ -47,4 +47,12 @@
     <string name="log_refresh">刷新</string>
     <string name="log_copy">复制</string>
     <string name="log_empty">该日期暂无日志</string>
+    <string name="compat_title">兼容性自检</string>
+    <string name="compat_desc">检查本机能力（系统版本、家长管理、Provider、日志与网络），老机型排障用。</string>
+    <string name="compat_run">开始自检</string>
+    <string name="compat_running">正在自检…</string>
+    <string name="compat_done">自检完成：%1$d/%2$d 项通过</string>
+    <string name="compat_copy">复制报告</string>
+    <string name="compat_close">关闭</string>
+    <string name="copied">已复制</string>
 </resources>

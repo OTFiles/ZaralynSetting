@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape android:shape="rectangle">
+      <corners android:topLeftRadius="@dimen/button_radius_2"
+               android:topRightRadius="@dimen/button_radius_2"
+               android:bottomLeftRadius="@dimen/button_radius_2"
+               android:bottomRightRadius="@dimen/button_radius_2" />
+      <solid android:color="#ff7fbdfe" />
+    </shape>
+  </item>
+  <item android:left="2.0px"
+        android:top="2.0px"
+        android:right="2.0px"
+        android:bottom="2.0px">
+    <shape android:shape="rectangle">
+      <corners android:topLeftRadius="@dimen/button_radius_2"
+               android:topRightRadius="@dimen/button_radius_2"
+               android:bottomLeftRadius="@dimen/button_radius_2"
+               android:bottomRightRadius="@dimen/button_radius_2" />
+      <solid android:color="@color/readboy_color_white_1" />
+    </shape>
+  </item>
+</layer-list>

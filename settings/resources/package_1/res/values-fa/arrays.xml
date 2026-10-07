@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">پویانمایی خاموش</item>
+    <item name="r0x00000000">مقیاس پویانمایی 0.5 برابر</item>
+    <item name="r0x00000000">مقیاس پویانمایی 1 برابر</item>
+    <item name="r0x00000000">مقیاس پویانمایی 1.5 برابر</item>
+    <item name="r0x00000000">مقیاس پویانمایی 2 برابر</item>
+    <item name="r0x00000000">مقیاس پویانمایی 5 برابر</item>
+    <item name="r0x00000000">مقیاس پویانمایی 10 برابر</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">‏PAP یا CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">دستگاه ذخیره‌سازی داخلی</item>
+    <item name="r0x00000000">‏کارت SD جدا شدنی</item>
+    <item name="r0x00000000">سیستم تصمیم بگیرد</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">مکان</item>
+    <item name="r0x00000000">شخصی</item>
+    <item name="r0x00000000">پیام‌رسانی</item>
+    <item name="r0x00000000">رسانه</item>
+    <item name="r0x00000000">دستگاه</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">لرزش</item>
+    <item name="r0x00000000">خواندن مخاطبین</item>
+    <item name="r0x00000000">تغییر مخاطبین</item>
+    <item name="r0x00000000">خواندن گزارش تماس</item>
+    <item name="r0x00000000">تغییر گزارش تماس</item>
+    <item name="r0x00000000">خواندن تقویم</item>
+    <item name="r0x00000000">تغییر تقویم</item>
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">اعلان پست</item>
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">تماس تلفنی</item>
+    <item name="r0x00000000">خواندن پیامک/فراپیام</item>
+    <item name="r0x00000000">نوشتن پیامک/فراپیام</item>
+    <item name="r0x00000000">دریافت پیامک/فراپیام</item>
+    <item name="r0x00000000">دریافت پیامک/فراپیام</item>
+    <item name="r0x00000000">دریافت پیامک/فراپیام</item>
+    <item name="r0x00000000">دریافت پیامک/فراپیام</item>
+    <item name="r0x00000000">ارسال پیامک/فراپیام</item>
+    <item name="r0x00000000">خواندن پیامک/فراپیام</item>
+    <item name="r0x00000000">نوشتن پیامک/فراپیام</item>
+    <item name="r0x00000000">تغییر تنظیمات</item>
+    <item name="r0x00000000">در بالا طراحی کنید</item>
+    <item name="r0x00000000">اعلان‌های دسترسی</item>
+    <item name="r0x00000000">دوربین</item>
+    <item name="r0x00000000">ضبط صدا</item>
+    <item name="r0x00000000">پخش صدا</item>
+    <item name="r0x00000000">خواندن کلیپ بورد</item>
+    <item name="r0x00000000">تغییر بریده‌دان</item>
+    <item name="r0x00000000">دکمه‌های رسانه‌</item>
+    <item name="r0x00000000">فوکوس صدا</item>
+    <item name="r0x00000000">میزان صدای اصلی</item>
+    <item name="r0x00000000">میزان صدای مکالمه</item>
+    <item name="r0x00000000">میزان صدای زنگ</item>
+    <item name="r0x00000000">میزان صدای رسانه</item>
+    <item name="r0x00000000">میزان صدای هشدار</item>
+    <item name="r0x00000000">میزان صدای اعلان</item>
+    <item name="r0x00000000">میزان صدای بلوتوث</item>
+    <item name="r0x00000000">بیدار باش</item>
+    <item name="r0x00000000">موقعیت مکانی</item>
+    <item name="r0x00000000">مکان</item>
+    <item name="r0x00000000">دریافت آمار استفاده</item>
+    <item name="r0x00000000">صدادار/بی‌صدا کردن میکروفن</item>
+    <item name="r0x00000000">نمایش تست</item>
+    <item name="r0x00000000">فرستادن رسانه</item>
+    <item name="r0x00000000">‏فعال کردن VPN</item>
+    <item name="r0x00000000">نوشتن تصویرزمینه</item>
+    <item name="r0x00000000">ساختار دستیار</item>
+    <item name="r0x00000000">عکس‌ صفحه‌نمایش دستیار</item>
+    <item name="r0x00000000">خواندن وضعیت تلفن</item>
+    <item name="r0x00000000">افزودن پست صوتی</item>
+    <item name="r0x00000000">‏استفاده از SIP</item>
+    <item name="r0x00000000">پردازش تماس خروجی</item>
+    <item name="r0x00000000">اثر انگشت</item>
+    <item name="r0x00000000">حسگرهای بدن</item>
+    <item name="r0x00000000">خواندن پخش‌های سلولی</item>
+    <item name="r0x00000000">مکان کاذب</item>
+    <item name="r0x00000000">خواندن حافظه</item>
+    <item name="r0x00000000">نوشتن در حافظه</item>
+    <item name="r0x00000000">روشن کردن صفحه</item>
+    <item name="r0x00000000">دریافت حساب‌ها</item>
+    <item name="r0x00000000">اجرا در پس‌زمینه</item>
+    <item name="r0x00000000">میزان دسترس‌پذیری</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">موقعیت مکانی غیردقیق</item>
+    <item name="r0x00000000">موقعیت مکانی دقیق</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">لرزش</item>
+    <item name="r0x00000000">خواندن مخاطبین</item>
+    <item name="r0x00000000">تغییر مخاطبین</item>
+    <item name="r0x00000000">خواندن گزارش تماس</item>
+    <item name="r0x00000000">تغییر گزارش تماس</item>
+    <item name="r0x00000000">خواندن تقویم</item>
+    <item name="r0x00000000">تغییر تقویم</item>
+    <item name="r0x00000000">‏جستجوی شبکه Wi‑Fi</item>
+    <item name="r0x00000000">اعلان</item>
+    <item name="r0x00000000">جستجوی شبکه سلولی</item>
+    <item name="r0x00000000">تماس تلفنی</item>
+    <item name="r0x00000000">خواندن پیامک</item>
+    <item name="r0x00000000">نوشتن پیامک</item>
+    <item name="r0x00000000">دریافت پیامک</item>
+    <item name="r0x00000000">دریافت پیامک‌های اضطراری</item>
+    <item name="r0x00000000">دریافت فراپیام</item>
+    <item name="r0x00000000">‏دریافت پیام ارسال داده WAP</item>
+    <item name="r0x00000000">ارسال پیامک</item>
+    <item name="r0x00000000">‏خواندن پیامک ICC</item>
+    <item name="r0x00000000">‏نوشتن پیامک ICC</item>
+    <item name="r0x00000000">تغییر تنظیمات</item>
+    <item name="r0x00000000">در بالا طراحی کنید</item>
+    <item name="r0x00000000">اعلان‌های دسترسی</item>
+    <item name="r0x00000000">دوربین</item>
+    <item name="r0x00000000">ضبط صدا</item>
+    <item name="r0x00000000">پخش صدا</item>
+    <item name="r0x00000000">خواندن کلیپ بورد</item>
+    <item name="r0x00000000">تغییر بریده‌دان</item>
+    <item name="r0x00000000">دکمه‌های رسانه‌ای</item>
+    <item name="r0x00000000">فوکوس صدا</item>
+    <item name="r0x00000000">میزان کنترل</item>
+    <item name="r0x00000000">میزان صدا</item>
+    <item name="r0x00000000">حجم حلقه</item>
+    <item name="r0x00000000">میزان صدای رسانه</item>
+    <item name="r0x00000000">میزان صدای هشدار</item>
+    <item name="r0x00000000">میزان صدای اعلان</item>
+    <item name="r0x00000000">میزان صدای بلوتوث</item>
+    <item name="r0x00000000">بیدار باش</item>
+    <item name="r0x00000000">کنترل موقعیت مکانی</item>
+    <item name="r0x00000000">کنترل مکان پرقدرت</item>
+    <item name="r0x00000000">دریافت آمار استفاده</item>
+    <item name="r0x00000000">صدادار/بی‌صدا کردن میکروفن</item>
+    <item name="r0x00000000">نمایش تست</item>
+    <item name="r0x00000000">فرستادن رسانه</item>
+    <item name="r0x00000000">‏فعال کردن VPN</item>
+    <item name="r0x00000000">نوشتن تصویرزمینه</item>
+    <item name="r0x00000000">ساختار دستیار</item>
+    <item name="r0x00000000">عکس‌ صفحه‌نمایش دستیار</item>
+    <item name="r0x00000000">خواندن وضعیت تلفن</item>
+    <item name="r0x00000000">افزودن پست صوتی</item>
+    <item name="r0x00000000">‏استفاده از SIP</item>
+    <item name="r0x00000000">پردازش تماس خروجی</item>
+    <item name="r0x00000000">اثر انگشت</item>
+    <item name="r0x00000000">حسگرهای بدن</item>
+    <item name="r0x00000000">خواندن پخش‌های سلولی</item>
+    <item name="r0x00000000">مکان کاذب</item>
+    <item name="r0x00000000">خواندن حافظه</item>
+    <item name="r0x00000000">نوشتن در حافظه</item>
+    <item name="r0x00000000">روشن کردن صفحه</item>
+    <item name="r0x00000000">دریافت حساب‌ها</item>
+    <item name="r0x00000000">اجرا در پس‌زمینه</item>
+    <item name="r0x00000000">میزان دسترس‌پذیری</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">حد استاندارد</item>
+    <item name="r0x00000000">بدون پردازش در پس‌زمینه</item>
+    <item name="r0x00000000">حداکثر 1 پردازش</item>
+    <item name="r0x00000000">حداکثر 2 پردازش</item>
+    <item name="r0x00000000">حداکثر 3 پردازش</item>
+    <item name="r0x00000000">حداکثر 4 پردازش</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">بیش از ۳۰ روز پیش</item>
+    <item name="r0x00000000">بیش از ۶۰ روز پیش</item>
+    <item name="r0x00000000">بیش از ۹۰ روز پیش</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">٪۰</item>
+    <item name="r0x00000000">۵۰٪</item>
+    <item name="r0x00000000">۱۰۰٪</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">نامشخص</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">۱۶ بیت در هر نمونه</item>
+    <item name="r0x00000000">۲۴ بیت در هر نمونه</item>
+    <item name="r0x00000000">۳۲ بیت در هر نمونه</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">۱۶ بیت در هر نمونه</item>
+    <item name="r0x00000000">۲۴ بیت در هر نمونه</item>
+    <item name="r0x00000000">۳۲ بیت در هر نمونه</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">مونو</item>
+    <item name="r0x00000000">استریو</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">مونو</item>
+    <item name="r0x00000000">استریو</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">بهینه‌شده برای کیفیت صوت</item>
+    <item name="r0x00000000">کیفیت متعادل صوت و اتصال</item>
+    <item name="r0x00000000">بهینه‌شده برای کیفیت اتصال</item>
+    <item name="r0x00000000">بهترین حالت (نرخ بیت تطبیقی)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">بهینه‌شده برای کیفیت صوت (۹۹۰ کیلوبیت در ثانیه/۹۰۹ کیلوبیت در ثانیه)</item>
+    <item name="r0x00000000">کیفیت متعادل صوت و اتصال (۶۶۰ کیلوبیت در ثانیه/۶۰۶ کیلوبیت در ثانیه)</item>
+    <item name="r0x00000000">بهینه‌شده برای کیفیت اتصال (۳۳۰ کیلوبیت در ثانیه/۳۰۳ کیلوبیت در ثانیه)</item>
+    <item name="r0x00000000">بهترین حالت (نرخ بیت تطبیقی)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">۴۴٫۱ کیلوهرتز</item>
+    <item name="r0x00000000">۴۸٫۰ کیلوهرتز</item>
+    <item name="r0x00000000">۸۸٫۲ کیلوهرتز</item>
+    <item name="r0x00000000">۹۶٫۰ کیلوهرتز</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">۴۴٫۱ کیلوهرتز</item>
+    <item name="r0x00000000">۴۸٫۰ کیلوهرتز</item>
+    <item name="r0x00000000">۸۸٫۲ کیلوهرتز</item>
+    <item name="r0x00000000">۹۶٫۰ کیلوهرتز</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">صوت Qualcomm® aptX™</item>
+    <item name="r0x00000000">صوت Qualcomm® aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">فعال کردن کدک‌های اختیاری</item>
+    <item name="r0x00000000">غیرفعال کردن کدک‌های اختیاری</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">استفاده از انتخاب سیستم (پیش‌فرض)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">صوت Qualcomm® aptX™</item>
+    <item name="r0x00000000">صوت Qualcomm® aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">فعال کردن کدک‌های اختیاری</item>
+    <item name="r0x00000000">غیرفعال کردن کدک‌های اختیاری</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">، فعال</item>
+    <item name="r0x00000000">، فعال (رسانه)</item>
+    <item name="r0x00000000">، فعال (تلفن)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">‏avrcp نسخه ۱۴</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">‏AVRCP نسخه ۱.۴ (پیش‌فرض)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">استفاده از پیش‌فرض سیستم: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">۲ دقیقه</item>
+    <item name="r0x00000000">۵ دقیقه</item>
+    <item name="r0x00000000">۱ ساعت</item>
+    <item name="r0x00000000">بدون مهلت زمانی</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">پیش‌فرض</item>
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">نمای کلی</item>
+    <item name="r0x00000000">سایه‌دار</item>
+    <item name="r0x00000000">برآمده</item>
+    <item name="r0x00000000">فرورفته</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">بسیار کوچک</item>
+    <item name="r0x00000000">کوچک</item>
+    <item name="r0x00000000">عادی</item>
+    <item name="r0x00000000">بزرگ</item>
+    <item name="r0x00000000">بسیار بزرگ</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">٪۲۵</item>
+    <item name="r0x00000000">٪۵۰</item>
+    <item name="r0x00000000">٪۷۵</item>
+    <item name="r0x00000000">٪۱۰۰</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">استفاده از پیش‌فرض‌های برنامه</item>
+    <item name="r0x00000000">سفید در سیاه</item>
+    <item name="r0x00000000">سیاه در سفید</item>
+    <item name="r0x00000000">زرد در سیاه</item>
+    <item name="r0x00000000">زرد در آبی</item>
+    <item name="r0x00000000">سفارشی</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">پیش‌فرض</item>
+    <item name="r0x00000000">Sans-serif</item>
+    <item name="r0x00000000">‏Sans-serif فشرده</item>
+    <item name="r0x00000000">‏Sans-serif با عرض ثابت</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">‏Serif با عرض ثابت</item>
+    <item name="r0x00000000">غیررسمی</item>
+    <item name="r0x00000000">شکسته</item>
+    <item name="r0x00000000">حروف بزرگ با اندازه کوچک</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">رنگ‌های پیشرفته</item>
+    <item name="r0x00000000">رنگ‌های طبیعی به‌همان صورتی که با چشم دیده می‌شوند</item>
+    <item name="r0x00000000">رنگ‌های بهینه‌شده برای محتوای دیجیتالی</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">پرطروات (پیش‌فرض)</item>
+    <item name="r0x00000000">طبیعی</item>
+    <item name="r0x00000000">استاندارد</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">فیروزه‌ای</item>
+    <item name="r0x00000000">آبی</item>
+    <item name="r0x00000000">نیلی</item>
+    <item name="r0x00000000">بنفش</item>
+    <item name="r0x00000000">صورتی</item>
+    <item name="r0x00000000">قرمز</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">خودکار (براساس اینکه چه ساعتی از روز باشد)</item>
+    <item name="r0x00000000">همیشه روشن</item>
+    <item name="r0x00000000">همیشه خاموش</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">۳۰ روز گذشته</item>
+    <item name="r0x00000000">تنظیم چرخه مصرف...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">غیرفعال</item>
+    <item name="r0x00000000">نمایش نواحی بازنویسی</item>
+    <item name="r0x00000000">نمایش مناطق برای مبتلایان به سبزدشواربینی</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">هیچ‌وقت</item>
+    <item name="r0x00000000">۱۵ ثانیه</item>
+    <item name="r0x00000000">۳۰ ثانیه</item>
+    <item name="r0x00000000">۱ دقیقه</item>
+    <item name="r0x00000000">۲ دقیقه</item>
+    <item name="r0x00000000">۵ دقیقه</item>
+    <item name="r0x00000000">۱۰ دقیقه</item>
+    <item name="r0x00000000">۳۰ دقیقه</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">‏Systrace (تصاویر گرافیکی)</item>
+    <item name="r0x00000000">‏فراخوانی پشته در glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">کوچک</item>
+    <item name="r0x00000000">پیش‌فرض</item>
+    <item name="r0x00000000">بزرگ</item>
+    <item name="r0x00000000">بزرگ‌ترین</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">‏هرگز از بررسی HDCP استفاده نشود</item>
+    <item name="r0x00000000">‏استفاده از بررسی HDCP فقط برای محتوای DRM</item>
+    <item name="r0x00000000">‏همیشه از بررسی HDCP استفاده شود</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">هرگز بررسی نشود</item>
+    <item name="r0x00000000">‏فقط بررسی محتوای DRM</item>
+    <item name="r0x00000000">همیشه بررسی شود</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">فوری</item>
+    <item name="r0x00000000">۵ ثانیه</item>
+    <item name="r0x00000000">۱۵ ثانیه</item>
+    <item name="r0x00000000">۳۰ ثانیه</item>
+    <item name="r0x00000000">۱ دقیقه</item>
+    <item name="r0x00000000">۲ دقیقه</item>
+    <item name="r0x00000000">۵ دقیقه</item>
+    <item name="r0x00000000">۱۰ دقیقه</item>
+    <item name="r0x00000000">۳۰ دقیقه</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">کوتاه</item>
+    <item name="r0x00000000">متوسط</item>
+    <item name="r0x00000000">طولانی</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">‏480p (ایمن)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">‏720p (ایمن)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">‏1080p (ایمن)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">‏4K (ایمن)</item>
+    <item name="r0x00000000">‏4K (ارتقا یافته)</item>
+    <item name="r0x00000000">‏4K (ارتقا یافته، ایمن)</item>
+    <item name="r0x00000000">‏720p،‏ 1080p (صفحه‌نمایش دوتایی)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">عادی</item>
+    <item name="r0x00000000">متوسط</item>
+    <item name="r0x00000000">کم</item>
+    <item name="r0x00000000">خیلی کم</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">دائمی</item>
+    <item name="r0x00000000">فعالیت برتر</item>
+    <item name="r0x00000000">مهم (پیش‌زمینه)</item>
+    <item name="r0x00000000">مهم (پس‌زمینه)</item>
+    <item name="r0x00000000">پشتیبان‌گیری</item>
+    <item name="r0x00000000">سنگین وزن</item>
+    <item name="r0x00000000">سرویس (در حال اجرا)</item>
+    <item name="r0x00000000">سرویس (در حال شروع مجدد)</item>
+    <item name="r0x00000000">دریافت‌کننده</item>
+    <item name="r0x00000000">صفحه اصلی</item>
+    <item name="r0x00000000">آخرین فعالیت</item>
+    <item name="r0x00000000">قرار داده شده در حافظه پنهان (فعالیت)</item>
+    <item name="r0x00000000">قرار داده شده در حافظه پنهان (کلاینت فعالیت)</item>
+    <item name="r0x00000000">قرار داده شده در حافظه پنهان (خالی)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">معمولی</item>
+    <item name="r0x00000000">متوسط</item>
+    <item name="r0x00000000">کم</item>
+    <item name="r0x00000000">خیلی کم</item>
+    <item name="r0x00000000">؟</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">۱۵ ثانیه</item>
+    <item name="r0x00000000">۳۰ ثانیه</item>
+    <item name="r0x00000000">۱ دقیقه</item>
+    <item name="r0x00000000">۲ دقیقه</item>
+    <item name="r0x00000000">۵ دقیقه</item>
+    <item name="r0x00000000">۱۰ دقیقه</item>
+    <item name="r0x00000000">۳۰ دقیقه</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">سؤال شود</item>
+    <item name="r0x00000000">همیشه غیرمجاز</item>
+    <item name="r0x00000000">همیشه مجاز است</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">۶۴ هزار</item>
+    <item name="r0x00000000">۲۵۶ هزار</item>
+    <item name="r0x00000000">۱ میلیون</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">۶۴ هزار در هر بافر گزارش</item>
+    <item name="r0x00000000">۲۵۶ هزار در هر بافر گزارش</item>
+    <item name="r0x00000000">۱ میلیون در هر بافر گزارش</item>
+    <item name="r0x00000000">۴ میلیون در هر بافر گزارش</item>
+    <item name="r0x00000000">۱۶ میلیون در هر بافر گزارش</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">۶۴ هزار</item>
+    <item name="r0x00000000">۲۵۶ هزار</item>
+    <item name="r0x00000000">۱ میلیون</item>
+    <item name="r0x00000000">۴ میلیون</item>
+    <item name="r0x00000000">۱۶ میلیون</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">همه بافرهای گزارش</item>
+    <item name="r0x00000000">همه به‌جز بافرهای گزارش رادیو</item>
+    <item name="r0x00000000">فقط بافر گزارش هسته اصلی</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">همه</item>
+    <item name="r0x00000000">همه به‌جز رادیو</item>
+    <item name="r0x00000000">فقط هسته اصلی</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">غیرفعال</item>
+    <item name="r0x00000000">کشیدن کلیپ قسمت غیر مربعی آبی</item>
+    <item name="r0x00000000">هایلایت کردن دستورات کشیدن تست‌شده به رنگ سبز</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">امریکا</item>
+    <item name="r0x00000000">اروپا</item>
+    <item name="r0x00000000">آفریقا</item>
+    <item name="r0x00000000">آسیا</item>
+    <item name="r0x00000000">استرالیا</item>
+    <item name="r0x00000000">اقیانوسیه</item>
+    <item name="r0x00000000">همه</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">خاموش</item>
+    <item name="r0x00000000">روی صفحه نمایش به‌صورت میله‌ای</item>
+    <item name="r0x00000000">در adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">پویانمایی خاموش</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 0.5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 1x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 1.5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 2x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 10X</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">بسیار آهسته</item>
+    <item name="r0x00000000">آهسته</item>
+    <item name="r0x00000000">معمولی</item>
+    <item name="r0x00000000">سریع</item>
+    <item name="r0x00000000">سریع‌تر</item>
+    <item name="r0x00000000">خیلی سریع</item>
+    <item name="r0x00000000">تند</item>
+    <item name="r0x00000000">خیلی تند</item>
+    <item name="r0x00000000">سریع‌ترین</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">زمان استفاده</item>
+    <item name="r0x00000000">آخرین زمان استفاده</item>
+    <item name="r0x00000000">نام برنامه</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">در حال شارژ شدن</item>
+    <item name="r0x00000000">‏MTP (پروتکل انتقال رسانه)</item>
+    <item name="r0x00000000">‏PTP (پروتکل انتقال تصویر)</item>
+    <item name="r0x00000000">‏RNDIS (اترنت USB)</item>
+    <item name="r0x00000000">منبع صوتی</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">اتصال قطع شد</item>
+    <item name="r0x00000000">آماده سازی...</item>
+    <item name="r0x00000000">در حال اتصال...</item>
+    <item name="r0x00000000">متصل شد</item>
+    <item name="r0x00000000">پایان مهلت زمانی</item>
+    <item name="r0x00000000">ناموفق</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">‏L2TP/IPSec VPN با کلیدهای از قبل به اشتراک گذاشته شده</item>
+    <item name="r0x00000000">‏L2TP/IPSec VPN با گواهی</item>
+    <item name="r0x00000000">‏IPSec VPN با کلیدهای از قبل به اشتراک گذاشته شده و احراز هویت Xauth</item>
+    <item name="r0x00000000">‏IPSec VPN با گواهی و احراز هویت Xauth</item>
+    <item name="r0x00000000">‏IPSec VPN دارای گواهی و احراز هویت دوگانه</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">‏Wi-Fi ترجیحی</item>
+    <item name="r0x00000000">داده شبکه تلفن همراه ارجح است</item>
+    <item name="r0x00000000">‏فقط Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">داده شبکه تلفن همراه</item>
+    <item name="r0x00000000">‏فقط Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">داده شبکه تلفن همراه</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">‏Wi-Fi ترجیحی</item>
+    <item name="r0x00000000">داده شبکه تلفن همراه ارجح است</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">۲</item>
+    <item name="r0x00000000">۱</item>
+    <item name="r0x00000000">۰</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">۲</item>
+    <item name="r0x00000000">۱</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">نه</item>
+    <item name="r0x00000000">بله</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">ثابت</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">تشخیص خودکار</item>
+    <item name="r0x00000000">به‌عنوان محدود در نظر شود</item>
+    <item name="r0x00000000">به‌عنوان نامحدود در نظر شود</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">متصل</item>
+    <item name="r0x00000000">دعوت شده</item>
+    <item name="r0x00000000">ناموفق</item>
+    <item name="r0x00000000">در دسترس</item>
+    <item name="r0x00000000">خارج از محدوده</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">فشار دکمه</item>
+    <item name="r0x00000000">پین از دستگاه مرتبط شده</item>
+    <item name="r0x00000000">پین از این دستگاه</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">سیم کارت</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">هیچ‌کدام</item>
+    <item name="r0x00000000">دستی</item>
+    <item name="r0x00000000">پیکربندی خودکار پروکسی</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">ضعیف</item>
+    <item name="r0x00000000">ضعیف</item>
+    <item name="r0x00000000">متوسط</item>
+    <item name="r0x00000000">خوب</item>
+    <item name="r0x00000000">عالی</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">اسکن کردن...</item>
+    <item name="r0x00000000">در حال اتصال…</item>
+    <item name="r0x00000000">در حال راستی‌آزمایی...</item>
+    <item name="r0x00000000">‏درحال دریافت نشانی IP…</item>
+    <item name="r0x00000000">متصل</item>
+    <item name="r0x00000000">معلق</item>
+    <item name="r0x00000000">در حال قطع اتصال...</item>
+    <item name="r0x00000000">اتصال قطع شد</item>
+    <item name="r0x00000000">ناموفق</item>
+    <item name="r0x00000000">مسدود شده</item>
+    <item name="r0x00000000">جلوگیری موقت از اتصال ضعیف</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">اسکن کردن...</item>
+    <item name="r0x00000000">در حال اتصال به %1$s…</item>
+    <item name="r0x00000000">در حال راستی‌آزمایی با %1$s...</item>
+    <item name="r0x00000000">‏درحال دریافت نشانی IP از %1$s…</item>
+    <item name="r0x00000000">متصل شد به %1$s</item>
+    <item name="r0x00000000">معلق</item>
+    <item name="r0x00000000">اتصال قطع شد از %1$s...</item>
+    <item name="r0x00000000">اتصال قطع شد</item>
+    <item name="r0x00000000">ناموفق</item>
+    <item name="r0x00000000">مسدود شده</item>
+    <item name="r0x00000000">جلوگیری موقت از اتصال ضعیف</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">پویانمایی خاموش</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 0.5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 1x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 1.5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 2x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 5x</item>
+    <item name="r0x00000000">‏مقیاس پویانمایی 10X</item>
+  </string-array>
+</resources>

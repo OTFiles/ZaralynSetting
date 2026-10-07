@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_enabled="false"
+        android:state_selected="false"
+        android:drawable="@drawable/btn_selected_mult_off_dis" />
+  <item android:state_enabled="true"
+        android:state_selected="false"
+        android:drawable="@drawable/btn_selected_mult_off" />
+  <item android:state_enabled="false"
+        android:state_selected="true"
+        android:drawable="@drawable/btn_selected_mult_on_dis" />
+  <item android:state_enabled="true"
+        android:state_selected="true"
+        android:drawable="@drawable/btn_selected_mult_on" />
+  <item android:drawable="@drawable/btn_selected_mult_off_dis" />
+</selector>

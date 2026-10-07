@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:layout_gravity="left"
+          android:id="@id/zen_mode_settings_turn_on_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/zen_mode_button_turn_on"
+          android:layout_marginStart="@dimen/screen_margin_sides"
+          style="@style/ActionPrimaryButton" />
+  <Button android:layout_gravity="left"
+          android:id="@id/zen_mode_settings_turn_off_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/zen_mode_button_turn_off"
+          android:layout_marginStart="@dimen/screen_margin_sides"
+          style="@style/ActionSecondaryButton" />
+</LinearLayout>

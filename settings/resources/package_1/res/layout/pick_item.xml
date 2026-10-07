@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TextView android:textAppearance="?android:attr/textAppearanceMedium"
+          android:gravity="center_vertical"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="?android:attr/listPreferredItemHeightSmall"
+          android:drawablePadding="8.0dp"
+          android:paddingStart="11.0dp"
+          android:paddingEnd="11.0dp" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center"
+              android:orientation="horizontal"
+              android:background="@color/readboy_search_view_color_bg"
+              android:paddingLeft="@dimen/header_item_margin_size"
+              android:paddingRight="@dimen/header_item_margin_size"
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/actionbar_size" xmlns:android="http://schemas.android.com/apk/res/android">
+  <android.widget.SearchView android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/readboy_actionbar_title"
+                        android:id="@id/searchPicker"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:layout_weight="1.0"
+                        android:imeOptions="actionSearch" />
+</LinearLayout>

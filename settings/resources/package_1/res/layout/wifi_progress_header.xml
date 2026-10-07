@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="1.0px" xmlns:android="http://schemas.android.com/apk/res/android">
+  <View android:id="@id/progress_bar_background"
+        android:background="?android:attr/colorSecondary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TrimmedHorizontalProgressBar" />
+  <ProgressBar android:id="@id/progress_bar_animation"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:indeterminate="true"
+               style="@style/TrimmedHorizontalProgressBar" />
+  <View android:background="@color/divider_line_color"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="?android:attr/listPreferredItemHeight" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:id="@id/clickable"
+                android:background="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+    <CheckBox android:layout_gravity="center"
+              android:id="@id/checkbox"
+              android:focusable="false"
+              android:clickable="false"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.0dp"
+                    android:layout_marginBottom="6.0dp"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="6.0dp">
+      <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+                android:ellipsize="marquee"
+                android:id="@id/name"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+      <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="13.0sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:id="@id/description"
+                android:paddingBottom="3.0dp"
+                android:focusable="false"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:layout_below="@android:id/title"
+                android:layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+  </LinearLayout>
+</LinearLayout>

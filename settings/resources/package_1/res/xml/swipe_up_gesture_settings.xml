@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/swipe_up_to_switch_apps_title"
+                  android:key="gesture_swipe_up_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.VideoPreference android:key="gesture_swipe_up_video"
+                        app:animation="@raw/gesture_swipe_up"
+                        app:preview="@drawable/gesture_swipe_up" />
+  <SwitchPreference android:title="@string/swipe_up_to_switch_apps_title"
+                    android:key="gesture_swipe_up"
+                    android:summary="@string/swipe_up_to_switch_apps_summary"
+                    app:allowDividerAbove="true"
+                    app:controller="com.android.settings.gestures.SwipeUpPreferenceController"
+                    app:keywords="@string/keywords_gesture" />
+</PreferenceScreen>

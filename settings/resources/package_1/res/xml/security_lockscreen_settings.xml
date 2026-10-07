@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/lockscreen_settings_title"
+                  android:key="security_lockscreen_settings_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.RestrictedListPreference android:title="@string/lock_screen_notifications_title"
+                        android:key="security_setting_lock_screen_notif"
+                        android:summary="@string/summary_placeholder" />
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/user_add_on_lockscreen_menu"
+                        android:key="security_lockscreen_add_users_when_locked" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/owner_info_settings_title"
+                        android:key="owner_info_settings"
+                        android:summary="@string/owner_info_settings_summary" />
+  <SwitchPreference android:title="@string/lockdown_settings_title"
+                    android:key="security_setting_lockdown_enabled"
+                    android:summary="@string/lockdown_settings_summary"
+                    settings:controller="com.android.settings.security.LockdownButtonPreferenceController" />
+  <PreferenceCategory android:title="@string/profile_section_header"
+                      android:key="security_setting_lock_screen_notif_work_header"
+                      android:order="1000">
+    <com.android.settings.RestrictedListPreference android:title="@string/locked_work_profile_notification_title"
+                          android:key="security_setting_lock_screen_notif_work"
+                          android:summary="@string/summary_placeholder" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:layout_width="fill_parent"
+               android:layout_height="0.0dp"
+               android:layout_weight="1.0">
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/list_container"
+                  android:visibility="gone"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <FrameLayout android:id="@id/pinned_header"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content" />
+      <FrameLayout android:layout_width="fill_parent"
+                   android:layout_height="0.0px"
+                   android:layout_weight="1.0"
+                   android:paddingStart="5.0dp"
+                   android:paddingEnd="5.0dp">
+        <com.android.settingslib.readboy.BaseListView android:scrollbarStyle="@integer/preference_scrollbar_style"
+                              android:id="@android:id/list"
+                              android:clipToPadding="false"
+                              android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:listSelector="@drawable/readboy_ripple_list_item_color_round"
+                              android:drawSelectorOnTop="false"
+                              android:dividerHeight="1.0px"
+                              android:layout_marginStart="-30.0dp"
+                              android:layout_marginEnd="-30.0dp" />
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge"
+                  android:gravity="center"
+                  android:id="@android:id/empty"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:text="@string/no_applications" />
+      </FrameLayout>
+      <view android:orientation="horizontal"
+            android:id="@id/storage_color_bar"
+            android:paddingTop="30.0dp"
+            android:paddingBottom="1.0dp"
+            android:visibility="invisible"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5.0dp"
+            android:layoutDirection="ltr"
+            class="com.android.settings.applications.LinearColorBar">
+        <TextView android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                  android:textColor="#000"
+                  android:gravity="left"
+                  android:id="@id/usedStorageText"
+                  android:layout_width="0.0px"
+                  android:layout_height="wrap_content"
+                  android:singleLine="true"
+                  android:layout_weight="1.0" />
+        <TextView android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                  android:textStyle="bold"
+                  android:textColor="#ccc"
+                  android:id="@id/storageChartLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="-20.0dp"
+                  android:text="@string/internal_storage"
+                  android:singleLine="true"
+                  android:shadowColor="#000"
+                  android:shadowRadius="5.0"
+                  android:layout_weight="0.0" />
+        <TextView android:textAppearance="?android:attr/textAppearanceSmallInverse"
+                  android:textColor="#000"
+                  android:gravity="right"
+                  android:layout_gravity="center|end"
+                  android:id="@id/freeStorageText"
+                  android:layout_width="0.0px"
+                  android:layout_height="wrap_content"
+                  android:singleLine="true"
+                  android:layout_weight="1.0" />
+      </view>
+    </LinearLayout>
+    <include layout="@layout/loading_container" />
+  </FrameLayout>
+</LinearLayout>

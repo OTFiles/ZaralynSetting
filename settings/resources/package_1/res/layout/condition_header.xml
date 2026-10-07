@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingTop="10.0dp"
+              android:paddingBottom="10.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/SuggestionConditionStyle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="36.0dp"
+                  android:layout_centerHorizontal="true">
+    <FrameLayout android:id="@android:id/icon_frame"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:layout_marginStart="24.0dp">
+      <include layout="@layout/condition_header_icon" />
+    </FrameLayout>
+    <ImageView android:id="@id/expand_indicator"
+               android:paddingTop="4.0dp"
+               android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:src="@drawable/ic_expand_more"
+               android:paddingStart="16.0dp"
+               android:paddingEnd="16.0dp"
+               android:layout_alignParentEnd="true" />
+    <TextView android:textAppearance="@style/TextAppearance.SuggestionTitle"
+              android:textColor="?android:attr/colorAccent"
+              android:gravity="end"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginStart="8.0dp"
+              android:layout_toStartOf="@id/expand_indicator" />
+    <TextView android:textAppearance="@style/TextAppearance.SuggestionTitle"
+              android:textColor="?android:attr/textColorPrimary"
+              android:ellipsize="end"
+              android:id="@android:id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:layout_centerVertical="true"
+              android:layout_toStartOf="@android:id/summary"
+              android:layout_toEndOf="@android:id/icon_frame" />
+    <LinearLayout android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:id="@id/additional_icons"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_toStartOf="@android:id/summary"
+                  android:layout_toEndOf="@android:id/icon_frame" />
+  </RelativeLayout>
+</LinearLayout>

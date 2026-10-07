@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/zen_sound_title"
+                  android:key="zen_mode_sound_vibration_settings_page" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/zen_mode_settings_category">
+    <SwitchPreference android:title="@string/zen_mode_alarms"
+                      android:key="zen_mode_alarms" />
+    <SwitchPreference android:title="@string/zen_mode_media"
+                      android:key="zen_mode_media" />
+    <SwitchPreference android:title="@string/zen_mode_system"
+                      android:key="zen_mode_system" />
+  </PreferenceCategory>
+  <com.android.settingslib.widget.FooterPreference />
+</PreferenceScreen>

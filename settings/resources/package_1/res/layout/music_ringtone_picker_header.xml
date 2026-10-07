@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <View android:background="@color/list_divider_extra_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/readboy_sub_divider_height" />
+  <include android:id="@id/localRingtoneContainer"
+           layout="@layout/preference_screen_local_ringtone" />" 
+  <View android:background="@color/list_divider_extra_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/readboy_sub_divider_height" />
+  <TextView android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="?android:attr/textColorPrimary"
+            android:ellipsize="marquee"
+            android:gravity="bottom"
+            android:background="@color/readboy_windowBackground"
+            android:paddingLeft="@dimen/header_item_margin_size"
+            android:paddingTop="9.0dp"
+            android:paddingRight="@dimen/header_item_margin_size"
+            android:paddingBottom="9.0dp"
+            android:fadingEdge="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:text="@string/local_ringtone_title001"
+            android:singleLine="true" />
+  <View android:background="@color/list_divider_extra_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/readboy_sub_divider_height" />
+</LinearLayout>

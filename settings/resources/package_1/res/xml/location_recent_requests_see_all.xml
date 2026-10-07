@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/location_category_recent_location_requests"
+                  android:key="recent_location_requests_see_all" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="all_recent_location_requests" />
+</PreferenceScreen>

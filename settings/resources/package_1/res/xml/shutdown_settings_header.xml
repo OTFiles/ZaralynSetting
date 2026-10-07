@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:layout="@layout/preference_category_no_label_shutdowntimer1"
+                      android:key="category_at_time_turn_off_pad">
+    <SwitchPreference android:title="@string/readboy_extra_at_time_turn_off_pad_title"
+                      android:key="at_time_turn_off_pad" />
+    <Preference android:title="@string/readboy_extra_at_time_turn_off_pad_time_title"
+                android:key="at_time_turn_off_pad_set_time" />
+  </PreferenceCategory>
+  <Preference android:enabled="false"
+              android:layout="@layout/preference_category_no_label_shutdowntimer2"
+              android:title="@string/readboy_extra_at_time_delaytime_turn_off_pad_space"
+              android:key="category_space" />
+  <PreferenceCategory android:layout="@layout/preference_category_no_label_shutdowntimer1"
+                      android:key="category_delay_time_turn_off_pad">
+    <SwitchPreference android:title="@string/readboy_extra_auto_turn_off_pad_title"
+                      android:key="delaytime_turn_off_pad_timeout"
+                      android:summaryOn="@string/readboy_extra_auto_turn_off_pad_summary_on"
+                      android:summaryOff="@string/readboy_extra_auto_turn_off_pad_summary_off" />
+    <com.android.settings.TimeoutListPreference android:entries="@array/auto_turn_off_time_entries"
+                          android:title="@string/readboy_extra_at_time_turn_off_pad_delaytime_title"
+                          android:key="delaytime_turn_off_pad_timeout_set_time"
+                          android:entryValues="@array/auto_turn_off_time_values" />
+  </PreferenceCategory>
+  <Preference android:enabled="false"
+              android:title="@string/readboy_extra_at_time_delaytime_turn_off_pad_space"
+              android:key="category_space_0"
+              settings:allowDividerAbove="true" />
+  <SwitchPreference android:title="@string/readboy_extra_enable_charging_turn_off_pad_title"
+                    android:key="charging_turn_off_pad_enable"
+                    settings:allowDividerAbove="false"
+                    settings:allowDividerBelow="false" />
+</PreferenceScreen>

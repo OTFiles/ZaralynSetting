@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:padding="8.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RadioGroup android:id="@id/private_dns_radio_group"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <RadioButton android:id="@id/private_dns_mode_off"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8.0dp"
+                 android:text="@string/private_dns_mode_off" />
+    <RadioButton android:id="@id/private_dns_mode_opportunistic"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8.0dp"
+                 android:text="@string/private_dns_mode_opportunistic" />
+    <RadioButton android:id="@id/private_dns_mode_provider"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8.0dp"
+                 android:text="@string/private_dns_mode_provider" />
+    <EditText android:id="@id/private_dns_mode_provider_hostname"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/private_dns_mode_provider_hostname_hint"
+              android:inputType="textFilter"
+              android:imeOptions="actionDone"
+              android:layout_marginStart="40.0dp"
+              android:layout_marginEnd="8.0dp"
+              style="@android:style/Widget.CompoundButton.RadioButton" />
+  </RadioGroup>
+  <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@id/private_dns_help_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:paddingStart="16.0dp" />
+</LinearLayout>

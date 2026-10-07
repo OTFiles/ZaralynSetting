@@ -147,6 +147,17 @@ jobs:
           ### 注意
 
           - 数据库管理页 SQLiteProvider（mysql.db3）在新版中为只读，仅能查询
+
+          ### 老机型适配（v1.1）
+
+          - **支持 Android 5.0 (API 21) ~ Android 14 (API 34)**，含 Android 7.0/7.1（API 24/25）
+          - 日志目录多级回退并真实校验可写性（外部存储不可写时回退内部私有目录）
+          - launcher 图标提供 5 档 PNG（含圆形）+ API 26+ 自适应图标，老 Launcher 不再白图标
+          - 启动日志记录运行环境（Android 版本 / API / ABI / 机型 / 版本）
+          - 设置页新增**「兼容性自检」**：系统版本、家长管理安装与版本、Provider authority、
+            安装管控状态读取、家长密码读取、云端接口连通、日志目录、剩余存储、存储权限，一键复制报告
+          - 移除 manifest 中 4 个指向不存在类的 `<service>` 声明
+          - 开启 core library desugaring，避免 API 21~23 上 Java 8 默认方法报错
         files: ZaralynSettings-v${{ github.run_number }}.apk
         draft: false
         prerelease: false

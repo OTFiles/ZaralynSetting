@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/screensaver_settings_title"
+                  android:key="dream_overview_screen" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.widget.GearPreference android:title="@string/screensaver_settings_current"
+                        android:key="current_screensaver"
+                        android:fragment="com.android.settings.dream.CurrentDreamPicker" />
+  <Preference android:title="@string/screensaver_settings_when_to_dream"
+              android:key="when_to_start"
+              android:fragment="com.android.settings.dream.WhenToDreamPicker" />
+  <PreferenceCategory android:key="dream_start_now_category">
+    <com.android.settings.applications.LayoutPreference android:layout="@layout/dream_start_button"
+                          android:selectable="false"
+                          android:key="dream_start_now_button_container" />
+  </PreferenceCategory>
+</PreferenceScreen>

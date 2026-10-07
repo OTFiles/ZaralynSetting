@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:ordering="sequentially" xmlns:android="http://schemas.android.com/apk/res/android">
+  <set android:ordering="together">
+    <objectAnimator android:interpolator="@android:interpolator/linear_out_slow_in"
+                    android:duration="300"
+                    android:valueFrom="#000000"
+                    android:valueTo="#34a853"
+                    android:valueType="intType"
+                    android:propertyName="fillColor" />
+    <objectAnimator android:duration="300"
+                    android:valueFrom="0.07f"
+                    android:valueTo="0.65f"
+                    android:valueType="floatType"
+                    android:propertyName="fillAlpha" />
+  </set>
+  <set android:ordering="together">
+    <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in"
+                    android:duration="300"
+                    android:valueFrom="#34a853"
+                    android:valueTo="#000000"
+                    android:valueType="intType"
+                    android:propertyName="fillColor" />
+    <objectAnimator android:duration="300"
+                    android:valueFrom="0.65f"
+                    android:valueTo="0.07f"
+                    android:valueType="floatType"
+                    android:propertyName="fillAlpha" />
+  </set>
+</set>

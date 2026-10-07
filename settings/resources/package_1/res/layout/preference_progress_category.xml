@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingTop="16.0dp"
+              android:paddingBottom="16.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center|start"
+                android:orientation="horizontal"
+                android:id="@id/icon_container"
+                android:layout_width="56.0dp"
+                android:layout_height="wrap_content">
+    <com.android.internal.widget.PreferenceImageView android:id="@android:id/icon"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:maxWidth="18.0dp"
+                          android:maxHeight="18.0dp" />
+  </LinearLayout>
+  <TextView android:textAppearance="?android:attr/textAppearanceListItem"
+            android:layout_gravity="center|start"
+            android:id="@android:id/title"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+  <ProgressBar android:layout_gravity="center_vertical"
+               android:id="@id/scanning_progress"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:minWidth="32.0dp"
+               android:text="@string/progress_scanning"
+               android:layout_marginStart="16.0dp"
+               style="?android:attr/progressBarStyleSmallTitle" />
+</LinearLayout>

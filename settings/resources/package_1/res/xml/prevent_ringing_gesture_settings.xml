@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/gesture_prevent_ringing_screen_title"
+                  android:key="gesture_prevent_ringing_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.VideoPreference android:key="gesture_prevent_ringing_video"
+                        app:animation="@raw/gesture_prevent_ringing"
+                        app:preview="@drawable/gesture_prevent_ringing" />
+  <ListPreference android:entries="@array/gesture_prevent_ringing_entries"
+                  android:title="@string/gesture_prevent_ringing_title"
+                  android:key="gesture_prevent_ringing"
+                  android:entryValues="@array/gesture_prevent_ringing_values"
+                  app:allowDividerAbove="true"
+                  app:controller="com.android.settings.gestures.PreventRingingPreferenceController"
+                  app:keywords="@string/keywords_gesture" />
+</PreferenceScreen>

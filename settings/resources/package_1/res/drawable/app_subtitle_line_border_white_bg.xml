@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape>
+      <solid android:color="@color/divider_line_color" />
+    </shape>
+  </item>
+  <item android:bottom="@dimen/readboy_sub_divider_height">
+    <shape>
+      <solid android:color="@color/light_white_text_color_nor" />
+    </shape>
+  </item>
+</layer-list>

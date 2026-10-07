@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/data_usage_summary_title"
+                  android:key="data_usage_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/usage"
+                      android:key="data_usage_category">
+    <com.android.settings.SummaryPreference android:selectable="false"
+                          android:key="status_header" />
+    <Preference android:selectable="false"
+                android:key="limit_summary"
+                settings:allowDividerBelow="true" />
+    <com.android.settings.datausage.DataSaverPreference android:title="@string/data_saver_title"
+                          android:key="restrict_background_legacy"
+                          android:fragment="com.android.settings.datausage.DataSaverSummary" />
+  </PreferenceCategory>
+</PreferenceScreen>

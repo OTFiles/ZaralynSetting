@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">アニメーションオフ</item>
+    <item name="r0x00000000">アニメーションスケール.5x</item>
+    <item name="r0x00000000">アニメーションスケール1x</item>
+    <item name="r0x00000000">アニメーションスケール1.5x</item>
+    <item name="r0x00000000">アニメーションスケール2x</item>
+    <item name="r0x00000000">アニメーションスケール5x</item>
+    <item name="r0x00000000">アニメーションスケール10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAPまたはCHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">内部端末ストレージ</item>
+    <item name="r0x00000000">リムーバブルSDカード</item>
+    <item name="r0x00000000">システムで判断する</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">個人</item>
+    <item name="r0x00000000">メッセージ</item>
+    <item name="r0x00000000">メディア</item>
+    <item name="r0x00000000">端末</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">バイブレーション</item>
+    <item name="r0x00000000">連絡先の読み取り</item>
+    <item name="r0x00000000">連絡先の変更</item>
+    <item name="r0x00000000">通話履歴の読み取り</item>
+    <item name="r0x00000000">通話履歴の変更</item>
+    <item name="r0x00000000">カレンダーの読み取り</item>
+    <item name="r0x00000000">カレンダーの変更</item>
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">通知の投稿</item>
+    <item name="r0x00000000">位置情報</item>
+    <item name="r0x00000000">通話の発信</item>
+    <item name="r0x00000000">SMS/MMSの読み取り</item>
+    <item name="r0x00000000">SMS/MMSの書き込み</item>
+    <item name="r0x00000000">SMS/MMSの受信</item>
+    <item name="r0x00000000">SMS/MMSの受信</item>
+    <item name="r0x00000000">SMS/MMSの受信</item>
+    <item name="r0x00000000">SMS/MMSの受信</item>
+    <item name="r0x00000000">SMS/MMSの送信</item>
+    <item name="r0x00000000">SMS/MMSの読み取り</item>
+    <item name="r0x00000000">SMS/MMSの書き込み</item>
+    <item name="r0x00000000">設定の変更</item>
+    <item name="r0x00000000">上部に描画</item>
+    <item name="r0x00000000">通知へのアクセス</item>
+    <item name="r0x00000000">カメラ</item>
+    <item name="r0x00000000">音声の録音</item>
+    <item name="r0x00000000">音声の再生</item>
+    <item name="r0x00000000">クリップボードの読み取り</item>
+    <item name="r0x00000000">クリップボードの変更</item>
+    <item name="r0x00000000">メディアボタン</item>
+    <item name="r0x00000000">音声フォーカス</item>
+    <item name="r0x00000000">主音量</item>
+    <item name="r0x00000000">音声の音量</item>
+    <item name="r0x00000000">着信音の音量</item>
+    <item name="r0x00000000">メディアの音量</item>
+    <item name="r0x00000000">アラームの音量</item>
+    <item name="r0x00000000">通知の音量</item>
+    <item name="r0x00000000">Bluetoothの音量</item>
+    <item name="r0x00000000">スリープモードにしない</item>
+    <item name="r0x00000000">場所</item>
+    <item name="r0x00000000">現在地</item>
+    <item name="r0x00000000">使用統計情報を取得</item>
+    <item name="r0x00000000">マイクをミュート/ミュート解除</item>
+    <item name="r0x00000000">トーストの表示</item>
+    <item name="r0x00000000">メディア プロジェクション</item>
+    <item name="r0x00000000">VPN の有効化</item>
+    <item name="r0x00000000">壁紙の書き込み</item>
+    <item name="r0x00000000">ストラクチャのアシスト</item>
+    <item name="r0x00000000">スクリーンショットのアシスト</item>
+    <item name="r0x00000000">スマートフォンのステータスの読み取り</item>
+    <item name="r0x00000000">ボイスメールの追加</item>
+    <item name="r0x00000000">SIP の使用</item>
+    <item name="r0x00000000">発信の処理</item>
+    <item name="r0x00000000">指紋</item>
+    <item name="r0x00000000">ボディー センサー</item>
+    <item name="r0x00000000">緊急速報メールの読み取り</item>
+    <item name="r0x00000000">仮の現在地情報</item>
+    <item name="r0x00000000">ストレージの読み取り</item>
+    <item name="r0x00000000">ストレージへの書き込み</item>
+    <item name="r0x00000000">画面をオン</item>
+    <item name="r0x00000000">アカウントの取得</item>
+    <item name="r0x00000000">バックグラウンドで実行</item>
+    <item name="r0x00000000">ユーザー補助機能の音量</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">おおよその位置情報</item>
+    <item name="r0x00000000">精細な位置情報</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">バイブレーション</item>
+    <item name="r0x00000000">連絡先の読み取り</item>
+    <item name="r0x00000000">連絡先の変更</item>
+    <item name="r0x00000000">通話履歴の読み取り</item>
+    <item name="r0x00000000">通話履歴の変更</item>
+    <item name="r0x00000000">カレンダーの読み取り</item>
+    <item name="r0x00000000">カレンダーの変更</item>
+    <item name="r0x00000000">Wi-Fiスキャン</item>
+    <item name="r0x00000000">通知</item>
+    <item name="r0x00000000">セルスキャン</item>
+    <item name="r0x00000000">通話の発信</item>
+    <item name="r0x00000000">SMSの読み取り</item>
+    <item name="r0x00000000">SMSの書き込み</item>
+    <item name="r0x00000000">SMSの受信</item>
+    <item name="r0x00000000">緊急SMSの受信</item>
+    <item name="r0x00000000">MMSの受信</item>
+    <item name="r0x00000000">WAPプッシュの受信</item>
+    <item name="r0x00000000">SMSの送信</item>
+    <item name="r0x00000000">ICC SMSの読み取り</item>
+    <item name="r0x00000000">ICC SMSの書き込み</item>
+    <item name="r0x00000000">設定の変更</item>
+    <item name="r0x00000000">上部に描画</item>
+    <item name="r0x00000000">通知へのアクセス</item>
+    <item name="r0x00000000">カメラ</item>
+    <item name="r0x00000000">音声の録音</item>
+    <item name="r0x00000000">音声の再生</item>
+    <item name="r0x00000000">クリップボードの読み取り</item>
+    <item name="r0x00000000">クリップボードの変更</item>
+    <item name="r0x00000000">メディアボタン</item>
+    <item name="r0x00000000">音声フォーカス</item>
+    <item name="r0x00000000">主音量</item>
+    <item name="r0x00000000">音声の音量</item>
+    <item name="r0x00000000">着信音の音量</item>
+    <item name="r0x00000000">メディアの音量</item>
+    <item name="r0x00000000">アラームの音量</item>
+    <item name="r0x00000000">通知音量</item>
+    <item name="r0x00000000">Bluetoothの音量</item>
+    <item name="r0x00000000">スリープモードにしない</item>
+    <item name="r0x00000000">場所を監視</item>
+    <item name="r0x00000000">高精度の現在地情報を監視</item>
+    <item name="r0x00000000">使用統計情報を取得</item>
+    <item name="r0x00000000">マイクをミュート/ミュート解除</item>
+    <item name="r0x00000000">トーストの表示</item>
+    <item name="r0x00000000">メディア プロジェクション</item>
+    <item name="r0x00000000">VPN の有効化</item>
+    <item name="r0x00000000">壁紙の書き込み</item>
+    <item name="r0x00000000">ストラクチャのアシスト</item>
+    <item name="r0x00000000">スクリーンショットのアシスト</item>
+    <item name="r0x00000000">スマートフォンのステータスの読み取り</item>
+    <item name="r0x00000000">ボイスメールの追加</item>
+    <item name="r0x00000000">SIP の使用</item>
+    <item name="r0x00000000">発信の処理</item>
+    <item name="r0x00000000">指紋</item>
+    <item name="r0x00000000">ボディー センサー</item>
+    <item name="r0x00000000">緊急速報メールの読み取り</item>
+    <item name="r0x00000000">仮の現在地情報</item>
+    <item name="r0x00000000">ストレージの読み取り</item>
+    <item name="r0x00000000">ストレージへの書き込み</item>
+    <item name="r0x00000000">画面をオン</item>
+    <item name="r0x00000000">アカウントの取得</item>
+    <item name="r0x00000000">バックグラウンドで実行</item>
+    <item name="r0x00000000">ユーザー補助機能の音量</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">標準の上限</item>
+    <item name="r0x00000000">バックグラウンドプロセスを使用しない</item>
+    <item name="r0x00000000">プロセスの上限: 1</item>
+    <item name="r0x00000000">プロセスの上限: 2</item>
+    <item name="r0x00000000">プロセスの上限: 3</item>
+    <item name="r0x00000000">プロセスの上限: 4</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">30 日以上経過</item>
+    <item name="r0x00000000">60 日以上経過</item>
+    <item name="r0x00000000">90 日以上経過</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">指定なし</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">16 ビット / サンプル</item>
+    <item name="r0x00000000">24 ビット / サンプル</item>
+    <item name="r0x00000000">32 ビット / サンプル</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">16 ビット / サンプル</item>
+    <item name="r0x00000000">24 ビット / サンプル</item>
+    <item name="r0x00000000">32 ビット / サンプル</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">モノラル</item>
+    <item name="r0x00000000">ステレオ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">モノラル</item>
+    <item name="r0x00000000">ステレオ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">音質重視で最適化</item>
+    <item name="r0x00000000">音質と接続の品質のバランスを確保</item>
+    <item name="r0x00000000">接続の品質重視で最適化</item>
+    <item name="r0x00000000">ベスト エフォート（アダプティブ ビットレート）</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">音質重視で最適化（990 kbps / 909 kbps）</item>
+    <item name="r0x00000000">音質と接続の品質のバランスを確保（660 kbps / 606 kbps）</item>
+    <item name="r0x00000000">接続の品質重視で最適化（330 kbps / 303 kbps）</item>
+    <item name="r0x00000000">ベスト エフォート（アダプティブ ビットレート）</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ オーディオ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD オーディオ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">オプションのコーデックを有効にします</item>
+    <item name="r0x00000000">オプションのコーデックを無効にします</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">システムの選択（デフォルト）を使用</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ オーディオ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD オーディオ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">オプションのコーデックの有効化</item>
+    <item name="r0x00000000">オプションのコーデックの無効化</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">、有効</item>
+    <item name="r0x00000000">、有効（メディア）</item>
+    <item name="r0x00000000">、有効（スマートフォン）</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4（デフォルト）</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">システムのデフォルトを使用: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2分</item>
+    <item name="r0x00000000">5分</item>
+    <item name="r0x00000000">1時間</item>
+    <item name="r0x00000000">タイムアウトしない</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">デフォルト</item>
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">アウトライン</item>
+    <item name="r0x00000000">ドロップシャドウ</item>
+    <item name="r0x00000000">浮き彫り</item>
+    <item name="r0x00000000">沈み彫り</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">極小</item>
+    <item name="r0x00000000">小</item>
+    <item name="r0x00000000">標準</item>
+    <item name="r0x00000000">大</item>
+    <item name="r0x00000000">極大</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">アプリのデフォルトを使用</item>
+    <item name="r0x00000000">黒地に白</item>
+    <item name="r0x00000000">白地に黒</item>
+    <item name="r0x00000000">黒地に黄色</item>
+    <item name="r0x00000000">青地に黄色</item>
+    <item name="r0x00000000">カスタム</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">デフォルト</item>
+    <item name="r0x00000000">Sans Serif</item>
+    <item name="r0x00000000">Sans Serif Condensed</item>
+    <item name="r0x00000000">Sans Serif固定幅</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif固定幅</item>
+    <item name="r0x00000000">カジュアル</item>
+    <item name="r0x00000000">草書体</item>
+    <item name="r0x00000000">スモールキャピタル</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">拡張色</item>
+    <item name="r0x00000000">目に自然な色</item>
+    <item name="r0x00000000">デジタルコンテンツに最適な色</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">鮮やか（既定）</item>
+    <item name="r0x00000000">自然</item>
+    <item name="r0x00000000">標準</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">ティール</item>
+    <item name="r0x00000000">ブルー</item>
+    <item name="r0x00000000">インディゴ</item>
+    <item name="r0x00000000">パープル</item>
+    <item name="r0x00000000">ピンク</item>
+    <item name="r0x00000000">レッド</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">自動（時間帯に基づく）</item>
+    <item name="r0x00000000">常に ON</item>
+    <item name="r0x00000000">常に OFF</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">過去30日間</item>
+    <item name="r0x00000000">使用サイクルを設定...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">オーバードロー領域の表示</item>
+    <item name="r0x00000000">第二色弱の方向けの領域の表示</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">起動しない</item>
+    <item name="r0x00000000">15秒</item>
+    <item name="r0x00000000">30秒</item>
+    <item name="r0x00000000">1分</item>
+    <item name="r0x00000000">2分</item>
+    <item name="r0x00000000">5分</item>
+    <item name="r0x00000000">10分</item>
+    <item name="r0x00000000">30分</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace（画像）</item>
+    <item name="r0x00000000">glGetErrorでのスタック呼び出し</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">小</item>
+    <item name="r0x00000000">デフォルト</item>
+    <item name="r0x00000000">大</item>
+    <item name="r0x00000000">最大</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">HDCPチェックを使用しない</item>
+    <item name="r0x00000000">DRMコンテンツにのみHDCPチェックを使用する</item>
+    <item name="r0x00000000">HDCPチェックを常に使用する</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">チェックしない</item>
+    <item name="r0x00000000">DRMコンテンツのみをチェック</item>
+    <item name="r0x00000000">常にチェック</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">すぐ</item>
+    <item name="r0x00000000">5秒</item>
+    <item name="r0x00000000">15秒</item>
+    <item name="r0x00000000">30秒</item>
+    <item name="r0x00000000">1分</item>
+    <item name="r0x00000000">2分</item>
+    <item name="r0x00000000">5分</item>
+    <item name="r0x00000000">10分</item>
+    <item name="r0x00000000">30分</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">短め</item>
+    <item name="r0x00000000">中</item>
+    <item name="r0x00000000">長め</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p（セキュア）</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p（セキュア）</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p（セキュア）</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K（セキュア）</item>
+    <item name="r0x00000000">4K（アップスケール）</item>
+    <item name="r0x00000000">4K（アップスケール、セキュア）</item>
+    <item name="r0x00000000">720p、1080p（デュアルスクリーン）</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">標準</item>
+    <item name="r0x00000000">やや不足</item>
+    <item name="r0x00000000">かなり不足</item>
+    <item name="r0x00000000">残りわずか</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">常駐</item>
+    <item name="r0x00000000">上位のアクティビティ</item>
+    <item name="r0x00000000">重要（フォアグラウンド）</item>
+    <item name="r0x00000000">重要（バックグラウンド）</item>
+    <item name="r0x00000000">バックアップ</item>
+    <item name="r0x00000000">大重量</item>
+    <item name="r0x00000000">サービス（実行中）</item>
+    <item name="r0x00000000">サービス（再起動中）</item>
+    <item name="r0x00000000">レシーバー</item>
+    <item name="r0x00000000">ホーム</item>
+    <item name="r0x00000000">前回のアクティビティ</item>
+    <item name="r0x00000000">キャッシュ済み（アクティビティ）</item>
+    <item name="r0x00000000">キャッシュ済み（アクティビティクライアント）</item>
+    <item name="r0x00000000">キャッシュ済み（空）</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">良好</item>
+    <item name="r0x00000000">やや良好</item>
+    <item name="r0x00000000">低下</item>
+    <item name="r0x00000000">残りわずか</item>
+    <item name="r0x00000000">不明</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15秒</item>
+    <item name="r0x00000000">30秒</item>
+    <item name="r0x00000000">1分</item>
+    <item name="r0x00000000">2分</item>
+    <item name="r0x00000000">5分</item>
+    <item name="r0x00000000">10分</item>
+    <item name="r0x00000000">30分</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">確認する</item>
+    <item name="r0x00000000">許可しない</item>
+    <item name="r0x00000000">常に許可する</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">64 K</item>
+    <item name="r0x00000000">256 K</item>
+    <item name="r0x00000000">1 M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">64 K / ログバッファ</item>
+    <item name="r0x00000000">256 K / ログバッファ</item>
+    <item name="r0x00000000">1 M / ログバッファ</item>
+    <item name="r0x00000000">4 M / ログバッファ</item>
+    <item name="r0x00000000">16 M / ログバッファ</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">64 K</item>
+    <item name="r0x00000000">256 K</item>
+    <item name="r0x00000000">1 M</item>
+    <item name="r0x00000000">4 M</item>
+    <item name="r0x00000000">16 M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">すべてのログバッファ</item>
+    <item name="r0x00000000">ラジオ ログバッファ以外すべて</item>
+    <item name="r0x00000000">カーネル ログ バッファのみ</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">すべて</item>
+    <item name="r0x00000000">ラジオ以外すべて</item>
+    <item name="r0x00000000">カーネルのみ</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">非矩形クリップ領域を青で描画</item>
+    <item name="r0x00000000">テスト済み描画コマンドを緑でハイライト表示</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">アメリカ</item>
+    <item name="r0x00000000">ヨーロッパ</item>
+    <item name="r0x00000000">アフリカ</item>
+    <item name="r0x00000000">アジア</item>
+    <item name="r0x00000000">オーストラリア</item>
+    <item name="r0x00000000">太平洋</item>
+    <item name="r0x00000000">すべて</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">OFF</item>
+    <item name="r0x00000000">バーとして画面に表示</item>
+    <item name="r0x00000000">adb shell dumpsys gfxinfo 内</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">アニメーションオフ</item>
+    <item name="r0x00000000">アニメーションスケール.5x</item>
+    <item name="r0x00000000">アニメーションスケール1x</item>
+    <item name="r0x00000000">アニメーションスケール1.5x</item>
+    <item name="r0x00000000">アニメーションスケール2x</item>
+    <item name="r0x00000000">アニメーションスケール5x</item>
+    <item name="r0x00000000">アニメーションスケール10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">非常に遅い</item>
+    <item name="r0x00000000">遅い</item>
+    <item name="r0x00000000">標準</item>
+    <item name="r0x00000000">速い</item>
+    <item name="r0x00000000">より速い</item>
+    <item name="r0x00000000">非常に速い</item>
+    <item name="r0x00000000">高速</item>
+    <item name="r0x00000000">非常に高速</item>
+    <item name="r0x00000000">最高速</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">使用時間</item>
+    <item name="r0x00000000">前回の使用</item>
+    <item name="r0x00000000">アプリ名</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">充電</item>
+    <item name="r0x00000000">MTP（Media Transfer Protocol）</item>
+    <item name="r0x00000000">PTP（Picture Transfer Protocol）</item>
+    <item name="r0x00000000">RNDIS（USBイーサネット）</item>
+    <item name="r0x00000000">オーディオソース</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">切断されました</item>
+    <item name="r0x00000000">初期化中...</item>
+    <item name="r0x00000000">接続処理中...</item>
+    <item name="r0x00000000">接続されました</item>
+    <item name="r0x00000000">タイムアウト</item>
+    <item name="r0x00000000">失敗しました</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">事前共有鍵付きのL2TP/IPSec VPN</item>
+    <item name="r0x00000000">証明書付きのL2TP/IPSec VPN</item>
+    <item name="r0x00000000">事前共有鍵とXauth認証付きのIPSec VPN</item>
+    <item name="r0x00000000">証明書とXauth認証付きのIPSec VPN</item>
+    <item name="r0x00000000">証明書とハイブリッド認証付きのIPSec VPN</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi優先</item>
+    <item name="r0x00000000">モバイル優先</item>
+    <item name="r0x00000000">Wi-Fiのみ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">モバイル</item>
+    <item name="r0x00000000">Wi-Fi のみ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">モバイル</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi 優先</item>
+    <item name="r0x00000000">モバイル優先</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">いいえ</item>
+    <item name="r0x00000000">はい</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">静的</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">自動的に検出</item>
+    <item name="r0x00000000">従量制として処理</item>
+    <item name="r0x00000000">定額制として処理</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">接続済み</item>
+    <item name="r0x00000000">招待済み</item>
+    <item name="r0x00000000">失敗しました</item>
+    <item name="r0x00000000">利用可能</item>
+    <item name="r0x00000000">圏外</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">ボタンを押す</item>
+    <item name="r0x00000000">ピアデバイスのPIN</item>
+    <item name="r0x00000000">このデバイスのPIN</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">なし</item>
+    <item name="r0x00000000">手動</item>
+    <item name="r0x00000000">プロキシの自動設定</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">弱</item>
+    <item name="r0x00000000">弱</item>
+    <item name="r0x00000000">中</item>
+    <item name="r0x00000000">強</item>
+    <item name="r0x00000000">非常に強い</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">スキャン中...</item>
+    <item name="r0x00000000">接続処理中...</item>
+    <item name="r0x00000000">認証中...</item>
+    <item name="r0x00000000">IPアドレスを取得中...</item>
+    <item name="r0x00000000">接続済み</item>
+    <item name="r0x00000000">保留中</item>
+    <item name="r0x00000000">切断中...</item>
+    <item name="r0x00000000">切断されました</item>
+    <item name="r0x00000000">失敗しました</item>
+    <item name="r0x00000000">ブロック中</item>
+    <item name="r0x00000000">接続不良により一時的に無効</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">スキャン中...</item>
+    <item name="r0x00000000">%1$sに接続中...</item>
+    <item name="r0x00000000">%1$sによる認証中...</item>
+    <item name="r0x00000000">IPアドレスを%1$sから取得中...</item>
+    <item name="r0x00000000">%1$sに接続しました</item>
+    <item name="r0x00000000">保留中</item>
+    <item name="r0x00000000">%1$sから切断中...</item>
+    <item name="r0x00000000">切断されました</item>
+    <item name="r0x00000000">失敗しました</item>
+    <item name="r0x00000000">ブロック中</item>
+    <item name="r0x00000000">接続不良により一時的に無効</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">アニメーションオフ</item>
+    <item name="r0x00000000">アニメーションスケール.5x</item>
+    <item name="r0x00000000">アニメーションスケール1x</item>
+    <item name="r0x00000000">アニメーションスケール1.5x</item>
+    <item name="r0x00000000">アニメーションスケール2x</item>
+    <item name="r0x00000000">アニメーションスケール5x</item>
+    <item name="r0x00000000">アニメーションスケール10x</item>
+  </string-array>
+</resources>

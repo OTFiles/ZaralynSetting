@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingTop="16.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/preference_no_icon_padding_start_settings"
+              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <TextView android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="36.0sp"
+            android:textColor="?android:attr/colorAccent"
+            android:id="@id/charge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16.0dp"
+            android:fontFamily="@android:string/config_headlineFontFamilyMedium" />
+  <com.android.settings.graph.UsageView android:gravity="end"
+                        android:id="@id/battery_usage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="141.0dp"
+                        android:layout_marginBottom="16.0dp"
+                        android:colorAccent="?android:attr/colorAccent"
+                        settings:sideLabels="@array/battery_labels"
+                        settings:textColor="?android:attr/textColorSecondary" />
+  <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@id/bottom_summary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16.0dp" />
+</LinearLayout>

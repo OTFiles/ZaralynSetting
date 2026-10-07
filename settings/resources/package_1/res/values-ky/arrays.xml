@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Анимацияны токтотуу</item>
+    <item name="r0x00000000">Анимация масштабы .5x</item>
+    <item name="r0x00000000">Анимация масштабы 1x</item>
+    <item name="r0x00000000">Анимация масштабы 1.5x</item>
+    <item name="r0x00000000">Анимация масштабы  2x</item>
+    <item name="r0x00000000">Анимация масштабы 5x</item>
+    <item name="r0x00000000">Анимация масштабы 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Жок</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP же CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Ички түзмөк эстутуму</item>
+    <item name="r0x00000000">Ташыма SD карта</item>
+    <item name="r0x00000000">Тутум өзү тандасын</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Жайгашкан жер</item>
+    <item name="r0x00000000">Жеке</item>
+    <item name="r0x00000000">SMS/MMS</item>
+    <item name="r0x00000000">Медиа</item>
+    <item name="r0x00000000">Түзмөк</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Жайгашкан жер</item>
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Дирилдөө</item>
+    <item name="r0x00000000">Байланыштарды окуу</item>
+    <item name="r0x00000000">Байланыштарды өзгөртүү</item>
+    <item name="r0x00000000">Чалуулар тизмесин окуу</item>
+    <item name="r0x00000000">Чалуулар тизмесин өзгөртүү</item>
+    <item name="r0x00000000">Күнбаракты окуу</item>
+    <item name="r0x00000000">Күнбаракты өзгөртүү</item>
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Эскертүү жайгаштыруу</item>
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Телефон чалуу</item>
+    <item name="r0x00000000">SMS/MMS окуу</item>
+    <item name="r0x00000000">SMS/MMS жазуу</item>
+    <item name="r0x00000000">SMS/MMS алуу</item>
+    <item name="r0x00000000">SMS/MMS алуу</item>
+    <item name="r0x00000000">SMS/MMS алуу</item>
+    <item name="r0x00000000">SMS/MMS алуу</item>
+    <item name="r0x00000000">SMS/MMS жөнөтүү</item>
+    <item name="r0x00000000">SMS/MMS окуу</item>
+    <item name="r0x00000000">SMS/MMS жазуу</item>
+    <item name="r0x00000000">Тууралоолорду өзгөртүү</item>
+    <item name="r0x00000000">Үстүнө тартуу</item>
+    <item name="r0x00000000">Жетки эскертмелери</item>
+    <item name="r0x00000000">Камера</item>
+    <item name="r0x00000000">Аудио жаздыруу</item>
+    <item name="r0x00000000">Аудио ойнотуу</item>
+    <item name="r0x00000000">Алмашуу буферин окуу</item>
+    <item name="r0x00000000">Алмашуу буферин өзгөртүү</item>
+    <item name="r0x00000000">Медиа баскычтар</item>
+    <item name="r0x00000000">Аудио фокус</item>
+    <item name="r0x00000000">Үн башкаргыч</item>
+    <item name="r0x00000000">Үндүн деңгээли</item>
+    <item name="r0x00000000">Шыңгырактын үнү</item>
+    <item name="r0x00000000">Мультимедианын үнү</item>
+    <item name="r0x00000000">Ойготкучтун үнү</item>
+    <item name="r0x00000000">Эскерткичтин үнү</item>
+    <item name="r0x00000000">Bluetooth үнү</item>
+    <item name="r0x00000000">Ойго кармоо</item>
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Орду</item>
+    <item name="r0x00000000">Колдонуу статистикасын алуу</item>
+    <item name="r0x00000000">Микрофондун үнүн басуу/чыгаруу</item>
+    <item name="r0x00000000">Эскертмени көрсөтүү</item>
+    <item name="r0x00000000">Долбоор медиясы</item>
+    <item name="r0x00000000">VPN'ди жандыруу</item>
+    <item name="r0x00000000">Тушкагаз жазуу</item>
+    <item name="r0x00000000">Көмөкчү түзүм</item>
+    <item name="r0x00000000">Көмөкчү скриншот</item>
+    <item name="r0x00000000">Телефон абалын окуу</item>
+    <item name="r0x00000000">Үн почтасын кошуу</item>
+    <item name="r0x00000000">Sip пайдалануу</item>
+    <item name="r0x00000000">Чыгуучу чалууну иштетүү</item>
+    <item name="r0x00000000">Манжа изи</item>
+    <item name="r0x00000000">Дене сенсорлору</item>
+    <item name="r0x00000000">Калкка кабар берүү тутумунун билдирүүлөрүн окуу</item>
+    <item name="r0x00000000">Жайгашкан жер дайындарын бурмалоо</item>
+    <item name="r0x00000000">Сактагычтагы дайындарды окуу</item>
+    <item name="r0x00000000">Сактагычка дайындарды жазуу</item>
+    <item name="r0x00000000">Экранды күйгүзүү</item>
+    <item name="r0x00000000">Каттоо эсептерин алуу</item>
+    <item name="r0x00000000">Фондо ойнотуу</item>
+    <item name="r0x00000000">Атайын мүмкүнчүлүктөрдүн үнүнүн катуулугу</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">болжолдуу жайгаштыруу</item>
+    <item name="r0x00000000">так жайгаштыруу</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">титиретүү</item>
+    <item name="r0x00000000">байланыштарды окуу</item>
+    <item name="r0x00000000">байланыштарды өзгөртүү</item>
+    <item name="r0x00000000">чалуулар тизмесин окуу</item>
+    <item name="r0x00000000">чалуулар тизмесин өзгөртүү</item>
+    <item name="r0x00000000">күнбаракты окуу</item>
+    <item name="r0x00000000">күнбаракты өзгөртүү</item>
+    <item name="r0x00000000">wi-fi издөө</item>
+    <item name="r0x00000000">эскертме</item>
+    <item name="r0x00000000">түйүн издөө</item>
+    <item name="r0x00000000">телефон чалуу</item>
+    <item name="r0x00000000">SMS окуу</item>
+    <item name="r0x00000000">SMS жазуу</item>
+    <item name="r0x00000000">SMS алуу</item>
+    <item name="r0x00000000">шашылыш SMS алуу</item>
+    <item name="r0x00000000">MMS алуу</item>
+    <item name="r0x00000000">WAP push алуу</item>
+    <item name="r0x00000000">SMS жөнөтүү</item>
+    <item name="r0x00000000">ICC SMS окуу</item>
+    <item name="r0x00000000">ICC SMS жазуу</item>
+    <item name="r0x00000000">тууралоолорду өзгөртүү</item>
+    <item name="r0x00000000">үстүнө тартуу</item>
+    <item name="r0x00000000">жетки эскертүүлөрү</item>
+    <item name="r0x00000000">камера</item>
+    <item name="r0x00000000">audio жаздыруу</item>
+    <item name="r0x00000000">audio ойнотуу</item>
+    <item name="r0x00000000">алмашуу буферин окуу</item>
+    <item name="r0x00000000">алмашуу буферин өзгөртүү</item>
+    <item name="r0x00000000">медиа баскычтар</item>
+    <item name="r0x00000000">audio фокус</item>
+    <item name="r0x00000000">үн башкаргыч</item>
+    <item name="r0x00000000">үн деңгээли</item>
+    <item name="r0x00000000">шыңгырактын үнү</item>
+    <item name="r0x00000000">мультимедианын үнү</item>
+    <item name="r0x00000000">ойготкучтун үнү</item>
+    <item name="r0x00000000">эскерткичтин үнү</item>
+    <item name="r0x00000000">bluetooth үнү</item>
+    <item name="r0x00000000">ойго кармоо</item>
+    <item name="r0x00000000">жайгашууну көзөмөлдөө</item>
+    <item name="r0x00000000">жогору кубаттуу жайгашууну көзөмөлдөө</item>
+    <item name="r0x00000000">колдонуу статистикасын алуу</item>
+    <item name="r0x00000000">микрофондун үнүн басуу/чыгаруу</item>
+    <item name="r0x00000000">эскертмени көрсөтүү</item>
+    <item name="r0x00000000">долбоор медиясы</item>
+    <item name="r0x00000000">VPN'ди жандыруу</item>
+    <item name="r0x00000000">тушкагаз жазуу</item>
+    <item name="r0x00000000">көмөкчү түзүм</item>
+    <item name="r0x00000000">көмөкчү скриншот</item>
+    <item name="r0x00000000">телефон абалын окуу</item>
+    <item name="r0x00000000">үн почтасын кошуу</item>
+    <item name="r0x00000000">sip пайдалануу</item>
+    <item name="r0x00000000">чыгуучу чалууну иштетүү</item>
+    <item name="r0x00000000">манжа изи</item>
+    <item name="r0x00000000">дене сенсорлору</item>
+    <item name="r0x00000000">Калкка кабар берүү тутумунун билдирүүлөрүн окуу</item>
+    <item name="r0x00000000">Жайгашкан жер дайындарын бурмалоо</item>
+    <item name="r0x00000000">сактагычтагы дайындарды окуу</item>
+    <item name="r0x00000000">сактагычка дайындарды жазуу</item>
+    <item name="r0x00000000">экранды күйгүзүү</item>
+    <item name="r0x00000000">каттоо эсептерин алуу</item>
+    <item name="r0x00000000">фондо ойнотуу</item>
+    <item name="r0x00000000">атайын мүмкүнчүлүктөрдүн үнүнүн катуулугу</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Стандарттык чектөө</item>
+    <item name="r0x00000000">Фондо процесстер жок</item>
+    <item name="r0x00000000">Эң көп дегенде 1 процесс</item>
+    <item name="r0x00000000">Эң көп дегенде 2 процесс</item>
+    <item name="r0x00000000">Эң көп дегенде 3 процесс</item>
+    <item name="r0x00000000">Эң көп дегенде 4 процесс</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">30 күндөн мурунку</item>
+    <item name="r0x00000000">60 күндөн мурунку</item>
+    <item name="r0x00000000">90 күндөн мурунку</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Көрсөтүлбөгөн</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">16 бит/үлгү</item>
+    <item name="r0x00000000">24 бит/үлгү</item>
+    <item name="r0x00000000">32 бит/үлгү</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">16 бит/үлгү</item>
+    <item name="r0x00000000">24 бит/үлгү</item>
+    <item name="r0x00000000">32 бит/үлгү</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Аудионун сапатын оптималдаштыруу</item>
+    <item name="r0x00000000">Теңделген аудио жана туташуу сапаты</item>
+    <item name="r0x00000000">Туташуунун сапатын оптималдаштыруу</item>
+    <item name="r0x00000000">Мүмкүн болгон эң мыкты натыйжа (адаптивдүү битрейт)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Аудионун сапатын оптималдаштыруу (990кб/сек./909кб/сек.)</item>
+    <item name="r0x00000000">Теңделген аудио жана туташуу сапаты (660кб/сек./606кб/сек.)</item>
+    <item name="r0x00000000">Туташуунун сапатын оптималдаштыруу (330кб/сек./303кб/сек.)</item>
+    <item name="r0x00000000">Мүмкүн болгон эң мыкты натыйжа (адаптивдүү битрейт)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">44,1 кГц</item>
+    <item name="r0x00000000">48,0 кГц</item>
+    <item name="r0x00000000">88,2 кГц</item>
+    <item name="r0x00000000">96,0 кГц</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">44,1 кГц</item>
+    <item name="r0x00000000">48,0 кГц</item>
+    <item name="r0x00000000">88,2 кГц</item>
+    <item name="r0x00000000">96,0 кГц</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Кошумча кодекстер иштетилсин</item>
+    <item name="r0x00000000">Кошумча кодекстер өчүрүлсүн</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Тутум тандаганды колдонуу (демейки)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Кошумча кодекстер иштетилсин</item>
+    <item name="r0x00000000">Кошумча кодекстер өчүрүлсүн</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, жандырылган</item>
+    <item name="r0x00000000">, жандырылган (аудио)</item>
+    <item name="r0x00000000">, жандырылган (телефон)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (Демейки)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Демейки маани колдонулат: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 мүнөт</item>
+    <item name="r0x00000000">5 мүнөт</item>
+    <item name="r0x00000000">1 саат</item>
+    <item name="r0x00000000">Токтотпоо</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Демейки</item>
+    <item name="r0x00000000">Эч нерсе жок</item>
+    <item name="r0x00000000">Контур</item>
+    <item name="r0x00000000">Көлөкөлөтүү</item>
+    <item name="r0x00000000">Дөмпөйгөн</item>
+    <item name="r0x00000000">Ныгырылган</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Өтө кичине</item>
+    <item name="r0x00000000">Кичине</item>
+    <item name="r0x00000000">Кадимки</item>
+    <item name="r0x00000000">Чоң</item>
+    <item name="r0x00000000">Өтө чоң</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Колдонмонун демейкилерин колдонуу</item>
+    <item name="r0x00000000">Ак карада</item>
+    <item name="r0x00000000">Кара акта</item>
+    <item name="r0x00000000">Сары карада</item>
+    <item name="r0x00000000">Сары көктө</item>
+    <item name="r0x00000000">Өзгөчөлөнгөн</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Демейки</item>
+    <item name="r0x00000000">Санс-сериф</item>
+    <item name="r0x00000000">коюлтулган Санс-сериф</item>
+    <item name="r0x00000000">Sans-serif бир орундуу</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif бир орундуу</item>
+    <item name="r0x00000000">Эркин</item>
+    <item name="r0x00000000">Жантык</item>
+    <item name="r0x00000000">Кичине баш тамгалар</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Жакшыртылган түстөр</item>
+    <item name="r0x00000000">Көзгө көрүнгөн табигый түстөр</item>
+    <item name="r0x00000000">Санарип мазмун үчүн оптималдаштырылган түстөр</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Толкундуу (демейки)</item>
+    <item name="r0x00000000">Табигый</item>
+    <item name="r0x00000000">Кадимки</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Жашыл көгүш</item>
+    <item name="r0x00000000">Көк</item>
+    <item name="r0x00000000">Индиго</item>
+    <item name="r0x00000000">Кызгылт көгүш</item>
+    <item name="r0x00000000">Кызгылтым</item>
+    <item name="r0x00000000">Кызыл</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Автоматтык түрдө (күндүн убагына жараша)</item>
+    <item name="r0x00000000">Ар дайым күйүк</item>
+    <item name="r0x00000000">Ар дайым өчүк</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Акыркы 30 күн</item>
+    <item name="r0x00000000">Колдонуу мерчимин коюу…</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Үстүнө тартуу аймагын көргөзүү</item>
+    <item name="r0x00000000">Дейтераномалиялуулар үчүн мейкиндикти көргөзүү</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Эч качан</item>
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 мүнөт</item>
+    <item name="r0x00000000">2 мүнөт</item>
+    <item name="r0x00000000">5 мүнөт</item>
+    <item name="r0x00000000">10 мүнөт</item>
+    <item name="r0x00000000">30 мүнөт</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Эчтеке жок</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (Graphics)</item>
+    <item name="r0x00000000">glGetError'го карата стекти чакыруу</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Кичине</item>
+    <item name="r0x00000000">Демейки</item>
+    <item name="r0x00000000">Чоң</item>
+    <item name="r0x00000000">Эң чоң</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Эч качан HDCP текшерүү колдонулбасын</item>
+    <item name="r0x00000000">HDCP текшерүү DRM мазмунуна гана колдонулат</item>
+    <item name="r0x00000000">Ар дайым HDCP текшерүү колдонулсун</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Эч качан текшерилбесин</item>
+    <item name="r0x00000000">DRM мазмуну гана текшерилсин</item>
+    <item name="r0x00000000">Ар дайым текшерилсин</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Дароо</item>
+    <item name="r0x00000000">5 секунд</item>
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 мүнөт</item>
+    <item name="r0x00000000">2 мүнөт</item>
+    <item name="r0x00000000">5 мүнөт</item>
+    <item name="r0x00000000">10 мүнөт</item>
+    <item name="r0x00000000">30 мүнөт</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Кыска</item>
+    <item name="r0x00000000">Орточо</item>
+    <item name="r0x00000000">Узун</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Эчтеке жок</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Эчтеке жок</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (коопсуз)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (коопсуз)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (коопсуз)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (коопсуз)</item>
+    <item name="r0x00000000">4K (жогорку сапатта)</item>
+    <item name="r0x00000000">4K (жогорку сапатта, коопсуз)</item>
+    <item name="r0x00000000">720p, 1080p (кош экран)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Кадимки</item>
+    <item name="r0x00000000">Орточо</item>
+    <item name="r0x00000000">Төмөн</item>
+    <item name="r0x00000000">Кескин</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Туруктуу</item>
+    <item name="r0x00000000">Көп аткарылган иш</item>
+    <item name="r0x00000000">Маанилүү (алдыңкы көрүнүштө)</item>
+    <item name="r0x00000000">Маанилүү (арткы көрүнүштө)</item>
+    <item name="r0x00000000">Камдык көчүрмөнү сактоо</item>
+    <item name="r0x00000000">Оор</item>
+    <item name="r0x00000000">Кызмат (иштеп жатат)</item>
+    <item name="r0x00000000">Кызмат (өчүрүлүп-күйгүзүлүүдө)</item>
+    <item name="r0x00000000">Алуучу</item>
+    <item name="r0x00000000">Үй</item>
+    <item name="r0x00000000">Акыркы аткарылган иш</item>
+    <item name="r0x00000000">Кештелген (иш)</item>
+    <item name="r0x00000000">Кештелген (иш-аракет кардары)</item>
+    <item name="r0x00000000">Кештелген (бош)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Кадимки</item>
+    <item name="r0x00000000">Орточо</item>
+    <item name="r0x00000000">Төмөн</item>
+    <item name="r0x00000000">Кескин</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 мүнөт</item>
+    <item name="r0x00000000">2 мүнөт</item>
+    <item name="r0x00000000">5 мүнөт</item>
+    <item name="r0x00000000">10 мүнөт</item>
+    <item name="r0x00000000">30 мүнөт</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Суроо</item>
+    <item name="r0x00000000">Эч качан уруксат жок</item>
+    <item name="r0x00000000">Дайым уруксат</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Буфер: 64КБ ашпашы керек</item>
+    <item name="r0x00000000">Буфер: 256КБ ашпашы керек</item>
+    <item name="r0x00000000">Буфер: 1М ашпашы керек</item>
+    <item name="r0x00000000">Буфер: 4М ашпашы керек</item>
+    <item name="r0x00000000">Буфер: 16М ашпашы керек</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+    <item name="r0x00000000">4M</item>
+    <item name="r0x00000000">16M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Бардык таржымал буферлери</item>
+    <item name="r0x00000000">Радио таржымал буферлеринен башкаларынын баары</item>
+    <item name="r0x00000000">өзөктүк журнал буфери гана</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Бардыгы</item>
+    <item name="r0x00000000">Радиодон башка</item>
+    <item name="r0x00000000">өзөк гана</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Тик бурчтуу эмес кесилген аймакты көк түстө тартуу</item>
+    <item name="r0x00000000">Текшерилген тартуу буйруктарын жашыл менен белгилөө</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Америка</item>
+    <item name="r0x00000000">Европа</item>
+    <item name="r0x00000000">Африка</item>
+    <item name="r0x00000000">Азия</item>
+    <item name="r0x00000000">Австралия</item>
+    <item name="r0x00000000">Тынч океан</item>
+    <item name="r0x00000000">Бардыгы</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Өчүк</item>
+    <item name="r0x00000000">Экранда тилке катары</item>
+    <item name="r0x00000000">Төмөнкүдө: adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Анимацияны өчүрүү</item>
+    <item name="r0x00000000">Анимация масштабы .5x</item>
+    <item name="r0x00000000">Анимация масштабы 1x</item>
+    <item name="r0x00000000">Анимация масштабы 1.5x</item>
+    <item name="r0x00000000">Анимация масштабы 2x</item>
+    <item name="r0x00000000">Анимация масштабы 5x</item>
+    <item name="r0x00000000">Анимация масштабы 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Өтө жай</item>
+    <item name="r0x00000000">Жай</item>
+    <item name="r0x00000000">Орточо</item>
+    <item name="r0x00000000">Ылдам</item>
+    <item name="r0x00000000">Ылдамыраак</item>
+    <item name="r0x00000000">Абдан ылдам</item>
+    <item name="r0x00000000">Тез</item>
+    <item name="r0x00000000">Өтө тез</item>
+    <item name="r0x00000000">Эң ылдам</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Колдонулган убакыт</item>
+    <item name="r0x00000000">Акыркы жолу колдонулган</item>
+    <item name="r0x00000000">Колдонмонун аты</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Кубатталууда</item>
+    <item name="r0x00000000">MTP (Медиа өткөрүүчү протокол)</item>
+    <item name="r0x00000000">PTP (Сүрөт өткөрүүчү протокол)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">Аудио булак</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Ажыратылган</item>
+    <item name="r0x00000000">Демилгеленүүдө…</item>
+    <item name="r0x00000000">Туташууда…</item>
+    <item name="r0x00000000">Туташып турат</item>
+    <item name="r0x00000000">Тайм-аут</item>
+    <item name="r0x00000000">Ийгиликсиз</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">Алдын ала бөлүшүлгөн ачкычтары бар L2TP/IPSec VPN</item>
+    <item name="r0x00000000">Тастыктамасы бар L2TP/IPSec VPN</item>
+    <item name="r0x00000000">Алдын ала бөлүшүлгөн ачкычтары бар жана аныктыгы Xauth менен текшерилүчүү IPSec VPN</item>
+    <item name="r0x00000000">Тастыктамалары бар жана аныктыгы Xauth менен текшерилүчүү IPSec VPN</item>
+    <item name="r0x00000000">Тастыктамалары бар жана аныктыгы аралаш ыкма менен текшерилүчүү IPSec VPN</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi тандалган</item>
+    <item name="r0x00000000">Тандалган мобилдик түзмөк</item>
+    <item name="r0x00000000">Wi-Fi гана</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi‑Fi</item>
+    <item name="r0x00000000">Мобилдик түзмөк</item>
+    <item name="r0x00000000">Wi-Fi гана</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi‑Fi</item>
+    <item name="r0x00000000">Мобилдик түзмөк</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi тандалган</item>
+    <item name="r0x00000000">Тандалган мобилдик түзмөк</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Жок</item>
+    <item name="r0x00000000">Ооба</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Туруктуу</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Автоматтык түрдө аныкталат</item>
+    <item name="r0x00000000">Ченелет</item>
+    <item name="r0x00000000">Ченелбейт</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Туташып турат</item>
+    <item name="r0x00000000">Чакырылды</item>
+    <item name="r0x00000000">Ийгиликсиз</item>
+    <item name="r0x00000000">Жеткиликтүү</item>
+    <item name="r0x00000000">Аракет чегинен тышкары</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Баскычты басыңыз</item>
+    <item name="r0x00000000">Туташуучу түзмөктүн PIN'и</item>
+    <item name="r0x00000000">Ушул түзмөктүн PIN'и</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Эчтеке жок</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Жок</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM-карта</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Жок</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Жок</item>
+    <item name="r0x00000000">Нускама</item>
+    <item name="r0x00000000">Прокси авто-конфигурац.</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Начар</item>
+    <item name="r0x00000000">Начар</item>
+    <item name="r0x00000000">Орто</item>
+    <item name="r0x00000000">Жакшы</item>
+    <item name="r0x00000000">Эң жакшы</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скандалууда…</item>
+    <item name="r0x00000000">Туташууда…</item>
+    <item name="r0x00000000">Аныктыгы текшерилүүдө…</item>
+    <item name="r0x00000000">IP дареги алынууда…</item>
+    <item name="r0x00000000">Туташып турат</item>
+    <item name="r0x00000000">Убактылуу токтотулду</item>
+    <item name="r0x00000000">Ажыратылууда…</item>
+    <item name="r0x00000000">Ажыратылган</item>
+    <item name="r0x00000000">Ийгиликсиз</item>
+    <item name="r0x00000000">Бөгөттөлгөн</item>
+    <item name="r0x00000000">Начар байланыштан убактылуу баш тартууда</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скандалууда…</item>
+    <item name="r0x00000000">%1$s тармагына туташууда…</item>
+    <item name="r0x00000000">%1$s менен аныктыгы текшерилүүдө…</item>
+    <item name="r0x00000000">%1$s тармагынан IP дареги алынууда…</item>
+    <item name="r0x00000000">%1$s тармагына туташты</item>
+    <item name="r0x00000000">Убактылуу токтотулду</item>
+    <item name="r0x00000000">%1$s тармагынан ажыратылууда…</item>
+    <item name="r0x00000000">Ажыратылган</item>
+    <item name="r0x00000000">Ийгиликсиз</item>
+    <item name="r0x00000000">Бөгөттөлгөн</item>
+    <item name="r0x00000000">Начар байланыштан убактылуу баш тартууда</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Анимацияны өчүрүү</item>
+    <item name="r0x00000000">Анимация масштабы .5x</item>
+    <item name="r0x00000000">Анимация масштабы 1x</item>
+    <item name="r0x00000000">Анимация масштабы 1.5x</item>
+    <item name="r0x00000000">Анимация масштабы 2x</item>
+    <item name="r0x00000000">Анимация масштабы 5x</item>
+    <item name="r0x00000000">Анимация масштабы 10x</item>
+  </string-array>
+</resources>

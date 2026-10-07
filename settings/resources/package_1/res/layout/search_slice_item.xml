@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:background="?android:attr/selectableItemBackground"
+              android:paddingTop="16.0dp"
+              android:paddingBottom="16.0dp"
+              android:clipToPadding="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="?android:attr/listPreferredItemHeight"
+              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android">
+  <include layout="@layout/search_icon_view" />
+  <android.app.slice.widget.SliceView android:id="@android:id/content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+</LinearLayout>

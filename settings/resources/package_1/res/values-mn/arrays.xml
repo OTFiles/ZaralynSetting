@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Дүрс амилуулалт идэвхгүй</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц .5x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1.5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 2x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP буюу CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Дотоод төхөөрөмжийн сан</item>
+    <item name="r0x00000000">Авагддаг SD карт</item>
+    <item name="r0x00000000">Системээр шийдүүлэх</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Хувийн</item>
+    <item name="r0x00000000">Зурвас</item>
+    <item name="r0x00000000">Медиа</item>
+    <item name="r0x00000000">Төхөөрөмж</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Чичиргээ</item>
+    <item name="r0x00000000">Харилцагчдыг унших</item>
+    <item name="r0x00000000">Харилцагчдыг өөрчлөх</item>
+    <item name="r0x00000000">Дуудлагын жагсаалтыг унших</item>
+    <item name="r0x00000000">Дуудлагын жагсаалтыг өөрчлөх</item>
+    <item name="r0x00000000">Хуанли унших</item>
+    <item name="r0x00000000">Календарийг өөрчлөх</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Пост мэдэгдэл</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Утас руу залгах</item>
+    <item name="r0x00000000">SMS/MMS унших</item>
+    <item name="r0x00000000">SMS/MMS бичих</item>
+    <item name="r0x00000000">SMS/MMS хүлээн авах</item>
+    <item name="r0x00000000">SMS/MMS хүлээн авах</item>
+    <item name="r0x00000000">SMS/MMS хүлээн авах</item>
+    <item name="r0x00000000">SMS/MMS хүлээн авах</item>
+    <item name="r0x00000000">SMS/MMS илгээх</item>
+    <item name="r0x00000000">SMS/MMS унших</item>
+    <item name="r0x00000000">SMS/MMS бичих</item>
+    <item name="r0x00000000">Тохиргоог өөрчлөх</item>
+    <item name="r0x00000000">Дээр нь нээх</item>
+    <item name="r0x00000000">Хандалтын мэдэгдэл</item>
+    <item name="r0x00000000">Камер</item>
+    <item name="r0x00000000">Аудио бичих</item>
+    <item name="r0x00000000">Аудио тоглуулах</item>
+    <item name="r0x00000000">Түр санах ойг унших</item>
+    <item name="r0x00000000">Түр санах ойг өөрчлөх</item>
+    <item name="r0x00000000">Медиа товч</item>
+    <item name="r0x00000000">Аудио фокус</item>
+    <item name="r0x00000000">Үндсэн дууны хэмжээ</item>
+    <item name="r0x00000000">Хоолойн дууны хэмжээ</item>
+    <item name="r0x00000000">Хонхны дууны түвшин</item>
+    <item name="r0x00000000">Медиа дууны түвшин</item>
+    <item name="r0x00000000">Сэрүүлгийн дууны түвшин</item>
+    <item name="r0x00000000">Мэдэгдлийн дууны хэмжээ</item>
+    <item name="r0x00000000">Блютүүтийн хэмжээ</item>
+    <item name="r0x00000000">Сэрүүн байлгах</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Байршил</item>
+    <item name="r0x00000000">Ашиглалтын статистик авах</item>
+    <item name="r0x00000000">Микрофон хаах/нээх</item>
+    <item name="r0x00000000">toast харуулах</item>
+    <item name="r0x00000000">Төслийн медиа</item>
+    <item name="r0x00000000">VPN идэвхжүүлэх</item>
+    <item name="r0x00000000">Ханын зураг бичих</item>
+    <item name="r0x00000000">Бүтцийг өөрчлөх</item>
+    <item name="r0x00000000">Дэлгэцийн агшинг өөрчлөх</item>
+    <item name="r0x00000000">Гар утасны төлөвийг унших</item>
+    <item name="r0x00000000">Дуут шуудан нэмэх</item>
+    <item name="r0x00000000">Sip-г ашиглах</item>
+    <item name="r0x00000000">Залгах дуудлагыг боловсруулах</item>
+    <item name="r0x00000000">Хурууны хээ</item>
+    <item name="r0x00000000">Биеийн мэдрэгч</item>
+    <item name="r0x00000000">Үүрэн нэвтрүүлгийг унших</item>
+    <item name="r0x00000000">Хуурамч байршил</item>
+    <item name="r0x00000000">Санах ойг унших</item>
+    <item name="r0x00000000">Санах ойг бичих</item>
+    <item name="r0x00000000">Дэлгэцийг асаах</item>
+    <item name="r0x00000000">Бүртгэл авах</item>
+    <item name="r0x00000000">Дэвсгэрт ажиллуулах</item>
+    <item name="r0x00000000">Хүртээмжийн дууны түвшин</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">бүдүүн байршил</item>
+    <item name="r0x00000000">сайн байршил</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">чичиргээ</item>
+    <item name="r0x00000000">харилцагчдыг унших</item>
+    <item name="r0x00000000">харилцагчдыг өөрчлөх</item>
+    <item name="r0x00000000">дуудлагын жагсаалтыг унших</item>
+    <item name="r0x00000000">дуудлагын жагсаалтыг өөрчлөх</item>
+    <item name="r0x00000000">хуанли унших</item>
+    <item name="r0x00000000">календарийг өөрчлөх</item>
+    <item name="r0x00000000">wi-fi скан</item>
+    <item name="r0x00000000">мэдэгдэл</item>
+    <item name="r0x00000000">үүрэн скан</item>
+    <item name="r0x00000000">утас руу залгах</item>
+    <item name="r0x00000000">SMS унших</item>
+    <item name="r0x00000000">SMS бичих</item>
+    <item name="r0x00000000">SMS хүлээн авах</item>
+    <item name="r0x00000000">яаралтай SMS хүлээж авах</item>
+    <item name="r0x00000000">MMS хүлээн авах</item>
+    <item name="r0x00000000">WAP хүлээн авах</item>
+    <item name="r0x00000000">SMS илгээх</item>
+    <item name="r0x00000000">ICC SMS унших</item>
+    <item name="r0x00000000">ICC SMS бичих</item>
+    <item name="r0x00000000">тохиргоог өөрчлөх</item>
+    <item name="r0x00000000">дээр нь нээх</item>
+    <item name="r0x00000000">мэдэгдэлд хандах</item>
+    <item name="r0x00000000">камер</item>
+    <item name="r0x00000000">аудио бичих</item>
+    <item name="r0x00000000">аудио тоглуулах</item>
+    <item name="r0x00000000">түр санах ойг унших</item>
+    <item name="r0x00000000">түр санах ойг өөрчлөх</item>
+    <item name="r0x00000000">медиа товч</item>
+    <item name="r0x00000000">аудио фокус</item>
+    <item name="r0x00000000">үндсэн дууны хэмжээ</item>
+    <item name="r0x00000000">хоолойн дууны хэмжээ</item>
+    <item name="r0x00000000">хонхны дууны түвшин</item>
+    <item name="r0x00000000">медиа дууны түвшин</item>
+    <item name="r0x00000000">сэрүүлгийн дууны түвшин</item>
+    <item name="r0x00000000">мэдэгдлийн дууны хэмжээ</item>
+    <item name="r0x00000000">блютүүтийн хэмжээ</item>
+    <item name="r0x00000000">сэрүүн байлгах</item>
+    <item name="r0x00000000">байршлыг хянах</item>
+    <item name="r0x00000000">өндөр чадалтай байршлуудыг хянах</item>
+    <item name="r0x00000000">ашиглалтын статистик авах</item>
+    <item name="r0x00000000">Микрофон хаах/нээх</item>
+    <item name="r0x00000000">toast харуулах</item>
+    <item name="r0x00000000">төслийн медиа</item>
+    <item name="r0x00000000">VPN идэвхжүүлэх</item>
+    <item name="r0x00000000">ханын зураг бичих</item>
+    <item name="r0x00000000">бүтцийг өөрчлөх</item>
+    <item name="r0x00000000">дэлгэцийн агшинг өөрчлөх</item>
+    <item name="r0x00000000">гар утасны төлөвийг унших</item>
+    <item name="r0x00000000">дуут шуудан нэмэх</item>
+    <item name="r0x00000000">sip ашиглах</item>
+    <item name="r0x00000000">залгах дуудлагыг боловсруулах</item>
+    <item name="r0x00000000">хурууны хээ</item>
+    <item name="r0x00000000">биеийн мэдрэгч</item>
+    <item name="r0x00000000">үүрэн нэвтрүүлгийг унших</item>
+    <item name="r0x00000000">хуурамч байршил</item>
+    <item name="r0x00000000">санах ойг унших</item>
+    <item name="r0x00000000">санах ойг бичих</item>
+    <item name="r0x00000000">дэлгэцийг асаах</item>
+    <item name="r0x00000000">бүртгэл авах</item>
+    <item name="r0x00000000">дэвсгэрт ажиллуулах</item>
+    <item name="r0x00000000">хүртээмжийн дууны түвшин</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Стандарт хязгаар</item>
+    <item name="r0x00000000">Далд процесс байхгүй</item>
+    <item name="r0x00000000">Хамгийн ихдээ 1 процесс</item>
+    <item name="r0x00000000">Хамгийн ихдээ 2 процесс</item>
+    <item name="r0x00000000">Хамгийн ихдээ 3 процесс</item>
+    <item name="r0x00000000">Хамгийн ихдээ 4 процесс</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">30 гаруй хоног хадгална</item>
+    <item name="r0x00000000">60 гаруй хоног хадгална</item>
+    <item name="r0x00000000">90 гаруй хоног хадгална</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Тодорхойлоогүй</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">16 бит/жишээ</item>
+    <item name="r0x00000000">24 бит/жишээ</item>
+    <item name="r0x00000000">32 бит/жишээ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">16 бит/жишээ</item>
+    <item name="r0x00000000">24 бит/жишээ</item>
+    <item name="r0x00000000">32 бит/жишээ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Аудио чанарт тааруулсан</item>
+    <item name="r0x00000000">Аудио, холболтын чанарыг тэнцүүлсэн</item>
+    <item name="r0x00000000">Холболтын чанарт тааруулсан</item>
+    <item name="r0x00000000">Шилдэг оролдлого (Тохируулж болох битийн хурд)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Аудио чанарт тааруулсан (990кб/цаг/909кб/цаг)</item>
+    <item name="r0x00000000">Аудио, холболтын чанарыг тэнцүүлсэн (660кб/цаг/606кб/цаг)</item>
+    <item name="r0x00000000">Холболтын чанарт тааруулсан (330кб/цаг/303кб/цаг)</item>
+    <item name="r0x00000000">Шилдэг оролдлого (Тохируулж болох битийн хурд)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">44.1 кГц</item>
+    <item name="r0x00000000">48.0 кГц</item>
+    <item name="r0x00000000">88.2 кГц</item>
+    <item name="r0x00000000">96.0 кГц</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">44.1 кГц</item>
+    <item name="r0x00000000">48.0 кГц</item>
+    <item name="r0x00000000">88.2 кГц</item>
+    <item name="r0x00000000">96.0 кГц</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Нэмэлт кодлогчийг идэвхжүүлэх</item>
+    <item name="r0x00000000">Нэмэлт кодлогчийг идэвхгүй болгох</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Системийн сонголтыг ашиглах (Өгөгдмөл)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Нэмэлт кодлогчийг идэвхжүүлэх</item>
+    <item name="r0x00000000">Нэмэлт кодлогчийг идэвхгүй болгох</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, идэвхтэй</item>
+    <item name="r0x00000000">, идэвхтэй (медиа)</item>
+    <item name="r0x00000000">, идэвхтэй (утас)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (Өгөгдмөл)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Системийн өгөгдмөлийг ашиглах: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 минут</item>
+    <item name="r0x00000000">5 минут</item>
+    <item name="r0x00000000">1 цаг</item>
+    <item name="r0x00000000">Хэзээ ч завсарлахгүй</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Үндсэн</item>
+    <item name="r0x00000000">Хоосон</item>
+    <item name="r0x00000000">Гадна хүрээ</item>
+    <item name="r0x00000000">Сүүдэр тусгах</item>
+    <item name="r0x00000000">Товгор</item>
+    <item name="r0x00000000">Ухмал</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Маш жижиг</item>
+    <item name="r0x00000000">Жижиг</item>
+    <item name="r0x00000000">Энгийн</item>
+    <item name="r0x00000000">Том</item>
+    <item name="r0x00000000">Маш том</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Апп-н үндсэнийг ашиглах</item>
+    <item name="r0x00000000">Хар дээр цагаан</item>
+    <item name="r0x00000000">Цагаан дээр хар</item>
+    <item name="r0x00000000">Хар дээр шар</item>
+    <item name="r0x00000000">Цэнхэр дээр шар</item>
+    <item name="r0x00000000">Өөрчлөх</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Үндсэн</item>
+    <item name="r0x00000000">Sans Serif</item>
+    <item name="r0x00000000">Sans-serif condensed</item>
+    <item name="r0x00000000">Sans-serif monospace</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif monospace</item>
+    <item name="r0x00000000">Casual</item>
+    <item name="r0x00000000">Cursive</item>
+    <item name="r0x00000000">Small capitals</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Сайжруулсан өнгө</item>
+    <item name="r0x00000000">Нүдээр харж болох байгалийн өнгө</item>
+    <item name="r0x00000000">Дижитал агуулгад зориулан тааруулсан өнгө</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Хурц (үндсэн)</item>
+    <item name="r0x00000000">Байгалийн</item>
+    <item name="r0x00000000">Стандарт</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Усан цэнхэр</item>
+    <item name="r0x00000000">Цэнхэр</item>
+    <item name="r0x00000000">Индиго</item>
+    <item name="r0x00000000">Нил ягаан</item>
+    <item name="r0x00000000">Ягаан</item>
+    <item name="r0x00000000">Улаан</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Автомат (өдрийн цагт тулгуурласан)</item>
+    <item name="r0x00000000">Байнга асаалттай</item>
+    <item name="r0x00000000">Байнга унтраалттай</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Сүүлийн 30 өдөр</item>
+    <item name="r0x00000000">Ашиглалтын циклийг тохируулах...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">Давхар дүрслэлтэй хэсгийг харуулах</item>
+    <item name="r0x00000000">Өнгө үл ялгагчид зориулсан бүсүүдийг харуулах</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Хэзээ ч үгүй</item>
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минут</item>
+    <item name="r0x00000000">5 минут</item>
+    <item name="r0x00000000">10 минут</item>
+    <item name="r0x00000000">30 минут</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Алийг нь ч биш</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (График)</item>
+    <item name="r0x00000000">Стекийг glGetError дээр дуудах</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Жижиг</item>
+    <item name="r0x00000000">Өгөгдмөл</item>
+    <item name="r0x00000000">Том</item>
+    <item name="r0x00000000">Хамгийн том</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">HDCP шалгахыг хэзээ ч ашиглахгүй</item>
+    <item name="r0x00000000">HDCP шалгахыг зөвхөн DRM контентэд ашиглах</item>
+    <item name="r0x00000000">Байнга HDCP шалгахыг ашиглах</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Хэзээ ч шалгахгүй</item>
+    <item name="r0x00000000">Зөвхөн DRM агуулгыг шалгах</item>
+    <item name="r0x00000000">Байнга шалгах</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Шууд</item>
+    <item name="r0x00000000">5 секунд</item>
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минут</item>
+    <item name="r0x00000000">5 минут</item>
+    <item name="r0x00000000">10 минут</item>
+    <item name="r0x00000000">30 минут</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Богино</item>
+    <item name="r0x00000000">Дундаж</item>
+    <item name="r0x00000000">Урт</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">480пиксель</item>
+    <item name="r0x00000000">480пиксель (найдвартай)</item>
+    <item name="r0x00000000">720пиксель</item>
+    <item name="r0x00000000">720пиксель (найдвартай)</item>
+    <item name="r0x00000000">1080пиксель</item>
+    <item name="r0x00000000">1080пиксель (найдвартай)</item>
+    <item name="r0x00000000">4К</item>
+    <item name="r0x00000000">4К (найдвартай)</item>
+    <item name="r0x00000000">4К (өндөр чанартай)</item>
+    <item name="r0x00000000">4К (өндөр чанартай, найдвартай)</item>
+    <item name="r0x00000000">720пиксель, 1080пиксель (хос дэлгэц)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Хэвийн</item>
+    <item name="r0x00000000">Дундаж</item>
+    <item name="r0x00000000">Бага</item>
+    <item name="r0x00000000">Эгзэгтэй</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Тогтвортой</item>
+    <item name="r0x00000000">Топ үйлдэл</item>
+    <item name="r0x00000000">Чухал (ил)</item>
+    <item name="r0x00000000">Чухал (далд)</item>
+    <item name="r0x00000000">Нөөшлөлт</item>
+    <item name="r0x00000000">Хүнд жинтэй</item>
+    <item name="r0x00000000">Үйлчилгээ (ажиллаж байгаа)</item>
+    <item name="r0x00000000">Үйлчилгээ (дахин ачааллалт)</item>
+    <item name="r0x00000000">Хүлээн авагч</item>
+    <item name="r0x00000000">Нүүр</item>
+    <item name="r0x00000000">Сүүлийн үйлдэл</item>
+    <item name="r0x00000000">Кеш хийгдсэн (үйлдэл)</item>
+    <item name="r0x00000000">Кеш хийгдсэн (үйлдэлийн клиент)</item>
+    <item name="r0x00000000">Кеш хийгдсэн (хоосон)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Энгийн</item>
+    <item name="r0x00000000">Дундаж</item>
+    <item name="r0x00000000">Бага</item>
+    <item name="r0x00000000">Эгзэгтэй</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 секунд</item>
+    <item name="r0x00000000">30 секунд</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минут</item>
+    <item name="r0x00000000">5 минут</item>
+    <item name="r0x00000000">10 минут</item>
+    <item name="r0x00000000">30 минут</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Асуух</item>
+    <item name="r0x00000000">Хэзээ ч зөвшөөрөхгүй</item>
+    <item name="r0x00000000">Байнга зөвшөөрөх</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">\64000</item>
+    <item name="r0x00000000">\256000</item>
+    <item name="r0x00000000">1 сая</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">лог буфер бүрт 64K</item>
+    <item name="r0x00000000">лог буфер бүрт 256K</item>
+    <item name="r0x00000000">лог буфер бүрт 1M</item>
+    <item name="r0x00000000">лог буфер бүрт 4M</item>
+    <item name="r0x00000000">лог буфер бүрт 16M</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">\64000</item>
+    <item name="r0x00000000">\256000</item>
+    <item name="r0x00000000">1 сая</item>
+    <item name="r0x00000000">4 сая</item>
+    <item name="r0x00000000">16 сая</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">Бүх логийн хамгаалалт</item>
+    <item name="r0x00000000">Радиогоос бусад бүх логийн хамгаалалт</item>
+    <item name="r0x00000000">зөвхөн үйлдлийн системийн төв логийн хамгаалалтад</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">Бүгд</item>
+    <item name="r0x00000000">Радиогоос бусад бүх</item>
+    <item name="r0x00000000">зөвхөн төвд</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">Тэгш өнцөгт бус клипийн бүсийг цэнхэрээр зурах</item>
+    <item name="r0x00000000">Шалгасан зурах командуудыг ногоон өнгөөр тэмдэглэх</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Америк</item>
+    <item name="r0x00000000">Европ</item>
+    <item name="r0x00000000">Африк</item>
+    <item name="r0x00000000">Ази</item>
+    <item name="r0x00000000">Австрали</item>
+    <item name="r0x00000000">Номхон далай</item>
+    <item name="r0x00000000">Бүгд</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Идэвхгүй</item>
+    <item name="r0x00000000">Дэлгэц дээр савхаар</item>
+    <item name="r0x00000000">adb shell dumpsys gfxinfo-д</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Дүрс амилуулалт идэвхгүй</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц .5x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1.5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 2x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Маш удаан</item>
+    <item name="r0x00000000">Удаан</item>
+    <item name="r0x00000000">Хэвийн</item>
+    <item name="r0x00000000">Хурдан</item>
+    <item name="r0x00000000">Илүү хурдан</item>
+    <item name="r0x00000000">Маш хурдан</item>
+    <item name="r0x00000000">Түргэн</item>
+    <item name="r0x00000000">Маш түргэн</item>
+    <item name="r0x00000000">Хамгийн хурдан</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Ашиглалтын цаг</item>
+    <item name="r0x00000000">Ашигласан сүүлийн цаг</item>
+    <item name="r0x00000000">Апп нэр</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Цэнэглэж байна</item>
+    <item name="r0x00000000">MTP (Медиа дамжуулах протокол)</item>
+    <item name="r0x00000000">PTP (Зураг Дамжуулах Протокол)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">Аудио эх сурвалж</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Салгагдсан</item>
+    <item name="r0x00000000">Эхлүүлж байна…</item>
+    <item name="r0x00000000">Холбогдож байна...</item>
+    <item name="r0x00000000">Холбогдсон</item>
+    <item name="r0x00000000">Завсарлага</item>
+    <item name="r0x00000000">Амжилтгүй</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">Урьдчилан хуваалцсан L2TP/IPSec VPN түлхүүртэй</item>
+    <item name="r0x00000000">Сертификаттай L2TP/IPSec VPN</item>
+    <item name="r0x00000000">Урьдчилан хуваалцсан түлхүүртэй IPSec VPN болон Xauth гэрчлэлт</item>
+    <item name="r0x00000000">Сертификат болон Xauth гэрчлэл бүхий IPSec VPN</item>
+    <item name="r0x00000000">Сертификат болон холимог гэрчлэл бүхий IPSec VPN</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi давуу эрхтэй</item>
+    <item name="r0x00000000">Мобайл давуу эрхтэй</item>
+    <item name="r0x00000000">Зөвхөн Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Мобайл</item>
+    <item name="r0x00000000">Зөвхөн Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Мобайл</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi давуу эрхтэй</item>
+    <item name="r0x00000000">Мобайл давуу эрхтэй</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">СИМ</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Үгүй</item>
+    <item name="r0x00000000">Тийм</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Статик</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Автоматаар илрүүлэх</item>
+    <item name="r0x00000000">Хязгаартайгаар тохируулах</item>
+    <item name="r0x00000000">Хязгааргүйгээр тохируулах</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Холбогдсон</item>
+    <item name="r0x00000000">Уригдсан</item>
+    <item name="r0x00000000">Амжилтгүй</item>
+    <item name="r0x00000000">Холбогдсон</item>
+    <item name="r0x00000000">Хүрээнээс гарсан</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Товчлуур</item>
+    <item name="r0x00000000">Түнш төхөөрөмжийн PIN</item>
+    <item name="r0x00000000">Энэ төхөөрөмжөөс PIN</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Аль нь ч биш</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">СИМ</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Байхгүй</item>
+    <item name="r0x00000000">Гараар</item>
+    <item name="r0x00000000">Прокси авто-тохируулга</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Муу</item>
+    <item name="r0x00000000">Муу</item>
+    <item name="r0x00000000">Дундаж</item>
+    <item name="r0x00000000">Сайн</item>
+    <item name="r0x00000000">Маш сайн</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скан хийж байна…</item>
+    <item name="r0x00000000">Холбогдож байна...</item>
+    <item name="r0x00000000">Гэрчлэж байна</item>
+    <item name="r0x00000000">IP хаягийг авч байна…</item>
+    <item name="r0x00000000">Холбогдсон</item>
+    <item name="r0x00000000">Түр хаасан</item>
+    <item name="r0x00000000">Салгаж байна…</item>
+    <item name="r0x00000000">Салгагдсан</item>
+    <item name="r0x00000000">Амжилтгүй</item>
+    <item name="r0x00000000">Хориглогдсон</item>
+    <item name="r0x00000000">Муу холболтоос түр зайлсхийж байна</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скан хийж байна…</item>
+    <item name="r0x00000000">%1$s руу холбогдож байна…</item>
+    <item name="r0x00000000">%1$s-тай гэрчилж байна…</item>
+    <item name="r0x00000000">%1$s-с IP хаягийг авч байна…</item>
+    <item name="r0x00000000">%1$s руу холбогдсон</item>
+    <item name="r0x00000000">Түр хаасан</item>
+    <item name="r0x00000000">%1$s-с салгагдаж байна…</item>
+    <item name="r0x00000000">Салгагдсан</item>
+    <item name="r0x00000000">Амжилтгүй</item>
+    <item name="r0x00000000">Хориглогдсон</item>
+    <item name="r0x00000000">Муу холболтоос түр зайлсхийж байна</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Дүрс амилуулалт идэвхгүй</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц .5x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1x</item>
+    <item name="r0x00000000">Дүрс амилуулах далайц 1.5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 2x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 5x</item>
+    <item name="r0x00000000">Дүрс амилуулалтын далайц 10x</item>
+  </string-array>
+</resources>

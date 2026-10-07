@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settingslib.readboy.BaseScrollView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:textDirection="locale"
+                      android:layoutDirection="locale" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:paddingTop="8.0dp"
+                android:paddingBottom="8.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <com.android.settings.localepicker.LocaleRecyclerView android:id="@id/dragList"
+                          android:scrollbars="vertical"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" />
+    <Button android:textAppearance="?android:attr/textAppearanceListItem"
+            android:id="@id/add_language"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:text="@string/add_a_language"
+            android:drawablePadding="24.0dp"
+            android:drawableStart="@drawable/ic_add_24dp"
+            android:textAlignment="textStart"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            style="@style/rbButtonStyle" />
+  </LinearLayout>
+</com.android.settingslib.readboy.BaseScrollView>

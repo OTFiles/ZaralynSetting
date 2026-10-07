@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.CheckableLinearLayout android:orientation="vertical"
+                      android:background="?android:attr/selectableItemBackground"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                      android:paddingEnd="?android:attr/dialogPreferredPadding" xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckedTextView android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:textColor="?android:attr/textColorAlertDialogListItem"
+                   android:ellipsize="marquee"
+                   android:gravity="center_vertical"
+                   android:id="@android:id/title"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                   android:paddingStart="20.0dp" />
+  <TextView android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary"
+            android:id="@android:id/summary"
+            android:paddingBottom="8.0dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:paddingStart="52.0dp" />
+</com.android.settings.CheckableLinearLayout>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settingslib.readboy.BaseScrollView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:padding="24.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <TextView android:id="@id/model_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/model_info"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/model_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/serial_number_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/status_serial_number"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/serial_number_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/hardware_rev_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/hardware_revision"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/hardware_rev_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+  </LinearLayout>
+</com.android.settingslib.readboy.BaseScrollView>

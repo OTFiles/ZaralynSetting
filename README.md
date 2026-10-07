@@ -42,6 +42,24 @@ cd ZaralynSetting
 
 ## 系统要求
 
+- Android 5.0 (API 21) ~ Android 14 (API 34)，**含老机型 Android 7.0/7.1（API 24/25）**
+- 无需 root；需设备已安装「家长管理」（com.readboy.parentmanager）
+- 无 native 库，任何 ABI 均可安装；已开启 Java 8+ API 脱糖，老系统不会因默认方法报 `NoSuchMethodError`
+
+## 老机型适配（v1.1）
+
+- **日志目录多级回退**：外部私有目录不可写时回退内部私有目录，且真实校验可写性
+- **launcher 图标**：5 档 PNG mipmap（含圆形版）+ API 26+ 自适应图标，老 Launcher 不再白图标
+- **启动日志**记录运行环境（Android 版本 / API / ABI / 机型 / 应用版本），便于老机型反馈排查
+- **兼容性自检**（设置页 →「开始自检」）：系统版本、家长管理是否安装与版本、Provider authority 解析、
+  安装管控状态读取、家长密码读取、云端接口连通、日志目录可写、剩余存储、存储权限，可一键复制报告
+- 移除了 manifest 中 4 个指向不存在类的 `<service>` 声明（部分老 ROM 安装/启动时会校验）
+
+## 使用方式（简述）
+
+1. 从 Releases 下载 APK 安装
+2. 首次启动若功能异常，先到「设置」页点「开始自检」，把报告反馈
+3. 关闭「全局安装开关」即可解除安装限制；黑白名单在对应页维护
 - Android SDK 28+
 - Kotlin 1.9.20+
 - Gradle 8.3+

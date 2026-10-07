@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/device_details_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.applications.LayoutPreference android:layout="@layout/settings_entity_header"
+                        android:selectable="false"
+                        android:key="bluetooth_device_header" />
+  <com.android.settings.widget.ActionButtonPreference android:key="action_buttons" />
+  <PreferenceCategory android:key="bluetooth_profiles" />
+</PreferenceScreen>

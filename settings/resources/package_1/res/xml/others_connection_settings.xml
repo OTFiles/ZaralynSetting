@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <SwitchPreference android:persistent="false"
+                    android:title="@string/bluetooth_settings"
+                    android:key="bluetooth_switcher"
+                    android:order="10"
+                    android:disableDependentsState="true" />
+  <SwitchPreference android:persistent="false"
+                    android:title="@string/readboy_bluetooth_is_discoverable_always"
+                    android:key="bluetooth_discoverable"
+                    android:order="11" />
+  <com.android.settings.bluetooth.DeviceNamePreference android:persistent="false"
+                        android:title="@string/preference_device_name"
+                        android:key="bluetooth_device_name"
+                        android:order="12" />
+  <com.android.settings.ArrowTitlePreference android:title="@string/bluetooth_show_received_files"
+                        android:key="bluetooth_show_recieved_file"
+                        android:order="13" />
+  <SwitchPreference android:persistent="false"
+                    android:title="@string/readboy_parent_control_connect_usb"
+                    android:key="parent_control_connect_usb"
+                    android:order="20" />
+  <SwitchPreference android:persistent="false"
+                    android:title="@string/readboy_parent_control_transf_bluetooth"
+                    android:key="parent_control_transf_bluetooth"
+                    android:order="21" />
+</PreferenceScreen>

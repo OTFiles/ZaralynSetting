@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingTop="4.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingEnd="56.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            android:id="@android:id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart" />
+  <com.android.settings.fuelgauge.BatteryActiveView android:id="@id/battery_active"
+                        android:layout_width="fill_parent"
+                        android:layout_height="6.0dp" />
+</LinearLayout>

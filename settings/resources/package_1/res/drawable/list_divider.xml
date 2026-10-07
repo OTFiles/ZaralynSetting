@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<inset android:drawable="?android:attr/listDivider"
+       android:insetLeft="?android:attr/listPreferredItemPaddingStart"
+       android:insetRight="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android" />

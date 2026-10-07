@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自适应图标前景：图形按 0.62 缩放居中，落在 72dp 安全区内 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5.58"
+        android:pathData="M38.19,54 a15.81,15.81 0 1 0 31.62,0 a15.81,15.81 0 1 0 -31.62,0" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.72"
+        android:pathData="M44.7,54 a9.3,9.3 0 1 0 18.6,0 a9.3,9.3 0 1 0 -18.6,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M51.52,54 a2.48,2.48 0 1 0 4.96,0 a2.48,2.48 0 1 0 -4.96,0" />
+</vector>

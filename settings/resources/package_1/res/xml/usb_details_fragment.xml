@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/usb_preference"
+                  android:key="usb_details_fragment" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.applications.LayoutPreference android:layout="@layout/settings_entity_header"
+                        android:selectable="false"
+                        android:key="usb_device_header" />
+  <PreferenceCategory android:title="@string/usb_control_title"
+                      android:key="usb_details_data_role" />
+  <PreferenceCategory android:title="@string/usb_use"
+                      android:key="usb_details_functions" />
+  <PreferenceCategory android:key="usb_details_power_role" />
+  <PreferenceCategory android:key="usb_details_space"
+                      settings:allowDividerAbove="false" />
+</PreferenceScreen>

@@ -1,0 +1,3 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/add_virtual_keyboard"
+                  android:key="available_virtual_keyboard_page" xmlns:android="http://schemas.android.com/apk/res/android" />

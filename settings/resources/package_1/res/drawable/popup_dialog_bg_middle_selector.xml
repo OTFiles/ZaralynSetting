@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape>
+      <solid android:color="@color/list_divider_popdlg_color" />
+    </shape>
+  </item>
+  <item android:left="@dimen/readboy_app_detail_button_stroke"
+        android:top="@dimen/readboy_app_detail_button_stroke"
+        android:right="@dimen/readboy_app_detail_button_stroke">
+    <shape>
+      <solid android:color="@color/readboy_text_list_item_normal" />
+    </shape>
+  </item>
+</layer-list>

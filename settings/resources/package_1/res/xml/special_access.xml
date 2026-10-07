@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/special_access"
+                  android:key="special_app_access_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <Preference android:title="@string/high_power_apps"
+              android:key="high_power_apps"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_ignore_optimizations">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$HighPowerApplicationsActivity" />
+  </Preference>
+  <Preference android:title="@string/manage_device_admin"
+              android:key="device_administrators"
+              android:fragment="com.android.settings.DeviceAdminSettings" />
+  <Preference android:title="@string/system_alert_window_settings"
+              android:key="system_alert_window"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_system_alert_window">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$OverlaySettingsActivity" />
+  </Preference>
+  <Preference android:title="@string/manage_zen_access_title"
+              android:key="zen_access"
+              android:fragment="com.android.settings.notification.ZenAccessSettings" />
+  <Preference android:title="@string/write_settings"
+              android:key="write_settings_apps"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_write_settings">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$WriteSettingsActivity" />
+  </Preference>
+  <Preference android:title="@string/manage_notification_access_title"
+              android:key="notification_access"
+              android:fragment="com.android.settings.notification.NotificationAccessSettings" />
+  <Preference android:title="@string/picture_in_picture_title"
+              android:key="picture_in_picture"
+              android:fragment="com.android.settings.applications.appinfo.PictureInPictureSettings"
+              settings:keywords="@string/picture_in_picture_keywords" />
+  <Preference android:title="@string/premium_sms_access"
+              android:key="premium_sms"
+              android:fragment="com.android.settings.applications.PremiumSmsAccess" />
+  <Preference android:title="@string/unrestricted_data_saver"
+              android:key="data_saver"
+              android:fragment="com.android.settings.datausage.UnrestrictedDataAccess" />
+  <Preference android:title="@string/install_other_apps"
+              android:key="manage_external_sources"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_install_other_apps">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$ManageExternalSourcesActivity" />
+  </Preference>
+  <Preference android:title="@string/usage_access"
+              android:key="special_app_usage_access"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_write_settings">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$UsageAccessSettingsActivity" />
+  </Preference>
+  <Preference android:title="@string/vr_listeners_title"
+              android:key="enabled_vr_listeners"
+              android:fragment="com.android.settings.applications.VrListenerSettings"
+              settings:keywords="@string/keywords_vr_listener">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$VrListenersSettingsActivity" />
+  </Preference>
+  <Preference android:title="@string/directory_access"
+              android:key="special_app_directory_access"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_directory_access">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$DirectoryAccessSettingsActivity" />
+  </Preference>
+  <Preference android:title="@string/change_wifi_state_title"
+              android:key="change_wifi_state"
+              android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+              settings:keywords="@string/keywords_change_wifi_state">
+    <extra android:name="classname"
+           android:value="com.android.settings.Settings$ChangeWifiStateActivity" />
+  </Preference>
+</PreferenceScreen>

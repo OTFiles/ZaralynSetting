@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<GridLayout android:id="@id/title_area"
+            android:paddingTop="8.0dp"
+            android:paddingBottom="8.0dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:columnCount="2"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            android:layout_marginStart="@dimen/settings_side_margin"
+            android:layout_marginEnd="@dimen/settings_side_margin" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/provider_icon"
+             android:layout_width="@dimen/app_icon_size"
+             android:layout_height="@dimen/app_icon_size"
+             android:scaleType="centerInside"
+             android:contentDescription="@null"
+             android:layout_rowSpan="2"
+             android:layout_marginEnd="8.0dp" />
+  <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+            android:ellipsize="marquee"
+            android:layout_gravity="fill_horizontal"
+            android:id="@id/user_id"
+            android:layout_width="0.0dp"
+            android:layout_marginTop="2.0dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart" />
+  <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+            android:ellipsize="marquee"
+            android:layout_gravity="center|fill_horizontal|top"
+            android:id="@id/provider_id"
+            android:layout_width="0.0dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart" />
+</GridLayout>

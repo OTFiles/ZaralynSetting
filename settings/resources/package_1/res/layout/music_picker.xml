@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/searchContainer"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/actionbar_size">
+    <include android:id="@id/searchLayout"
+             layout="@layout/music_piker_search" />
+  </FrameLayout>
+  <View android:background="@color/list_divider_extra_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/readboy_sub_divider_height" />
+  <FrameLayout android:layout_width="fill_parent"
+               android:layout_height="0.0dp"
+               android:layout_weight="1.0">
+    <LinearLayout android:gravity="center"
+                  android:orientation="vertical"
+                  android:id="@id/progressContainer"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <ProgressBar android:id="@android:id/progress"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:indeterminateDrawable="@drawable/progressbar_loading_anim"
+                   android:progressDrawable="@drawable/progressbar_loading_anim"
+                   android:indeterminateBehavior="repeat"
+                   style="?android:attr/progressBarStyle" />
+      <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingTop="4.0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading"
+                android:singleLine="true" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/listContainer"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent">
+      <com.android.settingslib.readboy.BaseListView android:id="@android:id/list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:drawSelectorOnTop="false"
+                            android:fastScrollEnabled="false" />
+      <TextView android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"
+                android:id="@android:id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/no_tracks_title" />
+    </FrameLayout>
+  </FrameLayout>
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="?android:attr/listPreferredItemHeight"
+                  android:layout_marginTop="0.0dp">
+    <Button android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/readboy_text_app_detail_extra_color"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/okayButton"
+            android:background="@drawable/readboy_ripple_master_clean_bg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/okay"
+            style="@style/rbButtonStyle" />
+    <Button android:id="@id/cancelButton"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120.0dp"
+            android:minHeight="48.0dp"
+            android:text="@android:string/cancel"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            style="@style/rbButtonStyle" />
+  </RelativeLayout>
+</LinearLayout>

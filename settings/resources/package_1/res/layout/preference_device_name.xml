@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="?android:attr/selectableItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="?android:attr/listPreferredItemHeightSmall"
+              android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:paddingTop="16.0dp"
+                android:paddingBottom="16.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:attr/listPreferredItemHeight">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0">
+      <TextView android:textAppearance="@style/LocalTextAppearanceSubhead"
+                android:id="@id/arrow_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+      <TextView android:textAppearance="@style/LocalTextAppearanceBody1"
+                android:textColor="?android:attr/textColorSecondary"
+                android:id="@id/arrow_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6.0dp" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/arrow_nor"
+               android:layout_marginEnd="5.0dp" />
+  </LinearLayout>
+</LinearLayout>

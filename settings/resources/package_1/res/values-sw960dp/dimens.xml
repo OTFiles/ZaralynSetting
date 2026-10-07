@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="action_bar_custom_guide_height">95.0dp</dimen>
+  <dimen name="action_bar_custom_guide_padding">4.0dp</dimen>
+  <dimen name="action_bar_custom_guide_total_height">99.0dp</dimen>
+  <dimen name="guide_loading_anim_height">56.0dp</dimen>
+  <dimen name="guide_text_size_1">26.0dp</dimen>
+  <dimen name="guide_text_size_2">27.0dp</dimen>
+  <dimen name="guide_text_size_3">32.0dp</dimen>
+  <dimen name="guide_text_size_4">25.0dp</dimen>
+  <dimen name="guide_text_size_5">23.0dp</dimen>
+  <dimen name="guide_text_size_6">24.0dp</dimen>
+</resources>

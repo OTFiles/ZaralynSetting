@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/popopup_root"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/popopup_dialog"
+                android:background="@null"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingStart"
+                android:paddingTop="@dimen/readboy_sub_divider_height"
+                android:paddingRight="?android:attr/listPreferredItemPaddingEnd"
+                android:paddingBottom="15.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/popopup_item_container"
+                  android:background="@drawable/popup_dialog_bg_only_selector"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/popopup_cancle"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="15.0dp">
+      <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/readboy_title_text_home_color"
+                android:gravity="center"
+                android:id="@id/popopup_tv_cancle"
+                android:background="@drawable/readboy_ripple_popup_dialog_bg_only_color"
+                android:padding="12.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/readboy_popup_dialog_bg_minheight"
+                android:text="@string/cancel" />
+    </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>

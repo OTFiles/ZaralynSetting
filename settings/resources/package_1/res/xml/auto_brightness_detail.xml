@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/auto_brightness_title"
+                  android:key="auto_brightness_detail" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.VideoPreference android:key="auto_brightness_video"
+                        settings:animation="@raw/aab_brightness"
+                        settings:preview="@drawable/aab_brightness" />
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/auto_brightness_title"
+                        android:key="auto_brightness"
+                        settings:allowDividerAbove="true"
+                        settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"
+                        settings:keywords="@string/keywords_display_auto_brightness"
+                        settings:useAdminDisabledSummary="true"
+                        settings:userRestriction="no_config_brightness" />
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/guide_text_size_3"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:id="@id/tip_provision_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dp"
+            android:text="@string/readboy_navigationbar_no_bar_guide_tip4"
+            android:layout_centerHorizontal="true" />
+  <TextView android:textSize="@dimen/guide_text_size_2"
+            android:textColor="#e6000000"
+            android:id="@id/tip_provision_describe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28.0dp"
+            android:text="@string/readboy_navigationbar_no_bar_guide_tip5"
+            android:layout_below="@id/tip_provision_title_text"
+            android:layout_centerHorizontal="true" />
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60.0dp"
+                android:layout_below="@id/tip_provision_describe_text"
+                android:layout_centerHorizontal="true">
+    <TextView android:textStyle="bold"
+              android:id="@id/tip_provision_cancel_btn"
+              android:layout_width="140.0dp"
+              android:layout_height="56.0dp"
+              android:layout_marginRight="28.0dp"
+              android:text="@string/readboy_navigationbar_no_bar_guide_tip3"
+              style="@style/rbButtonGuideDialogStyle" />
+    <TextView android:textStyle="bold"
+              android:id="@id/tip_provision_ok_btn"
+              android:layout_width="140.0dp"
+              android:layout_height="56.0dp"
+              android:layout_marginLeft="28.0dp"
+              android:text="@string/readboy_navigationbar_no_bar_guide_tip2"
+              style="@style/rbButtonGuideDialogStyle" />
+  </LinearLayout>
+</RelativeLayout>

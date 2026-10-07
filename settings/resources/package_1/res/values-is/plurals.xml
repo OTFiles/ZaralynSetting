@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <plurals name="accessibilty_autoclick_preference_subtitle_extremely_short_delay">
+    <item quantity="one">Agnarstutt töf (%1$d msek.)</item>
+    <item quantity="other">Agnarstutt töf (%1$d msek.)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_long_delay">
+    <item quantity="one">Löng töf (%1$d msek.)</item>
+    <item quantity="other">Löng töf (%1$d msek.)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_short_delay">
+    <item quantity="one">Stutt töf (%1$d msek.)</item>
+    <item quantity="other">Stutt töf (%1$d msek.)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_very_long_delay">
+    <item quantity="one">Mjög löng töf (%1$d msek.)</item>
+    <item quantity="other">Mjög löng töf (%1$d msek.)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_very_short_delay">
+    <item quantity="one">Mjög stutt töf (%1$d msek.)</item>
+    <item quantity="other">Mjög stutt töf (%1$d msek.)</item>
+  </plurals>
+  <plurals name="app_notification_listing_summary_others">
+    <item quantity="one">Slökkt fyrir %d forrit</item>
+    <item quantity="other">Slökkt fyrir %d forrit</item>
+  </plurals>
+  <plurals name="battery_manager_app_restricted">
+    <item quantity="one">%1$d forrit takmarkað</item>
+    <item quantity="other">%1$d forrit takmörkuð</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_app_dialog_title">
+    <item quantity="one">Takmarka %1$d forrit?</item>
+    <item quantity="other">Takmarka %1$d forrit?</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_handled_summary">
+    <item quantity="one">Þessi forrit geta ekki verið í gangi í bakgrunni</item>
+    <item quantity="other">Þessi forrit geta ekki verið í gangi í bakgrunni</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_handled_title">
+    <item quantity="one">%2$d forrit nýlega takmarkað</item>
+    <item quantity="other">%2$d forrit nýlega takmörkuð</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_summary">
+    <item quantity="one">%2$d forrit notar mikla rafhlöðuorku í bakgrunni</item>
+    <item quantity="other">%2$d forrit nota mikla rafhlöðuorku í bakgrunni</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_title">
+    <item quantity="one">Takmarka %1$d forrit</item>
+    <item quantity="other">Takmarka %1$d forrit</item>
+  </plurals>
+  <plurals name="billing_cycle_days_left">
+    <item quantity="one">%d dagur eftir</item>
+    <item quantity="other">%d dagar eftir</item>
+  </plurals>
+  <plurals name="data_saver_unrestricted_summary">
+    <item quantity="one">%1$d forrit má nota ótakmörkuð gögn þegar kveikt er á gagnasparnaði</item>
+    <item quantity="other">%1$d forrit mega nota ótakmörkuð gögn þegar kveikt er á gagnasparnaði</item>
+  </plurals>
+  <plurals name="default_camera_app_title">
+    <item quantity="one">Myndavélarforrit</item>
+    <item quantity="other">Myndavélarforrit</item>
+  </plurals>
+  <plurals name="default_email_app_title">
+    <item quantity="one">Tölvupóstsforrit</item>
+    <item quantity="other">Tölvupóstsforrit</item>
+  </plurals>
+  <plurals name="default_phone_app_title">
+    <item quantity="one">Símaforrit</item>
+    <item quantity="other">Símaforrit</item>
+  </plurals>
+  <plurals name="deleted_channels">
+    <item quantity="one">%d flokki eytt</item>
+    <item quantity="other">%d flokkum eytt</item>
+  </plurals>
+  <plurals name="dlg_remove_locales_title">
+    <item quantity="one">Fjarlægja valin tungumál?</item>
+    <item quantity="other">Fjarlægja valin tungumál?</item>
+  </plurals>
+  <plurals name="domain_urls_apps_summary_on">
+    <item quantity="one">%d forrit opnar studda tengla</item>
+    <item quantity="other">%d forrit opna studda tengla</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_ca_certs">
+    <item quantity="one">Að lágmarki %d CA-vottorð</item>
+    <item quantity="other">Að lágmarki %d CA-vottorð</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_failed_password_wipe">
+    <item quantity="one">%d tilraun</item>
+    <item quantity="other">%d tilraunir</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_packages">
+    <item quantity="one">%d forrit</item>
+    <item quantity="other">%d forrit</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_packages_lower_bound">
+    <item quantity="one">Að lágmarki %d forrit</item>
+    <item quantity="other">Að lágmarki %d forrit</item>
+  </plurals>
+  <plurals name="hours">
+    <item quantity="one">%s klukkustund</item>
+    <item quantity="other">%s klukkustundir</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_letters">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d staf</item>
+    <item quantity="other">Verður að innihalda að minnsta kosti %d stafi</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_lowercase">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d lágstaf</item>
+    <item quantity="other">Verður að innihalda að minnsta kosti %d lágstafi</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_nonletter">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d staftákn sem ekki er bókstafur</item>
+    <item quantity="other">Verður að innihalda að minsta kosti %d staftákn sem ekki eru bókstafir</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_numeric">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d tölustaf</item>
+    <item quantity="other">Verður að innihalda að minnsta kosti %d tölustafi</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_symbols">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d sérstaf</item>
+    <item quantity="other">Verður að innihalda að minnsta kosti %d sérstafi</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_uppercase">
+    <item quantity="one">Verður að innihalda að minnsta kosti %d hástaf</item>
+    <item quantity="other">Verður að innihalda að minnsta kosti %d hástafi</item>
+  </plurals>
+  <plurals name="manage_notification_access_summary_nonzero">
+    <item quantity="one">%d forrit getur lesið tilkynningar</item>
+    <item quantity="other">%d forrit geta lesið tilkynningar</item>
+  </plurals>
+  <plurals name="manage_trust_agents_summary_on">
+    <item quantity="one">%d virkur traustfulltrúi</item>
+    <item quantity="other">%d virkir traustfulltrúar</item>
+  </plurals>
+  <plurals name="memory_usage_apps_summary">
+    <item quantity="one">%1$d forrit notaði minni undanfarnar %2$s</item>
+    <item quantity="other">%1$d forrit notuðu minni undanfarnar %2$s</item>
+  </plurals>
+  <plurals name="minutes">
+    <item quantity="one">%s mínúta</item>
+    <item quantity="other">%s mínútur</item>
+  </plurals>
+  <plurals name="network_restrictions_summary">
+    <item quantity="one">%1$d takmörkun</item>
+    <item quantity="other">%1$d takmarkanir</item>
+  </plurals>
+  <plurals name="notification_group_summary">
+    <item quantity="one">%d flokkur</item>
+    <item quantity="other">%d flokkar</item>
+  </plurals>
+  <plurals name="notification_summary">
+    <item quantity="one">Slökkt fyrir %d forrit</item>
+    <item quantity="other">Slökkt fyrir %d forrit</item>
+  </plurals>
+  <plurals name="notifications_categories_off">
+    <item quantity="one">Slökkt á %d flokki</item>
+    <item quantity="other">Slökkt á %d flokkum</item>
+  </plurals>
+  <plurals name="number_of_device_admins">
+    <item quantity="one">%d virkt forrit</item>
+    <item quantity="other">%d virk forrit</item>
+  </plurals>
+  <plurals name="permissions_summary">
+    <item quantity="one">%d heimild veitt</item>
+    <item quantity="other">%d heimildir veittar</item>
+  </plurals>
+  <plurals name="power_high_usage_summary">
+    <item quantity="one">%2$d forrit sýnir óeðlilega virkni</item>
+    <item quantity="other">%2$d forrit sýna óeðlilega virkni</item>
+  </plurals>
+  <plurals name="power_high_usage_title">
+    <item quantity="one">Forrit ganga hratt á rafhlöðuna</item>
+    <item quantity="other">Forrit ganga hratt á rafhlöðuna</item>
+  </plurals>
+  <plurals name="print_jobs_summary">
+    <item quantity="one">%1$d prentverk</item>
+    <item quantity="other">%1$d prentverk</item>
+  </plurals>
+  <plurals name="print_settings_summary">
+    <item quantity="one">Kveikt á %1$d prentþjónustu</item>
+    <item quantity="other">Kveikt á %1$d prentþjónustum</item>
+  </plurals>
+  <plurals name="restricted_app_summary">
+    <item quantity="one">Takmarka rafhlöðunotkun %1$d forrits</item>
+    <item quantity="other">Takmarka rafhlöðunotkun %1$d forrita</item>
+  </plurals>
+  <plurals name="runtime_permissions_additional_count">
+    <item quantity="one">%d viðbótarheimild</item>
+    <item quantity="other">%d viðbótarheimildir</item>
+  </plurals>
+  <plurals name="runtime_permissions_summary">
+    <item quantity="one">%d heimild af %d veitt</item>
+    <item quantity="other">%d heimildir af %d veittar</item>
+  </plurals>
+  <plurals name="seconds">
+    <item quantity="one">%s sekúnda</item>
+    <item quantity="other">%s sekúndur</item>
+  </plurals>
+  <plurals name="security_settings_fingerprint_preference_summary">
+    <item quantity="one">%1$d fingrafar sett upp</item>
+    <item quantity="other">%1$d fingraför sett upp</item>
+  </plurals>
+  <plurals name="settings_suggestion_header_summary_hidden_items">
+    <item quantity="one">Sýna %d falið atriði</item>
+    <item quantity="other">Sýna %d falin atriði</item>
+  </plurals>
+  <plurals name="show_dev_countdown">
+    <item quantity="one">Nú ertu %1$d skrefi frá því að gerast þróunaraðili.</item>
+    <item quantity="other">Nú ertu %1$d skrefum frá því að gerast þróunaraðili.</item>
+  </plurals>
+  <plurals name="show_number_hearingaid_count">
+    <item quantity="one">%1$d vistað heyrnartæki</item>
+    <item quantity="other">%1$d vistuð heyrnartæki</item>
+  </plurals>
+  <plurals name="special_access_summary">
+    <item quantity="one">%d forrit getur notað ótakmörkuð gögn</item>
+    <item quantity="other">%d forrit geta notað ótakmörkuð gögn</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_dialog_title">
+    <item quantity="one">Treysta eða fjarlægja vottorð</item>
+    <item quantity="other">Treysta eða fjarlægja vottorð</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_info_message">
+    <item quantity="one">%s hefur sett upp CA-vottorð fyrir vinnusniðið þitt sem getur mögulega fylgst með netnotkuninni á vinnusniðinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.
+
+Til að fá frekari upplýsingar um þessi vottorð skaltu hafa samband við kerfisstjórann.</item>
+    <item quantity="other">%s hefur sett upp CA-vottorð fyrir vinnusniðið þitt sem geta mögulega fylgst með netnotkuninni á vinnusniðinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.
+
+Til að fá frekari upplýsingar um þessi vottorð skaltu hafa samband við kerfisstjórann.</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_info_message_device_owner">
+    <item quantity="one">%s hefur sett upp CA-vottorð fyrir tækið þitt sem geta mögulega fylgst með netnotkuninni á tækinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.
+
+Til að fá frekari upplýsingar um þessi vottorð skaltu hafa samband við kerfisstjórann.</item>
+    <item quantity="other">%s hefur sett upp CA-vottorð fyrir tækið þitt sem geta mögulega fylgst með netnotkuninni á tækinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.
+
+Til að fá frekari upplýsingar um þessi vottorð skaltu hafa samband við kerfisstjórann.</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_settings_button">
+    <item quantity="one">Athuga vottorð</item>
+    <item quantity="other">Athuga vottorð</item>
+  </plurals>
+  <plurals name="suggestions_collapsed_summary">
+    <item quantity="one">+%1$d tillaga</item>
+    <item quantity="other">+%1$d tillögur</item>
+  </plurals>
+  <plurals name="suggestions_collapsed_title">
+    <item quantity="one">%1$d tillaga</item>
+    <item quantity="other">%1$d tillögur</item>
+  </plurals>
+  <plurals name="uri_permissions_text">
+    <item quantity="one">%d atriði</item>
+    <item quantity="other">%d atriði</item>
+  </plurals>
+  <plurals name="wifi_saved_access_points_summary">
+    <item quantity="one">%d netkerfi</item>
+    <item quantity="other">%d netkerfi</item>
+  </plurals>
+  <plurals name="wifi_tether_connected_summary">
+    <item quantity="one">%1$d tæki tengt</item>
+    <item quantity="other">%1$d tæki tengd</item>
+  </plurals>
+  <plurals name="wrong_pin_code">
+    <item quantity="one">Rangt PIN-númer SIM-korts. Þú átt %d tilraun eftir.</item>
+    <item quantity="other">Rangt PIN-númer SIM-korts. Þú átt %d tilraunir eftir.</item>
+  </plurals>
+  <plurals name="zen_mode_duration_summary_time_hours">
+    <item quantity="one">%d klukkustund (nema kveikt sé á sjálfkrafa)</item>
+    <item quantity="other">%d klukkustundir (nema kveikt sé á sjálfkrafa)</item>
+  </plurals>
+  <plurals name="zen_mode_settings_summary_on">
+    <item quantity="one">%d regla</item>
+    <item quantity="other">%d reglur</item>
+  </plurals>
+  <plurals name="zen_mode_sound_summary_summary_off_info">
+    <item quantity="one">%d regla getur verið notuð sjálfkrafa</item>
+    <item quantity="other">%d reglur geta verið notaðar sjálfkrafa</item>
+  </plurals>
+  <plurals name="zen_mode_starred_contacts_summary_additional_contacts">
+    <item quantity="one">%d í viðbót</item>
+    <item quantity="other">%d í viðbót</item>
+  </plurals>
+  <plurals name="zen_mode_summary_alarms_only_by_hour">
+    <item quantity="one">Breyta í vekjara eingöngu í %1$d klukkustund til %2$s</item>
+    <item quantity="other">Breyta í vekjara eingöngu í %1$d klukkustundir til %2$s</item>
+  </plurals>
+  <plurals name="zen_mode_summary_alarms_only_by_minute">
+    <item quantity="one">Breyta í vekjara eingöngu í %1$d mínútu (til %2$s)</item>
+    <item quantity="other">Breyta í vekjara eingöngu í %1$d mínútur (til %2$s)</item>
+  </plurals>
+</resources>

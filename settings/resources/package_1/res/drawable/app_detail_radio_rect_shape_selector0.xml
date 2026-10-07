@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape>
+      <solid android:color="@color/readboy_launcher_manage_transcolor_txt_sel" />
+    </shape>
+  </item>
+  <item>
+    <shape>
+      <corners android:radius="7.0dp" />
+      <solid android:color="@color/readboy_app_detail_transcolor" />
+    </shape>
+  </item>
+</layer-list>

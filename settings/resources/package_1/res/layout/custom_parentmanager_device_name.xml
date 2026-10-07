@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditText android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="normal"
+            android:textColor="?android:attr/textColorPrimary"
+            android:gravity="center_vertical"
+            android:id="@id/edittext_device_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/readboy_edittext_margin_top_size"
+            android:maxLines="20"
+            android:maxLength="32"
+            android:imeOptions="actionNext"
+            android:layout_marginStart="20.0dp"
+            android:layout_marginEnd="20.0dp" />
+</LinearLayout>

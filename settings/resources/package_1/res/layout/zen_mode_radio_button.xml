@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RadioButton android:gravity="center"
+             android:id="@android:id/checkbox"
+             android:paddingTop="10.0dp"
+             android:paddingBottom="10.0dp"
+             android:layout_width="48.0dp"
+             android:layout_height="48.0dp"
+             android:layout_marginStart="7.0dp"
+             android:layout_marginEnd="4.0dp"
+             android:layout_alignParentStart="true" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/accessibility_vibration_settings_title"
+                  android:key="accessibility_settings_vibration_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <Preference android:title="@string/accessibility_notification_vibration_title"
+              android:key="notification_vibration_preference_screen"
+              android:fragment="com.android.settings.accessibility.NotificationVibrationPreferenceFragment"
+              app:controller="com.android.settings.accessibility.NotificationVibrationIntensityPreferenceController"
+              app:keywords="@string/keywords_ring_vibration" />
+  <Preference android:title="@string/accessibility_touch_vibration_title"
+              android:key="touch_vibration_preference_screen"
+              android:fragment="com.android.settings.accessibility.TouchVibrationPreferenceFragment"
+              app:controller="com.android.settings.accessibility.HapticFeedbackIntensityPreferenceController"
+              app:keywords="@string/keywords_touch_vibration" />
+</PreferenceScreen>

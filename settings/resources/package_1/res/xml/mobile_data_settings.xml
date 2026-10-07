@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <SwitchPreference android:persistent="false"
+                    android:title="@string/data_usage_enable_mobile"
+                    android:key="mobiledata_settings"
+                    android:disableDependentsState="true" />
+  <PreferenceScreen android:persistent="false"
+                    android:title="@string/mobile_data_more_settings"
+                    android:key="mobile_data_more_settings">
+    <intent android:targetPackage="com.android.phone"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.phone.MobileNetworkSettings" />
+  </PreferenceScreen>
+  <Preference android:persistent="false"
+              android:title="@string/data_reminder_title"
+              android:key="data_reminder"
+              android:summary="@string/data_reminder_summary1" />
+</PreferenceScreen>

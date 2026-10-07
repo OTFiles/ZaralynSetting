@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/zen_mode_settings_title"
+                  android:key="zen_mode_settings"
+                  settings:keywords="@string/keywords_zen_mode_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/zen_category_behavior">
+    <Preference android:title="@string/zen_sound_title"
+                android:key="zen_sound_vibration_settings"
+                android:fragment="com.android.settings.notification.ZenModeSoundVibrationSettings" />
+    <Preference android:title="@string/zen_mode_restrict_notifications_title"
+                android:key="zen_mode_block_effects_settings"
+                android:fragment="com.android.settings.notification.ZenModeRestrictNotificationsSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/zen_category_exceptions">
+    <Preference android:title="@string/zen_mode_calls"
+                android:key="zen_mode_calls_settings"
+                android:fragment="com.android.settings.notification.ZenModeCallsSettings" />
+    <Preference android:title="@string/zen_msg_event_reminder_title"
+                android:key="zen_mode_msg_event_reminder_settings"
+                android:fragment="com.android.settings.notification.ZenModeMsgEventReminderSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/zen_category_schedule">
+    <Preference android:title="@string/zen_mode_duration_settings_title"
+                android:key="zen_mode_duration_settings" />
+    <Preference android:title="@string/zen_mode_automation_settings_title"
+                android:key="zen_mode_automation_settings"
+                android:fragment="com.android.settings.notification.ZenModeAutomationSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="zen_mode_settings_button_category">
+    <com.android.settings.applications.LayoutPreference android:layout="@layout/zen_mode_settings_button"
+                          android:selectable="false"
+                          android:key="zen_mode_settings_button_container" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="zen_mode_footer_container">
+    <com.android.settingslib.widget.FooterPreference />
+  </PreferenceCategory>
+</PreferenceScreen>

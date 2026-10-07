@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/reset_dashboard_title"
+                  android:key="reset_dashboard_fragment_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.RestrictedPreference android:title="@string/reset_network_title"
+                        android:key="network_reset_pref"
+                        android:fragment="com.android.settings.ResetNetwork"
+                        settings:useAdminDisabledSummary="true"
+                        settings:userRestriction="no_network_reset" />
+  <Preference android:title="@string/reset_app_preferences"
+              android:key="reset_app_prefs" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/master_clear_title"
+                        android:key="factory_reset"
+                        android:fragment="com.android.settings.MasterClear"
+                        settings:keywords="@string/keywords_factory_data_reset"
+                        settings:useAdminDisabledSummary="true"
+                        settings:userRestriction="no_factory_reset" />
+</PreferenceScreen>

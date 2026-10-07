@@ -1,0 +1,17 @@
+{
+  "context": {
+    "includeDirectories": [
+      "/data/data/com.termux/files/home/work/pojie",
+      "/storage/emulated/0/破解"
+    ]
+  },
+  "$version": 4,
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push)",
+      "Bash(gh *)"
+    ]
+  }
+}

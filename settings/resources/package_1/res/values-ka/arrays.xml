@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">ანიმაციის გარეშე</item>
+    <item name="r0x00000000">ანიმაციის სიჩქარე .5x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 1x</item>
+    <item name="r0x00000000">ანიმაციის სიჩქარე 1.5x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი: 2x</item>
+    <item name="r0x00000000">ანიმაცია (მასშტაბი 5x)</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი: 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">არც ერთი</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP ან CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">შიდა მოწყობილობის მეხსიერება</item>
+    <item name="r0x00000000">შეცვლადი SD ბარათი</item>
+    <item name="r0x00000000">გადაწყვიტოს სისტემამ</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">პირადი</item>
+    <item name="r0x00000000">შეტყობინებები</item>
+    <item name="r0x00000000">მედია</item>
+    <item name="r0x00000000">მოწყობილობა</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">ვიბრაცია</item>
+    <item name="r0x00000000">კონტაქტების წაკითხვა</item>
+    <item name="r0x00000000">კონტაქტების შეცვლა</item>
+    <item name="r0x00000000">ზარების ჟურნალის ნახვა</item>
+    <item name="r0x00000000">ზარების ჟურნალის ჩასწორება</item>
+    <item name="r0x00000000">კალენდრის წაკითხვა</item>
+    <item name="r0x00000000">კალენდრის ჩასწორება</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">შეტყობინების გამოქვეყნება</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">ტელეფონზე დარეკვა</item>
+    <item name="r0x00000000">SMS/MMS-ის წაკითხვა</item>
+    <item name="r0x00000000">SMS/MMS-ის დაწერა</item>
+    <item name="r0x00000000">SMS/MMS-ის მიღება</item>
+    <item name="r0x00000000">SMS/MMS მიღება</item>
+    <item name="r0x00000000">SMS/MMS მიღება</item>
+    <item name="r0x00000000">SMS/MMS-ის მიღება</item>
+    <item name="r0x00000000">SMS/MMS გაგზავნა</item>
+    <item name="r0x00000000">SMS/MMS-ის წაკითხვა</item>
+    <item name="r0x00000000">SMS/MMS-ის დაწერა</item>
+    <item name="r0x00000000">პარამეტრების შეცვლა</item>
+    <item name="r0x00000000">დახაზვა ზემოთ</item>
+    <item name="r0x00000000">შეტყობინებებზე წვდომა</item>
+    <item name="r0x00000000">კამერა</item>
+    <item name="r0x00000000">აუდიოს ჩაწერა</item>
+    <item name="r0x00000000">აუდიოს დაკვრა</item>
+    <item name="r0x00000000">გაცვლის ბუფერის წაკითხვა</item>
+    <item name="r0x00000000">გაცვლის ბუფერის შეცვლა</item>
+    <item name="r0x00000000">მედიის ღილაკები</item>
+    <item name="r0x00000000">აუდიოს ფოკუსი</item>
+    <item name="r0x00000000">მასტერ-ხმის სიმძლავრე</item>
+    <item name="r0x00000000">ხმის სიმძღლავრე</item>
+    <item name="r0x00000000">ზარის სიმძლავრე</item>
+    <item name="r0x00000000">მედიის ხმა</item>
+    <item name="r0x00000000">მაღვიძარას ხმა</item>
+    <item name="r0x00000000">შეტყობინების ხმა</item>
+    <item name="r0x00000000">Bluetooth-ის ხმა</item>
+    <item name="r0x00000000">დარჩეს აქტიური</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">მდებარეობა</item>
+    <item name="r0x00000000">გამოყენების სტატისტიკის მიღება</item>
+    <item name="r0x00000000">მიკროფონის დადუმება/გააქტიურება</item>
+    <item name="r0x00000000">შეტყობინების ჩვენება</item>
+    <item name="r0x00000000">მედიის პროეცირება</item>
+    <item name="r0x00000000">VPN-ის აქტივაცია</item>
+    <item name="r0x00000000">ფონის ჩაწერა</item>
+    <item name="r0x00000000">დამხმარე სტრუქტურა</item>
+    <item name="r0x00000000">დამხმარე ეკრანის ანაბეჭდი</item>
+    <item name="r0x00000000">ტელეფონის მდგომარეობის წაკითხვა</item>
+    <item name="r0x00000000">ხმოვანი ფოსტის დამატება</item>
+    <item name="r0x00000000">SIP-ის გამოყენება</item>
+    <item name="r0x00000000">გამავალი ზარის დამუშავება</item>
+    <item name="r0x00000000">თითის ანაბეჭდი</item>
+    <item name="r0x00000000">სხეულის სენსორები</item>
+    <item name="r0x00000000">Cell Broadcast-ების წაკითხვა</item>
+    <item name="r0x00000000">მდებარეობის იმიტირება</item>
+    <item name="r0x00000000">მეხსიერების წაკითხვა</item>
+    <item name="r0x00000000">მეხსიერებაში ჩაწერა</item>
+    <item name="r0x00000000">ეკრანის ჩართვა</item>
+    <item name="r0x00000000">ანგარიშების მიღება</item>
+    <item name="r0x00000000">ფონურ რეჟიმში გაშვება</item>
+    <item name="r0x00000000">მარტივი წვდომის ხმის სიმძლავრე</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">მიახლოებითი მდებარეობა</item>
+    <item name="r0x00000000">ზუსტი მდებარეობა</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">ვიბრაცია</item>
+    <item name="r0x00000000">კონტაქტების წაკითხვა</item>
+    <item name="r0x00000000">კონტაქტების შეცვლა</item>
+    <item name="r0x00000000">ზარების სიის ნახვა</item>
+    <item name="r0x00000000">ზარების ჟურნალის ჩასწორება</item>
+    <item name="r0x00000000">კალენდრის წაკითხვა</item>
+    <item name="r0x00000000">კალენდრის ჩასწორება</item>
+    <item name="r0x00000000">Wi-Fi ქსელის ძებნა</item>
+    <item name="r0x00000000">შეტყობინება</item>
+    <item name="r0x00000000">ფიჭური ქსელების ძებნა</item>
+    <item name="r0x00000000">ტელეფონზე დარეკვა</item>
+    <item name="r0x00000000">SMS-ის წაკითხვა</item>
+    <item name="r0x00000000">SMS-ის შექმნა</item>
+    <item name="r0x00000000">SMS-ის მიღება</item>
+    <item name="r0x00000000">სასწრაფო SMS-ის მიღება</item>
+    <item name="r0x00000000">MMS-ის მიღება</item>
+    <item name="r0x00000000">WAP push მიღება</item>
+    <item name="r0x00000000">SMS-ის გაგზავნა</item>
+    <item name="r0x00000000">ICC SMS-ის წაკითხვა</item>
+    <item name="r0x00000000">ICC SMS-ის შექმნა</item>
+    <item name="r0x00000000">პარამეტრების შეცვლა</item>
+    <item name="r0x00000000">სხვა ერთეულებს ზემოდან ჩვენება</item>
+    <item name="r0x00000000">შეტყობინებებთან წვდომა</item>
+    <item name="r0x00000000">კამერა</item>
+    <item name="r0x00000000">აუდიოს ჩაწერა</item>
+    <item name="r0x00000000">აუდიოს დაკვრა</item>
+    <item name="r0x00000000">გაცვლის ბუფერის წაკითხვა</item>
+    <item name="r0x00000000">გაცვლის ბუფერის ცვლილება</item>
+    <item name="r0x00000000">მედიის ღილაკები</item>
+    <item name="r0x00000000">აუდიოს ფოკუსი</item>
+    <item name="r0x00000000">მასტერ-ხმის სიმძლავრე</item>
+    <item name="r0x00000000">ხმის სიმძღლავრე</item>
+    <item name="r0x00000000">ზარის სიმძლავრე</item>
+    <item name="r0x00000000">მედიის ხმა</item>
+    <item name="r0x00000000">მაღვიძარას ხმა</item>
+    <item name="r0x00000000">შეტყობინების ხმა</item>
+    <item name="r0x00000000">Bluetooth-ის ხმა</item>
+    <item name="r0x00000000">დარჩეს აქტიური</item>
+    <item name="r0x00000000">მდებარეობის მონიტორინგი</item>
+    <item name="r0x00000000">მაღალი ძაბვის მდებარეობის მონიტორინგი</item>
+    <item name="r0x00000000">გამოყენების სტატისტიკის მიღება</item>
+    <item name="r0x00000000">მიკროფონის დადუმება/გააქტიურება</item>
+    <item name="r0x00000000">შეტყობინების ჩვენება</item>
+    <item name="r0x00000000">მედიის პროეცირება</item>
+    <item name="r0x00000000">VPN-ის აქტივაცია</item>
+    <item name="r0x00000000">ფონის ჩაწერა</item>
+    <item name="r0x00000000">დამხმარე სტრუქტურა</item>
+    <item name="r0x00000000">დამხმარე ეკრანის ანაბეჭდი</item>
+    <item name="r0x00000000">ტელეფონის მდგომარეობის წაკითხვა</item>
+    <item name="r0x00000000">ხმოვანი ფოსტის დამატება</item>
+    <item name="r0x00000000">SIP-ის გამოყენება</item>
+    <item name="r0x00000000">გამავალი ზარის დამუშავება</item>
+    <item name="r0x00000000">თითის ანაბეჭდი</item>
+    <item name="r0x00000000">სხეულის სენსორები</item>
+    <item name="r0x00000000">Cell Broadcast-ების წაკითხვა</item>
+    <item name="r0x00000000">მდებარეობის იმიტირება</item>
+    <item name="r0x00000000">მეხსიერების წაკითხვა</item>
+    <item name="r0x00000000">მეხსიერებაში ჩაწერა</item>
+    <item name="r0x00000000">ეკრანის ჩართვა</item>
+    <item name="r0x00000000">ანგარიშების მიღება</item>
+    <item name="r0x00000000">ფონურ რეჟიმში გაშვება</item>
+    <item name="r0x00000000">მარტივი წვდომის ხმის სიმძლავრე</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">სტანდარტული ლიმიტი</item>
+    <item name="r0x00000000">ფონური პროცესები არ არის</item>
+    <item name="r0x00000000">არაუმეტეს 1 პროცესისა</item>
+    <item name="r0x00000000">არა უმეტეს 2 პროცესისა</item>
+    <item name="r0x00000000">არა უმეტეს 3 პროცესისა</item>
+    <item name="r0x00000000">არაუმეტეს 4 პროცესისა</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">30 დღეზე ძველი</item>
+    <item name="r0x00000000">60 დღეზე ძველი</item>
+    <item name="r0x00000000">90 დღეზე ძველი</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">არ არის მითითებული</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">16 ბიტი/ნიმუში</item>
+    <item name="r0x00000000">24 ბიტი/ნიმუში</item>
+    <item name="r0x00000000">32 ბიტი/ნიმუში</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">16 ბიტი/ნიმუში</item>
+    <item name="r0x00000000">24 ბიტი/ნიმუში</item>
+    <item name="r0x00000000">32 ბიტი/ნიმუში</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">მონო</item>
+    <item name="r0x00000000">სტერეო</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">მონო</item>
+    <item name="r0x00000000">სტერეო</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">აუდიოს ხარისხისთვის ოპტიმიზებული</item>
+    <item name="r0x00000000">აუდიოსა და კავშირის დაბალანსებული ხარისხი</item>
+    <item name="r0x00000000">კავშირის ხარისხისთვის ოპტიმიზებული</item>
+    <item name="r0x00000000">შეძლებისდაგვარად მაღალი (ადაპტირებადი ბიტური სიხშირე)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">აუდიოს ხარისხისთვის ოპტიმიზებული (990/909 კბიტი/წმ)</item>
+    <item name="r0x00000000">აუდიოსა და კავშირის დაბალანსებული ხარისხი (660/606 კბიტი/წმ)</item>
+    <item name="r0x00000000">კავშირის ხარისხისთვის ოპტიმიზებული (330/303 კბიტი/წმ)</item>
+    <item name="r0x00000000">შეძლებისდაგვარად მაღალი (ადაპტირებადი ბიტური სიხშირე)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">44,1 კჰც</item>
+    <item name="r0x00000000">48,0 კჰც</item>
+    <item name="r0x00000000">88,2 კჰც</item>
+    <item name="r0x00000000">96,0 კჰც</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">44,1 კჰც</item>
+    <item name="r0x00000000">48,0 კჰც</item>
+    <item name="r0x00000000">88,2 კჰც</item>
+    <item name="r0x00000000">96,0 კჰც</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ აუდიო</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD აუდიო</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">არასავალდებულო კოდეკების ჩართვა</item>
+    <item name="r0x00000000">არასავალდებულო კოდეკების გათიშვა</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">სისტემის არჩეულის გამოყენება (ნაგულისხმევი)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ აუდიო</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD აუდიო</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">არასავალდებულო კოდეკების ჩართვა</item>
+    <item name="r0x00000000">არასავალდებულო კოდეკების გათიშვა</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, აქტიური</item>
+    <item name="r0x00000000">, აქტიური (მედია)</item>
+    <item name="r0x00000000">, აქტიური (ტელეფონი)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (ნაგულისხმევი)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">სისტემის ნაგულისხმევი პარამეტრების გამოყენება: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 წუთი</item>
+    <item name="r0x00000000">5 წუთი</item>
+    <item name="r0x00000000">1 საათი</item>
+    <item name="r0x00000000">დროის ლიმიტის გარეშე</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">ნაგულისხმევი</item>
+    <item name="r0x00000000">არაფერი</item>
+    <item name="r0x00000000">კონტური</item>
+    <item name="r0x00000000">ჩრდილი</item>
+    <item name="r0x00000000">ამაღლებული</item>
+    <item name="r0x00000000">დაკლებული</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">ძალიან პატარა</item>
+    <item name="r0x00000000">პატარა</item>
+    <item name="r0x00000000">ჩვეულებრივი</item>
+    <item name="r0x00000000">დიდი</item>
+    <item name="r0x00000000">ძალიან დიდი</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">100 +</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">აპის ნაგულისხმევი</item>
+    <item name="r0x00000000">თეთრი შავზე</item>
+    <item name="r0x00000000">შავი თეთრზე</item>
+    <item name="r0x00000000">ყვითელი შავზე</item>
+    <item name="r0x00000000">ყვითელი ლურჯზე</item>
+    <item name="r0x00000000">მორგებული</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">ნაგულისხმევი</item>
+    <item name="r0x00000000">Sans Serif</item>
+    <item name="r0x00000000">Sans-serif შესქელებული</item>
+    <item name="r0x00000000">Sans-serif monospace</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif monospace</item>
+    <item name="r0x00000000">თავისუფალი</item>
+    <item name="r0x00000000">კურსივი</item>
+    <item name="r0x00000000">პატარა მთავრულები</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">გაჯერებული ფერები</item>
+    <item name="r0x00000000">თვალისთვის ხილული ბუნებრივი ფერები</item>
+    <item name="r0x00000000">ციფრული კონტენტისთვის ოპტიმიზებული ფერები</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">მკვეთრი (ნაგულისხმევი)</item>
+    <item name="r0x00000000">ბუნებრივი</item>
+    <item name="r0x00000000">სტანდარტული</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">ზურმუხტისფერი</item>
+    <item name="r0x00000000">ლურჯი</item>
+    <item name="r0x00000000">მუქი ლურჯი</item>
+    <item name="r0x00000000">მეწამული</item>
+    <item name="r0x00000000">ვარდისფერი</item>
+    <item name="r0x00000000">წითელი</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">ავტომატური (დღის მონაკვეთის მიხედვით)</item>
+    <item name="r0x00000000">ყოველთვის ჩართული</item>
+    <item name="r0x00000000">ყოველთვის გამორთული</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">ბოლო 30 დღე</item>
+    <item name="r0x00000000">გამოყენების ციკლის დაყენება...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">გამორთვა</item>
+    <item name="r0x00000000">overdraw არეების ჩვენება</item>
+    <item name="r0x00000000">დეუტერანომალიის არეების ჩვენება</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">არასოდეს</item>
+    <item name="r0x00000000">15 წამი</item>
+    <item name="r0x00000000">30 წამი</item>
+    <item name="r0x00000000">1 წუთი</item>
+    <item name="r0x00000000">2 წუთი</item>
+    <item name="r0x00000000">5 წუთი</item>
+    <item name="r0x00000000">10 წუთი</item>
+    <item name="r0x00000000">30 წუთი</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">არც ერთი</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (გრაფიკა)</item>
+    <item name="r0x00000000">გამოძახებების სია glGetError-ზე</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">პატარა</item>
+    <item name="r0x00000000">ნაგულისხმევი</item>
+    <item name="r0x00000000">დიდი</item>
+    <item name="r0x00000000">უდიდესი</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">არასდროს გამოიყენო HDCP შემოწმება</item>
+    <item name="r0x00000000">HDCP შემოწმების გამოყენება მხოლოდ DRM კონტენტის შემთხვევაში</item>
+    <item name="r0x00000000">ყოველთვის გამოიყენე HDCP შემოწმება</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">არასდროს შეამოწმო</item>
+    <item name="r0x00000000">შემოწმდეს მხოლოდ DRM კონტენტი</item>
+    <item name="r0x00000000">შემოწმება ყოველთვის</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">დაუყოვნებლივ</item>
+    <item name="r0x00000000">5 წამი</item>
+    <item name="r0x00000000">15 წამი</item>
+    <item name="r0x00000000">30 წამი</item>
+    <item name="r0x00000000">1 წუთი</item>
+    <item name="r0x00000000">2 წუთი</item>
+    <item name="r0x00000000">5 წუთი</item>
+    <item name="r0x00000000">10 წუთი</item>
+    <item name="r0x00000000">30 წუთი</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">მოკლე</item>
+    <item name="r0x00000000">საშუალო</item>
+    <item name="r0x00000000">ვრცელი</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">არც ერთი</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">არც ერთი</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (დაცული)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (დაცული)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (დაცული)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (დაცული)</item>
+    <item name="r0x00000000">4K (გადიდებული მასშტაბით)</item>
+    <item name="r0x00000000">4K (გადიდებული მასშტაბით, დაცული)</item>
+    <item name="r0x00000000">720p, 1080p (ორმაგი ეკრანი)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">ჩვეულებრივი</item>
+    <item name="r0x00000000">ზომიერი</item>
+    <item name="r0x00000000">დაბალი</item>
+    <item name="r0x00000000">კრიტიკული</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">სისტემატური</item>
+    <item name="r0x00000000">ტოპ-აქტივობა</item>
+    <item name="r0x00000000">მნიშვნელოვანი (წინა პლანზე)</item>
+    <item name="r0x00000000">მნიშვნელოვანი (ფონური)</item>
+    <item name="r0x00000000">დამარქაფება</item>
+    <item name="r0x00000000">დიდი დატვირთვა</item>
+    <item name="r0x00000000">სერვისი (გაშვებული)</item>
+    <item name="r0x00000000">სერვისი (გადატვირთვა)</item>
+    <item name="r0x00000000">მიმღები</item>
+    <item name="r0x00000000">მთავარი</item>
+    <item name="r0x00000000">ბოლო აქტივობა</item>
+    <item name="r0x00000000">ქეშირებული (აქტივობა)</item>
+    <item name="r0x00000000">ქეშირებულია (აქტივობის კლიენტი)</item>
+    <item name="r0x00000000">ქეშირებული (ცარიელი)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">ჩვეულებრივი</item>
+    <item name="r0x00000000">ზომიერი</item>
+    <item name="r0x00000000">დაბალი</item>
+    <item name="r0x00000000">კრიტიკული</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 წამი</item>
+    <item name="r0x00000000">30 წამი</item>
+    <item name="r0x00000000">1 წუთი</item>
+    <item name="r0x00000000">2 წუთი</item>
+    <item name="r0x00000000">5 წუთი</item>
+    <item name="r0x00000000">10 წუთი</item>
+    <item name="r0x00000000">30 წუთი</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">შეკითხვა</item>
+    <item name="r0x00000000">არასოდეს მიეცეს უფლება</item>
+    <item name="r0x00000000">ნებართვის მიცემა - ყოველთვის</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">64 კბაიტი</item>
+    <item name="r0x00000000">256 კბაიტი</item>
+    <item name="r0x00000000">1 მბაიტი</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">64 კბაიტი / ჟურნალის ბუფერი</item>
+    <item name="r0x00000000">256 კბაიტი / ჟურნალის ბუფერი</item>
+    <item name="r0x00000000">1 მბაიტი / ჟურნალის ბუფერი</item>
+    <item name="r0x00000000">4 მბაიტი / ჟურნალის ბუფერი</item>
+    <item name="r0x00000000">16 მბაიტი / ჟურნალის ბუფერი</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">64 კბაიტი</item>
+    <item name="r0x00000000">256 კბაიტი</item>
+    <item name="r0x00000000">1 მბაიტი</item>
+    <item name="r0x00000000">4 მბაიტი</item>
+    <item name="r0x00000000">16 მბაიტი</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">ჟურნალების ყველა ბუფერი</item>
+    <item name="r0x00000000">რადიოჟურნალების ბუფერების გარდა ყველა</item>
+    <item name="r0x00000000">მხოლოდ ბირთვის ჟურნალის ბუფერი</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">ყველა</item>
+    <item name="r0x00000000">რადიოს გარდა ყველა</item>
+    <item name="r0x00000000">მხოლოდ ბირთვი</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">გამორთული</item>
+    <item name="r0x00000000">დახატე არა მართკუთხა მოჭრის რეგიონი ლურჯად</item>
+    <item name="r0x00000000">ხატვის ტესტირებული ბრძანების მწვანე ფერით მონიშვნა</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">ამერიკა</item>
+    <item name="r0x00000000">ევროპა</item>
+    <item name="r0x00000000">აფრიკა</item>
+    <item name="r0x00000000">აზია</item>
+    <item name="r0x00000000">ავსტრალია</item>
+    <item name="r0x00000000">წყნარი ოკეანის</item>
+    <item name="r0x00000000">ყველა</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">გამორთვა</item>
+    <item name="r0x00000000">ეკრანზე ზოლების სახით</item>
+    <item name="r0x00000000">ბრძანებაში „adb shell dumpsys gfxinfo“</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">ანიმაციის გამორთვა</item>
+    <item name="r0x00000000">ანიმაცია (მასშტაბი - .5x)</item>
+    <item name="r0x00000000">ანიმაცია (მასშტაბი 1x)</item>
+    <item name="r0x00000000">ანიმაცია (მასშტაბი 1.5x)</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი: 2x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 5x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">ძალიან ნელი</item>
+    <item name="r0x00000000">ნელი</item>
+    <item name="r0x00000000">ჩვეულებრივი</item>
+    <item name="r0x00000000">სწრაფი</item>
+    <item name="r0x00000000">უფრო სწრაფი</item>
+    <item name="r0x00000000">ძალიან სწრაფი</item>
+    <item name="r0x00000000">ჩქარი</item>
+    <item name="r0x00000000">ძალიან ჩქარი</item>
+    <item name="r0x00000000">უსწრაფესი</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">გამოყენების დრო</item>
+    <item name="r0x00000000">ბოლოს გამოყენებული</item>
+    <item name="r0x00000000">აპის სახელი</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">იტენება</item>
+    <item name="r0x00000000">MTP (Media Transfer Protocol)</item>
+    <item name="r0x00000000">PTP (Picture Transfer Protocol)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">აუდიო წყარo</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">კავშირი გაწყვეტილია</item>
+    <item name="r0x00000000">მიმდინარეობს ინიციალიზაცია…</item>
+    <item name="r0x00000000">მიმდინარეობს დაკავშირება…</item>
+    <item name="r0x00000000">დაკავშირებულია</item>
+    <item name="r0x00000000">დროის ლიმიტი</item>
+    <item name="r0x00000000">წარუმატებელი</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN წინასწარ გაზიარებული ღილაკებით</item>
+    <item name="r0x00000000">VPN მიერთება L2TP/IPSec პროტოკოლის მიხედვით სერტიფიკატების გამოყენებით</item>
+    <item name="r0x00000000">IPSec VPN წინასწარ გაზიარებული ღილაკებით და Xauth ავტორიზაცია</item>
+    <item name="r0x00000000">IPSec VPN სერთიფიკატებითა და Xauth ავთენტიფიკაციით</item>
+    <item name="r0x00000000">IPSec VPN მიერთება სერტიფიკატების და კომბინირებული ავთენტიკაციის გამოყენებით</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">სასურველია Wi-Fi</item>
+    <item name="r0x00000000">უპირატესობა მიენიჭოს მობილურს</item>
+    <item name="r0x00000000">მხოლოდ Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">მობილური</item>
+    <item name="r0x00000000">მხოლოდ Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">მობილური</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">სასურველია Wi-Fi</item>
+    <item name="r0x00000000">უპირატესობა მიენიჭოს მობილურს</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">არა</item>
+    <item name="r0x00000000">დიახ</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">სტატიკური</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">ავტომატურად ამოცნობა</item>
+    <item name="r0x00000000">ლიმიტირებულად ჩათვლა</item>
+    <item name="r0x00000000">არალიმიტირებულად ჩათვლა</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">დაკავშირებულია</item>
+    <item name="r0x00000000">მოწვეულია</item>
+    <item name="r0x00000000">წარუმატებელი</item>
+    <item name="r0x00000000">ხელმისაწვდომი</item>
+    <item name="r0x00000000">დიაპაზონს მიღმა</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Push ღილაკი</item>
+    <item name="r0x00000000">ერთრანგიანი მოწყობილობის პინი</item>
+    <item name="r0x00000000">ამ მოწყობილობის PIN-კოდი</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">არცერთი</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">არცერთი</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">არცერთი</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">არცერთი</item>
+    <item name="r0x00000000">მექანიკურად</item>
+    <item name="r0x00000000">პროქსის ავტოკონფიგურაცია</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">სუსტი</item>
+    <item name="r0x00000000">ცუდი</item>
+    <item name="r0x00000000">ნორმალური</item>
+    <item name="r0x00000000">კარგი</item>
+    <item name="r0x00000000">შესანიშნავი</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">სკანირება…</item>
+    <item name="r0x00000000">დაკავშირება…</item>
+    <item name="r0x00000000">ავტორიზაცია…</item>
+    <item name="r0x00000000">IP მისამართის მიღება…</item>
+    <item name="r0x00000000">დაკავშირებულია</item>
+    <item name="r0x00000000">შეწყვეტილია</item>
+    <item name="r0x00000000">კავშირის გაწყვეტა…</item>
+    <item name="r0x00000000">არ არის ხაზზე</item>
+    <item name="r0x00000000">ვერ მოხერხდა</item>
+    <item name="r0x00000000">დაბლოკილი</item>
+    <item name="r0x00000000">ცუდი კავშირის დროებით თავიდან აცილება</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">სკანირება…</item>
+    <item name="r0x00000000">მიმდინარეობს დაკავშირება %1$s-თან…</item>
+    <item name="r0x00000000">ავთენტიფიკაცია %1$s-ში…</item>
+    <item name="r0x00000000">IP მისამართის მოპოვება %1$s-დან…</item>
+    <item name="r0x00000000">დაკავშირებულია %1$s-თან</item>
+    <item name="r0x00000000">შეჩერებული</item>
+    <item name="r0x00000000">კავშირის გაწყვეტა %1$s-თან…</item>
+    <item name="r0x00000000">კავშირი გაწყვეტილია</item>
+    <item name="r0x00000000">ვერ მოხერხდა</item>
+    <item name="r0x00000000">დაბლოკილი</item>
+    <item name="r0x00000000">ცუდი კავშირის დროებით თავიდან აცილება</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">ანიმაციის გამორთვა</item>
+    <item name="r0x00000000">ანიმაციის სიჩქარე .5x</item>
+    <item name="r0x00000000">ანიმაციის სიჩქარე 1x</item>
+    <item name="r0x00000000">ანიმაციის სიჩქარე 1.5x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 2x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 5x</item>
+    <item name="r0x00000000">ანიმაციის მასშტაბი 10x</item>
+  </string-array>
+</resources>

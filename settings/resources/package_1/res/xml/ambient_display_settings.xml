@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/ambient_display_screen_title"
+                  android:key="ambient_display_preference_screen"
+                  settings:keywords="@string/keywords_ambient_display_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/ambient_display_category_triggers"
+                      android:key="ambient_display_category_when_to_show">
+    <SwitchPreference android:title="@string/doze_always_on_title"
+                      android:key="ambient_display_always_on"
+                      android:summary="@string/doze_always_on_summary"
+                      settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController" />
+    <Preference android:title="@string/ambient_display_title"
+                android:key="ambient_display_double_tap"
+                android:fragment="com.android.settings.gestures.DoubleTapScreenSettings"
+                settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" />
+    <Preference android:title="@string/ambient_display_pickup_title"
+                android:key="ambient_display_pick_up"
+                android:fragment="com.android.settings.gestures.PickupGestureSettings"
+                settings:controller="com.android.settings.gestures.PickupGesturePreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:layout="@layout/preference_category_no_label"
+                      android:key="ambient_display_category_notification">
+    <SwitchPreference android:title="@string/doze_title"
+                      android:key="ambient_display_notification"
+                      android:summary="@string/doze_summary"
+                      settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
+  </PreferenceCategory>
+</PreferenceScreen>

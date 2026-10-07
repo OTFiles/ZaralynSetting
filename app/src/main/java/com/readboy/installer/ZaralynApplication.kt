@@ -29,6 +29,13 @@ class ZaralynApplication : android.app.Application() {
         try {
             AppLogger.init(this)
             AppLogger.i(TAG, "应用启动，日志系统已初始化")
+            AppLogger.i(
+                TAG,
+                "运行环境: Android ${android.os.Build.VERSION.RELEASE} " +
+                    "(API ${android.os.Build.VERSION.SDK_INT}) / ABI=${android.os.Build.SUPPORTED_ABIS.joinToString()} " +
+                    "/ 机型=${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL} " +
+                    "/ 版本=${BuildConfig.VERSION_NAME}(${BuildConfig.VERSION_CODE})"
+            )
         } catch (e: Exception) {
             Log.e(TAG, "初始化日志系统失败: ${e.message}", e)
         }

@@ -31,9 +31,9 @@
     <application
         android:name=".ZaralynApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReadboyInstaller">
 
@@ -45,30 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- 后台安装服务 -->
-        <service
-            android:name=".service.BackgroundInstallService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <!-- 数据上传服务 -->
-        <service
-            android:name=".service.DataUploadService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <!-- 录音服务 -->
-        <service
-            android:name=".service.RecordService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <!-- 家长模式切换服务 -->
-        <service
-            android:name=".service.ParentModeService"
-            android:enabled="true"
-            android:exported="false" />
 
     </application>
 

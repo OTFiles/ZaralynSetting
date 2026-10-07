@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/camera_preview"
+               android:visibility="gone"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent" />
+  <com.readboy.face.CameraSurfaceView android:id="@id/camera_surface_collect"
+                        android:clickable="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <RelativeLayout android:background="#aa000000"
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+    <RelativeLayout android:layout_width="800.0dp"
+                    android:layout_height="fill_parent">
+      <RelativeLayout android:id="@id/face_header_rect_container"
+                      android:background="@drawable/face_rect_inner"
+                      android:layout_width="660.0dp"
+                      android:layout_height="660.0dp"
+                      android:layout_centerInParent="true" />
+      <TextView android:textSize="21.0sp"
+                android:textColor="#ffffff"
+                android:id="@id/face_header_rect_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dp"
+                android:text="@string/please_keep_face_rect_inner"
+                android:layout_below="@id/face_header_rect_container"
+                android:layout_centerHorizontal="true"
+                android:elevation="5.0dp" />
+    </RelativeLayout>
+    <RelativeLayout android:background="#aa000000"
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+  </LinearLayout>
+  <Button android:id="@id/button_capture"
+          android:background="@drawable/face_btn_capture"
+          android:visibility="visible"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="20.0dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true" />
+</RelativeLayout>

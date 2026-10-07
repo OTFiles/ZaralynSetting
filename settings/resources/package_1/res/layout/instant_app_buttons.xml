@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:orientation="horizontal"
+              android:id="@id/instant_app_button_container"
+              android:paddingTop="24.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="68.0dp"
+              android:paddingEnd="24.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:layout_width="0.0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1.0">
+    <Button android:id="@id/install"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dp"
+            android:text="@string/install_text"
+            style="@style/ActionPrimaryButton" />
+    <Button android:id="@id/launch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dp"
+            android:text="@string/launch_instant_app"
+            style="@style/ActionPrimaryButton" />
+  </FrameLayout>
+  <Space android:layout_width="16.0dp"
+         android:layout_height="wrap_content" />
+  <FrameLayout android:layout_width="0.0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1.0">
+    <Button android:id="@id/clear_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dp"
+            android:text="@string/clear_instant_app_data"
+            style="@style/ActionSecondaryButton" />
+  </FrameLayout>
+</LinearLayout>

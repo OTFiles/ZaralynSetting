@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/connected_device_connections_title"
+                  android:key="connected_devices_advanced_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <Preference android:icon="@drawable/ic_settings_bluetooth"
+              android:title="@string/bluetooth_settings_title"
+              android:key="bluetooth_settings"
+              android:order="-9"
+              android:fragment="com.android.settings.connecteddevice.BluetoothDashboardFragment" />
+  <SwitchPreference android:icon="@drawable/ic_nfc"
+                    android:title="@string/nfc_quick_toggle_title"
+                    android:key="toggle_nfc"
+                    android:summary="@string/nfc_quick_toggle_summary"
+                    android:order="-7"
+                    settings:controller="com.android.settings.nfc.NfcPreferenceController" />
+  <com.android.settingslib.RestrictedPreference android:icon="@drawable/ic_android"
+                        android:title="@string/android_beam_settings_title"
+                        android:key="android_beam_settings"
+                        android:order="-6"
+                        android:fragment="com.android.settings.nfc.AndroidBeam"
+                        settings:controller="com.android.settings.nfc.AndroidBeamPreferenceController" />
+  <SwitchPreference android:icon="@drawable/ic_settings_bluetooth"
+                    android:title="@string/bluetooth_on_while_driving_pref"
+                    android:key="bluetooth_on_while_driving"
+                    android:summary="@string/bluetooth_on_while_driving_summary"
+                    android:order="-4"
+                    settings:controller="com.android.settings.connecteddevice.BluetoothOnWhileDrivingPreferenceController" />
+  <com.android.settingslib.RestrictedPreference android:icon="@drawable/ic_settings_print"
+                        android:title="@string/print_settings"
+                        android:key="connected_device_printing"
+                        android:summary="@string/summary_placeholder"
+                        android:order="-3"
+                        android:fragment="com.android.settings.print.PrintSettingsFragment" />
+  <Preference android:icon="@drawable/ic_folder_vd_theme_24"
+              android:title="@string/bluetooth_show_received_files"
+              android:key="bt_received_files" />
+  <PreferenceCategory android:key="dashboard_tile_placeholder"
+                      android:order="-8" />
+</PreferenceScreen>

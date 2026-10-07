@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Animation off</item>
+    <item name="r0x00000000">Animation scale .5x</item>
+    <item name="r0x00000000">Animation scale 1x</item>
+    <item name="r0x00000000">Animation scale 1.5x</item>
+    <item name="r0x00000000">Animation scale 2x</item>
+    <item name="r0x00000000">Animation scale 5x</item>
+    <item name="r0x00000000">Animation scale 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP or CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Internal device storage</item>
+    <item name="r0x00000000">Removable SD card</item>
+    <item name="r0x00000000">Let the system decide</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Personal</item>
+    <item name="r0x00000000">Messaging</item>
+    <item name="r0x00000000">Media</item>
+    <item name="r0x00000000">Device</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Vibrate</item>
+    <item name="r0x00000000">Read contacts</item>
+    <item name="r0x00000000">Modify contacts</item>
+    <item name="r0x00000000">Read call log</item>
+    <item name="r0x00000000">Modify call log</item>
+    <item name="r0x00000000">Read calendar</item>
+    <item name="r0x00000000">Modify calendar</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Post notification</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Call phone</item>
+    <item name="r0x00000000">Read SMS/MMS</item>
+    <item name="r0x00000000">Write SMS/MMS</item>
+    <item name="r0x00000000">Receive SMS/MMS</item>
+    <item name="r0x00000000">Receive SMS/MMS</item>
+    <item name="r0x00000000">Receive SMS/MMS</item>
+    <item name="r0x00000000">Receive SMS/MMS</item>
+    <item name="r0x00000000">Send SMS/MMS</item>
+    <item name="r0x00000000">Read SMS/MMS</item>
+    <item name="r0x00000000">Write SMS/MMS</item>
+    <item name="r0x00000000">Modify settings</item>
+    <item name="r0x00000000">Draw on top</item>
+    <item name="r0x00000000">Access notifications</item>
+    <item name="r0x00000000">Camera</item>
+    <item name="r0x00000000">Record audio</item>
+    <item name="r0x00000000">Play audio</item>
+    <item name="r0x00000000">Read clipboard</item>
+    <item name="r0x00000000">Modify clipboard</item>
+    <item name="r0x00000000">Media buttons</item>
+    <item name="r0x00000000">Audio focus</item>
+    <item name="r0x00000000">Master volume</item>
+    <item name="r0x00000000">Voice volume</item>
+    <item name="r0x00000000">Ring volume</item>
+    <item name="r0x00000000">Media volume</item>
+    <item name="r0x00000000">Alarm volume</item>
+    <item name="r0x00000000">Notification volume</item>
+    <item name="r0x00000000">Bluetooth volume</item>
+    <item name="r0x00000000">Keep awake</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Location</item>
+    <item name="r0x00000000">Get usage stats</item>
+    <item name="r0x00000000">Mute/unmute microphone</item>
+    <item name="r0x00000000">Show toast</item>
+    <item name="r0x00000000">Project media</item>
+    <item name="r0x00000000">Activate VPN</item>
+    <item name="r0x00000000">Write wallpaper</item>
+    <item name="r0x00000000">Assist structure</item>
+    <item name="r0x00000000">Assist screenshot</item>
+    <item name="r0x00000000">Read phone state</item>
+    <item name="r0x00000000">Add voicemail</item>
+    <item name="r0x00000000">Use sip</item>
+    <item name="r0x00000000">Process outgoing call</item>
+    <item name="r0x00000000">Fingerprint</item>
+    <item name="r0x00000000">Body sensors</item>
+    <item name="r0x00000000">Read mobile broadcasts</item>
+    <item name="r0x00000000">Mock location</item>
+    <item name="r0x00000000">Read storage</item>
+    <item name="r0x00000000">Write storage</item>
+    <item name="r0x00000000">Turn on screen</item>
+    <item name="r0x00000000">Get accounts</item>
+    <item name="r0x00000000">Run in background</item>
+    <item name="r0x00000000">Accessibility volume</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">coarse location</item>
+    <item name="r0x00000000">fine location</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">vibrate</item>
+    <item name="r0x00000000">read contacts</item>
+    <item name="r0x00000000">modify contacts</item>
+    <item name="r0x00000000">read call log</item>
+    <item name="r0x00000000">modify call log</item>
+    <item name="r0x00000000">read calendar</item>
+    <item name="r0x00000000">modify calendar</item>
+    <item name="r0x00000000">Wi-Fi scan</item>
+    <item name="r0x00000000">notification</item>
+    <item name="r0x00000000">cell scan</item>
+    <item name="r0x00000000">call phone</item>
+    <item name="r0x00000000">read SMS</item>
+    <item name="r0x00000000">write SMS</item>
+    <item name="r0x00000000">receive SMS</item>
+    <item name="r0x00000000">receive emergency SMS</item>
+    <item name="r0x00000000">receive MMS</item>
+    <item name="r0x00000000">receive WAP push</item>
+    <item name="r0x00000000">send SMS</item>
+    <item name="r0x00000000">read ICC SMS</item>
+    <item name="r0x00000000">write ICC SMS</item>
+    <item name="r0x00000000">modify settings</item>
+    <item name="r0x00000000">draw on top</item>
+    <item name="r0x00000000">access notifications</item>
+    <item name="r0x00000000">camera</item>
+    <item name="r0x00000000">record audio</item>
+    <item name="r0x00000000">play audio</item>
+    <item name="r0x00000000">read clipboard</item>
+    <item name="r0x00000000">modify clipboard</item>
+    <item name="r0x00000000">media buttons</item>
+    <item name="r0x00000000">audio focus</item>
+    <item name="r0x00000000">master volume</item>
+    <item name="r0x00000000">voice volume</item>
+    <item name="r0x00000000">ring volume</item>
+    <item name="r0x00000000">media volume</item>
+    <item name="r0x00000000">alarm volume</item>
+    <item name="r0x00000000">notification volume</item>
+    <item name="r0x00000000">Bluetooth volume</item>
+    <item name="r0x00000000">keep awake</item>
+    <item name="r0x00000000">monitor location</item>
+    <item name="r0x00000000">monitor high power location</item>
+    <item name="r0x00000000">get usage stats</item>
+    <item name="r0x00000000">mute/unmute microphone</item>
+    <item name="r0x00000000">show toast</item>
+    <item name="r0x00000000">project media</item>
+    <item name="r0x00000000">activate VPN</item>
+    <item name="r0x00000000">write wallpaper</item>
+    <item name="r0x00000000">assist structure</item>
+    <item name="r0x00000000">assist screenshot</item>
+    <item name="r0x00000000">read phone state</item>
+    <item name="r0x00000000">add voicemail</item>
+    <item name="r0x00000000">use sip</item>
+    <item name="r0x00000000">process outgoing call</item>
+    <item name="r0x00000000">fingerprint</item>
+    <item name="r0x00000000">body sensors</item>
+    <item name="r0x00000000">read mobile broadcasts</item>
+    <item name="r0x00000000">mock location</item>
+    <item name="r0x00000000">read storage</item>
+    <item name="r0x00000000">write storage</item>
+    <item name="r0x00000000">turn on screen</item>
+    <item name="r0x00000000">get accounts</item>
+    <item name="r0x00000000">run in background</item>
+    <item name="r0x00000000">accessibility volume</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Standard limit</item>
+    <item name="r0x00000000">No background processes</item>
+    <item name="r0x00000000">At most, 1 process</item>
+    <item name="r0x00000000">At most, 2 processes</item>
+    <item name="r0x00000000">At most, 3 processes</item>
+    <item name="r0x00000000">At most, 4 processes</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">Over 30 days old</item>
+    <item name="r0x00000000">Over 60 days old</item>
+    <item name="r0x00000000">Over 90 days old</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Unspecified</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">16 bits/sample</item>
+    <item name="r0x00000000">24 bits/sample</item>
+    <item name="r0x00000000">32 bits/sample</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">16 bits/sample</item>
+    <item name="r0x00000000">24 bits/sample</item>
+    <item name="r0x00000000">32 bits/sample</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Optimised for Audio Quality</item>
+    <item name="r0x00000000">Balanced Audio and Connection Quality</item>
+    <item name="r0x00000000">Optimised for Connection Quality</item>
+    <item name="r0x00000000">Best effort (adaptive bit rate)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Optimised for Audio Quality (990kbps/909kbps)</item>
+    <item name="r0x00000000">Balanced Audio And Connection Quality (660 kbps/606 kbps)</item>
+    <item name="r0x00000000">Optimised for Connection Quality (330kbps/303kbps)</item>
+    <item name="r0x00000000">Best Effort (Adaptive Bit Rate)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ audio</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD audio</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Enable Optional Codecs</item>
+    <item name="r0x00000000">Disable Optional Codecs</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Use system selection (default)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ audio</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD audio</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Enable Optional Codecs</item>
+    <item name="r0x00000000">Disable Optional Codecs</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, active</item>
+    <item name="r0x00000000">, active (media)</item>
+    <item name="r0x00000000">, active (phone)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (Default)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Use system default: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 minutes</item>
+    <item name="r0x00000000">5 minutes</item>
+    <item name="r0x00000000">1 hour</item>
+    <item name="r0x00000000">Never time out</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Default</item>
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">Outline</item>
+    <item name="r0x00000000">Drop shadow</item>
+    <item name="r0x00000000">Raised</item>
+    <item name="r0x00000000">Depressed</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Very small</item>
+    <item name="r0x00000000">Small</item>
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Large</item>
+    <item name="r0x00000000">Very large</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Use app defaults</item>
+    <item name="r0x00000000">White on black</item>
+    <item name="r0x00000000">Black on white</item>
+    <item name="r0x00000000">Yellow on black</item>
+    <item name="r0x00000000">Yellow on blue</item>
+    <item name="r0x00000000">Customise</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Default</item>
+    <item name="r0x00000000">Sans-serif</item>
+    <item name="r0x00000000">Sans-serif condensed</item>
+    <item name="r0x00000000">Sans-serif monospace</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif monospace</item>
+    <item name="r0x00000000">Casual</item>
+    <item name="r0x00000000">Cursive</item>
+    <item name="r0x00000000">Small capitals</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Enhanced colours</item>
+    <item name="r0x00000000">Natural colours as seen by the eye</item>
+    <item name="r0x00000000">Colours optimised for digital content</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Vibrant (default)</item>
+    <item name="r0x00000000">Natural</item>
+    <item name="r0x00000000">Standard</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Teal</item>
+    <item name="r0x00000000">Blue</item>
+    <item name="r0x00000000">Indigo</item>
+    <item name="r0x00000000">Purple</item>
+    <item name="r0x00000000">Pink</item>
+    <item name="r0x00000000">Red</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Automatic (based on time of day)</item>
+    <item name="r0x00000000">Always on</item>
+    <item name="r0x00000000">Always off</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Last 30 days</item>
+    <item name="r0x00000000">Set usage cycle...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">Show overdraw areas</item>
+    <item name="r0x00000000">Show areas for Deuteranomaly</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Never</item>
+    <item name="r0x00000000">15 seconds</item>
+    <item name="r0x00000000">30 seconds</item>
+    <item name="r0x00000000">1 minute</item>
+    <item name="r0x00000000">2 minutes</item>
+    <item name="r0x00000000">5 minutes</item>
+    <item name="r0x00000000">10 minutes</item>
+    <item name="r0x00000000">30 minutes</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (Graphics)</item>
+    <item name="r0x00000000">Call stack on glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Small</item>
+    <item name="r0x00000000">Default</item>
+    <item name="r0x00000000">Large</item>
+    <item name="r0x00000000">Largest</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Never use HDCP checking</item>
+    <item name="r0x00000000">Use HDCP checking for DRM content only</item>
+    <item name="r0x00000000">Always use HDCP checking</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Never check</item>
+    <item name="r0x00000000">Check for DRM content only</item>
+    <item name="r0x00000000">Always check</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Immediately</item>
+    <item name="r0x00000000">5 seconds</item>
+    <item name="r0x00000000">15 seconds</item>
+    <item name="r0x00000000">30 seconds</item>
+    <item name="r0x00000000">1 minute</item>
+    <item name="r0x00000000">2 minutes</item>
+    <item name="r0x00000000">5 minutes</item>
+    <item name="r0x00000000">10 minutes</item>
+    <item name="r0x00000000">30 minutes</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Short</item>
+    <item name="r0x00000000">Medium</item>
+    <item name="r0x00000000">Long</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">480 p</item>
+    <item name="r0x00000000">480p (secure)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (secure)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (secure)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (secure)</item>
+    <item name="r0x00000000">4K (upscaled)</item>
+    <item name="r0x00000000">4K (upscaled, secure)</item>
+    <item name="r0x00000000">720p, 1080p (dual screen)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Moderate</item>
+    <item name="r0x00000000">Low</item>
+    <item name="r0x00000000">Critical</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Persistent</item>
+    <item name="r0x00000000">Top activity</item>
+    <item name="r0x00000000">Important (foreground)</item>
+    <item name="r0x00000000">Important (background)</item>
+    <item name="r0x00000000">Backup</item>
+    <item name="r0x00000000">Heavy weight</item>
+    <item name="r0x00000000">Service (running)</item>
+    <item name="r0x00000000">Service (restarting)</item>
+    <item name="r0x00000000">Receiver</item>
+    <item name="r0x00000000">Home</item>
+    <item name="r0x00000000">Last activity</item>
+    <item name="r0x00000000">Cached (activity)</item>
+    <item name="r0x00000000">Cached (activity client)</item>
+    <item name="r0x00000000">Cached (empty)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Moderate</item>
+    <item name="r0x00000000">Low</item>
+    <item name="r0x00000000">Critical</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 seconds</item>
+    <item name="r0x00000000">30 seconds</item>
+    <item name="r0x00000000">1 minute</item>
+    <item name="r0x00000000">2 minutes</item>
+    <item name="r0x00000000">5 minutes</item>
+    <item name="r0x00000000">10 minutes</item>
+    <item name="r0x00000000">30 minutes</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Ask</item>
+    <item name="r0x00000000">Never allow</item>
+    <item name="r0x00000000">Always allow</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">64 K</item>
+    <item name="r0x00000000">256 K</item>
+    <item name="r0x00000000">1 M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">64 K per log buffer</item>
+    <item name="r0x00000000">256 K per log buffer</item>
+    <item name="r0x00000000">1 M per log buffer</item>
+    <item name="r0x00000000">4 M per log buffer</item>
+    <item name="r0x00000000">16 M per log buffer</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">64 K</item>
+    <item name="r0x00000000">256 K</item>
+    <item name="r0x00000000">1 M</item>
+    <item name="r0x00000000">4 M</item>
+    <item name="r0x00000000">16 M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">All log buffers</item>
+    <item name="r0x00000000">All but radio log buffers</item>
+    <item name="r0x00000000">kernel log buffer only</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">All</item>
+    <item name="r0x00000000">All but radio</item>
+    <item name="r0x00000000">kernel only</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">Draw non-rectangular clip region in blue</item>
+    <item name="r0x00000000">Highlight tested drawing commands in green</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">America</item>
+    <item name="r0x00000000">Europe</item>
+    <item name="r0x00000000">Africa</item>
+    <item name="r0x00000000">Asia</item>
+    <item name="r0x00000000">Australia</item>
+    <item name="r0x00000000">Pacific</item>
+    <item name="r0x00000000">All</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Off</item>
+    <item name="r0x00000000">On screen as bars</item>
+    <item name="r0x00000000">In adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Animation off</item>
+    <item name="r0x00000000">Animation scale .5x</item>
+    <item name="r0x00000000">Animation scale 1x</item>
+    <item name="r0x00000000">Animation scale 1.5x</item>
+    <item name="r0x00000000">Animation scale 2x</item>
+    <item name="r0x00000000">Animation scale 5x</item>
+    <item name="r0x00000000">Animation scale 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Very slow</item>
+    <item name="r0x00000000">Slow</item>
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Fast</item>
+    <item name="r0x00000000">Faster</item>
+    <item name="r0x00000000">Very fast</item>
+    <item name="r0x00000000">Rapid</item>
+    <item name="r0x00000000">Very rapid</item>
+    <item name="r0x00000000">Fastest</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Usage time</item>
+    <item name="r0x00000000">Last time used</item>
+    <item name="r0x00000000">App name</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Charging</item>
+    <item name="r0x00000000">MTP (Media Transfer Protocol)</item>
+    <item name="r0x00000000">PTP (Picture Transfer Protocol)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">Audio Source</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Disconnected</item>
+    <item name="r0x00000000">Initialising...</item>
+    <item name="r0x00000000">Connecting…</item>
+    <item name="r0x00000000">Connected</item>
+    <item name="r0x00000000">Timeout</item>
+    <item name="r0x00000000">Unsuccessful</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN with preshared keys</item>
+    <item name="r0x00000000">L2TP/IPSec VPN with certificates</item>
+    <item name="r0x00000000">IPSec VPN with preshared keys and Xauth authentication</item>
+    <item name="r0x00000000">IPSec VPN with certificates and Xauth authentication</item>
+    <item name="r0x00000000">IPSec VPN with certificates and hybrid authentication</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi preferred</item>
+    <item name="r0x00000000">Mobile preferred</item>
+    <item name="r0x00000000">Wi-Fi only</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Mobile</item>
+    <item name="r0x00000000">Wi-Fi only</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Mobile</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi preferred</item>
+    <item name="r0x00000000">Mobile preferred</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">No</item>
+    <item name="r0x00000000">Yes</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Static</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Detect automatically</item>
+    <item name="r0x00000000">Treat as metered</item>
+    <item name="r0x00000000">Treat as unmetered</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Connected</item>
+    <item name="r0x00000000">Invited</item>
+    <item name="r0x00000000">Unsuccessful</item>
+    <item name="r0x00000000">Available</item>
+    <item name="r0x00000000">Out of range</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Push button</item>
+    <item name="r0x00000000">PIN from peer device</item>
+    <item name="r0x00000000">PIN from this device</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">None</item>
+    <item name="r0x00000000">Manual</item>
+    <item name="r0x00000000">Proxy Auto-Config</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Poor</item>
+    <item name="r0x00000000">Poor</item>
+    <item name="r0x00000000">Fair</item>
+    <item name="r0x00000000">Good</item>
+    <item name="r0x00000000">Excellent</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Scanning…</item>
+    <item name="r0x00000000">Connecting…</item>
+    <item name="r0x00000000">Authenticating…</item>
+    <item name="r0x00000000">Obtaining IP address…</item>
+    <item name="r0x00000000">Connected</item>
+    <item name="r0x00000000">Suspended</item>
+    <item name="r0x00000000">Disconnecting…</item>
+    <item name="r0x00000000">Disconnected</item>
+    <item name="r0x00000000">Unsuccessful</item>
+    <item name="r0x00000000">Blocked</item>
+    <item name="r0x00000000">Temporarily avoiding poor connection</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Scanning…</item>
+    <item name="r0x00000000">Connecting to %1$s…</item>
+    <item name="r0x00000000">Authenticating with %1$s…</item>
+    <item name="r0x00000000">Obtaining IP address from %1$s…</item>
+    <item name="r0x00000000">Connected to %1$s</item>
+    <item name="r0x00000000">Suspended</item>
+    <item name="r0x00000000">Disconnecting from %1$s…</item>
+    <item name="r0x00000000">Disconnected</item>
+    <item name="r0x00000000">Unsuccessful</item>
+    <item name="r0x00000000">Blocked</item>
+    <item name="r0x00000000">Temporarily avoiding poor connection</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Animation off</item>
+    <item name="r0x00000000">Animation scale .5x</item>
+    <item name="r0x00000000">Animation scale 1x</item>
+    <item name="r0x00000000">Animation scale 1.5x</item>
+    <item name="r0x00000000">Animation scale 2x</item>
+    <item name="r0x00000000">Animation scale 5x</item>
+    <item name="r0x00000000">Animation scale 10x</item>
+  </string-array>
+</resources>

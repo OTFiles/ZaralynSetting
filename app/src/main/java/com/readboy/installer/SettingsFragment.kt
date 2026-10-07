@@ -20,6 +20,7 @@ class SettingsFragment : Fragment() {
     private lateinit var tvVersion: TextView
     private lateinit var rgSqlMethod: RadioGroup
     private lateinit var tvMethodHint: TextView
+    private lateinit var tvCompatResult: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +36,11 @@ class SettingsFragment : Fragment() {
             tvVersion = view.findViewById(R.id.tvVersion)
             rgSqlMethod = view.findViewById(R.id.rgSqlMethod)
             tvMethodHint = view.findViewById(R.id.tvMethodHint)
+            tvCompatResult = view.findViewById(R.id.tvCompatResult)
+
+            view.findViewById<View>(R.id.btnCompatCheck).setOnClickListener {
+                runCompatCheck()
+            }
 
             view.findViewById<View>(R.id.btnRedetect).setOnClickListener {
                 try {
@@ -68,6 +74,55 @@ class SettingsFragment : Fragment() {
             android.util.Log.e(TAG, "设置页初始化失败", e)
             Toast.makeText(requireContext(), "初始化失败: ${e.message}", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    /**
+     * 兼容性自检：检查放在后台线程（含 Binder 查询与磁盘/网络 IO），完成后弹报告
+     */
+    private fun runCompatCheck() {
+        val ctx = context ?: return
+        tvCompatResult.visibility = View.VISIBLE
+        tvCompatResult.text = getString(R.string.compat_running)
+        Thread {
+            val items = runCatching { CompatCheck.run(ctx) }
+                .onFailure { AppLogger.e(TAG, "兼容性自检失败: ${it.message}") }
+                .getOrElse { emptyList() }
+            val report = runCatching { CompatCheck.report(ctx, items) }.getOrDefault("自检报告生成失败")
+            activity?.runOnUiThread {
+                if (!isAdded) return@runOnUiThread
+                val pass = items.count { it.ok }
+                tvCompatResult.text = getString(R.string.compat_done, pass, items.size)
+                showCompatDialog(report)
+            }
+        }.start()
+    }
+
+    private fun showCompatDialog(report: String) {
+        val ctx = context ?: return
+        val scroll = android.widget.ScrollView(ctx).apply {
+            addView(TextView(ctx).apply {
+                text = report
+                typeface = android.graphics.Typeface.MONOSPACE
+                setTextIsSelectable(true)
+                textSize = 12f
+                setPadding(32, 24, 32, 24)
+            })
+        }
+        com.google.android.material.dialog.MaterialAlertDialogBuilder(ctx)
+            .setTitle(R.string.compat_title)
+            .setView(scroll)
+            .setPositiveButton(R.string.compat_copy) { _, _ ->
+                runCatching {
+                    val cm = ctx.getSystemService(android.content.Context.CLIPBOARD_SERVICE)
+                        as android.content.ClipboardManager
+                    cm.setPrimaryClip(android.content.ClipData.newPlainText("兼容性自检", report))
+                    Toast.makeText(ctx, getString(R.string.copied), Toast.LENGTH_SHORT).show()
+                }.onFailure {
+                    Toast.makeText(ctx, "复制失败: ${it.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton(R.string.compat_close, null)
+            .show()
     }
 
     private fun loadVersion() {

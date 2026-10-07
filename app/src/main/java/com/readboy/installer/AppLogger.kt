@@ -27,18 +27,33 @@ object AppLogger {
     private val buffer = StringBuilder()      // init 之前的日志先缓存
     private val lock = Any()
 
-    /** 初始化日志目录（应用启动时调用） */
+    /** 初始化日志目录（应用启动时调用；外部存储不可写时多级回退） */
     fun init(context: Context) {
         synchronized(lock) {
             if (logDirectory != null) return
-            val dir = try {
-                context.getExternalFilesDir(DIRECTORY_NAME)
-            } catch (e: Exception) {
-                null
-            } ?: File(context.filesDir, DIRECTORY_NAME)
-
-            if (!dir.exists()) dir.mkdirs()
+            val candidates = listOf<File?>(
+                runCatching { context.getExternalFilesDir(DIRECTORY_NAME) }.getOrNull(),
+                File(context.filesDir, DIRECTORY_NAME)
+            )
+            var dir: File? = null
+            for (candidate in candidates) {
+                if (candidate == null) continue
+                runCatching {
+                    if (!candidate.exists()) candidate.mkdirs()
+                    // 真正验证可写（老 ROM 上目录可能创建成功却不可写）
+                    val probe = File(candidate, ".write_test")
+                    probe.writeText("ok")
+                    val ok = probe.readText() == "ok"
+                    probe.delete()
+                    if (ok) dir = candidate
+                }.onFailure { Log.w(TAG, "日志目录不可写: ${candidate.absolutePath} (${it.message})") }
+                if (dir != null) break
+            }
             logDirectory = dir
+            if (dir == null) {
+                Log.e(TAG, "无可写日志目录，日志将仅输出到 logcat")
+                return
+            }
             cleanupOldLogs()
 
             // 回放缓存的早期日志
@@ -52,6 +67,11 @@ object AppLogger {
 
     /** 日志目录（未初始化时为 null） */
     fun getLogDirectory(): File? = logDirectory
+
+    /** 当前时间（供自检报告使用） */
+    fun nowString(): String = synchronized(lock) {
+        SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(Date())
+    }
 
     // ==================== 日志写入 ====================
 

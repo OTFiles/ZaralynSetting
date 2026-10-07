@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <corners android:radius="24.0dp" />
+  <padding android:left="10.0dp"
+           android:right="10.0dp" />
+  <solid android:color="#80ffffff" />
+  <stroke android:width="1.0dp"
+          android:color="@color/action_bar_guide_org_sel" />
+</shape>

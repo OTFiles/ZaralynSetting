@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">እነማ ጠፍቷል</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ .5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ 1x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ 1.5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ 2x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ 5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">አንዱም</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP ወይም CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">የውስጥ መሣሪያ ማከማቻ</item>
+    <item name="r0x00000000">ተወጋጅ SD ካርድ</item>
+    <item name="r0x00000000">ስርዓቱ ይወስን</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">መገኛ ስፍራ</item>
+    <item name="r0x00000000">የግል</item>
+    <item name="r0x00000000">መልዕክት መላኪያ</item>
+    <item name="r0x00000000">ማህደረ መረጃ</item>
+    <item name="r0x00000000">መሣሪያ</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">ንዘር</item>
+    <item name="r0x00000000">እውቂያዎችን አንብብ</item>
+    <item name="r0x00000000">ዕውቂያዎችዎን ይቀይሩ</item>
+    <item name="r0x00000000">የጥሪ ምዝግብ ማስታወሻን ያንብቡ</item>
+    <item name="r0x00000000">የጥሪ ምዝግብ ማስታወሻን ይቀይሩ</item>
+    <item name="r0x00000000">የቀን መቁጠሪያ አንብብ</item>
+    <item name="r0x00000000">የቀን መቁጠሪያን ይቀይሩ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">ማሳወቂያ ለጥፍ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">ወደ ስልክ ደውል</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ያንብቡ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይጻፉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይላኩ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ያንብቡ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ/ኤም ኤም ኤስ ይጻፉ</item>
+    <item name="r0x00000000">ቅንብሮችን ይቀይሩ</item>
+    <item name="r0x00000000">ከላይ ይሳሉ</item>
+    <item name="r0x00000000">ማሳወቂያዎችን ይድረሱ</item>
+    <item name="r0x00000000">ካሜራ</item>
+    <item name="r0x00000000">ኦዲዮ ቅረጽ</item>
+    <item name="r0x00000000">ድምጽ አጫውት</item>
+    <item name="r0x00000000">ቅንጥብ ሰሌዳ አንብብ</item>
+    <item name="r0x00000000">ቅንጥብ መለያ ቀይር</item>
+    <item name="r0x00000000">የሚዲያ አዝራሮች</item>
+    <item name="r0x00000000">የድምጽ ትኩረት</item>
+    <item name="r0x00000000">ዋናው የድምጽ መቆጣጠሪያ</item>
+    <item name="r0x00000000">የድምጽ መጠን</item>
+    <item name="r0x00000000">የጥሪ መጠን</item>
+    <item name="r0x00000000">የማህደረ መረጃ ክፍልፍል</item>
+    <item name="r0x00000000">የማንቂያ ድምፅ መጠን</item>
+    <item name="r0x00000000">የማሳወቂያ ድምጽ መጠን</item>
+    <item name="r0x00000000">የብሉቱዝ ድምፅ መጠን</item>
+    <item name="r0x00000000">እንደነቃ አቆይ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">አካባቢ</item>
+    <item name="r0x00000000">የአጠቃቀም ስታቲስቲክሶችን ያግኙ</item>
+    <item name="r0x00000000">ማይክሮፎን ድምፅ-ከል አድርግ/አንሳ</item>
+    <item name="r0x00000000">ቶስት አሳይ</item>
+    <item name="r0x00000000">ፕሮጀክት ሚዲያ</item>
+    <item name="r0x00000000">VPN አግብር</item>
+    <item name="r0x00000000">ልጣፍ ይጻፉ</item>
+    <item name="r0x00000000">የረዳት መዋቅር</item>
+    <item name="r0x00000000">የረዳት ቅጽበታዊ ገጽ እይታ</item>
+    <item name="r0x00000000">የስልክ ግዛት ያንብቡ</item>
+    <item name="r0x00000000">የድምጽ መልዕክት ያክሉ</item>
+    <item name="r0x00000000">sip ይጠቀሙ</item>
+    <item name="r0x00000000">ወጪ ጥሪን አስኪድ</item>
+    <item name="r0x00000000">የጣት አሻራ</item>
+    <item name="r0x00000000">የሰውነት ዳሳሾች</item>
+    <item name="r0x00000000">የተንቀሳቃሽ ስልክ ስርጭቶችን ያንብቡ</item>
+    <item name="r0x00000000">የቀልድ መገኛ አካባቢ</item>
+    <item name="r0x00000000">ማከማቻ ያንብቡ</item>
+    <item name="r0x00000000">ማከማቻ ይጻፉ</item>
+    <item name="r0x00000000">ማያ ገጽ አብራ</item>
+    <item name="r0x00000000">መለያዎችን ያግኙ</item>
+    <item name="r0x00000000">ዳራ ውስጥ አሂድ</item>
+    <item name="r0x00000000">የተደራሽነት መጠን</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">ግምታዊ አካባቢ</item>
+    <item name="r0x00000000">ትክክለኛ አካባቢ</item>
+    <item name="r0x00000000">ጂ ፒ ኤስ</item>
+    <item name="r0x00000000">ንዘር</item>
+    <item name="r0x00000000">እውቂያዎችን አንብብ</item>
+    <item name="r0x00000000">ዕውቂያዎችዎን ይቀይሩ</item>
+    <item name="r0x00000000">የጥሪ ምዝግብ ማስታወሻን ያንብቡ</item>
+    <item name="r0x00000000">የጥሪ ምዝግብ ማስታወሻን ይቀይሩ</item>
+    <item name="r0x00000000">የቀን መቁጠሪያ አንብብ</item>
+    <item name="r0x00000000">የቀን መቁጠሪያን ይቀይሩ</item>
+    <item name="r0x00000000">የWi-Fi ቅኝት</item>
+    <item name="r0x00000000">ማሳወቂያ</item>
+    <item name="r0x00000000">የህዋስ ቅኝት</item>
+    <item name="r0x00000000">ወደ ስልክ ደውል</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስን ያንብቡ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ ይጻፉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">አስቸኳይ ኤስ ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">ኤም ኤም ኤስ ይቀበሉ</item>
+    <item name="r0x00000000">የደልብዩ ኤ ፒ ግፊት ይቀበሉ</item>
+    <item name="r0x00000000">ኤስ ኤም ኤስ ይላኩ</item>
+    <item name="r0x00000000">የአይ ሲ ሲ ኤስ ኤም ኤስ ያንብቡ</item>
+    <item name="r0x00000000">የአይ ሲ ሲ ኤስ ኤም ኤስ ይጻፉ</item>
+    <item name="r0x00000000">ቅንብሮችን ይቀይሩ</item>
+    <item name="r0x00000000">ከላይ ይሳሉ</item>
+    <item name="r0x00000000">ማሳወቂያዎችን ድረስ</item>
+    <item name="r0x00000000">ካሜራ</item>
+    <item name="r0x00000000">ኦዲዮ ቅረጽ</item>
+    <item name="r0x00000000">ድምጽ አጫውት</item>
+    <item name="r0x00000000">ቅንጥብ መለያ አንብብ</item>
+    <item name="r0x00000000">ቅንጥብ መለያ ቀይር</item>
+    <item name="r0x00000000">የሚዲያ አዝራሮች</item>
+    <item name="r0x00000000">የድምጽ ትኩረት</item>
+    <item name="r0x00000000">ዋናው ድምጽ መቆጣጠሪያ</item>
+    <item name="r0x00000000">የድምጽ መጠን</item>
+    <item name="r0x00000000">የጥሪ ድምጽ መጠን</item>
+    <item name="r0x00000000">የማህደረ መረጃ መጠን</item>
+    <item name="r0x00000000">የማንቂያ ድምፅ መጠን</item>
+    <item name="r0x00000000">የማሳወቂያ ድምጽ መጠን</item>
+    <item name="r0x00000000">የብሉቱዝ ድምፅ መጠን</item>
+    <item name="r0x00000000">እንደነቃ አቆይ</item>
+    <item name="r0x00000000">አካባቢን ይቆጣጠሩ</item>
+    <item name="r0x00000000">የከፍተኛ ኃይል አካባቢ ተከታተል</item>
+    <item name="r0x00000000">የአጠቃቀም ስታቲስቲክስ ያግኙ</item>
+    <item name="r0x00000000">ማይክሮፎን ድምፅ-ከል አድርግ/አንሳ</item>
+    <item name="r0x00000000">ቶስት አሳይ</item>
+    <item name="r0x00000000">ፕሮጀክት ሚዲያ</item>
+    <item name="r0x00000000">VPN አግብር</item>
+    <item name="r0x00000000">ልጣፍ ይጻፉ</item>
+    <item name="r0x00000000">የረዳት መዋቅር</item>
+    <item name="r0x00000000">የረዳት ቅጽበታዊ ገጽ እይታ</item>
+    <item name="r0x00000000">የስልክ ግዛት ያንብቡ</item>
+    <item name="r0x00000000">የድምፅ መልዕክት ያክሉ</item>
+    <item name="r0x00000000">sip ይጠቀሙ</item>
+    <item name="r0x00000000">ወጪ ጥሪን አስኪድ</item>
+    <item name="r0x00000000">የጣት አሻራ</item>
+    <item name="r0x00000000">የሰውነት ዳሳሾች</item>
+    <item name="r0x00000000">የተንቀሳቃሽ ስልክ ስርጭቶችን ያንብቡ</item>
+    <item name="r0x00000000">የቀልድ መገኛ አካባቢ</item>
+    <item name="r0x00000000">ማከማቻ ያንብቡ</item>
+    <item name="r0x00000000">ማከማቻ ይጻፉ</item>
+    <item name="r0x00000000">ማያ ገጽ አብራ</item>
+    <item name="r0x00000000">መለያዎችን ያግኙ</item>
+    <item name="r0x00000000">ዳራ ውስጥ አሂድ</item>
+    <item name="r0x00000000">የተደራሽነት መጠን</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">መደበኛ ወሰኖች</item>
+    <item name="r0x00000000">ምንም የዳራ ሂደቶች የሉም</item>
+    <item name="r0x00000000">ቢበዛ 1  ሂደት</item>
+    <item name="r0x00000000">ቢበዛ 2  ሂደቶች</item>
+    <item name="r0x00000000">ቢበዛ 3  ሂደቶች</item>
+    <item name="r0x00000000">ቢበዛ 4  ሂደቶች</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">ከ30 ቀኖች በላይ የሆናቸው</item>
+    <item name="r0x00000000">ከ60 ቀኖች በላይ የሆናቸው</item>
+    <item name="r0x00000000">ከ90 ቀኖች በላይ የሆናቸው</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">ያልተገለጸ</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">ኤችኤስፒኤፒ</item>
+    <item name="r0x00000000">ኤችኤስፒኤ</item>
+    <item name="r0x00000000">ኤችኤስዩፒኤ</item>
+    <item name="r0x00000000">ኤችኤስፒዲኤ</item>
+    <item name="r0x00000000">ዩኤምቲኤስ</item>
+    <item name="r0x00000000">ኢዲጂኢ</item>
+    <item name="r0x00000000">ጂፒአርኤስ</item>
+    <item name="r0x00000000">ኢኤችአርፒዲ</item>
+    <item name="r0x00000000">ኢቪዲኦ_B</item>
+    <item name="r0x00000000">ኢቪዲኦ_A</item>
+    <item name="r0x00000000">ኢቪዲኦ_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">16 ቢት/ናሙና</item>
+    <item name="r0x00000000">24 ቢት/ናሙና</item>
+    <item name="r0x00000000">32 ቢት/ናሙና</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">16 ቢት/ናሙና</item>
+    <item name="r0x00000000">24 ቢት/ናሙና</item>
+    <item name="r0x00000000">32 ቢት/ናሙና</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">ሞኖ</item>
+    <item name="r0x00000000">ስቲሪዮ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">ሞኖ</item>
+    <item name="r0x00000000">ስቲሪዮ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">ለኦዲዮ ጥራት ተብቷል</item>
+    <item name="r0x00000000">የተመጣጠነ የኦዲዮ እና ግንኙነት ጥራት</item>
+    <item name="r0x00000000">ለግንኙነት ጥራት ተብቷል</item>
+    <item name="r0x00000000">የተሻለው ጥረት (ተለማማጅ የቢት ፍጥነት)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">ለኦዲዮ ጥራት ተብቷል (990 ኪቢ/ሴ / 909 ኪቢ/ሴ)</item>
+    <item name="r0x00000000">ለኦዲዮ ጥራት አትባ (660 ኪቢ/ሴ / 606 ኪቢ/ሴ)</item>
+    <item name="r0x00000000">ለግንኙነት ጥራት ተብቷል (330 ኪቢ/ሴ / 303 ኪቢ/ሴ)</item>
+    <item name="r0x00000000">የተሻለው ጥረት (ተለማማጅ የቢት ፍጥነት)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">44.1 ኪኸ</item>
+    <item name="r0x00000000">48.0 ኪኸ</item>
+    <item name="r0x00000000">88.2 ኪኸ</item>
+    <item name="r0x00000000">96.0 ኪኸ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">44.1 ኪኸ</item>
+    <item name="r0x00000000">48.0 ኪኸ</item>
+    <item name="r0x00000000">88.2 ኪኸ</item>
+    <item name="r0x00000000">96.0 ኪኸ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ ኦዲዮ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD ኦዲዮ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">አማራጭ ኮዴኮችን አንቃ</item>
+    <item name="r0x00000000">አማራጭ ኮዴኮችን አሰናክል</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">የስርዓቱን ምርጫ (ነባሪ) ተጠቀም</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ ኦዲዮ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD ኦዲዮ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">አማራጭ ኮዴኮችን አንቃ</item>
+    <item name="r0x00000000">አማራጭ ኮዴኮችን አሰናክል</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">፣ ገቢር</item>
+    <item name="r0x00000000">፣ ገቢር (ሚዲያ)</item>
+    <item name="r0x00000000">፣ ገቢር (ስልክ)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (ነባሪ)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">የስርዓት ነባሪ ይጠቀሙ፦ %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 ደቂቃዎች</item>
+    <item name="r0x00000000">5 ደቂቃዎች</item>
+    <item name="r0x00000000">1 ሰዓት</item>
+    <item name="r0x00000000">በጭራሽ አታቋርጥ</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">ነባሪ</item>
+    <item name="r0x00000000">ምንም</item>
+    <item name="r0x00000000">ቢጋር</item>
+    <item name="r0x00000000">ጥላጣል</item>
+    <item name="r0x00000000">የተነሳ</item>
+    <item name="r0x00000000">የተኛ</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">በጣም ትንሽ</item>
+    <item name="r0x00000000">ትንሽ</item>
+    <item name="r0x00000000">መደበኛ</item>
+    <item name="r0x00000000">ትልቅ</item>
+    <item name="r0x00000000">በጣም ትልቅ</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">የመተግበሪያ ነባሪዎችን ይጠቀሙ</item>
+    <item name="r0x00000000">ነጭ በጥቁር ላይ</item>
+    <item name="r0x00000000">ጥቁር በነጭ ላይ</item>
+    <item name="r0x00000000">ቢጫ በጥቁር ላይ</item>
+    <item name="r0x00000000">ቢጫ በሰማያዊ ላይ</item>
+    <item name="r0x00000000">ብጁ</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">ነባሪ</item>
+    <item name="r0x00000000">ጭረት-አልባ</item>
+    <item name="r0x00000000">ጭረት-አልባ ተጨምቆ</item>
+    <item name="r0x00000000">ሳንስ ሰሪፍ ሞኖስፔስ</item>
+    <item name="r0x00000000">ሰሪፍ</item>
+    <item name="r0x00000000">ሰሪፍ ሞኖስፔስ</item>
+    <item name="r0x00000000">የተለመደ</item>
+    <item name="r0x00000000">ቅጥልጥል</item>
+    <item name="r0x00000000">ትንሽ አብይ ሆሄያት</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">የበለጸጉ ቀለማት</item>
+    <item name="r0x00000000">ልክ በዓይን እንደሚታዩት የተፈጥሮ ቀለማት</item>
+    <item name="r0x00000000">ለዲጂታል ይዘት የላቁ ቀለማት</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">ነዛሪ (ነባሪ)</item>
+    <item name="r0x00000000">ተፈጥሯዊ</item>
+    <item name="r0x00000000">መደበኛ</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">ጥቁር አረንጓዴ-ሰማያዊ</item>
+    <item name="r0x00000000">ሰማያዊ</item>
+    <item name="r0x00000000">ወይን ጠጅ</item>
+    <item name="r0x00000000">ሐምራዊ</item>
+    <item name="r0x00000000">ሮዝ</item>
+    <item name="r0x00000000">ቀይ</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">ራስ-ሰር (በቀኑ ጊዜ ላይ በመመርኮዝ)</item>
+    <item name="r0x00000000">ሁልጊዜ አብራ</item>
+    <item name="r0x00000000">ሁልጊዜ አጥፋ</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">የመጨረሻዎቹ 30 ቀኖች</item>
+    <item name="r0x00000000">የአጠቃቀም ዑደት አዘጋጅ...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">ስዕሉ አልፎ የፈሰሰባቸው አካባቢዎችን አሳይ</item>
+    <item name="r0x00000000">ቀይ እና አረንጓዴ የማይለይባቸው ቦታዎች አሳይ</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">በፍፁም</item>
+    <item name="r0x00000000">15 ሰከንዶች</item>
+    <item name="r0x00000000">30 ሰከንዶች</item>
+    <item name="r0x00000000">1 ደቂቃ</item>
+    <item name="r0x00000000">2 ደቂቃዎች</item>
+    <item name="r0x00000000">5 ደቂቃዎች</item>
+    <item name="r0x00000000">10 ደቂቃዎች</item>
+    <item name="r0x00000000">30 ደቂቃዎች</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">ምንም</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (ግራፊክስ)</item>
+    <item name="r0x00000000">የጥሪ ቁልል በ glGetError ላይ</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">ትንሽ</item>
+    <item name="r0x00000000">ነባሪ</item>
+    <item name="r0x00000000">ትልቅ</item>
+    <item name="r0x00000000">በጣም ትልቁ</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">በፍፁም HDCP ምልከታ አትጠቀም</item>
+    <item name="r0x00000000">ለDRM ይዘት ብቻ HDCP  ምልከታን ተጠቀም</item>
+    <item name="r0x00000000">ሁልጊዜ የHDCP ምልከታ ተጠቀም</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">በፍፁም አትመልከት</item>
+    <item name="r0x00000000">የDRM ይዘት ብቻ ተመልከት</item>
+    <item name="r0x00000000">ሁልጊዜ ተመልከት</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">ወዲያውኑ</item>
+    <item name="r0x00000000">5 ሰከንዶች</item>
+    <item name="r0x00000000">15 ሰከንዶች</item>
+    <item name="r0x00000000">30 ሰከንዶች</item>
+    <item name="r0x00000000">1 ደቂቃ</item>
+    <item name="r0x00000000">2 ደቂቃዎች</item>
+    <item name="r0x00000000">5 ደቂቃዎች</item>
+    <item name="r0x00000000">10 ደቂቃዎች</item>
+    <item name="r0x00000000">30 ደቂቃዎች</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">አጭር</item>
+    <item name="r0x00000000">መካከለኛ</item>
+    <item name="r0x00000000">ረጅም</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">ምንም</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">ምንም የለም</item>
+    <item name="r0x00000000">480ፒክሰል</item>
+    <item name="r0x00000000">480ፒ (የተጠበቀ)</item>
+    <item name="r0x00000000">720ፒ</item>
+    <item name="r0x00000000">720ፒ (የተጠበቀ)</item>
+    <item name="r0x00000000">1080ፒ</item>
+    <item name="r0x00000000">1080ፒ (የተጠበቀ)</item>
+    <item name="r0x00000000">4ኬ</item>
+    <item name="r0x00000000">4ኬ (የተጠበቀ)</item>
+    <item name="r0x00000000">4ኬ (ከፍ ተድርጎ የተመጣጠነ)</item>
+    <item name="r0x00000000">4ኬ (ከፍ ተድርጎ የተመጣጠነ፣ የተጠበቀ)</item>
+    <item name="r0x00000000">720ፒ፣ 1080ፒ (ሁለትዮሽ ማያ ገጽ)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">መደበኛ</item>
+    <item name="r0x00000000">መጠነኛ</item>
+    <item name="r0x00000000">ዝቅ ያለ</item>
+    <item name="r0x00000000">አሳሳቢ</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">የሚጸና</item>
+    <item name="r0x00000000">ከፍተኛ እንቅስቃሴ</item>
+    <item name="r0x00000000">አስፈላጊ (ከፊት)</item>
+    <item name="r0x00000000">አስፈላጊ (ከጀርባ)</item>
+    <item name="r0x00000000">ምትኬ ስራ</item>
+    <item name="r0x00000000">ከባድ ስራ</item>
+    <item name="r0x00000000">አገልግሎት (እያሄዱ ያለ)</item>
+    <item name="r0x00000000">አገልግሎት (ዳግም በማስጀመር ላይ)</item>
+    <item name="r0x00000000">ተቀባይ</item>
+    <item name="r0x00000000">መነሻ</item>
+    <item name="r0x00000000">የመጨረሻ እንቅስቃሴ</item>
+    <item name="r0x00000000">የተሸጎጠ (እንቅስቃሴ)</item>
+    <item name="r0x00000000">የተሸጎጠ (የእንቅስቃሴ ደንበኛ)</item>
+    <item name="r0x00000000">የተሸጎጠ (ባዶ)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">መደበኛ</item>
+    <item name="r0x00000000">መጠነኛ</item>
+    <item name="r0x00000000">ዝቅተኛ</item>
+    <item name="r0x00000000">አሳሳቢ</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 ሰከንዶች</item>
+    <item name="r0x00000000">30 ሰከንዶች</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">2  ደቂቃዎች</item>
+    <item name="r0x00000000">5 ደቂቃዎች</item>
+    <item name="r0x00000000">10 ደቂቃዎች</item>
+    <item name="r0x00000000">30 ደቂቃዎች</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">ጠይቅ</item>
+    <item name="r0x00000000">በጭራሽ አትፍቀድ</item>
+    <item name="r0x00000000">ሁልጊዜ ፍቀድ</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">64 ኪባ</item>
+    <item name="r0x00000000">256 ኪባ</item>
+    <item name="r0x00000000">1 ሜባ</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">64 ኪባ በምዝግብ ማስታወሻ ቋጥ</item>
+    <item name="r0x00000000">256 ኪባ በምዝግብ ማስታወሻ ቋጥ</item>
+    <item name="r0x00000000">1 ሜ በምዝግብ ማስታወሻ ቋጥ</item>
+    <item name="r0x00000000">4 ሜ በምዝግብ ማስታወሻ ቋጥ</item>
+    <item name="r0x00000000">16 ሜ በምዝግብ ማስታወሻ ቋጥ</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">64 ኪባ</item>
+    <item name="r0x00000000">256 ኪባ</item>
+    <item name="r0x00000000">1 ሜባ</item>
+    <item name="r0x00000000">4 ሜባ</item>
+    <item name="r0x00000000">16 ሜባ</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">የሁሉም ምዝግብ ማስታወሻ ቋቶች</item>
+    <item name="r0x00000000">ከሬዲዮ ምዝግብ ማስታወሻ ቋቶች በስተቀር ሁሉም</item>
+    <item name="r0x00000000">የአውራ ከዋኝ ምዝግብ ማስታወሻ ቋት ብቻ</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">ሁሉም</item>
+    <item name="r0x00000000">ከሬዲዮ በስተቀር ሁሉም</item>
+    <item name="r0x00000000">አውራ ከዋኝ ብቻ</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">አራት ማእዘን ያልሆነ የቅንጥብ ክልልን በሰማያዊ ይሳሉ</item>
+    <item name="r0x00000000">የተሞከሩ የስእል ትእዛዞችን በአረንጓዴ ያድምቁ</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">አሜሪካ</item>
+    <item name="r0x00000000">አውሮፓ</item>
+    <item name="r0x00000000">አፍሪካ</item>
+    <item name="r0x00000000">እስያ</item>
+    <item name="r0x00000000">አውስትራሊያ</item>
+    <item name="r0x00000000">ፓስፊክ</item>
+    <item name="r0x00000000">ሁሉም</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">ጠፍቷል</item>
+    <item name="r0x00000000">ማያ ገጽ ላይ እንደ አሞሌዎች</item>
+    <item name="r0x00000000">በadb shell dumpsys gfxinfo ውስጥ</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">እነማ ጠፍቷል</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ.5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ1x</item>
+    <item name="r0x00000000">የእነማ  ልኬት ለውጥ1.5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ2x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">በጣም ቀርፋፋ</item>
+    <item name="r0x00000000">ቀርፋፋ</item>
+    <item name="r0x00000000">መደበኛ</item>
+    <item name="r0x00000000">ፈጣን</item>
+    <item name="r0x00000000">በጣም ፈጣን</item>
+    <item name="r0x00000000">እጅግ በጣም ፈጣን</item>
+    <item name="r0x00000000">ቀልጣፋ</item>
+    <item name="r0x00000000">በጣም ቀልጣፋ</item>
+    <item name="r0x00000000">እጅግ በጣም ቀልጣፋ</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">ጊዜ አጠቃቀም</item>
+    <item name="r0x00000000">ለመጨረሻ ጊዜ ጥቅም ላይ የዋለበት ጊዜ</item>
+    <item name="r0x00000000">መተግበሪያ ስም</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">ኃይል በመሙላት ላይ</item>
+    <item name="r0x00000000">MTP (የሚዲያ ማስተላለፍ ፕሮቶኮል)</item>
+    <item name="r0x00000000">PTP (የስዕል ማስተላለፍ ፕሮቶኮል)</item>
+    <item name="r0x00000000">RNDIS (ዩኤስቢ ኤተርኔት)</item>
+    <item name="r0x00000000">የኦዲዮ ምንጭ</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">ተለያየ</item>
+    <item name="r0x00000000">እየጀመረ ነው…</item>
+    <item name="r0x00000000">በማገናኘት ላይ…</item>
+    <item name="r0x00000000">ተገናኝቷል</item>
+    <item name="r0x00000000">ጊዜው አልቋል</item>
+    <item name="r0x00000000">ስኬታማ አልነበረም</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN ከቅድመ-ተጋሪ ቁልፎች ጋር</item>
+    <item name="r0x00000000">የL2TP/IPSec VPN ከምስክሮችጋር</item>
+    <item name="r0x00000000">የIPSec VPN በቅድመ ተጋሪ ቁልፎችእና በXauth ማረጋገጥ</item>
+    <item name="r0x00000000">የIPSec VPN በምስክር እና በXauth ማረጋገጥ</item>
+    <item name="r0x00000000">የIPSec VPN በዕውቅና ማረጋገጫ  እና በድቀላ ማረጋገጥ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi ተመራጭ</item>
+    <item name="r0x00000000">የተንቀሳቃሽ ስልክ ተመራጭ ነው</item>
+    <item name="r0x00000000">Wi-Fi ብቻ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">ተንቀሳቃሽ ስልክ</item>
+    <item name="r0x00000000">Wi-Fi ብቻ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">ተንቀሳቃሽ ስልክ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi ተመራጭ</item>
+    <item name="r0x00000000">የተንቀሳቃሽ ስልክ ተመራጭ ነው</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">ሲም</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">አይ</item>
+    <item name="r0x00000000">አዎ</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">አይለወጤ</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">በራስ-ሰር አግኝ</item>
+    <item name="r0x00000000">እንደ ተለካ አስተናግድ</item>
+    <item name="r0x00000000">እንደ ያልተለካ አስተናግድ</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">ተገናኝቷል</item>
+    <item name="r0x00000000">የተጋበዘ</item>
+    <item name="r0x00000000">ስኬታማ አልነበረም</item>
+    <item name="r0x00000000">የሚገኝ</item>
+    <item name="r0x00000000">ከክልል ውጪ</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">አዝራር ተጫን</item>
+    <item name="r0x00000000">ፒን ከአቻ መሣሪያ</item>
+    <item name="r0x00000000">ከዚህ መሣሪያ ፒን</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">ምንም</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">ምንም የለም</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">ሲም</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">የለም</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">አንዱም</item>
+    <item name="r0x00000000">መመሪያ</item>
+    <item name="r0x00000000">የተኪ ራስ-ውቅር</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">ደካማ</item>
+    <item name="r0x00000000">ደካማ</item>
+    <item name="r0x00000000">ደህና</item>
+    <item name="r0x00000000">ጥሩ</item>
+    <item name="r0x00000000">እጅግ በጣም ጥሩ</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">በመቃኘት ላይ.....</item>
+    <item name="r0x00000000">በማገናኘት ላይ…</item>
+    <item name="r0x00000000">በማረጋገጥ ላይ....</item>
+    <item name="r0x00000000">የIP አድራሻ በማግኘት ላይ...</item>
+    <item name="r0x00000000">ተገናኝቷል</item>
+    <item name="r0x00000000">ታግዷል</item>
+    <item name="r0x00000000">በማለያየት ላይ....</item>
+    <item name="r0x00000000">ተለያየ</item>
+    <item name="r0x00000000">አልተሳካም</item>
+    <item name="r0x00000000">ታግዷል</item>
+    <item name="r0x00000000">ለጊዜያዊነት ከደካማ ግኑኝነት በመታቀብ ላይ</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">በመቃኘት ላይ.....</item>
+    <item name="r0x00000000">%1$s በማያያዝ ላይ...</item>
+    <item name="r0x00000000">በ%1$s በማረጋገጥ ላይ...</item>
+    <item name="r0x00000000"> ከ%1$s የIP አድራሻ በማግኘት ላይ...</item>
+    <item name="r0x00000000">ለ%1$s የተገናኘ</item>
+    <item name="r0x00000000">ታግዷል</item>
+    <item name="r0x00000000">ከ%1$s በማለያየት ላይ....</item>
+    <item name="r0x00000000">ተለያየ</item>
+    <item name="r0x00000000">አልተሳካም</item>
+    <item name="r0x00000000">ታግዷል</item>
+    <item name="r0x00000000">ለጊዜያዊነት ከደካማ ግኑኝነት በመታቀብ ላይ</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">እነማ ጠፍቷል</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ.5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ1x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ1.5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ2x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ5x</item>
+    <item name="r0x00000000">የእነማ ልኬት ለውጥ10x</item>
+  </string-array>
+</resources>

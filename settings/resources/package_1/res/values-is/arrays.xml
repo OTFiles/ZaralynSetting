@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Slökkva á hreyfiáhrifum</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 0,5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1,5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 2x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Engin</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP eða CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Innbyggð geymsla tækis</item>
+    <item name="r0x00000000">Laust SD-kort</item>
+    <item name="r0x00000000">Leyfa kerfinu að ráða</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Persónulegt</item>
+    <item name="r0x00000000">Skilaboð</item>
+    <item name="r0x00000000">Margmiðlun</item>
+    <item name="r0x00000000">Tæki</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Titringur</item>
+    <item name="r0x00000000">Lesa tengiliði</item>
+    <item name="r0x00000000">Breyta tengiliðum</item>
+    <item name="r0x00000000">Lesa símtalaskrá</item>
+    <item name="r0x00000000">Breyta símtalaskrá</item>
+    <item name="r0x00000000">Lesa dagatal</item>
+    <item name="r0x00000000">Breyta dagatali</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Færslutilkynning</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Hringja í síma</item>
+    <item name="r0x00000000">Lesa SMS/MMS</item>
+    <item name="r0x00000000">Skrifa SMS/MMS</item>
+    <item name="r0x00000000">Taka á móti SMS/MMS</item>
+    <item name="r0x00000000">Taka á móti SMS/MMS</item>
+    <item name="r0x00000000">Fá SMS/MMS</item>
+    <item name="r0x00000000">Taka á móti SMS/MMS</item>
+    <item name="r0x00000000">Senda SMS/MMS</item>
+    <item name="r0x00000000">Lesa SMS/MMS</item>
+    <item name="r0x00000000">Skrifa SMS/MMS</item>
+    <item name="r0x00000000">Breyta stillingum</item>
+    <item name="r0x00000000">Teikna yfir</item>
+    <item name="r0x00000000">Opna tilkynningar</item>
+    <item name="r0x00000000">Myndavél</item>
+    <item name="r0x00000000">Taka upp hljóð</item>
+    <item name="r0x00000000">Spila hljóð</item>
+    <item name="r0x00000000">Lesa klippiborð</item>
+    <item name="r0x00000000">Breyta klippiborði</item>
+    <item name="r0x00000000">Margmiðlunarhnappar</item>
+    <item name="r0x00000000">Fókus hljóðs</item>
+    <item name="r0x00000000">Meginhljóðstyrkur</item>
+    <item name="r0x00000000">Hljóðstyrkur raddar</item>
+    <item name="r0x00000000">Hljóðstyrkur hringingar</item>
+    <item name="r0x00000000">Hljóðstyrkur margmiðlunarefnis</item>
+    <item name="r0x00000000">Hljóðstyrkur vekjara</item>
+    <item name="r0x00000000">Hljóðstyrkur tilkynninga</item>
+    <item name="r0x00000000">Hljóðstyrkur Bluetooth</item>
+    <item name="r0x00000000">Ekki fara í biðstöðu</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Staðsetning</item>
+    <item name="r0x00000000">Fá talnagögn um notkun</item>
+    <item name="r0x00000000">Kveikja/slökkva á hljóðnema</item>
+    <item name="r0x00000000">Sýna tilkynningu</item>
+    <item name="r0x00000000">Margmiðlunarefni verkefnis</item>
+    <item name="r0x00000000">Virkja VPN</item>
+    <item name="r0x00000000">Skrifa veggfóður</item>
+    <item name="r0x00000000">Aðstoða við uppbyggingu</item>
+    <item name="r0x00000000">Aðstoða við skjámynd</item>
+    <item name="r0x00000000">Lesa stöðu síma</item>
+    <item name="r0x00000000">Bæta við talhólfi</item>
+    <item name="r0x00000000">Nota SIP</item>
+    <item name="r0x00000000">Vinna úr hringdu símtali</item>
+    <item name="r0x00000000">Fingrafar</item>
+    <item name="r0x00000000">Líkamsskynjarar</item>
+    <item name="r0x00000000">Lesa skilaboð frá endurvarpa</item>
+    <item name="r0x00000000">Gervistaðsetning</item>
+    <item name="r0x00000000">Lesa geymslu</item>
+    <item name="r0x00000000">Skrifa í geymslu</item>
+    <item name="r0x00000000">Kveikja á skjánum</item>
+    <item name="r0x00000000">Fá reikninga</item>
+    <item name="r0x00000000">Keyra í bakgrunni</item>
+    <item name="r0x00000000">Hljóðstyrkur aðgengis</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">gróflega áætluð staðsetning</item>
+    <item name="r0x00000000">nákvæm staðsetning</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">titringur</item>
+    <item name="r0x00000000">lesa tengiliði</item>
+    <item name="r0x00000000">breyta tengiliðum</item>
+    <item name="r0x00000000">lesa símtalaskrá</item>
+    <item name="r0x00000000">breyta símtalaskrá</item>
+    <item name="r0x00000000">lesa dagatal</item>
+    <item name="r0x00000000">breyta dagatali</item>
+    <item name="r0x00000000">wi-fi leit</item>
+    <item name="r0x00000000">tilkynning</item>
+    <item name="r0x00000000">leit að símasambandi</item>
+    <item name="r0x00000000">hringja í síma</item>
+    <item name="r0x00000000">lesa SMS</item>
+    <item name="r0x00000000">skrifa SMS</item>
+    <item name="r0x00000000">taka á móti SMS</item>
+    <item name="r0x00000000">fá neyðartextaskilaboð</item>
+    <item name="r0x00000000">taka á móti MMS</item>
+    <item name="r0x00000000">fá WAP-sendingar</item>
+    <item name="r0x00000000">senda SMS</item>
+    <item name="r0x00000000">lesa ICC SMS</item>
+    <item name="r0x00000000">skrifa ICC SMS</item>
+    <item name="r0x00000000">breyta stillingum</item>
+    <item name="r0x00000000">teikna yfir</item>
+    <item name="r0x00000000">aðgangstilkynningar</item>
+    <item name="r0x00000000">myndavél</item>
+    <item name="r0x00000000">taka upp hljóð</item>
+    <item name="r0x00000000">spila hljóð</item>
+    <item name="r0x00000000">lesa klippiborð</item>
+    <item name="r0x00000000">breyta klippiborði</item>
+    <item name="r0x00000000">margmiðlunarhnappar</item>
+    <item name="r0x00000000">fókus hljóðs</item>
+    <item name="r0x00000000">meginhljóðstyrkur</item>
+    <item name="r0x00000000">hljóðstyrkur raddar</item>
+    <item name="r0x00000000">hljóðstyrkur hringingar</item>
+    <item name="r0x00000000">hljóðstyrkur margmiðlunarefnis</item>
+    <item name="r0x00000000">hljóðstyrkur vekjara</item>
+    <item name="r0x00000000">hljóðstyrkur tilkynninga</item>
+    <item name="r0x00000000">hljóðstyrkur bluetooth</item>
+    <item name="r0x00000000">ekki fara í biðstöðu</item>
+    <item name="r0x00000000">fylgjast með staðsetningu</item>
+    <item name="r0x00000000">fylgjast með staðsetningum með miklum styrk</item>
+    <item name="r0x00000000">fá talnagögn um notkun</item>
+    <item name="r0x00000000">kveikja/slökkva á hljóðnema</item>
+    <item name="r0x00000000">sýna tilkynningu</item>
+    <item name="r0x00000000">margmiðlunarefni verkefnis</item>
+    <item name="r0x00000000">virkja VPN</item>
+    <item name="r0x00000000">skrifa veggfóður</item>
+    <item name="r0x00000000">aðstoða við uppbyggingu</item>
+    <item name="r0x00000000">aðstoða við skjámynd</item>
+    <item name="r0x00000000">lesa stöðu síma</item>
+    <item name="r0x00000000">bæta við talhólfi</item>
+    <item name="r0x00000000">nota SIP</item>
+    <item name="r0x00000000">vinna úr hringdu símtali</item>
+    <item name="r0x00000000">fingrafar</item>
+    <item name="r0x00000000">líkamsskynjarar</item>
+    <item name="r0x00000000">lesa skilaboð frá endurvarpa</item>
+    <item name="r0x00000000">gervistaðsetning</item>
+    <item name="r0x00000000">lesa geymslu</item>
+    <item name="r0x00000000">skrifa í geymslu</item>
+    <item name="r0x00000000">kveikja á skjánum</item>
+    <item name="r0x00000000">fá reikninga</item>
+    <item name="r0x00000000">keyra í bakgrunni</item>
+    <item name="r0x00000000">hljóðstyrkur aðgengis</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Venjulegt hámark</item>
+    <item name="r0x00000000">Engar bakgrunnsvinnslur</item>
+    <item name="r0x00000000">Að hámarki 1 vinnsla</item>
+    <item name="r0x00000000">Að hámarki 2 vinnslur</item>
+    <item name="r0x00000000">Að hámarki 3 vinnslur</item>
+    <item name="r0x00000000">Að hámarki 4 vinnslur</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">Eldri en 30 daga</item>
+    <item name="r0x00000000">Eldri en 60 daga</item>
+    <item name="r0x00000000">Eldri en 90 daga</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Ótilgreint</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">16 bitar/úrtak</item>
+    <item name="r0x00000000">24 bitar/úrtak</item>
+    <item name="r0x00000000">32 bitar/úrtak</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">16 bitar/úrtak</item>
+    <item name="r0x00000000">24 bitar/úrtak</item>
+    <item name="r0x00000000">32 bitar/úrtak</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">Einóma</item>
+    <item name="r0x00000000">Víðóma</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">Einóma</item>
+    <item name="r0x00000000">Víðóma</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Fínstillt fyrir hljóðgæði</item>
+    <item name="r0x00000000">Jafnvægi á milli gæða hljóðs og tengingar</item>
+    <item name="r0x00000000">Fínstillt fyrir gæði tengingar</item>
+    <item name="r0x00000000">Bestu mögulegu gæði (breytilegur bitahraði)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Fínstillt fyrir hljóðgæði (990kbps/909kbps)</item>
+    <item name="r0x00000000">Jafnvægi á milli gæða hljóðs og tengingar (660 kbps / 606 kbps)</item>
+    <item name="r0x00000000">Fínstillt fyrir gæði tengingar (330kbps/303kbps)</item>
+    <item name="r0x00000000">Bestu mögulegu gæði (breytilegur bitahraði)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ hljóð</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD hljóð</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Gera valfrjálsa kóðara virka</item>
+    <item name="r0x00000000">Gera valfrjálsa kóðara óvirka</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Nota val kerfisins (sjálfgefið)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ hljóð</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD hljóð</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Gera valfrjálsa kóðara virka</item>
+    <item name="r0x00000000">Gera valfrjálsa kóðara óvirka</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, virkt</item>
+    <item name="r0x00000000">, virkt (hljóð- og myndefni)</item>
+    <item name="r0x00000000">, virkt (sími)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (sjálfgefið)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Nota sjálfgefna stillingu kerfis: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 mínútur</item>
+    <item name="r0x00000000">5 mínútur</item>
+    <item name="r0x00000000">1 klukkustund</item>
+    <item name="r0x00000000">Renna aldrei út á tíma</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Sjálfgefið</item>
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">Útlína</item>
+    <item name="r0x00000000">Skuggi</item>
+    <item name="r0x00000000">Lyft</item>
+    <item name="r0x00000000">Lækkað</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Mjög lítið</item>
+    <item name="r0x00000000">Lítið</item>
+    <item name="r0x00000000">Venjulegt</item>
+    <item name="r0x00000000">Stórt</item>
+    <item name="r0x00000000">Mjög stórt</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Nota sjálfgildi forrits</item>
+    <item name="r0x00000000">Hvítt á svörtu</item>
+    <item name="r0x00000000">Svart á hvítu</item>
+    <item name="r0x00000000">Gult á svörtu</item>
+    <item name="r0x00000000">Gult á bláu</item>
+    <item name="r0x00000000">Sérsniðið</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Sjálfgefið</item>
+    <item name="r0x00000000">Sans-serif</item>
+    <item name="r0x00000000">Þjappað sans-serif</item>
+    <item name="r0x00000000">Sans-serif jafnbreitt</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif jafnbreitt</item>
+    <item name="r0x00000000">Óformlegt</item>
+    <item name="r0x00000000">Tengt</item>
+    <item name="r0x00000000">Litlir hástafir</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Áhrifaríkir litir</item>
+    <item name="r0x00000000">Náttúrulegir litir eins og augað nemur þá</item>
+    <item name="r0x00000000">Litir sérhannaðir fyrir stafrænt efni</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Líflegir (sjálfgefið)</item>
+    <item name="r0x00000000">Náttúrulegir</item>
+    <item name="r0x00000000">Hefðbundnir</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Blágrænn</item>
+    <item name="r0x00000000">Blár</item>
+    <item name="r0x00000000">Dimmfjólublár</item>
+    <item name="r0x00000000">Fjólublár</item>
+    <item name="r0x00000000">Bleikur</item>
+    <item name="r0x00000000">Rauður</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Sjálfvirkt (fer eftir tíma dags)</item>
+    <item name="r0x00000000">Alltaf kveikt</item>
+    <item name="r0x00000000">Alltaf slökkt</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Síðustu 30 dagar</item>
+    <item name="r0x00000000">Velja notkunartímabil...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">Sýna yfirteiknuð svæði</item>
+    <item name="r0x00000000">Sýna svæði fyrir litblinda</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Aldrei</item>
+    <item name="r0x00000000">15 sekúndur</item>
+    <item name="r0x00000000">30 sekúndur</item>
+    <item name="r0x00000000">1 mínúta</item>
+    <item name="r0x00000000">2 mínútur</item>
+    <item name="r0x00000000">5 mínútur</item>
+    <item name="r0x00000000">10 mínútur</item>
+    <item name="r0x00000000">30 mínútur</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (grafík)</item>
+    <item name="r0x00000000">Kallastafli á glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Lítið</item>
+    <item name="r0x00000000">Sjálfgefið</item>
+    <item name="r0x00000000">Stórt</item>
+    <item name="r0x00000000">Stærst</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Nota aldrei HDCP-eftirlit</item>
+    <item name="r0x00000000">Nota HDCP-athugun aðeins fyrir höfundarréttarvarið efni</item>
+    <item name="r0x00000000">Nota alltaf HDCP-eftirlit</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Athuga aldrei</item>
+    <item name="r0x00000000">Athuga aðeins höfundarréttarvarið efni</item>
+    <item name="r0x00000000">Athuga alltaf</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Strax</item>
+    <item name="r0x00000000">5 sekúndur</item>
+    <item name="r0x00000000">15 sekúndur</item>
+    <item name="r0x00000000">30 sekúndur</item>
+    <item name="r0x00000000">1 mínúta</item>
+    <item name="r0x00000000">2 mínútur</item>
+    <item name="r0x00000000">5 mínútur</item>
+    <item name="r0x00000000">10 mínútur</item>
+    <item name="r0x00000000">30 mínútur</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Stutt</item>
+    <item name="r0x00000000">Meðallangt</item>
+    <item name="r0x00000000">Langt</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (öruggt)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (öruggt)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (öruggt)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (öruggt)</item>
+    <item name="r0x00000000">4K (stækkað)</item>
+    <item name="r0x00000000">4K (stækkað, öruggt)</item>
+    <item name="r0x00000000">720p, 1080p (tvískiptur skjár)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Venjulegt</item>
+    <item name="r0x00000000">Í meðallagi</item>
+    <item name="r0x00000000">Lítið</item>
+    <item name="r0x00000000">Alvarlegt</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Viðvarandi</item>
+    <item name="r0x00000000">Mesta virkni</item>
+    <item name="r0x00000000">Mikilvægt (forgrunnur)</item>
+    <item name="r0x00000000">Mikilvægt (bakgrunnur)</item>
+    <item name="r0x00000000">Til vara</item>
+    <item name="r0x00000000">Þung vinnsla</item>
+    <item name="r0x00000000">Þjónusta (í gangi)</item>
+    <item name="r0x00000000">Þjónusta (endurræsist)</item>
+    <item name="r0x00000000">Móttakari</item>
+    <item name="r0x00000000">Heim</item>
+    <item name="r0x00000000">Síðasta virkni</item>
+    <item name="r0x00000000">Í skyndiminni (virkni)</item>
+    <item name="r0x00000000">Í skyndiminni (virknibiðlari)</item>
+    <item name="r0x00000000">Í skyndiminni (autt)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Eðlilegt</item>
+    <item name="r0x00000000">Í meðallagi</item>
+    <item name="r0x00000000">Lítið</item>
+    <item name="r0x00000000">Á þrotum</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 sekúndur</item>
+    <item name="r0x00000000">30 sekúndur</item>
+    <item name="r0x00000000">1 mínúta</item>
+    <item name="r0x00000000">2 mínútur</item>
+    <item name="r0x00000000">5 mínútur</item>
+    <item name="r0x00000000">10 mínútur</item>
+    <item name="r0x00000000">30 mínútur</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Spyrja</item>
+    <item name="r0x00000000">Leyfa aldrei</item>
+    <item name="r0x00000000">Leyfa alltaf</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">64 k</item>
+    <item name="r0x00000000">256 k</item>
+    <item name="r0x00000000">1 M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">64 k/biðminni</item>
+    <item name="r0x00000000">256 k/biðminni</item>
+    <item name="r0x00000000">1 M/biðminni</item>
+    <item name="r0x00000000">4 M/biðminni</item>
+    <item name="r0x00000000">16 M/biðminni</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">64 k</item>
+    <item name="r0x00000000">256 k</item>
+    <item name="r0x00000000">1 M</item>
+    <item name="r0x00000000">4 M</item>
+    <item name="r0x00000000">16 M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">Allt biðminni</item>
+    <item name="r0x00000000">Allt nema útvarpsbiðminni</item>
+    <item name="r0x00000000">einungis kjarnaannálabiðminni</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">Allt</item>
+    <item name="r0x00000000">Allt n. útvarp</item>
+    <item name="r0x00000000">einungis kjarni</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">Teikna klippt svæði sem ekki er rétthyrnt með bláu</item>
+    <item name="r0x00000000">Auðkenna prófaðar teikniskipanir með grænu</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Ameríka</item>
+    <item name="r0x00000000">Evrópa</item>
+    <item name="r0x00000000">Afríka</item>
+    <item name="r0x00000000">Asía</item>
+    <item name="r0x00000000">Ástralía</item>
+    <item name="r0x00000000">Kyrrahaf</item>
+    <item name="r0x00000000">Allt</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Slökkt</item>
+    <item name="r0x00000000">Á skjánum sem stikur</item>
+    <item name="r0x00000000">Í adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Slökkt á hreyfiáhrifum</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1,5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 2x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Mjög hægt</item>
+    <item name="r0x00000000">Hægt</item>
+    <item name="r0x00000000">Venjulegt</item>
+    <item name="r0x00000000">Hratt</item>
+    <item name="r0x00000000">Hraðar</item>
+    <item name="r0x00000000">Mjög hratt</item>
+    <item name="r0x00000000">Leifturhratt</item>
+    <item name="r0x00000000">Næsthraðast</item>
+    <item name="r0x00000000">Hraðast</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Notkunartími</item>
+    <item name="r0x00000000">Síðast notað</item>
+    <item name="r0x00000000">Heiti forrits</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Í hleðslu</item>
+    <item name="r0x00000000">MTP (Media Transfer Protocol)</item>
+    <item name="r0x00000000">PTP (Picture Transfer Protocol)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">Audio Source</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Aftengt</item>
+    <item name="r0x00000000">Frumstillir…</item>
+    <item name="r0x00000000">Tengist…</item>
+    <item name="r0x00000000">Tengt</item>
+    <item name="r0x00000000">Tímamörk</item>
+    <item name="r0x00000000">Mistókst</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN með lyklum sem hefur verið deilt</item>
+    <item name="r0x00000000">L2TP/IPSec VPN með vottorðum</item>
+    <item name="r0x00000000">IPSec VPN með með lyklum sem hefur verið deilt og Xauth-staðfestingu</item>
+    <item name="r0x00000000">IPSec VPN með vottorðum og Xauth-staðfestingu</item>
+    <item name="r0x00000000">IPSec VPN með vottorðum og blandaðri staðfestingu</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi í forgangi</item>
+    <item name="r0x00000000">Farsímakerfi í forgangi</item>
+    <item name="r0x00000000">Wi-Fi eingöngu</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Farsímakerfi</item>
+    <item name="r0x00000000">Wi-Fi eingöngu</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Farsímakerfi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi í forgangi</item>
+    <item name="r0x00000000">Farsímakerfi í forgangi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Nei</item>
+    <item name="r0x00000000">Já</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Föst</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Greina sjálfkrafa</item>
+    <item name="r0x00000000">Meðhöndla sem mælt</item>
+    <item name="r0x00000000">Meðhöndla sem ótakmarkað</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Tengt</item>
+    <item name="r0x00000000">Boðið</item>
+    <item name="r0x00000000">Mistókst</item>
+    <item name="r0x00000000">Tiltækt</item>
+    <item name="r0x00000000">Ekkert samband</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Hnappur</item>
+    <item name="r0x00000000">PIN-númer úr tengdu tæki</item>
+    <item name="r0x00000000">PIN frá þessu tæki</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Ekkert</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Engin</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Enginn</item>
+    <item name="r0x00000000">Handvirkt</item>
+    <item name="r0x00000000">Sjálfstilling proxy-þjóns</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Lélegt</item>
+    <item name="r0x00000000">Lélegt</item>
+    <item name="r0x00000000">Sæmilegt</item>
+    <item name="r0x00000000">Gott</item>
+    <item name="r0x00000000">Frábært</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Leitar…</item>
+    <item name="r0x00000000">Tengist…</item>
+    <item name="r0x00000000">Auðkennir…</item>
+    <item name="r0x00000000">Sækir IP-tölu…</item>
+    <item name="r0x00000000">Tengt</item>
+    <item name="r0x00000000">Lokað</item>
+    <item name="r0x00000000">Aftengist…</item>
+    <item name="r0x00000000">Aftengt</item>
+    <item name="r0x00000000">Mistókst</item>
+    <item name="r0x00000000">Læst</item>
+    <item name="r0x00000000">Forðast lélega tengingu tímabundið</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Leitar…</item>
+    <item name="r0x00000000">Tengist %1$s…</item>
+    <item name="r0x00000000">Auðkennir á %1$s…</item>
+    <item name="r0x00000000">Sækir IP-tölu frá %1$s…</item>
+    <item name="r0x00000000">Tengt við %1$s</item>
+    <item name="r0x00000000">Lokað</item>
+    <item name="r0x00000000">Aftengist %1$s…</item>
+    <item name="r0x00000000">Aftengt</item>
+    <item name="r0x00000000">Mistókst</item>
+    <item name="r0x00000000">Læst</item>
+    <item name="r0x00000000">Forðast lélega tengingu tímabundið</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Slökkt á hreyfiáhrifum</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 1,5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 2x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 5x</item>
+    <item name="r0x00000000">Lengd hreyfiáhrifa 10x</item>
+  </string-array>
+</resources>

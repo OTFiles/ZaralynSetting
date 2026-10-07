@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_gravity="center"
+              android:orientation="horizontal"
+              android:id="@id/battery_entity_header"
+              android:paddingTop="24.0dp"
+              android:paddingBottom="24.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              style="@style/EntityHeader" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginStart="56.0dp">
+    <TextView android:textAppearance="@android:style/TextAppearance.Material.Display1"
+              android:id="@id/battery_percent"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12.0dp"
+              android:fontFamily="@android:string/config_headlineFontFamilyMedium" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Material.Small"
+              android:id="@id/summary1"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8.0dp"
+              android:minLines="2" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Material.Small"
+              android:id="@id/summary2"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" />
+  </LinearLayout>
+  <com.android.settings.fuelgauge.BatteryMeterView android:id="@id/battery_header_icon"
+                        android:layout_width="@dimen/battery_meter_width"
+                        android:layout_height="@dimen/battery_meter_height"
+                        android:layout_marginEnd="16.0dp" />
+</LinearLayout>

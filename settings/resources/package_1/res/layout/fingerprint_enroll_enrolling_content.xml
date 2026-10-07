@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.widget.RingProgressBar android:id="@id/fingerprint_progress_bar"
+                      android:background="@drawable/fp_illustration"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:progress="0"
+                      android:minHeight="@dimen/fingerprint_progress_bar_min_size" xmlns:android="http://schemas.android.com/apk/res/android" />

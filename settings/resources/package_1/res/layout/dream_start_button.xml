@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="bottom"
+              android:orientation="horizontal"
+              android:paddingTop="4.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:paddingStart="72.0dp"
+              android:paddingEnd="72.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:layout_gravity="center"
+          android:id="@id/dream_start_now_button"
+          android:layout_width="0.0dp"
+          android:layout_height="wrap_content"
+          android:text="@string/screensaver_settings_dream_start"
+          android:layout_weight="1.0"
+          android:paddingEnd="8.0dp"
+          style="@style/DreamStartButton" />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:paddingTop="35.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.readboy.BaseScrollView android:id="@id/scrollview_ram_fusion_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/rl_ram_fusion_container"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clipToPadding="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingStart="@dimen/settings_side_big_margin"
+                    android:paddingEnd="@dimen/settings_side_big_margin">
+      <View android:id="@id/ram_fusion_line_1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentTop="true" />
+      <TextView android:textAppearance="?android:attr/textAppearanceListItem"
+                android:ellipsize="marquee"
+                android:id="@id/ram_fusion_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dp"
+                android:singleLine="true"
+                android:layout_below="@id/ram_fusion_line_1"
+                android:title="@string/readboy_show_ram_fusion_switch_title" />
+      <TextView android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                android:textColor="?android:attr/textColorSecondary"
+                android:id="@id/ram_fusion_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="100"
+                android:layout_below="@id/ram_fusion_title"
+                android:title="@string/readboy_show_ram_fusion_switch_summary"
+                android:layout_alignStart="@id/ram_fusion_title" />
+      <Switch android:id="@id/ram_fusion_switch"
+              android:visibility="visible"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="80.0dp"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true" />
+      <View android:id="@id/ram_fusion_line_2"
+            android:background="@color/divider_line_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginTop="16.0dp"
+            android:layout_below="@id/ram_fusion_summary"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+  </com.android.settingslib.readboy.BaseScrollView>
+</RelativeLayout>

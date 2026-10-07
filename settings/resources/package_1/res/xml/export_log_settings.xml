@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <Preference android:title="@string/readboy_export_log_action_1"
+              android:key="export_log_action_1" />
+  <Preference android:title="@string/readboy_export_log_action_2"
+              android:key="export_log_action_2" />
+  <Preference android:title="@string/readboy_export_log_action_3"
+              android:key="export_log_action_3" />
+  <Preference android:title="@string/readboy_export_log_action_4"
+              android:key="export_log_action_4" />
+</PreferenceScreen>

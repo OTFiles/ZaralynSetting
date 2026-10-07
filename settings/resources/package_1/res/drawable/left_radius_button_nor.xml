@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <corners android:topLeftRadius="@dimen/button_radius_2"
+           android:bottomLeftRadius="@dimen/button_radius_2" />
+  <solid android:color="@color/readboy_color_white_1" />
+</shape>

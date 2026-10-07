@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Animácia je vypnutá</item>
+    <item name="r0x00000000">Mierka animácie 0,5x</item>
+    <item name="r0x00000000">Mierka animácie 1x</item>
+    <item name="r0x00000000">Mierka animácie 1,5x</item>
+    <item name="r0x00000000">Mierka animácie 2x</item>
+    <item name="r0x00000000">Mierka animácie 5x</item>
+    <item name="r0x00000000">Mierka animácie 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP alebo CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4 alebo IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Interné úložisko zariadenia</item>
+    <item name="r0x00000000">Odnímateľná SD karta</item>
+    <item name="r0x00000000">Automaticky vyberie systém</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Osobné</item>
+    <item name="r0x00000000">SMS a MMS</item>
+    <item name="r0x00000000">Médiá</item>
+    <item name="r0x00000000">Zariadenie</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Vibrovanie</item>
+    <item name="r0x00000000">Čítanie kontaktov</item>
+    <item name="r0x00000000">Úprava kontaktov</item>
+    <item name="r0x00000000">Čítanie denníka hovorov</item>
+    <item name="r0x00000000">Úprava denníka hovorov</item>
+    <item name="r0x00000000">Čítanie kalendára</item>
+    <item name="r0x00000000">Úprava kalendára</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Upozornenie na príspevok</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Volanie na telefón</item>
+    <item name="r0x00000000">Čítanie SMS/MMS</item>
+    <item name="r0x00000000">Písanie SMS/MMS</item>
+    <item name="r0x00000000">Príjem SMS/MMS</item>
+    <item name="r0x00000000">Príjem SMS/MMS</item>
+    <item name="r0x00000000">Príjem SMS/MMS</item>
+    <item name="r0x00000000">Príjem SMS/MMS</item>
+    <item name="r0x00000000">Odosielanie SMS/MMS</item>
+    <item name="r0x00000000">Čítanie SMS/MMS</item>
+    <item name="r0x00000000">Písanie SMS/MMS</item>
+    <item name="r0x00000000">Úprava nastavení</item>
+    <item name="r0x00000000">Vykreslenie navrch</item>
+    <item name="r0x00000000">Prístup k upozorneniam</item>
+    <item name="r0x00000000">Fotoaparát</item>
+    <item name="r0x00000000">Zaznamenať zvuk</item>
+    <item name="r0x00000000">Prehrať zvuk</item>
+    <item name="r0x00000000">Načítať schránku</item>
+    <item name="r0x00000000">Upraviť schránku</item>
+    <item name="r0x00000000">Tlačidlá médií</item>
+    <item name="r0x00000000">Zameranie zvuku</item>
+    <item name="r0x00000000">Hlavná hlasitosť</item>
+    <item name="r0x00000000">Hlasitosť hlasu</item>
+    <item name="r0x00000000">Hlasitosť zvonenia</item>
+    <item name="r0x00000000">Hlasitosť médií</item>
+    <item name="r0x00000000">Hlasitosť budíkov</item>
+    <item name="r0x00000000">Hlasitosť upozornení</item>
+    <item name="r0x00000000">Hlasitosť zariadenia Bluetooth</item>
+    <item name="r0x00000000">Zakázať režim spánku</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Poloha</item>
+    <item name="r0x00000000">Získanie štatistiky využívania</item>
+    <item name="r0x00000000">Stlmenie alebo zrušenie stlmenia mikrofónu</item>
+    <item name="r0x00000000">Zobrazenie oznamu</item>
+    <item name="r0x00000000">Projekcia médií</item>
+    <item name="r0x00000000">Aktivácia VPN</item>
+    <item name="r0x00000000">Zápis tapety</item>
+    <item name="r0x00000000">Asistujúca štruktúra</item>
+    <item name="r0x00000000">Asistujúca snímka obrazovky</item>
+    <item name="r0x00000000">Čítanie stavu telefónu</item>
+    <item name="r0x00000000">Pridanie hlasovej schránky</item>
+    <item name="r0x00000000">Používanie volania SIP</item>
+    <item name="r0x00000000">Spracovanie odchádzajúcich hovorov</item>
+    <item name="r0x00000000">Odtlačok prsta</item>
+    <item name="r0x00000000">Telesné senzory</item>
+    <item name="r0x00000000">Čítať správy informačných služieb</item>
+    <item name="r0x00000000">Napodobnenie miesta</item>
+    <item name="r0x00000000">Čítanie úložiska</item>
+    <item name="r0x00000000">Zápis do úložiska</item>
+    <item name="r0x00000000">Zapnutie obrazovky</item>
+    <item name="r0x00000000">Získanie účtov</item>
+    <item name="r0x00000000">Spustenie na pozadí</item>
+    <item name="r0x00000000">Objem aplikácií dostupnosti</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">približná poloha</item>
+    <item name="r0x00000000">presná poloha</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">vibrovanie</item>
+    <item name="r0x00000000">čítanie kontaktov</item>
+    <item name="r0x00000000">úprava kontaktov</item>
+    <item name="r0x00000000">čítanie denníka hovorov</item>
+    <item name="r0x00000000">úprava denníka hovorov</item>
+    <item name="r0x00000000">čítanie kalendára</item>
+    <item name="r0x00000000">úprava kalendára</item>
+    <item name="r0x00000000">prehľadanie sietí Wi‑Fi</item>
+    <item name="r0x00000000">upozornenie</item>
+    <item name="r0x00000000">prehľadanie mobilných sietí</item>
+    <item name="r0x00000000">volanie na telefón</item>
+    <item name="r0x00000000">čítanie správ SMS</item>
+    <item name="r0x00000000">písanie správ SMS</item>
+    <item name="r0x00000000">príjem správ SMS</item>
+    <item name="r0x00000000">príjem tiesňových SMS</item>
+    <item name="r0x00000000">príjem správ MMS</item>
+    <item name="r0x00000000">príjem správ WAP push</item>
+    <item name="r0x00000000">odosielanie správ SMS</item>
+    <item name="r0x00000000">čítanie správ ICC SMS</item>
+    <item name="r0x00000000">písanie správ ICC SMS</item>
+    <item name="r0x00000000">úprava nastavení</item>
+    <item name="r0x00000000">vykreslenie navrch</item>
+    <item name="r0x00000000">prístup k upozorneniam</item>
+    <item name="r0x00000000">fotoaparát:</item>
+    <item name="r0x00000000">záznam zvuku</item>
+    <item name="r0x00000000">prehrávanie zvuku</item>
+    <item name="r0x00000000">načítať schránku</item>
+    <item name="r0x00000000">upraviť schránku</item>
+    <item name="r0x00000000">mediálne tlačidlá</item>
+    <item name="r0x00000000">zvukové zameranie</item>
+    <item name="r0x00000000">hlavná hlasitosť</item>
+    <item name="r0x00000000">hlasitosť hlasu</item>
+    <item name="r0x00000000">hlasitosť zvonenia</item>
+    <item name="r0x00000000">hlasitosť médií</item>
+    <item name="r0x00000000">hlasitosť budíkov</item>
+    <item name="r0x00000000">hlasitosť upozornení</item>
+    <item name="r0x00000000">hlasitosť bluetooth</item>
+    <item name="r0x00000000">zakázať režim spánku</item>
+    <item name="r0x00000000">sledovať polohu</item>
+    <item name="r0x00000000">sledovanie polohy s vysokým výkonnom</item>
+    <item name="r0x00000000">získanie štatistiky používania</item>
+    <item name="r0x00000000">stlmenie alebo zrušenie stlmenia mikrofónu</item>
+    <item name="r0x00000000">zobrazenie oznamu</item>
+    <item name="r0x00000000">projekcia médií</item>
+    <item name="r0x00000000">aktivácia VPN</item>
+    <item name="r0x00000000">zápis tapety</item>
+    <item name="r0x00000000">asistujúca štruktúra</item>
+    <item name="r0x00000000">asistujúca snímka obrazovky</item>
+    <item name="r0x00000000">čítanie stavu telefónu</item>
+    <item name="r0x00000000">pridanie hlasovej schránky</item>
+    <item name="r0x00000000">používanie volania SIP</item>
+    <item name="r0x00000000">spracovanie odchádzajúcich hovorov</item>
+    <item name="r0x00000000">odtlačok prsta</item>
+    <item name="r0x00000000">telesné senzory</item>
+    <item name="r0x00000000">čítať správy informačných služieb</item>
+    <item name="r0x00000000">napodobnenie miesta</item>
+    <item name="r0x00000000">čítanie úložiska</item>
+    <item name="r0x00000000">zápis do úložiska</item>
+    <item name="r0x00000000">zapnutie obrazovky</item>
+    <item name="r0x00000000">získanie účtov</item>
+    <item name="r0x00000000">spustenie na pozadí</item>
+    <item name="r0x00000000">objem aplikácií dostupnosti</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Štandardný limit</item>
+    <item name="r0x00000000">Žiadne procesy na pozadí</item>
+    <item name="r0x00000000">Najviac 1 proces</item>
+    <item name="r0x00000000">Najviac 2 procesy</item>
+    <item name="r0x00000000">Najviac 3 procesy</item>
+    <item name="r0x00000000">Najviac 4 procesy</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">Staršie ako 30 dní</item>
+    <item name="r0x00000000">Staršie ako 60 dní</item>
+    <item name="r0x00000000">Staršie ako 90 dní</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">0 %</item>
+    <item name="r0x00000000">50 %</item>
+    <item name="r0x00000000">100 %</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Neurčené</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">16 bitov na vzorku</item>
+    <item name="r0x00000000">24 bitov na vzorku</item>
+    <item name="r0x00000000">32 bitov na vzorku</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">16 bitov na vzorku</item>
+    <item name="r0x00000000">24 bitov na vzorku</item>
+    <item name="r0x00000000">32 bitov na vzorku</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Optimalizovaná kvalita zvuku</item>
+    <item name="r0x00000000">Vyrovnaná kvalita zvuku a pripojenia</item>
+    <item name="r0x00000000">Optimalizovaná kvalita pripojenia</item>
+    <item name="r0x00000000">Najvyšši kvalita (adaptívna prenosová rýchlosť)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Optimalizovaná kvalita zvuku (990kbps/909kbps)</item>
+    <item name="r0x00000000">Vyrovnaná kvalita zvuku a pripojenia (660/606 kb/s)</item>
+    <item name="r0x00000000">Optimalizovaná kvalita pripojenia (330kbps/303kbps)</item>
+    <item name="r0x00000000">Najvyšši kvalita (adaptívna prenosová rýchlosť)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Zvuk: Qualcomm® aptX™</item>
+    <item name="r0x00000000">Zvuk: Qualcomm® aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Povoliť voliteľné kodeky</item>
+    <item name="r0x00000000">Zakázať voliteľné kodeky</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Použiť voľbu systému (predvolené)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Zvuk: Qualcomm® aptX™</item>
+    <item name="r0x00000000">Zvuk: Qualcomm® aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Povoliť voliteľné kodeky</item>
+    <item name="r0x00000000">Zakázať voliteľné kodeky</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, aktívne</item>
+    <item name="r0x00000000">, aktívne (médiá)</item>
+    <item name="r0x00000000">, aktívne (telefón)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (predvolené)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Použiť predvolenú hodnotu systému: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 min.</item>
+    <item name="r0x00000000">5 min.</item>
+    <item name="r0x00000000">1 h</item>
+    <item name="r0x00000000">Bez časového limitu</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Predvolené</item>
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">Obrys</item>
+    <item name="r0x00000000">Tieň</item>
+    <item name="r0x00000000">Reliéf</item>
+    <item name="r0x00000000">Rytina</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Veľmi malé</item>
+    <item name="r0x00000000">Malé</item>
+    <item name="r0x00000000">Normálne</item>
+    <item name="r0x00000000">Veľké</item>
+    <item name="r0x00000000">Veľmi veľké</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25 %</item>
+    <item name="r0x00000000">\50 %</item>
+    <item name="r0x00000000">\75 %</item>
+    <item name="r0x00000000">\100 %</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Predvolené nastavenie aplikácie</item>
+    <item name="r0x00000000">Biele na čiernom</item>
+    <item name="r0x00000000">Čierne na bielom</item>
+    <item name="r0x00000000">Žlté na čiernom</item>
+    <item name="r0x00000000">Žlté na modrom</item>
+    <item name="r0x00000000">Vlastné</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Predvolené</item>
+    <item name="r0x00000000">Bezpätkové</item>
+    <item name="r0x00000000">Bezpätkové zhustené</item>
+    <item name="r0x00000000">Bezpätkové neproporcionálne</item>
+    <item name="r0x00000000">Pätkové</item>
+    <item name="r0x00000000">Pätkové neproporcionálne</item>
+    <item name="r0x00000000">Štandardné</item>
+    <item name="r0x00000000">Kurzíva</item>
+    <item name="r0x00000000">Kapitálky</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Vylepšené farby</item>
+    <item name="r0x00000000">Prirodzené farby, ako ich vidí ľudské oko</item>
+    <item name="r0x00000000">Farby optimalizované pre digitálny obsah</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Sýty (predvolený)</item>
+    <item name="r0x00000000">Prirodzený</item>
+    <item name="r0x00000000">Štandardný</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Modrozelená</item>
+    <item name="r0x00000000">Modrá</item>
+    <item name="r0x00000000">Indigo</item>
+    <item name="r0x00000000">Purpurová</item>
+    <item name="r0x00000000">Ružová</item>
+    <item name="r0x00000000">Červená</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Automaticky (podľa času dňa)</item>
+    <item name="r0x00000000">Vždy zapnuté</item>
+    <item name="r0x00000000">Vždy vypnuté</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Posledných 30 dní</item>
+    <item name="r0x00000000">Nastaviť cyklus využitia</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">Zobraziť oblasti prekreslení</item>
+    <item name="r0x00000000">Zobraziť oblasti pre deuteranomáliu</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Nikdy</item>
+    <item name="r0x00000000">15 sekúnd</item>
+    <item name="r0x00000000">30 sekúnd</item>
+    <item name="r0x00000000">1 minúta</item>
+    <item name="r0x00000000">2 minúty</item>
+    <item name="r0x00000000">5 minút</item>
+    <item name="r0x00000000">10 minút</item>
+    <item name="r0x00000000">30 minút</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (grafika)</item>
+    <item name="r0x00000000">Zásobník volaní glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Malé</item>
+    <item name="r0x00000000">Predvolené</item>
+    <item name="r0x00000000">Veľké</item>
+    <item name="r0x00000000">Najväčšie</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Nikdy nepoužívať kontrolu HDCP</item>
+    <item name="r0x00000000">Použiť kontrolu HDCP len pre obsah DRM</item>
+    <item name="r0x00000000">Vždy používať kontrolu HDCP</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Nikdy nekontrolovať</item>
+    <item name="r0x00000000">Kontrolovať len obsah DRM</item>
+    <item name="r0x00000000">Vždy kontrolovať</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Okamžite</item>
+    <item name="r0x00000000">5 sekúnd</item>
+    <item name="r0x00000000">15 sekúnd</item>
+    <item name="r0x00000000">30 sekúnd</item>
+    <item name="r0x00000000">1 minúta</item>
+    <item name="r0x00000000">2 minúty</item>
+    <item name="r0x00000000">5 minút</item>
+    <item name="r0x00000000">10 minút</item>
+    <item name="r0x00000000">30 minút</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Krátke</item>
+    <item name="r0x00000000">Stredné</item>
+    <item name="r0x00000000">Dlhé</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (zabezpečené)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (zabezpečené)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (zabezpečené)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (zabezpečené)</item>
+    <item name="r0x00000000">4K (zväčšené)</item>
+    <item name="r0x00000000">4K (zväčšené, zabezpečené)</item>
+    <item name="r0x00000000">720p, 1080p (duálna obrazovka)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Normálny</item>
+    <item name="r0x00000000">Stredný</item>
+    <item name="r0x00000000">Nízky</item>
+    <item name="r0x00000000">Kritický</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Pretrvávajúci</item>
+    <item name="r0x00000000">Najčastejšia aktivita</item>
+    <item name="r0x00000000">Dôležitý (v popredí)</item>
+    <item name="r0x00000000">Dôležitý (v pozadí)</item>
+    <item name="r0x00000000">Zálohovanie</item>
+    <item name="r0x00000000">Vysoké vyťaženie</item>
+    <item name="r0x00000000">Služba (spustená)</item>
+    <item name="r0x00000000">Služba (reštartuje sa)</item>
+    <item name="r0x00000000">Prijímač</item>
+    <item name="r0x00000000">Plocha</item>
+    <item name="r0x00000000">Posledná aktivita</item>
+    <item name="r0x00000000">Vo vyrovnávacej pamäti (aktivita)</item>
+    <item name="r0x00000000">Vo vyrovnávacej pamäti (klient aktivity)</item>
+    <item name="r0x00000000">Vo vyrovnávacej pamäti (prázdne)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Normálny</item>
+    <item name="r0x00000000">Stredný</item>
+    <item name="r0x00000000">Nízky</item>
+    <item name="r0x00000000">Kritický</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 sekúnd</item>
+    <item name="r0x00000000">30 sekúnd</item>
+    <item name="r0x00000000">1 minúta</item>
+    <item name="r0x00000000">2 minúty</item>
+    <item name="r0x00000000">5 minút</item>
+    <item name="r0x00000000">10 minút</item>
+    <item name="r0x00000000">30 minút</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Opýtať sa</item>
+    <item name="r0x00000000">Nikdy nepovoliť</item>
+    <item name="r0x00000000">Vždy povoliť</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">64 kB na vyrov. pamäť denníka</item>
+    <item name="r0x00000000">256 kB na vyrov. pamäť denníka</item>
+    <item name="r0x00000000">1 MB na vyrov. pam. denníka</item>
+    <item name="r0x00000000">4 MB na vyrov. pamäť denníka</item>
+    <item name="r0x00000000">16 MB na vyrov. pamäť denníka</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+    <item name="r0x00000000">4 MB</item>
+    <item name="r0x00000000">16 MB</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">Všetky vyrovnávacie pamäte denníka</item>
+    <item name="r0x00000000">Všetky vyrovnávacie pamäte denníka (okrem rádia)</item>
+    <item name="r0x00000000">iba vyrovnávacia pamäť denníka jadra</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">Všetko</item>
+    <item name="r0x00000000">Okrem rádia</item>
+    <item name="r0x00000000">iba jadro</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">Neobdĺžnikový výstrižok modrou</item>
+    <item name="r0x00000000">Testované príkazy vykresľovania zelenou</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Amerika</item>
+    <item name="r0x00000000">Európa</item>
+    <item name="r0x00000000">Afrika</item>
+    <item name="r0x00000000">Ázia</item>
+    <item name="r0x00000000">Austrália</item>
+    <item name="r0x00000000">Tichomorie</item>
+    <item name="r0x00000000">Všetko</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Vypnuté</item>
+    <item name="r0x00000000">Na obrazovke v podobe stĺpcov</item>
+    <item name="r0x00000000">V príkaze adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Animácia je vypnutá</item>
+    <item name="r0x00000000">Mierka animácie 0,5x</item>
+    <item name="r0x00000000">Mierka animácie 1x</item>
+    <item name="r0x00000000">Mierka animácie 1,5x</item>
+    <item name="r0x00000000">Mierka animácie 2x</item>
+    <item name="r0x00000000">Mierka animácie 5x</item>
+    <item name="r0x00000000">Mierka animácie 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Veľmi pomaly</item>
+    <item name="r0x00000000">Pomaly</item>
+    <item name="r0x00000000">Normálne</item>
+    <item name="r0x00000000">Rýchlo</item>
+    <item name="r0x00000000">Rýchlejšie</item>
+    <item name="r0x00000000">Veľmi rýchlo</item>
+    <item name="r0x00000000">Svižne</item>
+    <item name="r0x00000000">Veľmi rýchlo</item>
+    <item name="r0x00000000">Najrýchlejšie</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Doba použitia</item>
+    <item name="r0x00000000">Naposledy použité</item>
+    <item name="r0x00000000">Názov aplikácie</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Nabíja sa</item>
+    <item name="r0x00000000">MTP (Media Transfer Protocol – protokol na prenos médií)</item>
+    <item name="r0x00000000">PTP (Picture Transfer Protocol – protokol na prenos obrázkov)</item>
+    <item name="r0x00000000">RNDIS (USB Ethernet)</item>
+    <item name="r0x00000000">Zdroj zvuku</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Odpojené</item>
+    <item name="r0x00000000">Prebieha inicializácia...</item>
+    <item name="r0x00000000">Prebieha pripájanie...</item>
+    <item name="r0x00000000">Pripojené</item>
+    <item name="r0x00000000">Časový limit vypršal</item>
+    <item name="r0x00000000">Neúspešné</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">VPN s protokolom PPTP</item>
+    <item name="r0x00000000">Sieť VPN založená na protokole L2TP/IPSec s predzdieľanými kľúčmi</item>
+    <item name="r0x00000000">L2TP/IPSec VPN s certifikátmi</item>
+    <item name="r0x00000000">IPSec VPN s predzdieľanými kľúčmi a overením Xauth</item>
+    <item name="r0x00000000">IPSec VPN s certifikátmi a overením Xauth</item>
+    <item name="r0x00000000">IPSec VPN s certifikátmi a hybridným overením</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Preferovať Wi‑Fi</item>
+    <item name="r0x00000000">Preferovať mobilné spojenie</item>
+    <item name="r0x00000000">Len Wi‑Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi‑Fi</item>
+    <item name="r0x00000000">Mobilné dáta</item>
+    <item name="r0x00000000">Len Wi‑Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi‑Fi</item>
+    <item name="r0x00000000">Mobilné dáta</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Preferovať Wi‑Fi</item>
+    <item name="r0x00000000">Preferovať mobilné spojenie</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Nie</item>
+    <item name="r0x00000000">Áno</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Statická</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Zistiť automaticky</item>
+    <item name="r0x00000000">Považovať za sieť s meraním dát</item>
+    <item name="r0x00000000">Považovať za sieť bez merania dát</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Pripojené</item>
+    <item name="r0x00000000">Pozvané</item>
+    <item name="r0x00000000">Neúspešné</item>
+    <item name="r0x00000000">K dispozícii</item>
+    <item name="r0x00000000">Mimo dosah</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Stlačenie tlačidla</item>
+    <item name="r0x00000000">PIN zo zdieľaného zariadenia</item>
+    <item name="r0x00000000">PIN zo zariadenia</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Žiadne</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Žiadny</item>
+    <item name="r0x00000000">Ručne</item>
+    <item name="r0x00000000">Autom. konfigurácia proxy</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Nízka</item>
+    <item name="r0x00000000">Slabé</item>
+    <item name="r0x00000000">Priemerné</item>
+    <item name="r0x00000000">Dobré</item>
+    <item name="r0x00000000">Vynikajúce</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Prebieha vyhľadávanie...</item>
+    <item name="r0x00000000">Prebieha pripájanie…</item>
+    <item name="r0x00000000">Prebieha overovanie…</item>
+    <item name="r0x00000000">Získava sa adresa IP…</item>
+    <item name="r0x00000000">Pripojené</item>
+    <item name="r0x00000000">Pozastavená</item>
+    <item name="r0x00000000">Prebieha odpájanie...</item>
+    <item name="r0x00000000">Odpojený</item>
+    <item name="r0x00000000">Neúspešné</item>
+    <item name="r0x00000000">Blokované</item>
+    <item name="r0x00000000">Dočasne bolo zabránené slabému pripojeniu</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Prebieha vyhľadávanie...</item>
+    <item name="r0x00000000">Prebieha pripájanie k sieti %1$s...</item>
+    <item name="r0x00000000">Prebieha overovanie v sieti %1$s...</item>
+    <item name="r0x00000000">Získava sa adresa IP zo siete %1$s...</item>
+    <item name="r0x00000000">Pripojené k sieti %1$s</item>
+    <item name="r0x00000000">Pozastavená</item>
+    <item name="r0x00000000">Prebieha odpájanie od siete %1$s...</item>
+    <item name="r0x00000000">Odpojený</item>
+    <item name="r0x00000000">Neúspešné</item>
+    <item name="r0x00000000">Blokované</item>
+    <item name="r0x00000000">Dočasne bolo zabránené slabému pripojeniu</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Animácia je vypnutá</item>
+    <item name="r0x00000000">Mierka animácie 0,5x</item>
+    <item name="r0x00000000">Mierka animácie 1x</item>
+    <item name="r0x00000000">Mierka animácie 1,5x</item>
+    <item name="r0x00000000">Mierka animácie 2x</item>
+    <item name="r0x00000000">Mierka animácie 5x</item>
+    <item name="r0x00000000">Mierka animácie 10x</item>
+  </string-array>
+</resources>

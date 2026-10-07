@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Animation avstängd</item>
+    <item name="r0x00000000">Animation i skala 0,5x</item>
+    <item name="r0x00000000">Animation i skala 1x</item>
+    <item name="r0x00000000">Animation i skala 1,5x</item>
+    <item name="r0x00000000">Animation i skala 2x</item>
+    <item name="r0x00000000">Animation i skala 5x</item>
+    <item name="r0x00000000">Animation i skala 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Inga</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP eller CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Lagring på intern enhet</item>
+    <item name="r0x00000000">Flyttbart SD-kort</item>
+    <item name="r0x00000000">Låt systemet bestämma</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Personligt</item>
+    <item name="r0x00000000">SMS/MMS</item>
+    <item name="r0x00000000">Media</item>
+    <item name="r0x00000000">Enhet</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Vibration</item>
+    <item name="r0x00000000">Läsa kontakter</item>
+    <item name="r0x00000000">Ändra kontakter</item>
+    <item name="r0x00000000">Läsa samtalslogg</item>
+    <item name="r0x00000000">Ändra samtalslogg</item>
+    <item name="r0x00000000">Läsa kalender</item>
+    <item name="r0x00000000">Ändra kalender</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Lägga upp meddelande</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Ringa samtal</item>
+    <item name="r0x00000000">Läs sms/mms</item>
+    <item name="r0x00000000">Skriv sms/mms</item>
+    <item name="r0x00000000">Ta emot SMS/MMS</item>
+    <item name="r0x00000000">Ta emot SMS/MMS</item>
+    <item name="r0x00000000">Ta emot SMS/MMS</item>
+    <item name="r0x00000000">Ta emot SMS/MMS</item>
+    <item name="r0x00000000">Skicka SMS/MMS</item>
+    <item name="r0x00000000">Läs sms/mms</item>
+    <item name="r0x00000000">Skriv sms/mms</item>
+    <item name="r0x00000000">Ändra inställningar</item>
+    <item name="r0x00000000">Rita högst upp</item>
+    <item name="r0x00000000">Få åtkomst till meddelanden</item>
+    <item name="r0x00000000">Kamera</item>
+    <item name="r0x00000000">Spela in ljud</item>
+    <item name="r0x00000000">Spela upp ljud</item>
+    <item name="r0x00000000">Läs Urklipp</item>
+    <item name="r0x00000000">Ändra Urklipp</item>
+    <item name="r0x00000000">Medieknappar</item>
+    <item name="r0x00000000">Ljudinställning</item>
+    <item name="r0x00000000">Huvudvolym</item>
+    <item name="r0x00000000">Röstvolym</item>
+    <item name="r0x00000000">Ringvolym</item>
+    <item name="r0x00000000">Medievolym</item>
+    <item name="r0x00000000">Alarmvolym</item>
+    <item name="r0x00000000">Meddelandevolym</item>
+    <item name="r0x00000000">Bluetooth-volym</item>
+    <item name="r0x00000000">Behåll aktiv</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Plats</item>
+    <item name="r0x00000000">Få användningsstatistik</item>
+    <item name="r0x00000000">Stäng av/slå på mikrofonen</item>
+    <item name="r0x00000000">Visa popup</item>
+    <item name="r0x00000000">Projicera media</item>
+    <item name="r0x00000000">Aktivera VPN</item>
+    <item name="r0x00000000">Skriva bakgrund</item>
+    <item name="r0x00000000">Assistentstruktur</item>
+    <item name="r0x00000000">Assistentskärmdump</item>
+    <item name="r0x00000000">Läsa telefonstatus</item>
+    <item name="r0x00000000">Lägga till röstbrevlåda</item>
+    <item name="r0x00000000">Använda SIP</item>
+    <item name="r0x00000000">Behandla utgående samtal</item>
+    <item name="r0x00000000">Fingeravtryck</item>
+    <item name="r0x00000000">Kroppssensorer</item>
+    <item name="r0x00000000">Läsa cellsändningar</item>
+    <item name="r0x00000000">Skenplatser</item>
+    <item name="r0x00000000">Läsa lagringsutrymme</item>
+    <item name="r0x00000000">Skriva lagringsutrymme</item>
+    <item name="r0x00000000">Aktivera skärmen</item>
+    <item name="r0x00000000">Hämta konton</item>
+    <item name="r0x00000000">Kör i bakgrunden</item>
+    <item name="r0x00000000">Volym på tillgänglighetsfunktionerna</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">ungefärlig plats</item>
+    <item name="r0x00000000">exakt plats</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">vibration</item>
+    <item name="r0x00000000">läsa kontakter</item>
+    <item name="r0x00000000">ändra kontakter</item>
+    <item name="r0x00000000">läsa samtalslogg</item>
+    <item name="r0x00000000">ändra samtalslogg</item>
+    <item name="r0x00000000">läsa kalender</item>
+    <item name="r0x00000000">ändra kalender</item>
+    <item name="r0x00000000">Wi-Fi-skanning</item>
+    <item name="r0x00000000">meddelande</item>
+    <item name="r0x00000000">mobilskanning</item>
+    <item name="r0x00000000">ringa samtal</item>
+    <item name="r0x00000000">läsa SMS</item>
+    <item name="r0x00000000">skriva SMS</item>
+    <item name="r0x00000000">ta emot SMS</item>
+    <item name="r0x00000000">ta emot nöd-SMS</item>
+    <item name="r0x00000000">ta emot MMS</item>
+    <item name="r0x00000000">ta emot WAP-push</item>
+    <item name="r0x00000000">skicka SMS</item>
+    <item name="r0x00000000">läsa ICC-SMS</item>
+    <item name="r0x00000000">skriva ICC-SMS</item>
+    <item name="r0x00000000">ändra inställningar</item>
+    <item name="r0x00000000">Rita högst upp</item>
+    <item name="r0x00000000">få åtkomst till meddelanden</item>
+    <item name="r0x00000000">kamera</item>
+    <item name="r0x00000000">spela in ljud</item>
+    <item name="r0x00000000">spela upp ljud</item>
+    <item name="r0x00000000">läs Urklipp</item>
+    <item name="r0x00000000">ändra Urklipp</item>
+    <item name="r0x00000000">medieknappar</item>
+    <item name="r0x00000000">ljudinställning</item>
+    <item name="r0x00000000">mastervolym</item>
+    <item name="r0x00000000">röstvolym</item>
+    <item name="r0x00000000">ringvolym</item>
+    <item name="r0x00000000">medievolym</item>
+    <item name="r0x00000000">alarmvolym</item>
+    <item name="r0x00000000">meddelandevolym</item>
+    <item name="r0x00000000">bluetooth-volym</item>
+    <item name="r0x00000000">behåll aktiv</item>
+    <item name="r0x00000000">övervaka plats</item>
+    <item name="r0x00000000">övervaka batterikrävande plats</item>
+    <item name="r0x00000000">få användningsstatistik</item>
+    <item name="r0x00000000">stäng av/slå på mikrofonen</item>
+    <item name="r0x00000000">visa popup</item>
+    <item name="r0x00000000">projicera media</item>
+    <item name="r0x00000000">aktivera VPN</item>
+    <item name="r0x00000000">skriva bakgrund</item>
+    <item name="r0x00000000">assistentstruktur</item>
+    <item name="r0x00000000">assistentskärmdump</item>
+    <item name="r0x00000000">läsa telefonstatus</item>
+    <item name="r0x00000000">lägga till röstbrevlåda</item>
+    <item name="r0x00000000">använda SIP</item>
+    <item name="r0x00000000">behandla utgående samtal</item>
+    <item name="r0x00000000">fingeravtryck</item>
+    <item name="r0x00000000">kroppssensorer</item>
+    <item name="r0x00000000">läsa cellsändningar</item>
+    <item name="r0x00000000">skenplatser</item>
+    <item name="r0x00000000">läsa lagringsutrymme</item>
+    <item name="r0x00000000">skriva lagringsutrymme</item>
+    <item name="r0x00000000">aktivera skärmen</item>
+    <item name="r0x00000000">hämta konton</item>
+    <item name="r0x00000000">köra i bakgrunden</item>
+    <item name="r0x00000000">volym på tillgänglighetsfunktionerna</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Standardgräns</item>
+    <item name="r0x00000000">Inga bakgrundsprocesser</item>
+    <item name="r0x00000000">Högst 1 process</item>
+    <item name="r0x00000000">Högst 2 processer</item>
+    <item name="r0x00000000">Högst 3 processer</item>
+    <item name="r0x00000000">Högst 4 processer</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">Äldre än 30 dagar</item>
+    <item name="r0x00000000">Äldre än 60 dagar</item>
+    <item name="r0x00000000">Äldre än 90 dagar</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">0 %</item>
+    <item name="r0x00000000">50 %</item>
+    <item name="r0x00000000">100 %</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Ej angiven</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">16 bitar/sampling</item>
+    <item name="r0x00000000">24 bitar/sampling</item>
+    <item name="r0x00000000">32 bitar/sampling</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">16 bitar/sampling</item>
+    <item name="r0x00000000">24 bitar/sampling</item>
+    <item name="r0x00000000">32 bitar/sampling</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">Mono</item>
+    <item name="r0x00000000">Stereo</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Optimerad för ljudkvalitet</item>
+    <item name="r0x00000000">Balanserad ljud- och anslutningskvalitet</item>
+    <item name="r0x00000000">Optimerad för anslutningskvalitet</item>
+    <item name="r0x00000000">Bästa möjliga kvalitet (anpassad bithastighet)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Optimerad för ljudkvalitet (990 kbit/s eller 909 kbit/s)</item>
+    <item name="r0x00000000">Balanserad ljud- och anslutningskvalitet (660 kbit/s/606 kbit/s)</item>
+    <item name="r0x00000000">Optimerad för anslutningskvalitet (330 kbit/s eller 303 kbit/s)</item>
+    <item name="r0x00000000">Bästa möjliga kvalitet (anpassad bithastighet)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™-ljud</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD-ljud</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Aktivera valfria kodekar</item>
+    <item name="r0x00000000">Inaktivera valfria kodekar</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Använd systemval (standardinställning)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™-ljud</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD-ljud</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Aktivera valfria kodekar</item>
+    <item name="r0x00000000">Inaktivera valfria kodekar</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, aktiv</item>
+    <item name="r0x00000000">, aktiv (media)</item>
+    <item name="r0x00000000">, aktiv (telefon)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (standard)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Använd systemstandard: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 minuter</item>
+    <item name="r0x00000000">5 minuter</item>
+    <item name="r0x00000000">1 timme</item>
+    <item name="r0x00000000">Ange aldrig tidsgräns</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Standard</item>
+    <item name="r0x00000000">Ingen</item>
+    <item name="r0x00000000">Disposition</item>
+    <item name="r0x00000000">Bakgrundsskugga</item>
+    <item name="r0x00000000">Upphöjd</item>
+    <item name="r0x00000000">Nedsänkt</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Mycket liten</item>
+    <item name="r0x00000000">Liten</item>
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Stor</item>
+    <item name="r0x00000000">Mycket stor</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25 %</item>
+    <item name="r0x00000000">\50 %</item>
+    <item name="r0x00000000">\75 %</item>
+    <item name="r0x00000000">\100 %</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Använd appstandarder</item>
+    <item name="r0x00000000">Vitt på svart</item>
+    <item name="r0x00000000">Svart på vitt</item>
+    <item name="r0x00000000">Gult på svart</item>
+    <item name="r0x00000000">Gult på blått</item>
+    <item name="r0x00000000">Anpassat</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Standard</item>
+    <item name="r0x00000000">Sans Serif</item>
+    <item name="r0x00000000">Sans Serif Condensed</item>
+    <item name="r0x00000000">Jämnbreda typsnitt – sanserif</item>
+    <item name="r0x00000000">Seriff</item>
+    <item name="r0x00000000">Jämnbreda typsnitt – seriff</item>
+    <item name="r0x00000000">Informell</item>
+    <item name="r0x00000000">Kursiv</item>
+    <item name="r0x00000000">Kapitäler</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Berikade färger</item>
+    <item name="r0x00000000">Naturliga färger så som ögat ser dem</item>
+    <item name="r0x00000000">Färger som har anpassats för digitalt innehåll</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Starka (standard)</item>
+    <item name="r0x00000000">Naturliga</item>
+    <item name="r0x00000000">Standardfärger</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Blågrön</item>
+    <item name="r0x00000000">Blå</item>
+    <item name="r0x00000000">Indigo</item>
+    <item name="r0x00000000">Lila</item>
+    <item name="r0x00000000">Rosa</item>
+    <item name="r0x00000000">Röd</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Automatisk (grundat på tidpunkt)</item>
+    <item name="r0x00000000">Alltid på</item>
+    <item name="r0x00000000">Alltid av</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Senaste 30 dagarna</item>
+    <item name="r0x00000000">Ange användningscykel ...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">Visa överritningsområden</item>
+    <item name="r0x00000000">Visa områden för deuteranomali</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Aldrig</item>
+    <item name="r0x00000000">15 sekunder</item>
+    <item name="r0x00000000">30 sekunder</item>
+    <item name="r0x00000000">1 minut</item>
+    <item name="r0x00000000">2 minuter</item>
+    <item name="r0x00000000">5 minuter</item>
+    <item name="r0x00000000">10 minuter</item>
+    <item name="r0x00000000">30 minuter</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Inga</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (grafik)</item>
+    <item name="r0x00000000">Anropsstacken på glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Liten</item>
+    <item name="r0x00000000">Standardinställning</item>
+    <item name="r0x00000000">Stor</item>
+    <item name="r0x00000000">Störst</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Använd aldrig HDCP-kontroll</item>
+    <item name="r0x00000000">Använd bara HDCP-kontroll för DRM-innehåll</item>
+    <item name="r0x00000000">Använd alltid HDCP-kontroll</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Kontrollera aldrig</item>
+    <item name="r0x00000000">Kontrollera bara DRM-innehåll</item>
+    <item name="r0x00000000">Kontrollera alltid</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Omedelbart</item>
+    <item name="r0x00000000">5 sekunder</item>
+    <item name="r0x00000000">15 sekunder</item>
+    <item name="r0x00000000">30 sekunder</item>
+    <item name="r0x00000000">1 minut</item>
+    <item name="r0x00000000">2 minuter</item>
+    <item name="r0x00000000">5 minuter</item>
+    <item name="r0x00000000">10 minuter</item>
+    <item name="r0x00000000">30 minuter</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Kort</item>
+    <item name="r0x00000000">Mellan</item>
+    <item name="r0x00000000">Lång</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Ingen</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Inga</item>
+    <item name="r0x00000000">480 p</item>
+    <item name="r0x00000000">480 p (säkert)</item>
+    <item name="r0x00000000">720 p</item>
+    <item name="r0x00000000">720 p (säkert)</item>
+    <item name="r0x00000000">1080 p</item>
+    <item name="r0x00000000">1080 p (säkert)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (säkert)</item>
+    <item name="r0x00000000">4K (uppskalat)</item>
+    <item name="r0x00000000">4K (uppskalat, säkert)</item>
+    <item name="r0x00000000">720 p, 1080 p (dubbla skärmar)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Måttlig</item>
+    <item name="r0x00000000">Låg</item>
+    <item name="r0x00000000">Kritisk</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Ihållande</item>
+    <item name="r0x00000000">Toppaktivitet</item>
+    <item name="r0x00000000">Viktig (förgrund)</item>
+    <item name="r0x00000000">Viktig (bakgrund)</item>
+    <item name="r0x00000000">Säkerhetskopia</item>
+    <item name="r0x00000000">Tungvikt</item>
+    <item name="r0x00000000">Service (pågående)</item>
+    <item name="r0x00000000">Service (startar om)</item>
+    <item name="r0x00000000">Mottagare</item>
+    <item name="r0x00000000">Hem</item>
+    <item name="r0x00000000">Senaste aktivitet</item>
+    <item name="r0x00000000">Cachelagrad (aktivitet)</item>
+    <item name="r0x00000000">Cachelagrad (aktivitetsklient)</item>
+    <item name="r0x00000000">Cachelagrad (tom)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Normal</item>
+    <item name="r0x00000000">Medel</item>
+    <item name="r0x00000000">Låg</item>
+    <item name="r0x00000000">Kritisk</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 sekunder</item>
+    <item name="r0x00000000">30 sekunder</item>
+    <item name="r0x00000000">1 minut</item>
+    <item name="r0x00000000">2 minuter</item>
+    <item name="r0x00000000">5 minuter</item>
+    <item name="r0x00000000">10 minuter</item>
+    <item name="r0x00000000">30 minuter</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Fråga</item>
+    <item name="r0x00000000">Tillåt aldrig</item>
+    <item name="r0x00000000">Tillåt alltid</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">64 kB/loggbuffert</item>
+    <item name="r0x00000000">256 kB/loggbuffert</item>
+    <item name="r0x00000000">1 MB/loggbuffert</item>
+    <item name="r0x00000000">4 MB/loggbuffert</item>
+    <item name="r0x00000000">16 MB/loggbuffert</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+    <item name="r0x00000000">4 MB</item>
+    <item name="r0x00000000">16 MB</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">Alla loggbuffertar</item>
+    <item name="r0x00000000">Alla loggbuffertar utom för radio</item>
+    <item name="r0x00000000">endast buffert av kernellogg</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">Alla</item>
+    <item name="r0x00000000">Alla utom radio</item>
+    <item name="r0x00000000">endast kernel</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">Rita icke-rektangulära urklippsavsnitt i blått</item>
+    <item name="r0x00000000">Markera testade ritningskommandon i grönt</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Amerika</item>
+    <item name="r0x00000000">Europa</item>
+    <item name="r0x00000000">Afrika</item>
+    <item name="r0x00000000">Asien</item>
+    <item name="r0x00000000">Australien</item>
+    <item name="r0x00000000">Stilla havet</item>
+    <item name="r0x00000000">Alla</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Av</item>
+    <item name="r0x00000000">På skärmen som fält</item>
+    <item name="r0x00000000">Om adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Animation avstängd</item>
+    <item name="r0x00000000">Animation i skala 0,5x</item>
+    <item name="r0x00000000">Animation i skala 1x</item>
+    <item name="r0x00000000">Animation i skala 1,5x</item>
+    <item name="r0x00000000">Animation i skala 2x</item>
+    <item name="r0x00000000">Animation i skala 5x</item>
+    <item name="r0x00000000">Animation i skala 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Mycket långsamt</item>
+    <item name="r0x00000000">Långsamt</item>
+    <item name="r0x00000000">Normalt</item>
+    <item name="r0x00000000">Snabbt</item>
+    <item name="r0x00000000">Snabbare</item>
+    <item name="r0x00000000">Mycket snabbt</item>
+    <item name="r0x00000000">Supersnabbt</item>
+    <item name="r0x00000000">Turbosnabbt</item>
+    <item name="r0x00000000">Snabbast</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Användningstid</item>
+    <item name="r0x00000000">Användes senast</item>
+    <item name="r0x00000000">Appnamn</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Laddar</item>
+    <item name="r0x00000000">MTP (Media Transfer Protocol)</item>
+    <item name="r0x00000000">PTP (Picture Transfer Protocol)</item>
+    <item name="r0x00000000">RNDIS (USB-ethernet)</item>
+    <item name="r0x00000000">Ljudkälla</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Frånkopplad</item>
+    <item name="r0x00000000">Initierar...</item>
+    <item name="r0x00000000">Ansluter...</item>
+    <item name="r0x00000000">Anslutet</item>
+    <item name="r0x00000000">Tidsgräns</item>
+    <item name="r0x00000000">Misslyckades</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP-VPN</item>
+    <item name="r0x00000000">L2TP-/IPSec-VPN med nycklar som delats i förväg</item>
+    <item name="r0x00000000">L2TP-/IPSec-VPN med certifikat</item>
+    <item name="r0x00000000">IPSec-VPN med nycklar som delats i förväg och Xauth-autentisering</item>
+    <item name="r0x00000000">IPSec-VPN med certifikat och Xauth-autentisering</item>
+    <item name="r0x00000000">IPSec-VPN med certifikat och dubbel autentisering</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi i första hand</item>
+    <item name="r0x00000000">Mobilnät i första hand</item>
+    <item name="r0x00000000">Endast Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Mobil enhet</item>
+    <item name="r0x00000000">Endast Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Mobil enhet</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi i första hand</item>
+    <item name="r0x00000000">Mobilnät i första hand</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Nej</item>
+    <item name="r0x00000000">Ja</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Statisk</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Identifiera automatiskt</item>
+    <item name="r0x00000000">Behandla som nätverk med datapriser</item>
+    <item name="r0x00000000">Behandla som nätverk utan datapriser</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Ansluten</item>
+    <item name="r0x00000000">Inbjuden</item>
+    <item name="r0x00000000">Misslyckades</item>
+    <item name="r0x00000000">Tillgänglig</item>
+    <item name="r0x00000000">Utanför intervallet</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Tryckknapp</item>
+    <item name="r0x00000000">PIN-kod från den andra enheten</item>
+    <item name="r0x00000000">PIN-kod från enheten</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Inga</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Ingen</item>
+    <item name="r0x00000000">MSCHAPv2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Inga</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Ingen</item>
+    <item name="r0x00000000">Manuell</item>
+    <item name="r0x00000000">Autokonfig. av proxy</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Dålig</item>
+    <item name="r0x00000000">Dålig</item>
+    <item name="r0x00000000">Ganska bra</item>
+    <item name="r0x00000000">Bra</item>
+    <item name="r0x00000000">Utmärkt</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Skannar…</item>
+    <item name="r0x00000000">Ansluter…</item>
+    <item name="r0x00000000">Autentiserar…</item>
+    <item name="r0x00000000">Erhåller IP-adress…</item>
+    <item name="r0x00000000">Ansluten</item>
+    <item name="r0x00000000">Pausad</item>
+    <item name="r0x00000000">Kopplar ifrån…</item>
+    <item name="r0x00000000">Frånkopplad</item>
+    <item name="r0x00000000">Misslyckades</item>
+    <item name="r0x00000000">Blockerat</item>
+    <item name="r0x00000000">Undviker just nu dålig anslutning</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Skannar…</item>
+    <item name="r0x00000000">Ansluter till %1$s…</item>
+    <item name="r0x00000000">Autentiserar med %1$s…</item>
+    <item name="r0x00000000">Hämtar IP-adress från %1$s…</item>
+    <item name="r0x00000000">Ansluten till: %1$s</item>
+    <item name="r0x00000000">Pausad</item>
+    <item name="r0x00000000">Kopplar ifrån %1$s…</item>
+    <item name="r0x00000000">Frånkopplad</item>
+    <item name="r0x00000000">Misslyckades</item>
+    <item name="r0x00000000">Blockerat</item>
+    <item name="r0x00000000">Undviker just nu dålig anslutning</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Animation avstängd</item>
+    <item name="r0x00000000">Animation i skala 0,5x</item>
+    <item name="r0x00000000">Animation i skala 1x</item>
+    <item name="r0x00000000">Animation i skala 1,5x</item>
+    <item name="r0x00000000">Animation i skala 2x</item>
+    <item name="r0x00000000">Animation i skala 5x</item>
+    <item name="r0x00000000">Animation i skala 10x</item>
+  </string-array>
+</resources>

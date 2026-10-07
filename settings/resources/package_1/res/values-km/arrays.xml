@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">បិទ​ចលនា</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា .5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1.5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 2x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP ឬ CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">ឧបករណ៍​ផ្ទុក​ខាង​ក្នុង</item>
+    <item name="r0x00000000">កាត​អេសឌី​​ដែល​អាច​ដក​បាន</item>
+    <item name="r0x00000000">ឲ្យ​ប្រព័ន្ធ​សម្រេចចិត្ត​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ផ្ទាល់ខ្លួន</item>
+    <item name="r0x00000000">ការ​ផ្ញើ​សារ</item>
+    <item name="r0x00000000">មេឌៀ</item>
+    <item name="r0x00000000">ឧបករណ៍</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ញ័រ</item>
+    <item name="r0x00000000">អាន​ទំនាក់ទំនង</item>
+    <item name="r0x00000000">កែ​ទំនាក់ទំនង</item>
+    <item name="r0x00000000">អាន​កំណត់ហេតុ​ហៅ</item>
+    <item name="r0x00000000">កែ​បញ្ជី​ហៅ</item>
+    <item name="r0x00000000">អាន​ប្រតិទិន</item>
+    <item name="r0x00000000">កែ​ប្រតិទិន</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ប្រកាស​ការ​ជូន​ដំណឹង</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ហៅ​ទូរស័ព្ទ</item>
+    <item name="r0x00000000">អាន​សារ SMS/MMS</item>
+    <item name="r0x00000000">សរសេរ​សារ SMS/MMS</item>
+    <item name="r0x00000000">ទទួល SMS/MMS​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​</item>
+    <item name="r0x00000000">ទទួល SMS/MMS</item>
+    <item name="r0x00000000">ទទួល SMS/MMS</item>
+    <item name="r0x00000000">ទទួល SMS/MMS</item>
+    <item name="r0x00000000">ផ្ញើ SMS/MMS</item>
+    <item name="r0x00000000">អាន​សារ SMS/MMS</item>
+    <item name="r0x00000000">សរសេរ​សារ SMS/MMS</item>
+    <item name="r0x00000000">កែ​ការ​កំណត់</item>
+    <item name="r0x00000000">គូរ​​​ខាង​លើ</item>
+    <item name="r0x00000000">​ជូន​ដំណឹង​ចូល​ដំណើរការ</item>
+    <item name="r0x00000000">ម៉ាស៊ីន​ថត</item>
+    <item name="r0x00000000">ថត​សំឡេង</item>
+    <item name="r0x00000000">ចាក់អូឌីយ៉ូ</item>
+    <item name="r0x00000000">អាន​ក្ដារតម្បៀតខ្ទាស់</item>
+    <item name="r0x00000000">កែ​ក្ដារតម្បៀតខ្ទាស់</item>
+    <item name="r0x00000000">ប៊ូតុង​មេឌៀ</item>
+    <item name="r0x00000000">ការ​ផ្ដោត​សំឡេង</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​មេ</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​រោទ៍</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​មេឌៀ</item>
+    <item name="r0x00000000">កម្រិត​សំឡេងម៉ោង​រោទ៍</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​ការ​ជូន​ដំណឹង</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​ប៊្លូធូស</item>
+    <item name="r0x00000000">មិន​ដេក</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ទី​តាំង​</item>
+    <item name="r0x00000000">ទទួល​​ស្ថិតិ​​ប្រើប្រាស់</item>
+    <item name="r0x00000000">បិទ/បើក​សំឡេង​មីក្រូហ្វូន</item>
+    <item name="r0x00000000">បង្ហាញថូស</item>
+    <item name="r0x00000000">មេឌៀគម្រោង</item>
+    <item name="r0x00000000">ធ្វើឲ្យ VPN សកម្ម</item>
+    <item name="r0x00000000">សរសេរផ្ទាំងរូបភាព</item>
+    <item name="r0x00000000">រចនាសម្ព័ន្ធជំនួយ</item>
+    <item name="r0x00000000">រូបថតអេក្រង់ជំនួយ</item>
+    <item name="r0x00000000">អានស្ថានភាពទូរស័ព្ទ</item>
+    <item name="r0x00000000">បន្ថែមសារជាសំឡេង</item>
+    <item name="r0x00000000">ប្រើ sip</item>
+    <item name="r0x00000000">កំពុងដំណើរការហៅចេញ</item>
+    <item name="r0x00000000">ស្នាមម្រាមដៃ</item>
+    <item name="r0x00000000">ឧបករណ៍ចាប់សញ្ញារាងកាយ</item>
+    <item name="r0x00000000">អានការផ្សព្វផ្សាយសារចល័ត</item>
+    <item name="r0x00000000">ទីតាំងបញ្ឆោត</item>
+    <item name="r0x00000000">អានទំហំផ្ទុក</item>
+    <item name="r0x00000000">សរសេរទំហំផ្ទុក</item>
+    <item name="r0x00000000">បើកអេក្រង់</item>
+    <item name="r0x00000000">ទទួលគណនី</item>
+    <item name="r0x00000000">រត់នៅក្នុងផ្ទៃខាងក្រោយ</item>
+    <item name="r0x00000000">កម្រិតសំឡេងភាពងាយស្រួល</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">ទីតាំង​មិន​ល្អ</item>
+    <item name="r0x00000000">ទីតាំង​ល្អ</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">ញ័រ</item>
+    <item name="r0x00000000">អាន​ទំនាក់ទំនង</item>
+    <item name="r0x00000000">កែ​ទំនាក់ទំនង</item>
+    <item name="r0x00000000">អាន​​បញ្ជី​​ហៅ</item>
+    <item name="r0x00000000">កែ​កំណត់​ហេតុ​ហៅ</item>
+    <item name="r0x00000000">អាន​ប្រតិទិន</item>
+    <item name="r0x00000000">កែ​ប្រតិទិន</item>
+    <item name="r0x00000000">វិភាគ​រក វ៉ាយហ្វាយ</item>
+    <item name="r0x00000000">ការ​ជូនដំណឹង</item>
+    <item name="r0x00000000">វិភាគ​រក​ក្រុម</item>
+    <item name="r0x00000000">ហៅ​ទូរស័ព្ទ</item>
+    <item name="r0x00000000">អាន​សារ SMS</item>
+    <item name="r0x00000000">សរសេរ SMS</item>
+    <item name="r0x00000000">ទទួល SMS</item>
+    <item name="r0x00000000">ទទួល​សារ SMS ពេល​អាសន្ន</item>
+    <item name="r0x00000000">ទទួល MMS</item>
+    <item name="r0x00000000">ទទួល WAP push</item>
+    <item name="r0x00000000">ផ្ញើ​សារ SMS</item>
+    <item name="r0x00000000">អាន​សារ SMS ICC</item>
+    <item name="r0x00000000">សរសេរ ICC SMS</item>
+    <item name="r0x00000000">កែ​ការ​កំណត់</item>
+    <item name="r0x00000000">គូរ​នៅ​ផ្នែក​ខាង​លើ</item>
+    <item name="r0x00000000">ចូល​មើល​ការ​ជូន​ដំណឹង</item>
+    <item name="r0x00000000">ម៉ាស៊ីន​ថត</item>
+    <item name="r0x00000000">ថត​សំឡេង</item>
+    <item name="r0x00000000">ចាក់​អូឌីយ៉ូ</item>
+    <item name="r0x00000000">អាន​ក្ដារតម្បៀតខ្ទាស់</item>
+    <item name="r0x00000000">កែ​ក្ដារតម្បៀតខ្ទាស់</item>
+    <item name="r0x00000000">ប៊ូតុង​មេឌៀ</item>
+    <item name="r0x00000000">ការ​ផ្ដោត​សំឡេង</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​មេ</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​​</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​រោទ៍</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​មេឌៀ</item>
+    <item name="r0x00000000">កម្រិត​សំឡេងម៉ោង​រោទ៍</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​ការ​ជូន​ដំណឹង</item>
+    <item name="r0x00000000">កម្រិត​សំឡេង​ប៊្លូធូស</item>
+    <item name="r0x00000000">មិន​ដេក</item>
+    <item name="r0x00000000">តាមដាន​ទីតាំង</item>
+    <item name="r0x00000000">​ពិនិត្យ​ទីតាំង​ថាមពល​​ខ្ពស់</item>
+    <item name="r0x00000000">ទទួល​​ស្ថិតិ​​ប្រើប្រាស់</item>
+    <item name="r0x00000000">បិទ/បើក​សំឡេង​មីក្រូហ្វូន</item>
+    <item name="r0x00000000">បង្ហាញថូស</item>
+    <item name="r0x00000000">មេឌៀគម្រោង</item>
+    <item name="r0x00000000">ធ្វើឲ្យ VPN សកម្ម</item>
+    <item name="r0x00000000">សរសេរផ្ទាំងរូបភាព</item>
+    <item name="r0x00000000">រចនាសម្ព័ន្ធជំនួយ</item>
+    <item name="r0x00000000">រូបថតអេក្រង់ជំនួយ</item>
+    <item name="r0x00000000">អានស្ថានភាពទូរស័ព្ទ</item>
+    <item name="r0x00000000">បន្ថែមសារជាសំឡេង</item>
+    <item name="r0x00000000">ប្រើ sip</item>
+    <item name="r0x00000000">កំពុងដំណើរការហៅចេញ</item>
+    <item name="r0x00000000">ស្នាមម្រាមដៃ</item>
+    <item name="r0x00000000">ឧបករណ៍ចាប់សញ្ញារាងកាយ</item>
+    <item name="r0x00000000">អានការផ្សព្វផ្សាយសារចល័ត</item>
+    <item name="r0x00000000">ទីតាំងបញ្ឆោត</item>
+    <item name="r0x00000000">អានទំហំផ្ទុក</item>
+    <item name="r0x00000000">សរសេរទំហំផ្ទុក</item>
+    <item name="r0x00000000">បើកអេក្រង់</item>
+    <item name="r0x00000000">ទទួលគណនី</item>
+    <item name="r0x00000000">រត់នៅក្នុងផ្ទៃខាងក្រោយ</item>
+    <item name="r0x00000000">កម្រិតសំឡេងភាពងាយស្រួល</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">ដែន​កំណត់​ស្តង់ដារ</item>
+    <item name="r0x00000000">គ្មាន​ដំណើរការ​​ក្នុង​ផ្ទៃ​ខាង​ក្រោយ</item>
+    <item name="r0x00000000">ជិត ១ ដំណើរការ</item>
+    <item name="r0x00000000">ដំណើរការ​ច្រើន​បំផុត​ ២</item>
+    <item name="r0x00000000">ដំណើរ​ការ​ច្រើន​បំផុត ៣</item>
+    <item name="r0x00000000">ជិត ៤​ ដំណើរ​ការ</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">លើសពី 30 ថ្ងៃ</item>
+    <item name="r0x00000000">លើសពី 60 ថ្ងៃ</item>
+    <item name="r0x00000000">លើសពី 90 ថ្ងៃ</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">មិនបានបញ្ជាក់</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">16 ប៊ីត​/​គំរូ</item>
+    <item name="r0x00000000">24 ប៊ីត​/​គំរូ</item>
+    <item name="r0x00000000">32 ប៊ីត​/​គំរូ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">16 ប៊ីត​/​គំរូ</item>
+    <item name="r0x00000000">24 ប៊ីត​/​គំរូ</item>
+    <item name="r0x00000000">32 ប៊ីត​/​គំរូ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">ម៉ូ​ណូ</item>
+    <item name="r0x00000000">ស្តេរ៉េអូ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">ម៉ូ​ណូ</item>
+    <item name="r0x00000000">ស្តេរ៉េអូ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">បាន​បង្កើន​ប្រសិទ្ធភាពសម្រាប់​​គុណភាព​សំឡេង</item>
+    <item name="r0x00000000">សំឡេង​ដែល​មាន​តុល្យភាព និង​គុណភាព​នៃ​ការ​តភ្ជាប់</item>
+    <item name="r0x00000000">បាន​បង្កើន​ប្រសិទ្ធភាព​​សម្រាប់គុណភាព​នៃ​ការ​ត​ភ្ជាប់</item>
+    <item name="r0x00000000">កម្រិតល្អបំផុត (កម្រិតប៊ីតដែលអាចប្រែប្រួល)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">បាន​បង្កើន​ប្រសិទ្ធភាព​​សម្រាប់​គុណភាព​សំឡេង (990kbps/909kbps)</item>
+    <item name="r0x00000000">សំឡេង​ដែល​មាន​តុល្យភាព និង​គុណភាព​នៃ​ការ​ត​ភ្ជាប់ (660kbps/606kbps)</item>
+    <item name="r0x00000000">បាន​បង្កើន​ប្រសិទ្ធភាព​សម្រាប់​គុណភាព​​នៃ​ការ​ត​ភ្ជាប់ (330kbps/303kbps)</item>
+    <item name="r0x00000000">កម្រិតល្អបំផុត (កម្រិតប៊ីតដែលអាចប្រែប្រួល)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm®សំឡេង aptX™</item>
+    <item name="r0x00000000">Qualcomm®សំឡេង aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">បើក​កូឌិក​ប្រភេទ​ស្រេច​ចិត្ត</item>
+    <item name="r0x00000000">បិទ​កូឌិក​ប្រភេទ​ស្រេច​ចិត្ត</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm®សំឡេង aptX™</item>
+    <item name="r0x00000000">Qualcomm®សំឡេង aptX™ HD</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">បើក​កូឌិក​ប្រភេទ​ស្រេច​ចិត្ត</item>
+    <item name="r0x00000000">បិទ​កូឌិក​ប្រភេទ​ស្រេច​ចិត្ត</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">សកម្ម</item>
+    <item name="r0x00000000">សកម្ម (មេឌៀ)</item>
+    <item name="r0x00000000">សកម្ម (ទូរសព្ទ)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (លំនាំដើម)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">ប្រើលំនាំដើម​របស់ប្រព័ន្ធ៖ %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">២ នាទី</item>
+    <item name="r0x00000000">៥ នាទី</item>
+    <item name="r0x00000000">១ ម៉ោង</item>
+    <item name="r0x00000000">កុំ​អស់​ពេល</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">លំនាំដើម</item>
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">គ្រោង</item>
+    <item name="r0x00000000">ទម្លាក់​ស្រមោល</item>
+    <item name="r0x00000000">បង្កើន</item>
+    <item name="r0x00000000">បន្ថយ</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">តូច​ណាស់</item>
+    <item name="r0x00000000">តូច</item>
+    <item name="r0x00000000">ធម្មតា</item>
+    <item name="r0x00000000">ធំ</item>
+    <item name="r0x00000000">ធំ​ណាស់</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">២៥%</item>
+    <item name="r0x00000000">៥០%</item>
+    <item name="r0x00000000">៧៥%</item>
+    <item name="r0x00000000">១០០%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">ប្រើ​លំនាំដើម​កម្មវិធី</item>
+    <item name="r0x00000000">ពណ៌ស​លើ​ពណ៌​ខ្មៅ</item>
+    <item name="r0x00000000">ពណ៌ខ្មៅ​លើ​ពណ៌ស</item>
+    <item name="r0x00000000">ពណ៌លឿង​​លើ​​ពណ៌​ខ្មៅ</item>
+    <item name="r0x00000000">ពណ៌លឿង​លើ​ពណ៌ខៀវ</item>
+    <item name="r0x00000000">តាម​បំណង</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">លំនាំដើម</item>
+    <item name="r0x00000000">Sans-serif</item>
+    <item name="r0x00000000">Sans-serif condensed</item>
+    <item name="r0x00000000">Sans-serif monospace</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif monospace</item>
+    <item name="r0x00000000">ធម្មតា</item>
+    <item name="r0x00000000">សរសេរ​ជាប់​គ្នា</item>
+    <item name="r0x00000000">អក្សរ​ពុម្ព​ធំ​ល្អិត</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">ពណ៌ដែលធ្វើឲ្យប្រសើរជាងមុន</item>
+    <item name="r0x00000000">ពណ៌ធម្មជាតិដូចដែលបានឃើញដោយភ្នែក</item>
+    <item name="r0x00000000">ពណ៌ដែលបានសម្រួលសម្រាប់មាតិកាឌីជីថល</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">រស់រវើក (លំនាំដើម)</item>
+    <item name="r0x00000000">ធម្មជាតិ</item>
+    <item name="r0x00000000">ស្តង់ដារ</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">បៃតង​​ចាស់</item>
+    <item name="r0x00000000">ពណ៌ខៀវ</item>
+    <item name="r0x00000000">ពណ៌​ឆ្លុះ</item>
+    <item name="r0x00000000">ស្វាយ</item>
+    <item name="r0x00000000">ផ្កាឈូក</item>
+    <item name="r0x00000000">ពណ៌ក្រហម</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">ស្វ័យ​ប្រវត្តិ (ផ្អែកលើពេលវេលា)</item>
+    <item name="r0x00000000">បើក​ជានិច្ច</item>
+    <item name="r0x00000000">បិទជានិច្ច</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">30 ថ្ងៃ​មុន</item>
+    <item name="r0x00000000">កំណត់រង្វង់ប្រើប្រាស់...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">បង្ហាញ​តំបន់​​ដែល​លើស</item>
+    <item name="r0x00000000">បង្ហាញ​តំបន់​សម្រាប់ Deuteranomaly</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">កុំ</item>
+    <item name="r0x00000000">១៥ វិនាទី</item>
+    <item name="r0x00000000">៣០ វិនាទី</item>
+    <item name="r0x00000000">១ នាទី</item>
+    <item name="r0x00000000">២ នាទី</item>
+    <item name="r0x00000000">៥ នាទី</item>
+    <item name="r0x00000000">១០ នាទី</item>
+    <item name="r0x00000000">៣០ នាទី</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (ក្រាហ្វិក)</item>
+    <item name="r0x00000000">លំដាប់​ហៅ​លើ glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">តូច</item>
+    <item name="r0x00000000">លំនាំដើម</item>
+    <item name="r0x00000000">ធំ</item>
+    <item name="r0x00000000">ធំបំផុត</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">កុំ​ប្រើ​ការ​ពិនិត្យ HDCP</item>
+    <item name="r0x00000000">ប្រើ​ការ​ពិនិត្យ HDCP សម្រាប់​តែ​មាតិកា DRM ប៉ុណ្ណោះ</item>
+    <item name="r0x00000000">ប្រើ​ការ​ពិនិត្យ HDCP ជា​និច្ច</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">កុំ​ពិនិត្យមើល</item>
+    <item name="r0x00000000">ពិនិត្យ​តែ​មាតិកា DRM</item>
+    <item name="r0x00000000">ពិនិត្យ​ជា​និច្ច</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">ភ្លាម​ៗ</item>
+    <item name="r0x00000000">៥ វិនាទី</item>
+    <item name="r0x00000000">១៥ វិនាទី</item>
+    <item name="r0x00000000">៣០ វិនាទី</item>
+    <item name="r0x00000000">១ នាទី</item>
+    <item name="r0x00000000">២ នាទី</item>
+    <item name="r0x00000000">៥ នាទី</item>
+    <item name="r0x00000000">១០ នាទី</item>
+    <item name="r0x00000000">៣០ នាទី</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">ខ្លី</item>
+    <item name="r0x00000000">មធ្យម</item>
+    <item name="r0x00000000">វែង</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (សុវត្ថិភាព)</item>
+    <item name="r0x00000000">720p</item>
+    <item name="r0x00000000">720p (សុវត្ថិភាព)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (សុវត្ថិភាព)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (សុវត្ថិភាព)</item>
+    <item name="r0x00000000">4K (បង្កើនគុណភាព)</item>
+    <item name="r0x00000000">4K (បង្កើនគុណភាព, សុវត្ថិភាព)</item>
+    <item name="r0x00000000">720p, 1080p (អេក្រង់ទ្វេ)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">ធម្មតា</item>
+    <item name="r0x00000000">មធ្យម</item>
+    <item name="r0x00000000">ទាប</item>
+    <item name="r0x00000000">ខ្លាំង​មែនទែន</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">ជាប់​លាប់</item>
+    <item name="r0x00000000">សកម្មភាព​​លើ​គេ</item>
+    <item name="r0x00000000">សំខាន់ (ផ្ទៃ​ខាង​មុខ​)</item>
+    <item name="r0x00000000">សំខាន់ (ផ្ទៃ​ខាង​ក្រោយ​)</item>
+    <item name="r0x00000000">បម្រុងទុក</item>
+    <item name="r0x00000000">ប្រើ​ច្រើន</item>
+    <item name="r0x00000000">សេវាកម្ម (កំពុង​ដំណើរការ)</item>
+    <item name="r0x00000000">សេវាកម្ម (ចាប់ផ្ដើម​ឡើង​វិញ)</item>
+    <item name="r0x00000000">កម្មវិធី​ទទួល</item>
+    <item name="r0x00000000">ដើម</item>
+    <item name="r0x00000000">សកម្ម​ភាព​ចុង​ក្រោយ</item>
+    <item name="r0x00000000">ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (សកម្មភាព​)</item>
+    <item name="r0x00000000">ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (ម៉ាស៊ីន​​កូន​សកម្មភាព​)</item>
+    <item name="r0x00000000">ទុក​ក្នុង​ឃ្លាំង​សម្ងាត់ (ទទេ​)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">ធម្មតា</item>
+    <item name="r0x00000000">មធ្យម</item>
+    <item name="r0x00000000">ទាប</item>
+    <item name="r0x00000000">ទាបមែនទែន</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">១៥ វិនាទី</item>
+    <item name="r0x00000000">៣០ វិនាទី</item>
+    <item name="r0x00000000">១ នាទី</item>
+    <item name="r0x00000000">២ នាទី</item>
+    <item name="r0x00000000">៥ នាទី</item>
+    <item name="r0x00000000">១០ នាទី</item>
+    <item name="r0x00000000">៣០ នាទី</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">សួរ</item>
+    <item name="r0x00000000">កុំ​អនុញ្ញាត</item>
+    <item name="r0x00000000">អនុញ្ញាត​ជា​និច្ច</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">64K per log buffer</item>
+    <item name="r0x00000000">256K per log buffer</item>
+    <item name="r0x00000000">1M per log buffer</item>
+    <item name="r0x00000000">4M per log buffer</item>
+    <item name="r0x00000000">16M per log buffer</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+    <item name="r0x00000000">4M</item>
+    <item name="r0x00000000">16M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">អង្គចងចាំកំណត់ហេតុបណ្តោះអាសន្នទាំងអស់</item>
+    <item name="r0x00000000">ទាំងអស់ក្រៅពីអង្គចងចាំកំណត់ហេតុវិទ្យុបណ្តោះអាសន្ន</item>
+    <item name="r0x00000000">អង្គចងចាំបណ្ដោះអាសន្នកំណត់ហេតុ kernel តែប៉ុណ្ណោះ</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">ទាំង​អស់</item>
+    <item name="r0x00000000">ទាំងអស់ក្រៅពីវិទ្យុ</item>
+    <item name="r0x00000000">kernel តែប៉ុណ្ណោះ</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">គូរ​តំបន់​កាត់​មិនមែន​រាង​ចតុកោណ​ជា​ពណ៌​ខៀវ</item>
+    <item name="r0x00000000">រំលេច​ពាក្យ​បញ្ជា​គូរ​បាន​សាកល្បង​ជា​ពណ៌​បៃតង</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">អាមេរិក</item>
+    <item name="r0x00000000">អឺរ៉ុប</item>
+    <item name="r0x00000000">អាហ្រ្វិក</item>
+    <item name="r0x00000000">អាស៊ី</item>
+    <item name="r0x00000000">អូស្ត្រាលី</item>
+    <item name="r0x00000000">ប៉ាស៊ីហ្វិក</item>
+    <item name="r0x00000000">ទាំងអស់</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">បិទ</item>
+    <item name="r0x00000000">លើ​អេក្រង់​ជា​របារ</item>
+    <item name="r0x00000000">ក្នុងរយៈពេល adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">បិទ​ចលនា</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា .5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1.5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 2x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">យឺតខ្លាំង</item>
+    <item name="r0x00000000">យឺត</item>
+    <item name="r0x00000000">ធម្មតា</item>
+    <item name="r0x00000000">លឿន</item>
+    <item name="r0x00000000">លឿនជាង</item>
+    <item name="r0x00000000">លឿនខ្លាំង</item>
+    <item name="r0x00000000">រហ័ស</item>
+    <item name="r0x00000000">រហ័សខ្លាំង</item>
+    <item name="r0x00000000">លឿនបំផុត</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">ពេលវេលា​ប្រើ</item>
+    <item name="r0x00000000">បាន​ប្រើ​​​ចុងក្រោយ</item>
+    <item name="r0x00000000">ឈ្មោះ​កម្មវិធី</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">កំពុងសាកថ្ម</item>
+    <item name="r0x00000000">MTP (ពិធីការផ្ទេរមេឌៀ)</item>
+    <item name="r0x00000000">PTP (ពិធីការ​ផ្ទេរ​រូបភាព)</item>
+    <item name="r0x00000000">RNDIS (អ៊ីសឺណិត​យូអេសប៊ី)</item>
+    <item name="r0x00000000">ប្រភព​អូឌីយ៉ូ</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">បាន​ផ្ដាច់</item>
+    <item name="r0x00000000">កំពុង​​ចាប់ផ្ដើម…</item>
+    <item name="r0x00000000">កំពុង​ត​ភ្ជាប់​…</item>
+    <item name="r0x00000000">បាន​តភ្ជាប់</item>
+    <item name="r0x00000000">អស់​​ពេល​</item>
+    <item name="r0x00000000">មិន​ជោគជ័យ</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN ជា​មួយ​សោ​ចែករំលែក​ជាមុន</item>
+    <item name="r0x00000000">L2TP/IPSec VPN ជា​មួយ​វិញ្ញាបនបត្រ</item>
+    <item name="r0x00000000">IPSec VPN ជា​មួយ​សោ​ចែករំលែក​ជាមុន និង​ការ​ផ្ទៀងផ្ទាត់ Xauth</item>
+    <item name="r0x00000000">IPSec VPN ជា​មួយ​ការ​ផ្ទៀងផ្ទាត់​វិញ្ញាបនបត្រ និង Xauth</item>
+    <item name="r0x00000000">IPSec VPN ជា​មួយ​វិញ្ញាបនបត្រ និង​ការ​ផ្ទៀងផ្ទាត់​ឆ្លង</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Wi-Fi ជាអាទិភាព</item>
+    <item name="r0x00000000">បាន​ជ្រើសរើសប្រើទិន្នន័យចល័ត</item>
+    <item name="r0x00000000">Wi-Fi តែប៉ុណ្ណោះ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">ទូរសព្ទ​ចល័ត</item>
+    <item name="r0x00000000">Wi-Fi តែប៉ុណ្ណោះ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">ទូរសព្ទ​ចល័ត</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi ជាអាទិភាព</item>
+    <item name="r0x00000000">បាន​ជ្រើសរើសប្រើទិន្នន័យចល័ត</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">ទេ</item>
+    <item name="r0x00000000">បាទ/ចាស</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">ថេរ</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">ចាប់ដោយ​ស្វ័យ​ប្រវត្តិ</item>
+    <item name="r0x00000000">ចាត់​ទុកថាមានការកំណត់</item>
+    <item name="r0x00000000">​ចាត់​ទុកថាមិនមាន​ការកំណត់ទេ</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">បាន​តភ្ជាប់</item>
+    <item name="r0x00000000">បាន​​អញ្ជើញ</item>
+    <item name="r0x00000000">បរាជ័យ</item>
+    <item name="r0x00000000">មាន</item>
+    <item name="r0x00000000">ក្រៅ​តំបន់</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">ប៊ូតុង​ចុច</item>
+    <item name="r0x00000000">កូដ PIN ពី​ឧបករណ៍​</item>
+    <item name="r0x00000000">កូដ PIN ពី​ឧបករណ៍​នេះ</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">គ្មាន</item>
+    <item name="r0x00000000">ដោយ​ដៃ</item>
+    <item name="r0x00000000">រចនាសម្ព័ន្ធប្រូកស៊ីស្វ័យប្រវត្តិ</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">ខ្សោយ</item>
+    <item name="r0x00000000">ខ្សោយ​</item>
+    <item name="r0x00000000">មធ្យម</item>
+    <item name="r0x00000000">ខ្លាំង</item>
+    <item name="r0x00000000">ខ្លាំងណាស់</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">កំពុង​វិភាគ​រក…</item>
+    <item name="r0x00000000">កំពុង​ត​ភ្ជាប់​…</item>
+    <item name="r0x00000000">កំពុង​ផ្ទៀងផ្ទាត់...</item>
+    <item name="r0x00000000">កំពុង​ទទួល​អាសយដ្ឋាន IP…</item>
+    <item name="r0x00000000">បាន​តភ្ជាប់</item>
+    <item name="r0x00000000">បាន​ពន្យារ​ពេល</item>
+    <item name="r0x00000000">កំពុង​ផ្ដាច់…</item>
+    <item name="r0x00000000">បាន​ផ្ដាច់</item>
+    <item name="r0x00000000">មិន​ជោគជ័យ</item>
+    <item name="r0x00000000">បាន​ទប់​ស្កាត់</item>
+    <item name="r0x00000000">ជៀសវាង​ការ​តភ្ជាប់​ដែល​ខ្សោយ​ជា​បណ្ដោះ​អាសន្ន</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">កំពុង​វិភាគ​រក…</item>
+    <item name="r0x00000000">កំពុង​តភ្ជាប់​ទៅ %1$s…</item>
+    <item name="r0x00000000">កំពុង​ផ្ទៀងផ្ទាត់​ជា​មួយ %1$s…</item>
+    <item name="r0x00000000">កំពុង​យក​អាសយដ្ឋាន IP ពី %1$s…</item>
+    <item name="r0x00000000">បាន​តភ្ជាប់​ទៅ %1$s</item>
+    <item name="r0x00000000">បាន​ផ្អាក</item>
+    <item name="r0x00000000">កំពុង​ផ្ដាច់​ពីរ %1$s…</item>
+    <item name="r0x00000000">បាន​ផ្ដាច់</item>
+    <item name="r0x00000000">មិន​ជោគជ័យ</item>
+    <item name="r0x00000000">បាន​ទប់ស្កាត់</item>
+    <item name="r0x00000000">ជៀសវាង​ការ​តភ្ជាប់​​ខ្សោយ​ជា​បណ្ដោះអាសន្ន</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">បិទ​ចលនា</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា .5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 1.5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 2x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 5x</item>
+    <item name="r0x00000000">មាត្រដ្ឋាន​ចលនា 10x</item>
+  </string-array>
+</resources>

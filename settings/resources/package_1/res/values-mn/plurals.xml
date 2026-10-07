@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <plurals name="accessibilty_autoclick_preference_subtitle_extremely_short_delay">
+    <item quantity="one">Маш богино хугацааны саатал (%1$d милсекунд)</item>
+    <item quantity="other">Маш богино хугацааны саатал (%1$d милсекунд)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_long_delay">
+    <item quantity="one">Урт хугацааны саатал (%1$d милсекунд)</item>
+    <item quantity="other">Урт хугацааны саатал (%1$d милсекунд)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_short_delay">
+    <item quantity="one">Богино саатал (%1$d милсекунд)</item>
+    <item quantity="other">Богино саатал (%1$d милсекунд)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_very_long_delay">
+    <item quantity="one">Маш урт хугацааны саатал (%1$d милсекунд)</item>
+    <item quantity="other">Маш урт хугацааны саатал (%1$d милсекунд)</item>
+  </plurals>
+  <plurals name="accessibilty_autoclick_preference_subtitle_very_short_delay">
+    <item quantity="one">Маш богино хугацааны саатал (%1$d милсекунд)</item>
+    <item quantity="other">Маш богино хугацааны саатал (%1$d милсекунд)</item>
+  </plurals>
+  <plurals name="app_notification_listing_summary_others">
+    <item quantity="one">%d аппад унтраасан</item>
+    <item quantity="other">%d аппад унтраасан</item>
+  </plurals>
+  <plurals name="battery_manager_app_restricted">
+    <item quantity="one">%1$d аппыг хязгаарласан</item>
+    <item quantity="other">%1$d аппыг хязгаарласан</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_app_dialog_title">
+    <item quantity="one">Аппыг хязгаарлах уу?</item>
+    <item quantity="other">%1$d аппыг хязгаарлах уу?</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_handled_summary">
+    <item quantity="one">Энэ аппыг цаана ажиллуулах боломжгүй байна</item>
+    <item quantity="other">Эдгээр аппыг цаана ажиллуулах боломжгүй байна</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_handled_title">
+    <item quantity="one">%1$s-г саяхан хязгаарласан</item>
+    <item quantity="other">%2$d аппыг саяхан хязгаарласан</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_summary">
+    <item quantity="one">%1$s-н батерейг цаана ашиглах түвшин өндөр байна</item>
+    <item quantity="other">%2$d аппын батерейг цаана ашиглах түвшин өндөр байна</item>
+  </plurals>
+  <plurals name="battery_tip_restrict_title">
+    <item quantity="one">%1$d аппыг хязгаарлах</item>
+    <item quantity="other">%1$d аппыг хязгаарлах</item>
+  </plurals>
+  <plurals name="billing_cycle_days_left">
+    <item quantity="one">%d өдөр үлдсэн</item>
+    <item quantity="other">%d өдөр үлдсэн</item>
+  </plurals>
+  <plurals name="data_saver_unrestricted_summary">
+    <item quantity="one">1 апп нь дата хэмнэгчийг асаалттай үед хязгааргүй дата ашиглах боломжтой</item>
+    <item quantity="other">%1$d апп нь дата хэмнэгчийг асаалттай үед хязгааргүй дата ашиглах боломжтой</item>
+  </plurals>
+  <plurals name="default_camera_app_title">
+    <item quantity="one">Камерын апп</item>
+    <item quantity="other">Камерын апп</item>
+  </plurals>
+  <plurals name="default_email_app_title">
+    <item quantity="one">Имэйл хэрэглэгчийн апп</item>
+    <item quantity="other">Имэйл хэрэглэгчийн апп</item>
+  </plurals>
+  <plurals name="default_phone_app_title">
+    <item quantity="one">Утасны апп</item>
+    <item quantity="other">Утасны апп</item>
+  </plurals>
+  <plurals name="deleted_channels">
+    <item quantity="one">%d категорийг устгасан</item>
+    <item quantity="other">%d категорийг устгасан</item>
+  </plurals>
+  <plurals name="dlg_remove_locales_title">
+    <item quantity="one">Сонгосон хэлийг устгах уу?</item>
+    <item quantity="other">Сонгосон хэлийг устгах уу?</item>
+  </plurals>
+  <plurals name="domain_urls_apps_summary_on">
+    <item quantity="one">Дэмжсэн холбоосыг нээх нэг ап</item>
+    <item quantity="other">Дэмжсэн холбоосыг нээх %d апп</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_ca_certs">
+    <item quantity="one">Хамгийн багадаа %d CA сертификат</item>
+    <item quantity="other">Хамгийн багадаа %d CA сертификат</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_failed_password_wipe">
+    <item quantity="one">%d оролдлого</item>
+    <item quantity="other">%d оролдлого</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_packages">
+    <item quantity="one">%d апп</item>
+    <item quantity="other">%d апп</item>
+  </plurals>
+  <plurals name="enterprise_privacy_number_packages_lower_bound">
+    <item quantity="one">Хамгийн багадаа %d апп</item>
+    <item quantity="other">Хамгийн багадаа %d апп</item>
+  </plurals>
+  <plurals name="hours">
+    <item quantity="one">1 цаг</item>
+    <item quantity="other">%s цаг</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_letters">
+    <item quantity="one">Хамгийн багадаа 1 үсэг агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d үсэг агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_lowercase">
+    <item quantity="one">Хамгийн багадаа 1 жижиг үсэг агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d жижиг үсэг агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_nonletter">
+    <item quantity="one">Хамгийн багадаа 1 тэмдэгт агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d тэмдэгт агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_numeric">
+    <item quantity="one">Хамгийн багадаа 1 тоо агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d тоо агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_symbols">
+    <item quantity="one">Хамгийн багадаа 1 тусгай дүрс тэмдэг агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d дүрс тэмдэг агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="lockpassword_password_requires_uppercase">
+    <item quantity="one">Хамгийн багадаа 1 том үсэг агуулах шаардлагатай</item>
+    <item quantity="other">Хамгийн багадаа %d том үсэг агуулах шаардлагатай</item>
+  </plurals>
+  <plurals name="manage_trust_agents_summary_on">
+    <item quantity="one">1 идэвхтэй итгэмжлэгдсэн агент</item>
+    <item quantity="other">%d идэвхтэй итгэмжлэгдсэн агент</item>
+  </plurals>
+  <plurals name="memory_usage_apps_summary">
+    <item quantity="one">1 апп сүүлийн %2$s хугацаанд санах ой ашигласан байна</item>
+    <item quantity="other">%1$d апп сүүлийн %2$s хугацаанд санах ой ашигласан байна</item>
+  </plurals>
+  <plurals name="minutes">
+    <item quantity="one">1 минут</item>
+    <item quantity="other">%s минут</item>
+  </plurals>
+  <plurals name="network_restrictions_summary">
+    <item quantity="one">1 хязгаарлалт</item>
+    <item quantity="other">%1$d хязгаарлалт</item>
+  </plurals>
+  <plurals name="notification_group_summary">
+    <item quantity="one">%d ангилал</item>
+    <item quantity="other">%d ангилал</item>
+  </plurals>
+  <plurals name="notification_summary">
+    <item quantity="one">1 апп-д унтраалттай</item>
+    <item quantity="other">%d апп-д унтраалттай</item>
+  </plurals>
+  <plurals name="notifications_categories_off">
+    <item quantity="one">%d ангиллыг унтраасан</item>
+    <item quantity="other">%d ангиллыг унтраасан</item>
+  </plurals>
+  <plurals name="number_of_device_admins">
+    <item quantity="one">%d идэвхтэй апп</item>
+    <item quantity="other">%d идэвхтэй апп</item>
+  </plurals>
+  <plurals name="permissions_summary">
+    <item quantity="one">%d зөвшөөрөл олгогдсон</item>
+    <item quantity="other">%d зөвшөөрөл олгогдсон</item>
+  </plurals>
+  <plurals name="power_high_usage_summary">
+    <item quantity="one">%1$s хэвийн бус ажиллаж байна</item>
+    <item quantity="other">%2$d апп хэвийн бус ажиллаж байна</item>
+  </plurals>
+  <plurals name="power_high_usage_title">
+    <item quantity="one">%1$s батерейг дуусгаж байна</item>
+    <item quantity="other">Апп батерейг дуусгаж байна</item>
+  </plurals>
+  <plurals name="print_jobs_summary">
+    <item quantity="one">1 хэвлэх ажил</item>
+    <item quantity="other">%1$d хэвлэх ажил</item>
+  </plurals>
+  <plurals name="print_settings_summary">
+    <item quantity="one">1 хэвлэх үйлчилгээ асаалттай</item>
+    <item quantity="other">%1$d хэвлэх үйлчилгээ асаалттай</item>
+  </plurals>
+  <plurals name="restricted_app_summary">
+    <item quantity="one">%1$d аппын батерей ашиглалтыг хязгаарлаж байна</item>
+    <item quantity="other">%1$d аппын батерей ашиглалтыг хязгаарлаж байна</item>
+  </plurals>
+  <plurals name="runtime_permissions_additional_count">
+    <item quantity="one">%d нэмэлт зөвшөөрөл</item>
+    <item quantity="other">%d нэмэлт зөвшөөрөл</item>
+  </plurals>
+  <plurals name="runtime_permissions_summary">
+    <item quantity="one">%d-аас %d зөвшөөрөл олгогдсон байна</item>
+    <item quantity="other">%d-аас %d зөвшөөрөл олгогдсон</item>
+  </plurals>
+  <plurals name="seconds">
+    <item quantity="one">1 секунд</item>
+    <item quantity="other">%s секунд</item>
+  </plurals>
+  <plurals name="security_settings_fingerprint_preference_summary">
+    <item quantity="one">%1$d хурууны хээний тохиргоо</item>
+    <item quantity="other">%1$d хурууны хээний тохиргоо</item>
+  </plurals>
+  <plurals name="settings_suggestion_header_summary_hidden_items">
+    <item quantity="one">Нуусан %d зүйлийг харуулах</item>
+    <item quantity="other">Нуусан %d зүйлийг харуулах</item>
+  </plurals>
+  <plurals name="show_dev_countdown">
+    <item quantity="one">Танд одоо хөгжүүлэгч болоход %1$d алхам дутуу байна.</item>
+    <item quantity="other">Танд одоо хөгжүүлэгч болоход %1$d алхам дутуу байна.</item>
+  </plurals>
+  <plurals name="show_number_hearingaid_count">
+    <item quantity="one">Хадгалсан %1$d сонсголын төхөөрөмж</item>
+    <item quantity="other">Хадгалсан %1$d сонсголын төхөөрөмжүүд</item>
+  </plurals>
+  <plurals name="special_access_summary">
+    <item quantity="one">Хязгааргүй датаг 1 апп ашиглах боломжтой</item>
+    <item quantity="other">Хязгааргүй датаг %d апп ашиглах боломжтой</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_dialog_title">
+    <item quantity="one">Сертификатад итгэх, эсвэл устгах</item>
+    <item quantity="other">Сертификатад итгэх, эсвэл устгах</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_info_message">
+    <item quantity="one">%s сертификатын эрхийг таны ажлын профайлд суулгасан бөгөөд тэдгээрт имэйл, апп, аюулгүй вэб хуудас зэрэг таны төхөөрөмжийн сүлжээний үйл ажиллагааг удирдах зөвшөөрлийг олгоно.
+
+Энэ сертификатын талаарх дэлгэрэнгүй мэдээлэл авахын тулд админтайгаа холбоо барина уу.</item>
+    <item quantity="other">%s сертификатын эрхийг таны ажлын профайлд суулгасан бөгөөд үүнд имэйл, апп, аюулгүй вэб хуудас зэрэг таны ажлын сүлжээний үйл ажиллагааг удирдах зөвшөөрлийг олгоно.
+
+Эдгээр сертификатын талаарх дэлгэрэнгүй мэдээлэл авахын тулд админтайгаа холбоо барина уу.</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_info_message_device_owner">
+    <item quantity="one">%s сертификатын эрхийг таны төхөөрөмжид суулгасан бөгөөд тэдгээрт имэйл, апп, аюулгүй вэб хуудас зэрэг таны төхөөрөмжийн сүлжээний үйл ажиллагааг удирдах зөвшөөрлийг олгоно.
+
+Энэ сертификатын талаарх дэлгэрэнгүй мэдээлэл авахын тулд админтайгаа холбоо барина уу.</item>
+    <item quantity="other">%s сертификатын эрхийг таны төхөөрөмжид суулгасан бөгөөд үүнд имэйл, апп, аюулгүй вэб хуудас зэрэг таны төхөөрөмжийн сүлжээний үйл ажиллагааг удирдах зөвшөөрлийг олгоно.
+
+Эдгээр сертификатын талаарх дэлгэрэнгүй мэдээлэл авахын тулд админтайгаа холбоо барина уу.</item>
+  </plurals>
+  <plurals name="ssl_ca_cert_settings_button">
+    <item quantity="one">Сертификат шалгах</item>
+    <item quantity="other">Сертификат шалгах</item>
+  </plurals>
+  <plurals name="suggestions_collapsed_summary">
+    <item quantity="one">+1 зөвлөмж</item>
+    <item quantity="other">+%1$d зөвлөмж</item>
+  </plurals>
+  <plurals name="suggestions_collapsed_title">
+    <item quantity="one">1 зөвлөмж</item>
+    <item quantity="other">%1$d зөвлөмж</item>
+  </plurals>
+  <plurals name="uri_permissions_text">
+    <item quantity="one">1 зүйл</item>
+    <item quantity="other">%d зүйлс</item>
+  </plurals>
+  <plurals name="wifi_saved_access_points_summary">
+    <item quantity="one">1 сүлжээ</item>
+    <item quantity="other">%d сүлжээ</item>
+  </plurals>
+  <plurals name="wifi_tether_connected_summary">
+    <item quantity="one">%1$d төхөөрөмж холбосон</item>
+    <item quantity="other">%1$d төхөөрөмж холбосон</item>
+  </plurals>
+  <plurals name="wrong_pin_code">
+    <item quantity="one">СИМ-ны ПИН код буруу байна. Танд мобайл оператортойгоо холбогдохгүйгээр төхөөрөмжийн түгжээг тайлахад %d оролдлого хийх боломж үлдсэн байна.</item>
+    <item quantity="other">СИМ-ны ПИН код буруу байна. Та %d удаа оролдлого хийх боломжтой байна.</item>
+  </plurals>
+  <plurals name="zen_mode_duration_summary_time_hours">
+    <item quantity="one">1 цаг (автоматаар асаагаагүй тохиолдолд)</item>
+    <item quantity="other">%d цаг (автоматаар асаагаагүй тохиолдолд)</item>
+  </plurals>
+  <plurals name="zen_mode_settings_summary_on">
+    <item quantity="one">1 дүрэм</item>
+    <item quantity="other">%d дүрэм</item>
+  </plurals>
+  <plurals name="zen_mode_sound_summary_summary_off_info">
+    <item quantity="one">1 дүрмийг автоматаар асааж болно</item>
+    <item quantity="other">%d дүрмийг автоматаар асааж болно</item>
+  </plurals>
+  <plurals name="zen_mode_starred_contacts_summary_additional_contacts">
+    <item quantity="one">бусад 1</item>
+    <item quantity="other">бусад %d</item>
+  </plurals>
+  <plurals name="zen_mode_summary_alarms_only_by_hour">
+    <item quantity="one">"Анхааруул" горимд %2$s хүртэл зөвхөн нэг цагийн турш шилжих</item>
+    <item quantity="other">"Анхааруул" горимд %2$s хүртэл зөвхөн %1$d цагийн турш шилжих</item>
+  </plurals>
+  <plurals name="zen_mode_summary_alarms_only_by_minute">
+    <item quantity="one">"Анхааруул" горимд %2$s хүртэл зөвхөн нэг минутын турш шилжих</item>
+    <item quantity="other">"Анхааруул" горимд (%2$s хүртэл) зөвхөн %1$d минутын турш шилжих</item>
+  </plurals>
+</resources>

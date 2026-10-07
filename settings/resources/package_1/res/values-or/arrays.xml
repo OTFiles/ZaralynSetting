@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">ଆନିମେଶନ୍ ବନ୍ଦ</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ .5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 1x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍ ସ୍କେଲ୍ 1.5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍ ସ୍କେଲ୍ 2x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">କିଛି ନୁହେଁ</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP କିମ୍ୱା CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">ଇଣ୍ଟର୍ନଲ୍‍ ଡିଭାଇସ୍‌ ଷ୍ଟୋରେଜ୍‌</item>
+    <item name="r0x00000000">ଅପସାରଣୀୟ SD କାର୍ଡ</item>
+    <item name="r0x00000000">ସିଷ୍ଟମକୁ ନିଷ୍ପତ୍ତି ନେବାକୁ ଦିଅନ୍ତୁ</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">ଲୋକେଶନ୍</item>
+    <item name="r0x00000000">ବ୍ୟକ୍ତିଗତ</item>
+    <item name="r0x00000000">ମେସେଜିଙ୍ଗ</item>
+    <item name="r0x00000000">ମିଡିଆ</item>
+    <item name="r0x00000000">ଡିଭାଇସ୍‌</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">ଲୋକେଶନ୍</item>
+    <item name="r0x00000000">ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">କମ୍ପନ</item>
+    <item name="r0x00000000">ଯୋଗାଯୋଗଗୁଡ଼ିକ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ଯୋଗାଯୋଗ ବଦଳାନ୍ତୁ</item>
+    <item name="r0x00000000">କଲ୍‌ ଲଗ୍‌ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">କଲ୍‌ ଲଗ୍‌ ସଂଶୋଧନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାଲେଣ୍ଡର ଦେଖନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାଲେଣ୍ଡରରେ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଲୋକେଶନ୍‍</item>
+    <item name="r0x00000000">ପୋଷ୍ଟ ବିଜ୍ଞପ୍ତି</item>
+    <item name="r0x00000000">ଲୋକେଶନ୍</item>
+    <item name="r0x00000000">ଫୋନ୍‌କୁ କଲ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ଲେଖନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପ୍ରାପ୍ତ କରନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପଠାନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">SMS/MMS ଲେଖନ୍ତୁ</item>
+    <item name="r0x00000000">ସେଟିଙ୍ଗଗୁଡ଼ିକ ବଦଳାନ୍ତୁ</item>
+    <item name="r0x00000000">ଉପର ଭାଗରେ ଆଙ୍କନ୍ତୁ</item>
+    <item name="r0x00000000">ବିଜ୍ଞପ୍ତି ଆକସେସ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାମେରା</item>
+    <item name="r0x00000000">ଅଡିଓ ରେକର୍ଡ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଅଡିଓ ଚଲାନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ଲିପ୍‌ବୋର୍ଡକୁ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ଲିପ୍‌ବୋର୍ଡରେ ସଂଶୋଧନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ମିଡିଆ ବଟନ୍‌</item>
+    <item name="r0x00000000">ଅଡିଓ ଫୋକସ୍‌</item>
+    <item name="r0x00000000">ମାଷ୍ଟର୍‌ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ଭଏସ୍ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ରିଙ୍ଗ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ମିଡିଆ ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ଆଲାର୍ମ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ବିଜ୍ଞପ୍ତି ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ବ୍ଲୁ-ଟୂଥ୍‍‌ ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ଜାଗ୍ରତ କରି ରଖନ୍ତୁ</item>
+    <item name="r0x00000000">ଅବସ୍ଥିତି</item>
+    <item name="r0x00000000">ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">ବ୍ୟବହାର ହିସାବ ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">ମାଇକ୍ରୋଫୋନ୍‌କୁ ବନ୍ଦ କରନ୍ତୁ/ଖୋଲନ୍ତୁ</item>
+    <item name="r0x00000000">ଟୋଷ୍ଟ ଦେଖାନ୍ତୁ</item>
+    <item name="r0x00000000">ପ୍ରୋଜେକ୍ଟ ମିଡିଆ</item>
+    <item name="r0x00000000">VPN ସକ୍ରିୟ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ୱାଲପେପର୍‌ ଯୋଡ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ସହାୟକ ସଂରଚନା</item>
+    <item name="r0x00000000">ସହାୟତାର ସ୍କ୍ରିନ୍‌ଶଟ୍‌</item>
+    <item name="r0x00000000">ଫୋନ୍‌ର ସ୍ଥିତି ଜାଣନ୍ତୁ</item>
+    <item name="r0x00000000">ଭଏସ୍‌ମେଲ୍‌ ଯୋଡ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ସିପ୍‌ ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆଉଟ୍‌ଗୋଇଙ୍ଗ କଲ୍‌ ପ୍ରୋସେସ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆଙ୍ଗୁଠି ଚିହ୍ନ</item>
+    <item name="r0x00000000">ବଡୀ ସେନ୍ସର୍</item>
+    <item name="r0x00000000">ସେଲ୍‌ର ସମ୍ପ୍ରସାରଣକୁ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ନକଲି ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">ପଠନ ଷ୍ଟୋରେଜ୍‌</item>
+    <item name="r0x00000000">ଷ୍ଟୋରେଜ୍‌ରେ ଡାଟା ରଖିବାର ଅନୁମତି</item>
+    <item name="r0x00000000">ସ୍କ୍ରୀନ୍‌କୁ ଅନ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆକାଉଣ୍ଟଗୁଡିକ ପ୍ରାପ୍ତ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ବ୍ୟାକ୍‌ଗ୍ରାଊଣ୍ଡରେ ଚଲାନ୍ତୁ</item>
+    <item name="r0x00000000">ଦିବ୍ୟାଙ୍ଗମାନଙ୍କ ପାଇଁ ସୁବିଧାଗୁଡ଼ିକର ଭଲ୍ୟୁମ୍‌</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">ଆନୁମାନିକ ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">ଫାଇନ୍‌ ଲୋକେଶନ୍‌</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">କମ୍ପନ</item>
+    <item name="r0x00000000">ଯୋଗାଯୋଗଗୁଡ଼ିକୁ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ଯୋଗାଯୋଗଗୁଡିକ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">କଲ୍‌ ଲଗ୍‌ ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">କଲ୍‌ ଲଗ୍‌ ସଂଶୋଧନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାଲେଣ୍ଡର ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାଲେଣ୍ଡର ସଂଶୋଧନ</item>
+    <item name="r0x00000000">ୱାଇ-ଫାଇ ସ୍କାନ୍</item>
+    <item name="r0x00000000">ବିଜ୍ଞପ୍ତି</item>
+    <item name="r0x00000000">ସେଲ୍‌ ସ୍କାନ୍‌</item>
+    <item name="r0x00000000">ଫୋନ୍‌ ନମ୍ବର୍‌ କଲ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">SMS ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">SMS ଲେଖନ୍ତୁ</item>
+    <item name="r0x00000000">SMS ଗ୍ରହଣ</item>
+    <item name="r0x00000000">ଜରୁରୀକାଳୀନ SMS ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">MMS ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">ୱାପ୍‌ ପୁଶ୍‌ ପ୍ରାପ୍ତ କରନ୍ତୁ</item>
+    <item name="r0x00000000">SMS ପଠାନ୍ତୁ</item>
+    <item name="r0x00000000">ICC SMS ପଢ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ICC SMS ଲେଖନ୍ତୁ</item>
+    <item name="r0x00000000">ସେଟିଙ୍ଗରେ ସଂଶୋଧନ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ସ୍କ୍ରୀନ୍‌ର ଉପର ଭାଗରେ ଆଙ୍କନ୍ତୁ</item>
+    <item name="r0x00000000">ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଆକ୍‌ସେସ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ୟାମେରା</item>
+    <item name="r0x00000000">ଅଡିଓ ରେକର୍ଡ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଅଡିଓ ବଜାନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ଲିପବୋର୍ଡ ପଢନ୍ତୁ</item>
+    <item name="r0x00000000">କ୍ଲିପ୍‌ବୋର୍ଡ ବଦଳାନ୍ତୁ</item>
+    <item name="r0x00000000">ମିଡିଆର ବଟନ୍‌</item>
+    <item name="r0x00000000">ଅଡିଓ ଫୋକସ୍‌</item>
+    <item name="r0x00000000">ମାଷ୍ଟର୍ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ଭଏସ ଭଲ୍ୟୁମ</item>
+    <item name="r0x00000000">ରିଙ୍ଗ ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ମିଡିଆ ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ଆଲାର୍ମର ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ବିଜ୍ଞପ୍ତି ଭଲ୍ୟୁମ୍</item>
+    <item name="r0x00000000">ବ୍ଲୁ-ଟୂଥ୍‍‌ ଭଲ୍ୟୁମ୍‌</item>
+    <item name="r0x00000000">ଜାଗ୍ରତ ରଖନ୍ତୁ</item>
+    <item name="r0x00000000">ଜାଗା ଖୋଜନ୍ତୁ</item>
+    <item name="r0x00000000">ମଜବୁତ ସିଗ୍ନାଲ୍‌ ଥିବା ଜାଗା ଖୋଜନ୍ତୁ</item>
+    <item name="r0x00000000">ଉପଯୋଗର ହିସାବ ପାଆନ୍ତୁ</item>
+    <item name="r0x00000000">ମାଇକ୍ରୋଫୋନ୍‌ର ସାଉଣ୍ଡ ବନ୍ଦ/ଚାଲୁ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଟୋଷ୍ଟ୍‌ ଦେଖାନ୍ତୁ</item>
+    <item name="r0x00000000">ପ୍ରୋଜେକ୍ଟ ମିଡିଆ</item>
+    <item name="r0x00000000">VPN ସକ୍ରିୟ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ୱାଲପେପର୍‌ ଯୋଡ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">ସହାୟତାର ସଂରଚନା</item>
+    <item name="r0x00000000">ସହାୟକ ସ୍କ୍ରିନ୍‌ଶଟ୍‍</item>
+    <item name="r0x00000000">ଫୋନ୍‌ର ସ୍ଥିତି ଜାଣନ୍ତୁ</item>
+    <item name="r0x00000000">ଭଏସ୍‌ମେଲ୍‌ ଯୋଡ଼ନ୍ତୁ</item>
+    <item name="r0x00000000">sip ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆଉଟ୍‌ଗୋଇଙ୍ଗ କଲ୍ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆଙ୍ଗୁଠି ଚିହ୍ନ</item>
+    <item name="r0x00000000">ବଡୀ ସେନ୍ସର୍</item>
+    <item name="r0x00000000">ସେଲ୍‌ ବ୍ରଡକାଷ୍ଟ ପଢନ୍ତୁ</item>
+    <item name="r0x00000000">ନକଲି ଅବସ୍ଥାନ</item>
+    <item name="r0x00000000">ଷ୍ଟୋରେଜ୍‌ରୁ ଡାଟା ପଢ଼ିବାର ଅନୁମତି</item>
+    <item name="r0x00000000">ଷ୍ଟୋରେଜ୍‌ରେ ଡାଟା ରଖିବାର ଅନୁମତି</item>
+    <item name="r0x00000000">ସ୍କ୍ରୀନ୍‌ ଅନ୍‌ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆକାଉଣ୍ଟଗୁଡିକ ପ୍ରାପ୍ତ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ବ୍ୟାକ୍‌ଗ୍ରାଉଣ୍ଡରେ ଚଲାନ୍ତୁ</item>
+    <item name="r0x00000000">ଆକ୍‌ସେସିବିଲିଟୀ ଭଲ୍ୟୁମ୍</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">ସାଧାରଣ ସୀମା</item>
+    <item name="r0x00000000">କୌଣସି ବ୍ୟାକ୍‌ଗ୍ରାଉଣ୍ଡ ପ୍ରୋସେସ୍ ଚାଲୁନାହିଁ</item>
+    <item name="r0x00000000">ସର୍ବାଧିକ 1ଟି ପ୍ରକ୍ରିୟା</item>
+    <item name="r0x00000000">ସର୍ବାଧିକ 2 ଟି ପ୍ରକ୍ରିୟା</item>
+    <item name="r0x00000000">ଅତିବେଶୀରେ 3ଟି ପ୍ରକ୍ରିୟା</item>
+    <item name="r0x00000000">ସର୍ବାଧିକ 4 ଟି ପ୍ରକ୍ରିୟା</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">୩୦ ଦିନରୁ ଅଧିକ ପୁରୁଣା</item>
+    <item name="r0x00000000">60 ଦିନରୁ ଅଧିକ ପୁରୁଣା</item>
+    <item name="r0x00000000">90 ଦିନରୁ ବି ଅଧିକ ପୁରୁଣା</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">ଅନିର୍ଦ୍ଦିଷ୍ଟ</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍‌ ମନୋନୟନ (ଡିଫଲ୍ଟ) ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">୧୬ ବିଟସ୍‌/ନମୁନା</item>
+    <item name="r0x00000000">24 ବିଟସ୍‌/ନମୂନା</item>
+    <item name="r0x00000000">32 ବିଟସ୍‌/ନମୁନା</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍‌ର ଚୟନ (ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ) ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">16 ବିଟ୍ସ/ସାମ୍ପଲ୍‌</item>
+    <item name="r0x00000000">24 ବିଟ୍ସ/ନମୁନା</item>
+    <item name="r0x00000000">32 ବିଟସ୍‌/ନମୂନା</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍ ଚୟନ ବ୍ୟବହାର କରନ୍ତୁ(ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ)</item>
+    <item name="r0x00000000">ମୋନୋ</item>
+    <item name="r0x00000000">ଷ୍ଟେରିଓ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍ ଚୟନ ବ୍ୟବହାର କରନ୍ତୁ (ଡିଫଲ୍ଟ)</item>
+    <item name="r0x00000000">ମୋନୋ</item>
+    <item name="r0x00000000">ଷ୍ଟେରିଓ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">ଅଡିଓର ଗୁଣବତ୍ତା ପାଇଁ ଅନୁକୂଳିତ</item>
+    <item name="r0x00000000">ସନ୍ତୁଳିତ ଅଡିଓ ଓ ସଂଯୋଗ କ୍ୱାଲିଟୀ</item>
+    <item name="r0x00000000">ସଂଯୋଗର ଗୁଣବତ୍ତା ପାଇଁ ଅନୁକୂଳିତ</item>
+    <item name="r0x00000000">ସର୍ବୋତ୍ତମ ପ୍ରୟାସ (ଅନୁକୂଳ ବିଟ୍‌ ରେଟ୍‌)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">ଅଡିଓ ଗୁଣବତ୍ତା ପାଇଁ ଅନୁକୂଳିତ(990kbps/909kbps)</item>
+    <item name="r0x00000000">ସନ୍ତୁଳିତ ଅଡିଓ ଓ ସଂଯୋଗ ଗୁଣବତ୍ତା (660kbps/606kbps)</item>
+    <item name="r0x00000000">ସଂଯୋଗର ଗୁଣବତ୍ତା (330kbps/303kbps) ପାଇଁ ଉପଯୁକ୍ତ କରାଯାଇଛି</item>
+    <item name="r0x00000000">ସର୍ବୋତ୍ତମ ପ୍ରୟାସ (ଅନୁକୁଳ ବିଟ୍‌ ରେଟ୍‌)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍‌ ଚୟନ ବ୍ୟବହାର କରନ୍ତୁ (ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ)</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍‌ର ଚୟନ (ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ) ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">44.1 kHz</item>
+    <item name="r0x00000000">48.0 kHz</item>
+    <item name="r0x00000000">88.2 kHz</item>
+    <item name="r0x00000000">96.0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍‌ର ଚୟନ (ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ) ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ ଅଡିଓ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD ଅଡିଓ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">ବିକଳ୍ପ କୋଡେକ୍ସ ସକ୍ଷମ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ବିକଳ୍ପ କୋଡେକ୍ସ ଅକ୍ଷମ କରନ୍ତୁ</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍ ଚୟନ ବ୍ୟବହାର କରନ୍ତୁ (ଡିଫଲ୍ଟ)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ ଅଡିଓ</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD ଅଡିଓ</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">ବିକଳ୍ପ କୋଡେକ୍ସକୁ ସକ୍ଷମ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ବିକଳ୍ପ କୋଡେକ୍‌ଗୁଡ଼ିକୁ ଅକ୍ଷମ କରନ୍ତୁ</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, ସକ୍ରିୟ</item>
+    <item name="r0x00000000">, ସକ୍ରିୟ (ମିଡିଆ)</item>
+    <item name="r0x00000000">, ସକ୍ରିୟ (ଫୋନ୍)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (ଡିଫଲ୍ଟ)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟ ବ୍ୟବହାର କରନ୍ତୁ: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 ମିନିଟ୍</item>
+    <item name="r0x00000000">୫ ମିନିଟ୍‌</item>
+    <item name="r0x00000000">୧ ଘଣ୍ଟା</item>
+    <item name="r0x00000000">କେବେବି ବନ୍ଦ କରନାହିଁ</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">ଡିଫଲ୍ଟ</item>
+    <item name="r0x00000000">କିଛି ନୁହେଁ</item>
+    <item name="r0x00000000">ଆଉଟ୍‌ଲାଇନ୍‌</item>
+    <item name="r0x00000000">ଡ୍ରପ୍‌ ଛାୟା</item>
+    <item name="r0x00000000">ଉଠିକରିଥିବା</item>
+    <item name="r0x00000000">ସଂକ୍ଷିପ୍ତ</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">ବହୁତ ଛୋଟ</item>
+    <item name="r0x00000000">ଛୋଟ</item>
+    <item name="r0x00000000">ସାଧାରଣ</item>
+    <item name="r0x00000000">ବହୁତ ବଡ଼</item>
+    <item name="r0x00000000">ବହୁତ ବଡ଼</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">ଆପ୍‌ର ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ ସେଟିଙ୍ଗ ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">କଳା ଉପରେ ଧଳା</item>
+    <item name="r0x00000000">ଧଳା ଉପରେ କଳା</item>
+    <item name="r0x00000000">କଳା ଉପରେ ହଳଦିଆ</item>
+    <item name="r0x00000000">ନୀଳ ଉପରେ ହଳଦିଆ</item>
+    <item name="r0x00000000">କଷ୍ଟମ୍‌</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ</item>
+    <item name="r0x00000000">ସାନ୍ସ-ସେରିଫ୍‌</item>
+    <item name="r0x00000000">ସାନ୍ସ-ସେରିଫ୍ କଣ୍ଡେନ୍ସଡ୍</item>
+    <item name="r0x00000000">ସାନ୍ସ-ସେରିଫ୍‍ ମୋନୋସ୍ପେସ୍</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif monospace</item>
+    <item name="r0x00000000">ସାଧାରଣ</item>
+    <item name="r0x00000000">କର୍ସିଭ</item>
+    <item name="r0x00000000">ଛୋଟ ଆକାରର ଅକ୍ଷର</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">ବର୍ଦ୍ଧିତ ରଙ୍ଗ</item>
+    <item name="r0x00000000">ଆଖି ଦ୍ୱାରା ଦେଖାଯାଇଥିବା ପରି ପ୍ରାକୃତିକ ରଙ୍ଗ</item>
+    <item name="r0x00000000">ଡିଜିଟାଲ୍‌ କଣ୍ଟେଣ୍ଟ ପାଇଁ ରଙ୍ଗଗୁଡ଼ିକ ଅନୁକୂଳିତ ହୋଇଛି</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">ଜୀବନ୍ତ (ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ)</item>
+    <item name="r0x00000000">ପ୍ରାକୃତିକ</item>
+    <item name="r0x00000000">ମାନକ</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">ଟିଲ୍</item>
+    <item name="r0x00000000">ନୀଳ</item>
+    <item name="r0x00000000">ଇଣ୍ଡିଗୋ</item>
+    <item name="r0x00000000">ବାଇଗଣୀ</item>
+    <item name="r0x00000000">ଗୋଲାପୀ</item>
+    <item name="r0x00000000">ନାଲି</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">ସ୍ଵଚାଳିତ (ଦିନର ସମୟ ଉପରେ ଆଧାରିତ)</item>
+    <item name="r0x00000000">ସର୍ବଦା ଅନ୍‌</item>
+    <item name="r0x00000000">ସର୍ବଦା ଅଫ୍</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">ଗତ ୩୦ ଦିନ</item>
+    <item name="r0x00000000">ବ୍ୟବହାରର ଚକ୍ର ସେଟ୍‌ କରନ୍ତୁ…</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">ଅଫ୍</item>
+    <item name="r0x00000000">ଓଭର୍‌ ଡ୍ର କ୍ଷେତ୍ରଗୁଡ଼ିକୁ ଦେଖାଅ</item>
+    <item name="r0x00000000">ଡିଉଟେରାନୋମାଲୀ ପାଇଁ କ୍ଷେତ୍ର ଦେଖନ୍ତୁ</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">ଆଦୌ ନୁହେଁ</item>
+    <item name="r0x00000000">15 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">30 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">1 ମିନିଟ୍</item>
+    <item name="r0x00000000">୨ ମିନିଟ୍</item>
+    <item name="r0x00000000">ମିନିଟ୍</item>
+    <item name="r0x00000000">10 ମିନିଟ୍</item>
+    <item name="r0x00000000">୩୦ ମିନିଟ୍‌</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">କିଛିନାହିଁ</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (ଗ୍ରାଫିକ୍ସ)</item>
+    <item name="r0x00000000">glGetError ରେ କଲ୍‌ ଷ୍ଟାକ୍</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">ଛୋଟ</item>
+    <item name="r0x00000000">ପୂର୍ବ-ନିର୍ଦ୍ଧାରିତ</item>
+    <item name="r0x00000000">ବହୁତ ବଡ଼</item>
+    <item name="r0x00000000">ବୃହତ୍ତମ</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">କଦାପି HDCP ଯାଞ୍ଚ କରିବା ବ୍ୟବହାର କରନ୍ତୁ ନାହିଁ</item>
+    <item name="r0x00000000">କେବଳ DRM କଣ୍ଟେଣ୍ଟ ପାଇଁ HDCP ଯାଞ୍ଚ ବ୍ୟବହାର କରନ୍ତୁ</item>
+    <item name="r0x00000000">ସର୍ବଦା HDCP ଯାଞ୍ଚ ବ୍ୟବହାର କରନ୍ତୁ</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">ଆଦୌ ଯାଞ୍ଚ କରନାହିଁ</item>
+    <item name="r0x00000000">କେବଳ DRM କଣ୍ଟେଣ୍ଟ ଠାବ କର</item>
+    <item name="r0x00000000">ସର୍ବଦା ଠାବ କର</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">ତୁରନ୍ତ</item>
+    <item name="r0x00000000">5 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">15 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">30 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">୧ ମିନିଟ୍‌</item>
+    <item name="r0x00000000">2 ମିନିଟ୍</item>
+    <item name="r0x00000000">5 ମିନିଟ୍</item>
+    <item name="r0x00000000">10 ମିନିଟ୍</item>
+    <item name="r0x00000000">୩୦ ମିନିଟ୍</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">ଛୋଟ</item>
+    <item name="r0x00000000">ମଧ୍ୟମ</item>
+    <item name="r0x00000000">ଲମ୍ଵା</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">କିଛି ନୁହେଁ</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">କିଛି ନାହିଁ</item>
+    <item name="r0x00000000">480p</item>
+    <item name="r0x00000000">480p (ସୁରକ୍ଷିତ)</item>
+    <item name="r0x00000000">p</item>
+    <item name="r0x00000000">720p (ସୁରକ୍ଷିତ)</item>
+    <item name="r0x00000000">1080p</item>
+    <item name="r0x00000000">1080p (ସୁରକ୍ଷିତ)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (ସୁରକ୍ଷିତ)</item>
+    <item name="r0x00000000">4K (ଅପ୍‌ସ୍କେଲ୍‌ କରାଯାଇଛି)</item>
+    <item name="r0x00000000">4K (ଉତ୍ତମ, ସୁରକ୍ଷିତ)</item>
+    <item name="r0x00000000">720p, 1080p (ଡୁଆଲ୍ ସ୍କ୍ରୀନ୍‌)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">ସାଧାରଣ</item>
+    <item name="r0x00000000">ମଧ୍ୟମ</item>
+    <item name="r0x00000000">ନିମ୍ନ</item>
+    <item name="r0x00000000">ଜଟିଳ</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">ନିରନ୍ତର</item>
+    <item name="r0x00000000">ଶ୍ରେଷ୍ଠ ଗତିବିଧି</item>
+    <item name="r0x00000000">ଜରୁରୀ (ଫୋର୍‌ଗ୍ରାଉଣ୍ଡ)</item>
+    <item name="r0x00000000">ଗୁରୁତ୍ଵପୁର୍ଣ୍ଣ (ପୃଷ୍ଠପଟ)</item>
+    <item name="r0x00000000">ବ୍ୟାକଅପ୍</item>
+    <item name="r0x00000000">ଭାରୀ</item>
+    <item name="r0x00000000">ସେବା (ଚାଲୁଛି)</item>
+    <item name="r0x00000000">ସେବା (ରିଷ୍ଟାର୍ଟ ହେଉଛି)</item>
+    <item name="r0x00000000">ପ୍ରାପକ</item>
+    <item name="r0x00000000">ହୋମ୍‌</item>
+    <item name="r0x00000000">ଶେଷ ଗତିବିଧି</item>
+    <item name="r0x00000000">କ୍ୟାଶ୍ ହୋଇଥିବା (କାର୍ଯ୍ୟକଳାପ)</item>
+    <item name="r0x00000000">କ୍ୟାଶ୍ ହୋଇଥିବା (କାର୍ଯ୍ୟକଳାପ କ୍ଲାଏଣ୍ଟ)</item>
+    <item name="r0x00000000">କ୍ୟାଶ୍ ହୋଇଥିବା (ଖାଲି)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">ସାଧାରଣ</item>
+    <item name="r0x00000000">ମଧ୍ୟମ ଧରଣର</item>
+    <item name="r0x00000000">ନିମ୍ନ</item>
+    <item name="r0x00000000">ଜଟିଳ</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">30 ସେକେଣ୍ଡ</item>
+    <item name="r0x00000000">1 ମିନିଟ୍</item>
+    <item name="r0x00000000">2 ମିନିଟ୍</item>
+    <item name="r0x00000000">5 ମିନିଟ୍‍</item>
+    <item name="r0x00000000">10 ମିନିଟ୍</item>
+    <item name="r0x00000000">30 ମିନିଟ୍</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">ପଚାରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆଦୌ ଅନୁମତି ଦିଅନାହିଁ</item>
+    <item name="r0x00000000">ସର୍ବଦା ଅନୁମତି ଦିଅନ୍ତୁ</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">ବନ୍ଦ</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">ବନ୍ଦ</item>
+    <item name="r0x00000000">64K ପିଛା ଲଗ୍‌ ବଫର୍‌</item>
+    <item name="r0x00000000">256K ଲଗ୍‌ ପ୍ରତି ବଫର୍‌</item>
+    <item name="r0x00000000">ଲଗ୍‌ ବଫର୍‌ ପ୍ରତି 1M</item>
+    <item name="r0x00000000">ଲଗ୍‌ ବଫର୍‌ ପ୍ରତି 4M</item>
+    <item name="r0x00000000">16M ଲଗ ପିଛା ବଫର୍‌</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">ଅଫ୍</item>
+    <item name="r0x00000000">64K</item>
+    <item name="r0x00000000">256K</item>
+    <item name="r0x00000000">1M</item>
+    <item name="r0x00000000">4M</item>
+    <item name="r0x00000000">16M</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">ଅଫ</item>
+    <item name="r0x00000000">ସମସ୍ତ ଲଗ୍‌ ବଫର୍‌</item>
+    <item name="r0x00000000">ରେଡିଓ ଲଗ୍‌ ବଫର୍‌‌ଗୁଡିକ ଛଡ଼ା ଅନ୍ୟ ସବୁ</item>
+    <item name="r0x00000000">କେବଳ କର୍ନେଲ୍‌ ଲଗ୍‌ ବଫର୍‌</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">ବନ୍ଦ</item>
+    <item name="r0x00000000">ସମସ୍ତ</item>
+    <item name="r0x00000000">ରେଡିଓ ଛଡ଼ା ଅନ୍ୟ ସବୁ</item>
+    <item name="r0x00000000">କେବଳ କର୍ନେଲ୍</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">ଅଫ୍</item>
+    <item name="r0x00000000">ଅଣ-ଆୟତାକାର କ୍ଲିପ୍ କ୍ଷେତ୍ର ନୀଳ ରଙ୍ଗରେ ଆଙ୍କନ୍ତୁ</item>
+    <item name="r0x00000000">ଟେଷ୍ଟ ହୋଇଥିବା ଅଙ୍କନ କମାଣ୍ଡଗୁଡ଼ିକୁ ସବୁଜରେ ଚିହ୍ନିତ କରନ୍ତୁ</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">ଆମେରିକା</item>
+    <item name="r0x00000000">ୟୁରୋପ</item>
+    <item name="r0x00000000">ଆଫ୍ରିକା</item>
+    <item name="r0x00000000">ଏସିଆ</item>
+    <item name="r0x00000000">ଅଷ୍ଟ୍ରେଲିଆ</item>
+    <item name="r0x00000000">ପେସିଫିକ୍‌</item>
+    <item name="r0x00000000">ସମସ୍ତ</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">ବନ୍ଦ</item>
+    <item name="r0x00000000">ସ୍କ୍ରୀନ୍‌ରେ ବାର୍‌ ପରି</item>
+    <item name="r0x00000000">ରେ adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ବନ୍ଦ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ .5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 1x</item>
+    <item name="r0x00000000">ଆନିମେସନ୍‌ ସ୍କେଲ 1.5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 2x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 5x</item>
+    <item name="r0x00000000">ଆନିମେସନ୍‌ ସ୍କେଲ୍‌ 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">ବହୁତ ମନ୍ଥର</item>
+    <item name="r0x00000000">ମନ୍ଥର</item>
+    <item name="r0x00000000">ସାମାନ୍ୟ</item>
+    <item name="r0x00000000">ଦ୍ରୁତ</item>
+    <item name="r0x00000000">ଦ୍ରୁତତର</item>
+    <item name="r0x00000000">ଅତି ଦ୍ରୁତ</item>
+    <item name="r0x00000000">ଦ୍ରୁତ</item>
+    <item name="r0x00000000">ଅତି ତୀବ୍ର</item>
+    <item name="r0x00000000">ଦ୍ରୁତତ୍ତମ</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">ବ୍ୟବହାରର ସମୟ</item>
+    <item name="r0x00000000">ଗତଥର ବ୍ୟବହାର କରାଯାଇଥିବା</item>
+    <item name="r0x00000000">ଆପ୍‌ର ନାମ</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">ଚାର୍ଜ ହେଉଛି</item>
+    <item name="r0x00000000">MTP (ମିଡିଆ ସ୍ଥାନାନ୍ତର ପ୍ରୋଟୋକଲ୍‌)</item>
+    <item name="r0x00000000">PTP (ପିକଚର୍‌ ଟ୍ରାନ୍ସଫର୍‌ ପ୍ରୋଟୋକଲ୍‌)</item>
+    <item name="r0x00000000">RNDIS (USB ଏଥରନେଟ)</item>
+    <item name="r0x00000000">ଅଡିଓ ଉତ୍ସ</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">ବିଛିନ୍ନ ହେଲା</item>
+    <item name="r0x00000000">ଆରମ୍ଭ କରୁଛି…</item>
+    <item name="r0x00000000">ସଂଯୋଗ କରାଯାଉଛି…</item>
+    <item name="r0x00000000">ସଂଯୁକ୍ତ</item>
+    <item name="r0x00000000">ସମୟ ସମାପ୍ତ</item>
+    <item name="r0x00000000">ଅସଫଳ</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">ପୂର୍ବରୁ ଶେୟାର୍‌ ହୋଇଥିବା କୀଗୁଡ଼ିକ ସହ L2TP/IPSec VPN</item>
+    <item name="r0x00000000">ସର୍ଟିଫିକେଟ୍‌ ସହ L2TP/IPSec VPN</item>
+    <item name="r0x00000000">ଶେୟାର୍‌ କରାଯାଇଥିବା କୀ’ଗୁଡ଼ିକ ସହିତ IPSec VPN ଏବଂ Xauth ସତ୍ୟାପନ</item>
+    <item name="r0x00000000">ସର୍ଟିଫିକେଟ୍‌ ଏବଂ Xauth ପ୍ରାମାଣିକୀକରଣ ସହ IPSec VPN</item>
+    <item name="r0x00000000">ସର୍ଟିଫିକେଟ୍‌ ଓ ହାଇବ୍ରିଡ୍‌ ସତ୍ୟାପନ ସହ IPSec VPN</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">ମନପସନ୍ଦର Wi-Fi</item>
+    <item name="r0x00000000">ପସନ୍ଦର ମୋବାଇଲ</item>
+    <item name="r0x00000000">କେବଳ ୱାଇ-ଫାଇ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">ମୋବାଇଲ୍‌</item>
+    <item name="r0x00000000">କେବଳ ୱାଇ-ଫାଇ</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">ୱାଇ-ଫାଇ</item>
+    <item name="r0x00000000">ମୋବାଇଲ୍</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">ମନପସନ୍ଦର ୱାଇ-ଫାଇ</item>
+    <item name="r0x00000000">ପସନ୍ଦର ମୋବାଇଲ୍‌</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">୧</item>
+    <item name="r0x00000000">୦</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">୨</item>
+    <item name="r0x00000000">\1</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">ସିମ୍‌</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">ନା</item>
+    <item name="r0x00000000">ହଁ</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">ଷ୍ଟାଟିକ୍</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">ସ୍ଵଚାଳିତ ଭାବେ ଚିହ୍ନଟ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ମାପ ହୋଇଥିବା ସଂଯୋଗ ରୂପେ ବିବେଚନା କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଅପରିମିତ ସଂଯୋଗ ରୂପେ ବିବେଚନା କରନ୍ତୁ</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">ସଂଯୁକ୍ତ</item>
+    <item name="r0x00000000">ଆମନ୍ତ୍ରିତ</item>
+    <item name="r0x00000000">ବିଫଳ</item>
+    <item name="r0x00000000">ଉପଲବ୍ଧ</item>
+    <item name="r0x00000000">ପରିସୀମା ବାହାରେ</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">ପୁଶ୍‌ ବଟନ୍‌</item>
+    <item name="r0x00000000">ପୀଅର୍‌ ଡିଭାଇସ୍‌ରୁ PIN‌</item>
+    <item name="r0x00000000">ଏହି ଡିଭାଇସ୍‌ରୁ PIN</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">କିଛି ନାହିଁ</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">କିଛି ନୁହେଁ</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">AKA</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">କିଛି ନୁହେଁ</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">କିଛି ନାହିଁ</item>
+    <item name="r0x00000000">ମାନୁଆଲ୍‌</item>
+    <item name="r0x00000000">ପ୍ରକ୍ସୀ ଅଟୋ-କନ୍‌ପିଗରେଶନ୍</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">ଖରାପ</item>
+    <item name="r0x00000000">ଖରାପ</item>
+    <item name="r0x00000000">ଠିକଠାକ</item>
+    <item name="r0x00000000">ଭଲ</item>
+    <item name="r0x00000000">ସର୍ବୋତ୍ତମ</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">ସ୍କାନ୍‌ କରୁଛି…</item>
+    <item name="r0x00000000">ସଂଯୋଗ କରୁଛି…</item>
+    <item name="r0x00000000">ପ୍ରାମାଣିକୀକରଣ କରାଯାଉଛି…</item>
+    <item name="r0x00000000">IP ଠିକଣା ପ୍ରାପ୍ତ କରୁଛି…</item>
+    <item name="r0x00000000">ସଂଯୋଜିତ</item>
+    <item name="r0x00000000">ନିଲମ୍ବିତ</item>
+    <item name="r0x00000000">ବିଚ୍ଛିନ୍ନ ହେଉଛି…</item>
+    <item name="r0x00000000">ବିଚ୍ଛିନ୍ନ</item>
+    <item name="r0x00000000">ଅସଫଳ</item>
+    <item name="r0x00000000">ଅବରୋଧିତ</item>
+    <item name="r0x00000000">ସାମୟିକ ଭାବେ ଖରାପ ସଂଯୋଜନାକୁ ଏଡାଉଛି</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">ସ୍କାନ୍‌ କରୁଛି…</item>
+    <item name="r0x00000000">%1$sକୁ ସଂଯୋଗ କରାଯାଉଛି…</item>
+    <item name="r0x00000000">%1$s ସହ ପ୍ରମାଣିତ ହେଉଛି…</item>
+    <item name="r0x00000000">%1$sରୁ IP ଠିକଣା ହାସଲ କରୁଛି…</item>
+    <item name="r0x00000000">%1$s ସହ ସଂଯୁକ୍ତ</item>
+    <item name="r0x00000000">କଟିଯାଇଛି</item>
+    <item name="r0x00000000">%1$sରୁ ବିଚ୍ଛିନ୍ନ ହେଉଛି…</item>
+    <item name="r0x00000000">ସଂଯୁକ୍ତ ନାହିଁ</item>
+    <item name="r0x00000000">ଅସଫଳ</item>
+    <item name="r0x00000000">ଅବରୋଧିତ</item>
+    <item name="r0x00000000">ଦୁର୍ବଳ ସଂଯୋଗକୂ ସାମୟିକ ଭାବେ ଏଡ଼ାଉଛି</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ବନ୍ଦ କରନ୍ତୁ</item>
+    <item name="r0x00000000">ଆନିମେଶନ ସ୍କେଲ .5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 1x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 1.5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ ସ୍କେଲ 2x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 5x</item>
+    <item name="r0x00000000">ଆନିମେଶନ୍‌ ସ୍କେଲ୍‌ 10x</item>
+  </string-array>
+</resources>

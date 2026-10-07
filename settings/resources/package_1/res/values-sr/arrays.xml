@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="animator_duration_scale_entries">
+    <item name="r0x00000000">Анимација је искључена</item>
+    <item name="r0x00000000">Размера анимације 0,5x</item>
+    <item name="r0x00000000">Размера анимације 1x</item>
+    <item name="r0x00000000">Размера анимације 1,5x</item>
+    <item name="r0x00000000">Размера анимације 2x</item>
+    <item name="r0x00000000">Размера анимације 5x</item>
+    <item name="r0x00000000">Размера анимације 10x</item>
+  </string-array>
+  <string-array name="apn_auth_entries">
+    <item name="r0x00000000">Ништа</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">CHAP</item>
+    <item name="r0x00000000">PAP или CHAP</item>
+  </string-array>
+  <string-array name="apn_protocol_entries">
+    <item name="r0x00000000">IPv4</item>
+    <item name="r0x00000000">IPv6</item>
+    <item name="r0x00000000">IPv4/IPv6</item>
+  </string-array>
+  <string-array name="app_install_location_entries">
+    <item name="r0x00000000">Складиште унутрашњег уређаја</item>
+    <item name="r0x00000000">Уклоњива SD картица</item>
+    <item name="r0x00000000">Нека систем одлучи</item>
+  </string-array>
+  <string-array name="app_ops_categories">
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Лично</item>
+    <item name="r0x00000000">Размена порука</item>
+    <item name="r0x00000000">Медији</item>
+    <item name="r0x00000000">Уређај</item>
+  </string-array>
+  <string-array name="app_ops_labels">
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Вибрација</item>
+    <item name="r0x00000000">Читање контаката</item>
+    <item name="r0x00000000">Мењање контаката</item>
+    <item name="r0x00000000">Читање евиденције позива</item>
+    <item name="r0x00000000">Мењање евиденције позива</item>
+    <item name="r0x00000000">Читање календара</item>
+    <item name="r0x00000000">Мењање календара</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Постављање обавештења</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Позивање телефона</item>
+    <item name="r0x00000000">Читање SMS/MMS порука</item>
+    <item name="r0x00000000">Писање SMS/MMS порука</item>
+    <item name="r0x00000000">Пријем SMS/MMS порука</item>
+    <item name="r0x00000000">Пријем SMS/MMS порука</item>
+    <item name="r0x00000000">Пријем SMS/MMS порука</item>
+    <item name="r0x00000000">Пријем SMS/MMS порука</item>
+    <item name="r0x00000000">Слање SMS/MMS порука</item>
+    <item name="r0x00000000">Читање SMS/MMS порука</item>
+    <item name="r0x00000000">Писање SMS/MMS порука</item>
+    <item name="r0x00000000">Мењање подешавања</item>
+    <item name="r0x00000000">Повлачење на врх</item>
+    <item name="r0x00000000">Приступ обавештењима</item>
+    <item name="r0x00000000">Камера</item>
+    <item name="r0x00000000">Снимање аудио записа</item>
+    <item name="r0x00000000">Пуштање аудио записа</item>
+    <item name="r0x00000000">Читање меморије</item>
+    <item name="r0x00000000">Мењање меморије</item>
+    <item name="r0x00000000">Дугмад за медије</item>
+    <item name="r0x00000000">Аудио фокус</item>
+    <item name="r0x00000000">Главна јачина звука</item>
+    <item name="r0x00000000">Јачина звука гласа</item>
+    <item name="r0x00000000">Јачина звука звона</item>
+    <item name="r0x00000000">Јачина звука медија</item>
+    <item name="r0x00000000">Јачина звука аларма</item>
+    <item name="r0x00000000">Јачина звука обавештења</item>
+    <item name="r0x00000000">Јачина звука Bluetooth-а</item>
+    <item name="r0x00000000">Задржи ван стања спавања</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Локација</item>
+    <item name="r0x00000000">Преузми статистику о коришћењу</item>
+    <item name="r0x00000000">Искључи/укључи звук микрофона</item>
+    <item name="r0x00000000">Приказивање искачућих пoрука</item>
+    <item name="r0x00000000">Медији за пројекат</item>
+    <item name="r0x00000000">Активирање VPN-а</item>
+    <item name="r0x00000000">Упис на позадину</item>
+    <item name="r0x00000000">Структура помоћи</item>
+    <item name="r0x00000000">Снимак екрана помоћи</item>
+    <item name="r0x00000000">Читање стања телефона</item>
+    <item name="r0x00000000">Додавање говорне поште</item>
+    <item name="r0x00000000">Коришћење SIP-а</item>
+    <item name="r0x00000000">Обрада одлазног позива</item>
+    <item name="r0x00000000">Отисак прста</item>
+    <item name="r0x00000000">Сензори за тело</item>
+    <item name="r0x00000000">Читање порука за мобилне уређаје на локалитету</item>
+    <item name="r0x00000000">Лажна локација</item>
+    <item name="r0x00000000">Читање меморијског простора</item>
+    <item name="r0x00000000">Упис података у меморијски простор</item>
+    <item name="r0x00000000">Укључивање екрана</item>
+    <item name="r0x00000000">Приступ налозима</item>
+    <item name="r0x00000000">Рад у позадини</item>
+    <item name="r0x00000000">Јачина звука за приступачност</item>
+  </string-array>
+  <string-array name="app_ops_summaries">
+    <item name="r0x00000000">оквирна локација</item>
+    <item name="r0x00000000">прецизна локација</item>
+    <item name="r0x00000000">GPS</item>
+    <item name="r0x00000000">вибрација</item>
+    <item name="r0x00000000">читање контаката</item>
+    <item name="r0x00000000">мењање контаката</item>
+    <item name="r0x00000000">читање евиденције позива</item>
+    <item name="r0x00000000">мењање евиденције позива</item>
+    <item name="r0x00000000">читање календара</item>
+    <item name="r0x00000000">мењање календара</item>
+    <item name="r0x00000000">Wi-Fi скенирање</item>
+    <item name="r0x00000000">обавештење</item>
+    <item name="r0x00000000">скенирање телефона</item>
+    <item name="r0x00000000">позивање телефона</item>
+    <item name="r0x00000000">читање SMS порука</item>
+    <item name="r0x00000000">писање SMS порука</item>
+    <item name="r0x00000000">пријем SMS порука</item>
+    <item name="r0x00000000">пријем хитних SMS порука</item>
+    <item name="r0x00000000">пријем MMS порука</item>
+    <item name="r0x00000000">пријем push порука преко WAP-а</item>
+    <item name="r0x00000000">слање SMS порука</item>
+    <item name="r0x00000000">читање ICC SMS порука</item>
+    <item name="r0x00000000">писање ICC SMS порука</item>
+    <item name="r0x00000000">мењање подешавања</item>
+    <item name="r0x00000000">повлачење на врх</item>
+    <item name="r0x00000000">приступ обавештењима</item>
+    <item name="r0x00000000">камера</item>
+    <item name="r0x00000000">снимање аудио записа</item>
+    <item name="r0x00000000">пуштање аудио записа</item>
+    <item name="r0x00000000">читање меморије</item>
+    <item name="r0x00000000">мењање меморије</item>
+    <item name="r0x00000000">дугмад за медије</item>
+    <item name="r0x00000000">аудио фокус</item>
+    <item name="r0x00000000">главна јачина звука</item>
+    <item name="r0x00000000">јачина звука гласа</item>
+    <item name="r0x00000000">јачина звука звона</item>
+    <item name="r0x00000000">јачина звука медија</item>
+    <item name="r0x00000000">јачина звука аларма</item>
+    <item name="r0x00000000">јачина звука обавештења</item>
+    <item name="r0x00000000">јачина звука Bluetooth-а</item>
+    <item name="r0x00000000">задржавање ван стања спавања</item>
+    <item name="r0x00000000">праћење локације</item>
+    <item name="r0x00000000">надгледање локације са високим напоном</item>
+    <item name="r0x00000000">преузми статистику о коришћењу</item>
+    <item name="r0x00000000">искључи/укључи звук микрофона</item>
+    <item name="r0x00000000">приказивање искачућих порука</item>
+    <item name="r0x00000000">медији за пројекат</item>
+    <item name="r0x00000000">активирање VPN-а</item>
+    <item name="r0x00000000">упис на позадину</item>
+    <item name="r0x00000000">структура помоћи</item>
+    <item name="r0x00000000">снимак екрана помоћи</item>
+    <item name="r0x00000000">читање стања телефона</item>
+    <item name="r0x00000000">додавање говорне поште</item>
+    <item name="r0x00000000">коришћење SIP-а</item>
+    <item name="r0x00000000">обрада одлазног позива</item>
+    <item name="r0x00000000">отисак прста</item>
+    <item name="r0x00000000">сензори за тело</item>
+    <item name="r0x00000000">читање порука за мобилне уређаје на локалитету</item>
+    <item name="r0x00000000">лажна локација</item>
+    <item name="r0x00000000">читање меморијског простора</item>
+    <item name="r0x00000000">упис података у меморијски простор</item>
+    <item name="r0x00000000">укључивање екрана</item>
+    <item name="r0x00000000">приступ налозима</item>
+    <item name="r0x00000000">рад у позадини</item>
+    <item name="r0x00000000">јачина звука за приступачност</item>
+  </string-array>
+  <string-array name="app_process_limit_entries">
+    <item name="r0x00000000">Стандардно ограничење</item>
+    <item name="r0x00000000">Без позадинских процеса</item>
+    <item name="r0x00000000">Највише један процес</item>
+    <item name="r0x00000000">Највише два процеса</item>
+    <item name="r0x00000000">Највише три процеса</item>
+    <item name="r0x00000000">Највише четири процеса</item>
+  </string-array>
+  <string-array name="automatic_storage_management_days">
+    <item name="r0x00000000">Старије од 30 дана</item>
+    <item name="r0x00000000">Старије од 60 дана</item>
+    <item name="r0x00000000">Старије од 90 дана</item>
+  </string-array>
+  <string-array name="battery_labels">
+    <item name="r0x00000000">\0%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="bearer_entries">
+    <item name="r0x00000000">Није наведено</item>
+    <item name="r0x00000000">LTE</item>
+    <item name="r0x00000000">HSPAP</item>
+    <item name="r0x00000000">HSPA</item>
+    <item name="r0x00000000">HSUPA</item>
+    <item name="r0x00000000">HSDPA</item>
+    <item name="r0x00000000">UMTS</item>
+    <item name="r0x00000000">EDGE</item>
+    <item name="r0x00000000">GPRS</item>
+    <item name="r0x00000000">eHRPD</item>
+    <item name="r0x00000000">EVDO_B</item>
+    <item name="r0x00000000">EVDO_A</item>
+    <item name="r0x00000000">EVDO_0</item>
+    <item name="r0x00000000">1xRTT</item>
+    <item name="r0x00000000">IS95B</item>
+    <item name="r0x00000000">IS95A</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">16 битова по узорку</item>
+    <item name="r0x00000000">24 бита по узорку</item>
+    <item name="r0x00000000">32 бита по узорку</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">16 битова по узорку</item>
+    <item name="r0x00000000">24 бита по узорку</item>
+    <item name="r0x00000000">32 бита по узорку</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">Моно</item>
+    <item name="r0x00000000">Стерео</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+    <item name="r0x00000000">Оптимизовано за квалитет звука</item>
+    <item name="r0x00000000">Уједначен квалитет звука и везе</item>
+    <item name="r0x00000000">Оптимизовано за квалитет везе</item>
+    <item name="r0x00000000">Најбоље могуће (прилагодљива брзина преноса)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+    <item name="r0x00000000">Оптимизовано за квалитет звука (990 kb/s/909 kb/s)</item>
+    <item name="r0x00000000">Уједначен квалитет звука и везе (660 kb/s/606 kb/s)</item>
+    <item name="r0x00000000">Оптимизовано за квалитет везе (330 kb/s/303 kb/s)</item>
+    <item name="r0x00000000">Најбоље могуће (прилагодљива брзина преноса)</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">44,1 kHz</item>
+    <item name="r0x00000000">48,0 kHz</item>
+    <item name="r0x00000000">88,2 kHz</item>
+    <item name="r0x00000000">96,0 kHz</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_summaries">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Омогући опционалне кодеке</item>
+    <item name="r0x00000000">Онемогући опционалне кодеке</item>
+  </string-array>
+  <string-array name="bluetooth_a2dp_codec_titles">
+    <item name="r0x00000000">Користи избор система (подразумевано)</item>
+    <item name="r0x00000000">SBC</item>
+    <item name="r0x00000000">AAC</item>
+    <item name="r0x00000000">Qualcomm® aptX™ аудио</item>
+    <item name="r0x00000000">Qualcomm® aptX™ HD аудио</item>
+    <item name="r0x00000000">LDAC</item>
+    <item name="r0x00000000">Омогући опционалне кодеке</item>
+    <item name="r0x00000000">Онемогући опционалне кодеке</item>
+  </string-array>
+  <string-array name="bluetooth_audio_active_device_summaries">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">, активан</item>
+    <item name="r0x00000000">, активан (медијски)</item>
+    <item name="r0x00000000">, активан (телефон)</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_version_values">
+    <item name="r0x00000000">avrcp14</item>
+    <item name="r0x00000000">avrcp13</item>
+    <item name="r0x00000000">avrcp15</item>
+    <item name="r0x00000000">avrcp16</item>
+  </string-array>
+  <string-array name="bluetooth_avrcp_versions">
+    <item name="r0x00000000">AVRCP 1.4 (подразумевано)</item>
+    <item name="r0x00000000">AVRCP 1.3</item>
+    <item name="r0x00000000">AVRCP 1.5</item>
+    <item name="r0x00000000">AVRCP 1.6</item>
+  </string-array>
+  <string-array name="bluetooth_max_connected_audio_devices">
+    <item name="r0x00000000">Користи подразумевано системско подешавање: %1$d</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\3</item>
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\5</item>
+  </string-array>
+  <string-array name="bluetooth_visibility_timeout_entries">
+    <item name="r0x00000000">2 минута</item>
+    <item name="r0x00000000">5 минута</item>
+    <item name="r0x00000000">1 сат</item>
+    <item name="r0x00000000">Без чекања</item>
+  </string-array>
+  <string-array name="captioning_edge_type_selector_titles">
+    <item name="r0x00000000">Подразумевана</item>
+    <item name="r0x00000000">Ниједна</item>
+    <item name="r0x00000000">Контура</item>
+    <item name="r0x00000000">Падајућа сенка</item>
+    <item name="r0x00000000">Испупчена</item>
+    <item name="r0x00000000">Удубљена</item>
+  </string-array>
+  <string-array name="captioning_font_size_selector_titles">
+    <item name="r0x00000000">Веома мала</item>
+    <item name="r0x00000000">Мала</item>
+    <item name="r0x00000000">Нормална</item>
+    <item name="r0x00000000">Велика</item>
+    <item name="r0x00000000">Веома велика</item>
+  </string-array>
+  <string-array name="captioning_opacity_selector_titles">
+    <item name="r0x00000000">\25%</item>
+    <item name="r0x00000000">\50%</item>
+    <item name="r0x00000000">\75%</item>
+    <item name="r0x00000000">\100%</item>
+  </string-array>
+  <string-array name="captioning_preset_selector_titles">
+    <item name="r0x00000000">Подразумевано за апликацију</item>
+    <item name="r0x00000000">Бело на црно</item>
+    <item name="r0x00000000">Црно на бело</item>
+    <item name="r0x00000000">Жуто на црно</item>
+    <item name="r0x00000000">Жуто на плаво</item>
+    <item name="r0x00000000">Прилагођено</item>
+  </string-array>
+  <string-array name="captioning_typeface_selector_titles">
+    <item name="r0x00000000">Подразумевано</item>
+    <item name="r0x00000000">Sans-serif</item>
+    <item name="r0x00000000">Скупљени sans-serif</item>
+    <item name="r0x00000000">Sans-serif фиксне ширине</item>
+    <item name="r0x00000000">Serif</item>
+    <item name="r0x00000000">Serif фиксне ширине</item>
+    <item name="r0x00000000">Опуштено</item>
+    <item name="r0x00000000">Курзив</item>
+    <item name="r0x00000000">Мала почетна слова</item>
+  </string-array>
+  <string-array name="color_mode_descriptions">
+    <item name="r0x00000000">Побољшане боје</item>
+    <item name="r0x00000000">Природне боје налик онима које региструје око</item>
+    <item name="r0x00000000">Боје оптимизоване за дигитални садржај</item>
+  </string-array>
+  <string-array name="color_mode_names">
+    <item name="r0x00000000">Живописан (подразумевано)</item>
+    <item name="r0x00000000">Природан</item>
+    <item name="r0x00000000">Стандардан</item>
+  </string-array>
+  <string-array name="color_picker">
+    <item name="r0x00000000">Плавозелена</item>
+    <item name="r0x00000000">Плава</item>
+    <item name="r0x00000000">Тамноплава</item>
+    <item name="r0x00000000">Љубичаста</item>
+    <item name="r0x00000000">Розе</item>
+    <item name="r0x00000000">Црвена</item>
+  </string-array>
+  <string-array name="dark_ui_mode_entries">
+    <item name="r0x00000000">Аутоматски (у зависности од доба дана)</item>
+    <item name="r0x00000000">Увек укључено</item>
+    <item name="r0x00000000">Увек искључено</item>
+  </string-array>
+  <string-array name="data_usage_data_range">
+    <item name="r0x00000000">Последњих 30 дана</item>
+    <item name="r0x00000000">Подеси циклус потрошње...</item>
+  </string-array>
+  <string-array name="debug_hw_overdraw_entries">
+    <item name="r0x00000000">Искључи</item>
+    <item name="r0x00000000">Прикажи области преклапања</item>
+    <item name="r0x00000000">Прикажи области за деутераномалију</item>
+  </string-array>
+  <string-array name="dream_timeout_entries">
+    <item name="r0x00000000">Никад</item>
+    <item name="r0x00000000">15 секунди</item>
+    <item name="r0x00000000">30 секунди</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минута</item>
+    <item name="r0x00000000">5 минута</item>
+    <item name="r0x00000000">10 минута</item>
+    <item name="r0x00000000">30 минута</item>
+  </string-array>
+  <string-array name="eap_method_without_sim_auth">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="enable_opengl_traces_entries">
+    <item name="r0x00000000">Ниједан</item>
+    <item name="r0x00000000">Logcat</item>
+    <item name="r0x00000000">Systrace (графика)</item>
+    <item name="r0x00000000">Групно позивање функције glGetError</item>
+  </string-array>
+  <string-array name="entries_font_size">
+    <item name="r0x00000000">Мала</item>
+    <item name="r0x00000000">Подразумевана</item>
+    <item name="r0x00000000">Велика</item>
+    <item name="r0x00000000">Највећа</item>
+  </string-array>
+  <string-array name="hdcp_checking_summaries">
+    <item name="r0x00000000">Никада не користи HDCP проверу</item>
+    <item name="r0x00000000">Користи HDCP проверу само за DRM садржај</item>
+    <item name="r0x00000000">Увек користи HDCP проверу</item>
+  </string-array>
+  <string-array name="hdcp_checking_titles">
+    <item name="r0x00000000">Никад не проверавај</item>
+    <item name="r0x00000000">Потражи само DRM садржај</item>
+    <item name="r0x00000000">Увек проверавај</item>
+  </string-array>
+  <string-array name="lock_after_timeout_entries">
+    <item name="r0x00000000">Одмах</item>
+    <item name="r0x00000000">5 секунди</item>
+    <item name="r0x00000000">15 секунди</item>
+    <item name="r0x00000000">30 секунди</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минута</item>
+    <item name="r0x00000000">5 минута</item>
+    <item name="r0x00000000">10 минута</item>
+    <item name="r0x00000000">30 минута</item>
+  </string-array>
+  <string-array name="long_press_timeout_selector_titles">
+    <item name="r0x00000000">Кратко</item>
+    <item name="r0x00000000">Средње</item>
+    <item name="r0x00000000">Дугачко</item>
+  </string-array>
+  <string-array name="mvno_type_entries">
+    <item name="r0x00000000">Ниједан</item>
+    <item name="r0x00000000">SPN</item>
+    <item name="r0x00000000">IMSI</item>
+    <item name="r0x00000000">GID</item>
+    <item name="r0x00000000">ICCID</item>
+  </string-array>
+  <string-array name="overlay_display_devices_entries">
+    <item name="r0x00000000">Ништа</item>
+    <item name="r0x00000000">480 пиксела</item>
+    <item name="r0x00000000">480 пиксела (безбедно)</item>
+    <item name="r0x00000000">720 пиксела</item>
+    <item name="r0x00000000">720 пиксела (безбедно)</item>
+    <item name="r0x00000000">1080 пиксела</item>
+    <item name="r0x00000000">1080 пиксела (безбедно)</item>
+    <item name="r0x00000000">4K</item>
+    <item name="r0x00000000">4K (безбедно)</item>
+    <item name="r0x00000000">4K (увећана резолуција)</item>
+    <item name="r0x00000000">4K (увећана резолуција, безбедно)</item>
+    <item name="r0x00000000">720 пиксела, 1080 пикс. (2 екрана)</item>
+  </string-array>
+  <string-array name="proc_stats_memory_states">
+    <item name="r0x00000000">Нормална</item>
+    <item name="r0x00000000">Умерена</item>
+    <item name="r0x00000000">Ниска</item>
+    <item name="r0x00000000">Критична</item>
+  </string-array>
+  <string-array name="proc_stats_process_states">
+    <item name="r0x00000000">Непрекидна</item>
+    <item name="r0x00000000">Највећа активност</item>
+    <item name="r0x00000000">Важна (први план)</item>
+    <item name="r0x00000000">Важна (други план)</item>
+    <item name="r0x00000000">Резервна копија</item>
+    <item name="r0x00000000">Тешка</item>
+    <item name="r0x00000000">Услуга (активна)</item>
+    <item name="r0x00000000">Услуга (поново се покреће)</item>
+    <item name="r0x00000000">Пријемник</item>
+    <item name="r0x00000000">Почетна</item>
+    <item name="r0x00000000">Последња активност</item>
+    <item name="r0x00000000">Кеширана (активност)</item>
+    <item name="r0x00000000">Кеширана (клијент активности)</item>
+    <item name="r0x00000000">Кеширана (празно)</item>
+  </string-array>
+  <string-array name="ram_states">
+    <item name="r0x00000000">Нормално</item>
+    <item name="r0x00000000">Умерено</item>
+    <item name="r0x00000000">Ниско</item>
+    <item name="r0x00000000">Критично</item>
+    <item name="r0x00000000">?</item>
+  </string-array>
+  <string-array name="screen_timeout_entries">
+    <item name="r0x00000000">15 секунди</item>
+    <item name="r0x00000000">30 секунди</item>
+    <item name="r0x00000000">1 минут</item>
+    <item name="r0x00000000">2 минута</item>
+    <item name="r0x00000000">5 минута</item>
+    <item name="r0x00000000">10 минута</item>
+    <item name="r0x00000000">30 минута</item>
+  </string-array>
+  <string-array name="security_settings_premium_sms_values">
+    <item name="r0x00000000">Питај</item>
+    <item name="r0x00000000">Никада не дозволи</item>
+    <item name="r0x00000000">Увек дозволи</item>
+  </string-array>
+  <string-array name="select_logd_size_lowram_titles">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+  </string-array>
+  <string-array name="select_logd_size_summaries">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">64 kB по међумеморији евиденције</item>
+    <item name="r0x00000000">256 kB по међумеморији евиденције</item>
+    <item name="r0x00000000">1 MB по међумеморији евиденције</item>
+    <item name="r0x00000000">4 MB по међумеморији евиденције</item>
+    <item name="r0x00000000">16 MB по међумеморији евиденције</item>
+  </string-array>
+  <string-array name="select_logd_size_titles">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">64 kB</item>
+    <item name="r0x00000000">256 kB</item>
+    <item name="r0x00000000">1 MB</item>
+    <item name="r0x00000000">4 MB</item>
+    <item name="r0x00000000">16 MB</item>
+  </string-array>
+  <string-array name="select_logpersist_summaries">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">Све међумеморије евиденција</item>
+    <item name="r0x00000000">Све осим међумеморија евиденција за радио</item>
+    <item name="r0x00000000">само међумеморија евиденције језгра</item>
+  </string-array>
+  <string-array name="select_logpersist_titles">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">Све</item>
+    <item name="r0x00000000">Све сeм радија</item>
+    <item name="r0x00000000">само језгро</item>
+  </string-array>
+  <string-array name="show_non_rect_clip_entries">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">Нацртај област за исецање која није правоугаоног облика плавом бојом</item>
+    <item name="r0x00000000">Истакни зеленом тестиране команде за цртање</item>
+  </string-array>
+  <string-array name="timezone_filters">
+    <item name="r0x00000000">Америка</item>
+    <item name="r0x00000000">Европа</item>
+    <item name="r0x00000000">Африка</item>
+    <item name="r0x00000000">Азија</item>
+    <item name="r0x00000000">Аустралија</item>
+    <item name="r0x00000000">Пацифик</item>
+    <item name="r0x00000000">Све</item>
+  </string-array>
+  <string-array name="track_frame_time_entries">
+    <item name="r0x00000000">Искључено</item>
+    <item name="r0x00000000">На екрану у виду трака</item>
+    <item name="r0x00000000">У adb shell dumpsys gfxinfo</item>
+  </string-array>
+  <string-array name="transition_animation_scale_entries">
+    <item name="r0x00000000">Анимација је искључена</item>
+    <item name="r0x00000000">Размера анимације 0,5x</item>
+    <item name="r0x00000000">Размера анимације 1x</item>
+    <item name="r0x00000000">Размера анимације 1,5x</item>
+    <item name="r0x00000000">Размера анимације 2x</item>
+    <item name="r0x00000000">Размера анимације 5x</item>
+    <item name="r0x00000000">Размера анимације 10x</item>
+  </string-array>
+  <string-array name="tts_rate_entries">
+    <item name="r0x00000000">Веома споро</item>
+    <item name="r0x00000000">Споро</item>
+    <item name="r0x00000000">Нормално</item>
+    <item name="r0x00000000">Брзо</item>
+    <item name="r0x00000000">Брже</item>
+    <item name="r0x00000000">Веома брзо</item>
+    <item name="r0x00000000">Убрзано</item>
+    <item name="r0x00000000">Веома убрзано</item>
+    <item name="r0x00000000">Најбрже</item>
+  </string-array>
+  <string-array name="usage_stats_display_order_types">
+    <item name="r0x00000000">Време коришћења</item>
+    <item name="r0x00000000">Последњи пут коришћено</item>
+    <item name="r0x00000000">Назив апликације</item>
+  </string-array>
+  <string-array name="usb_configuration_titles">
+    <item name="r0x00000000">Пуњење</item>
+    <item name="r0x00000000">MTP (протокол за трансфер медија)</item>
+    <item name="r0x00000000">PTP (протокол за пренос слика)</item>
+    <item name="r0x00000000">RNDIS (USB етернет)</item>
+    <item name="r0x00000000">Извор звука</item>
+    <item name="r0x00000000">MIDI</item>
+  </string-array>
+  <string-array name="vpn_states">
+    <item name="r0x00000000">Веза је прекинута</item>
+    <item name="r0x00000000">Покретање...</item>
+    <item name="r0x00000000">Повезивање…</item>
+    <item name="r0x00000000">Повезано</item>
+    <item name="r0x00000000">Време чекања</item>
+    <item name="r0x00000000">Неуспешно</item>
+  </string-array>
+  <string-array name="vpn_types_long">
+    <item name="r0x00000000">PPTP VPN</item>
+    <item name="r0x00000000">L2TP/IPSec VPN са унапред дељеним кључевима</item>
+    <item name="r0x00000000">L2TP/IPSec VPN са сертификатима</item>
+    <item name="r0x00000000">IPSec VPN са унапред дељеним кључевима и Xauth потврдом идентитета</item>
+    <item name="r0x00000000">IPSec VPN са сертификатима и Xauth потврдом идентитета</item>
+    <item name="r0x00000000">IPSec VPN са сертификатима и хибридном потврдом идентитета</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices">
+    <item name="r0x00000000">Предност има Wi-Fi</item>
+    <item name="r0x00000000">Желим мобилне податке</item>
+    <item name="r0x00000000">Само Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Мобилни подаци</item>
+    <item name="r0x00000000">Само Wi-Fi</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_v2_without_wifi_only">
+    <item name="r0x00000000">Wi-Fi</item>
+    <item name="r0x00000000">Мобилни подаци</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_choices_without_wifi_only">
+    <item name="r0x00000000">Предност има Wi-Fi</item>
+    <item name="r0x00000000">Желим мобилне податке</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values">
+    <item name="r0x00000000">\2</item>
+    <item name="r0x00000000">\1</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="wifi_calling_mode_values_without_wifi_only">
+    <item name="r0x00000000">\2.</item>
+    <item name="r0x00000000">\1.</item>
+  </string-array>
+  <string-array name="wifi_eap_entries">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+  </string-array>
+  <string-array name="wifi_eap_method">
+    <item name="r0x00000000">PEAP</item>
+    <item name="r0x00000000">TLS</item>
+    <item name="r0x00000000">TTLS</item>
+    <item name="r0x00000000">PWD</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">АКА</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_hidden_entries">
+    <item name="r0x00000000">Не</item>
+    <item name="r0x00000000">Да</item>
+  </string-array>
+  <string-array name="wifi_ip_settings">
+    <item name="r0x00000000">DHCP</item>
+    <item name="r0x00000000">Статички</item>
+  </string-array>
+  <string-array name="wifi_metered_entries">
+    <item name="r0x00000000">Аутоматски откриј</item>
+    <item name="r0x00000000">Третирај као мрежу са ограничењем</item>
+    <item name="r0x00000000">Третирај као мрежу без ограничења</item>
+  </string-array>
+  <string-array name="wifi_p2p_status">
+    <item name="r0x00000000">Повезано</item>
+    <item name="r0x00000000">Позван</item>
+    <item name="r0x00000000">Неуспешно</item>
+    <item name="r0x00000000">Доступно</item>
+    <item name="r0x00000000">Изван опсега</item>
+  </string-array>
+  <string-array name="wifi_p2p_wps_setup">
+    <item name="r0x00000000">Притискање дугмета</item>
+    <item name="r0x00000000">PIN са равноправног уређаја</item>
+    <item name="r0x00000000">PIN са овог уређаја</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries">
+    <item name="r0x00000000">Ништа</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_peap_phase2_entries_with_sim_auth">
+    <item name="r0x00000000">Ништа</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+    <item name="r0x00000000">SIM</item>
+    <item name="r0x00000000">АКА</item>
+    <item name="r0x00000000">AKA'</item>
+  </string-array>
+  <string-array name="wifi_phase2_entries">
+    <item name="r0x00000000">Ништа</item>
+    <item name="r0x00000000">PAP</item>
+    <item name="r0x00000000">MSCHAP</item>
+    <item name="r0x00000000">MSCHAPV2</item>
+    <item name="r0x00000000">GTC</item>
+  </string-array>
+  <string-array name="wifi_proxy_settings">
+    <item name="r0x00000000">Нема</item>
+    <item name="r0x00000000">Ручно</item>
+    <item name="r0x00000000">Аутом. конфиг. проксија</item>
+  </string-array>
+  <string-array name="wifi_signal">
+    <item name="r0x00000000">Слаба</item>
+    <item name="r0x00000000">Слаба</item>
+    <item name="r0x00000000">Задовољавајућа</item>
+    <item name="r0x00000000">Добра</item>
+    <item name="r0x00000000">Одлична</item>
+  </string-array>
+  <string-array name="wifi_status">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скенирање...</item>
+    <item name="r0x00000000">Повезивање…</item>
+    <item name="r0x00000000">Потврђује се аутентичност...</item>
+    <item name="r0x00000000">Преузимање IP адресе...</item>
+    <item name="r0x00000000">Повезано</item>
+    <item name="r0x00000000">Обустављено</item>
+    <item name="r0x00000000">Прекидање везе...</item>
+    <item name="r0x00000000">Веза је прекинута</item>
+    <item name="r0x00000000">Неуспешно</item>
+    <item name="r0x00000000">Блокирано</item>
+    <item name="r0x00000000">Привремено избегавање лоше везе</item>
+  </string-array>
+  <string-array name="wifi_status_with_ssid">
+    <item name="r0x00000000"></item>
+    <item name="r0x00000000">Скенирање...</item>
+    <item name="r0x00000000">Повезивање са мрежом %1$s…</item>
+    <item name="r0x00000000">Проверавање идентитета мреже %1$s...</item>
+    <item name="r0x00000000">Добијање IP адресе од мреже %1$s…</item>
+    <item name="r0x00000000">Повезано са мрежом %1$s</item>
+    <item name="r0x00000000">Обустављено</item>
+    <item name="r0x00000000">Прекидање везе са мрежом %1$s…</item>
+    <item name="r0x00000000">Веза је прекинута</item>
+    <item name="r0x00000000">Неуспешно</item>
+    <item name="r0x00000000">Блокирано</item>
+    <item name="r0x00000000">Привремено избегавање лоше везе</item>
+  </string-array>
+  <string-array name="wifi_tether_security_values">
+    <item name="r0x00000000">\4</item>
+    <item name="r0x00000000">\0</item>
+  </string-array>
+  <string-array name="window_animation_scale_entries">
+    <item name="r0x00000000">Анимација је искључена</item>
+    <item name="r0x00000000">Размера анимације 0,5x</item>
+    <item name="r0x00000000">Размера анимације 1x</item>
+    <item name="r0x00000000">Размера анимације 1,5x</item>
+    <item name="r0x00000000">Размера анимације 2x</item>
+    <item name="r0x00000000">Размера анимације 5x</item>
+    <item name="r0x00000000">Размера анимације 10x</item>
+  </string-array>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settingslib.readboy.BaseScrollView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:padding="@dimen/sim_content_padding"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <TextView android:id="@id/firmware_version_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/firmware_version"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/firmware_version_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/security_patch_level_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/security_patch"
+              style="@style/device_info_dialog_label" />
+    <TextView android:textColor="?android:attr/colorAccent"
+              android:id="@id/security_patch_level_value"
+              android:background="?android:attr/selectableItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/baseband_version_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/baseband_version"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/baseband_version_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/kernel_version_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/kernel_version"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/kernel_version_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+    <TextView android:id="@id/build_number_label"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/build_number"
+              style="@style/device_info_dialog_label" />
+    <TextView android:id="@id/build_number_value"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/device_info_dialog_value" />
+  </LinearLayout>
+</com.android.settingslib.readboy.BaseScrollView>

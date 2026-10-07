@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settingslib.readboy.BaseScrollView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <EditText android:id="@id/text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="11.0dp"
+              android:minHeight="48.0dp"
+              android:singleLine="true"
+              android:inputType="textPassword"
+              android:layout_marginStart="@dimen/bluetooth_pairing_edittext_padding"
+              android:layout_marginEnd="@dimen/bluetooth_pairing_padding" />
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+              android:gravity="center_vertical"
+              android:id="@id/pin_values_hint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="6.0dp"
+              android:text="@string/bluetooth_pin_values_hint"
+              android:layout_marginStart="@dimen/bluetooth_pairing_padding"
+              android:layout_marginEnd="@dimen/bluetooth_pairing_padding" />
+    <CheckBox android:textAppearance="@android:style/TextAppearance.Material.Body1"
+              android:textColor="?android:attr/textColorSecondary"
+              android:gravity="center"
+              android:id="@id/alphanumeric_pin"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="16.0dp"
+              android:text="@string/bluetooth_enable_alphanumeric_pin"
+              android:paddingStart="@dimen/bluetooth_checkbox_padding"
+              android:layout_marginStart="@dimen/bluetooth_pairing_padding"
+              android:layout_marginEnd="@dimen/bluetooth_pairing_padding" />
+    <TextView android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+              android:textColor="?android:attr/textColorSecondary"
+              android:gravity="center_vertical"
+              android:id="@id/message_below_pin"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="12.0dp"
+              android:layout_marginStart="@dimen/bluetooth_pairing_padding"
+              android:layout_marginEnd="@dimen/bluetooth_pairing_padding" />
+    <CheckBox android:textAppearance="@android:style/TextAppearance.Material.Body1"
+              android:textColor="?android:attr/textColorSecondary"
+              android:gravity="center_vertical"
+              android:id="@id/phonebook_sharing_message_entry_pin"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="12.0dp"
+              android:text="@string/bluetooth_pairing_shares_phonebook"
+              android:paddingStart="@dimen/bluetooth_checkbox_padding"
+              android:layout_marginStart="@dimen/bluetooth_pairing_padding"
+              android:layout_marginEnd="@dimen/bluetooth_pairing_padding" />
+  </LinearLayout>
+</com.android.settingslib.readboy.BaseScrollView>

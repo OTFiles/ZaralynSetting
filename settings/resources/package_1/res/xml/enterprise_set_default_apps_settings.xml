@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="enterprise_set_default_apps_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="dashboard_tile_placeholder" />
+</PreferenceScreen>
