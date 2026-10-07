@@ -25,4 +25,20 @@
     <color name="on_tertiary">#FFFFFFFF</color>
     <color name="success">#FF4CAF50</color>
     <color name="error">#FFF44336</color>
+    <color name="surface_container">#FFF3EDF7</color>
+    <color name="surface_container_low">#FFF7F2FA</color>
+    <color name="surface_container_high">#FFECE6F0</color>
+    <color name="surface_container_highest">#FFE6E0E9</color>
+    <color name="surface_container_lowest">#FFFFFFFF</color>
+    <color name="surface_dim">#FFDED8E1</color>
+    <color name="surface_bright">#FFFEF7FF</color>
+    <color name="outline">#FF79747E</color>
+    <color name="outline_variant">#FFCAC4D0</color>
+    <color name="inverse_surface">#FF313033</color>
+    <color name="inverse_on_surface">#FFF4EFF4</color>
+    <color name="scrim">#FF000000</color>
+    <color name="tertiary_container">#FFFFD8E4</color>
+    <color name="on_tertiary_container">#FF31101D</color>
+    <color name="error_container">#FFF9DEDC</color>
+    <color name="on_error_container">#FF410E0B</color>
 </resources>

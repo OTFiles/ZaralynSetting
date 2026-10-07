@@ -55,4 +55,6 @@
     <string name="compat_copy">复制报告</string>
     <string name="compat_close">关闭</string>
     <string name="copied">已复制</string>
+    <string name="log_prev_day">上一天</string>
+    <string name="log_next_day">下一天</string>
 </resources>

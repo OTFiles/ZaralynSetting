@@ -30,8 +30,10 @@
                     style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="48dp"
                     android:layout_height="wrap_content"
-                    android:text="◀"
-                    android:textSize="16sp" />
+                    android:contentDescription="@string/log_prev_day"
+                    app:icon="@drawable/ic_prev_day"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp" />
 
                 <TextView
                     android:id="@+id/tvDate"
@@ -49,8 +51,10 @@
                     style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="48dp"
                     android:layout_height="wrap_content"
-                    android:text="▶"
-                    android:textSize="16sp" />
+                    android:contentDescription="@string/log_next_day"
+                    app:icon="@drawable/ic_next_day"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp" />
 
             </LinearLayout>
 
